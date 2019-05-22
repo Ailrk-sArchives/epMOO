@@ -1,0 +1,183 @@
+!-      Use '!' comments if they need to be retained when using the IDFEditor.
+
+Construction,
+    Exterior Window5,        !- Name
+    6YNEshuangcengloweboli;  !- Outside Layer
+
+    ,                        !- Delta Temperature Schedule Name
+    ,                        !- Minimum Outdoor Temperature {C}
+    ,                        !- Minimum Outdoor Temperature Schedule Name
+    ,                        !- Maximum Outdoor Temperature {C}
+    ,                        !- Maximum Outdoor Temperature Schedule Name
+    40;                      !- Maximum Wind Speed {m/s}
+
+Construction,
+    Exterior Wall1,          !- Name
+    5mm shuinishajiang,      !- Outside Layer
+    20mm shuinishajiang,     !- Layer 2
+    200mm shaojieyanduokongzhuanqiti,  !- Layer 3
+    20mm shuinishajiang;     !- Layer 4
+
+Construction,
+    Exterior Roof1,          !- Name
+    40mm suishiluanshihunningtu,  !- Outside Layer
+    20mm shuinishajiang,     !- Layer 2
+    5mm sbsgaixingliqingfangshuijuancai,  !- Layer 3
+    20mm shuinishajiang,     !- Layer 4
+    30mm 1551shaojieyanhunningt,  !- Layer 5
+    120mm gangjinhunningtu;  !- Layer 6
+
+
+Construction,
+    Exterior Window1,        !- Name
+    putongdantengboli;       !- Outside Layer
+
+Construction,
+    Exterior Window2,        !- Name
+    shuangcengzhongkongboli; !- Outside Layer
+
+                        !- Surface Name/Angle Factor List Name
+    ,                        !- Work Efficiency Schedule Name
+    ClothingInsulationSchedule;  !- Clothing Insulation Calculation Method
+
+o;                      !- Return Air Fraction Calculated from Plenum Temperature
+
+BuildingSurface:Detailed,
+    eastwall1.1,             !- Name
+    Wall,                    !- Surface Type
+    Exterior Wall,           !- Construction Name
+    bedroom1.4,              !- Zone Name
+    Outdoors,                !- Outside Boundary Condition
+    ,                        !- Outside Boundary Condition Object
+    SunExposed,              !- Sun Exposure
+    WindExposed,             !- Wind Exposure
+    ,                        !- View Factor to Ground
+    4,                       !- Number of Vertices
+    6.000000000000, 0.000000000000, 3.000000000000,
+                                        !- X,Y,Z  1 {m}
+    6.000000000000, 0.000000000000, 0.000000000000,
+                                        !- X,Y,Z  2 {m}
+    6.000000000000, 3.000000000000, 0.000000000000,
+                                        !- X,Y,Z  3 {m}
+    6.000000000000, 3.000000000000, 3.000000000000;
+                                        !- X,Y,Z  4 {m}
+
+BuildingSurface:Detailed,
+    westwall1.4,             !- Name
+    Wall,                    !- Surface Type
+    Exterior Wall,           !- Construction Name
+    bedroom1.7,              !- Zone Name
+    Outdoors,                !- Outside Boundary Condition
+    ,                        !- Outside Boundary Condition Object
+    SunExposed,              !- Sun Exposure
+    WindExposed,             !- Wind Exposure
+    ,                        !- View Factor to Ground
+    4,                       !- Number of Vertices
+    0.000000000000, 3.500000000000, 3.000000000000,
+                                        !- X,Y,Z  1 {m}
+    0.000000000000, 3.500000000000, 0.000000000000,
+                                        !- X,Y,Z  2 {m}
+    0.000000000000, 0.000000000000, 0.000000000000,
+                                        !- X,Y,Z  3 {m}
+    0.000000000000, 0.000000000000, 3.000000000000;
+                                        !- X,Y,Z  4 {m}
+
+BuildingSurface:Detailed,
+    southwall1.3,            !- Name
+    Wall,                    !- Surface Type
+    Exterior Wall,           !- Construction Name
+    bedroom1.3,              !- Zone Name
+    Outdoors,                !- Outside Boundary Condition
+    ,                        !- Outside Boundary Condition Object
+    SunExposed,              !- Sun Exposure
+    WindExposed,             !- Wind Exposure
+    ,                        !- View Factor to Ground
+    4,                       !- Number of Vertices
+    0.000000000000, 0.000000000000, 3.000000000000,
+                                        !- X,Y,Z  1 {m}
+    0.000000000000, 0.000000000000, 0.000000000000,
+                                        !- X,Y,Z  2 {m}
+    5.000000000000, 0.000000000000, 0.000000000000,
+                                        !- X,Y,Z  3 {m}
+    5.000000000000, 0.000000000000, 3.000000000000;
+                                        !- X,Y,Z  4 {m}
+BuildingSurface:Detailed,
+    northwall2.3,            !- Name
+    Wall,                    !- Surface Type
+    Exterior Wall,           !- Construction Name
+    bedroom2.11,             !- Zone Name
+    Outdoors,                !- Outside Boundary Condition
+    ,                        !- Outside Boundary Condition Object
+    SunExposed,              !- Sun Exposure
+    WindExposed,             !- Wind Exposure
+    ,                        !- View Factor to Ground
+    4,                       !- Number of Vertices
+    5.000000000000, 3.000000000000, 6.000000000000,
+                                        !- X,Y,Z  1 {m}
+    5.000000000000, 3.000000000000, 3.000000000000,
+                                        !- X,Y,Z  2 {m}
+    0.000000000000, 3.000000000000, 3.000000000000,
+                                        !- X,Y,Z  3 {m}
+    0.000000000000, 3.000000000000, 6.000000000000;
+                                        !- X,Y,Z  4 {m}
+Building,
+    3cengzhuzhai,            !- Name
+    0.0,                     !- North Axis {deg}
+    City,                    !- Terrain
+    0.04,                    !- Loads Convergence Tolerance Value
+    0.4,                     !- Temperature Convergence Tolerance Value {deltaC}
+    FullInteriorAndExterior, !- Solar Distribution
+    25,                      !- Maximum Number of Warmup Days
+    ;                        !- Minimum Number of Warmup Days
+
+ZoneVentilation:DesignFlowRate,
+    kitchen1.1,              !- Name
+    kitchen1.1,              !- Zone or ZoneList Name
+    tongfengcishubianliang,  !- Schedule Name
+    AirChanges/Hour,         !- Design Flow Rate Calculation Method
+    ,                        !- Design Flow Rate {m3/s}
+    ,                        !- Flow Rate per Zone Floor Area {m3/s-m2}
+    ,                        !- Flow Rate per Person {m3/s-person}
+    0,                       !- Air Changes per Hour {1/hr}
+    Natural,                 !- Ventilation Type
+    0,                       !- Fan Pressure Rise {Pa}
+    1,                       !- Fan Total Efficiency
+    0.606,                   !- Constant Term Coefficient
+    0.036,                   !- Temperature Term Coefficient
+    0.1177,                  !- Velocity Term Coefficient
+    0,                       !- Velocity Squared Term Coefficient
+    ,                        !- Minimum Indoor Temperature {C}
+    ,                        !- Minimum Indoor Temperature Schedule Name
+    ,                        !- Maximum Indoor Temperature {C}
+    ,                        !- Maximum Indoor Temperature Schedule Name
+    -100,                    !- Delta Temperature {deltaC}
+    ,                        !- Delta Temperature Schedule Name
+    15.37,                   !- Minimum Outdoor Temperature {C}
+    ,                        !- Minimum Outdoor Temperature Schedule Name
+    28.78,                   !- Maximum Outdoor Temperature {C}
+    ,                        !- Maximum Outdoor Temperature Schedule Name
+    40;                      !- Maximum Wind Speed {m/s}
+
+
+
+buildingsurface:detailed,
+    northwall2.2,            !- name
+    wall,                    !- surface type
+    exterior wall,           !- construction name
+    bedroom2.10,             !- zone name
+    outdoors,                !- outside boundary condition
+    ,                        !- outside boundary condition object
+    sunexposed,              !- sun exposure
+    windexposed,             !- wind exposure
+    ,                        !- view factor to ground
+    4,                       !- number of vertices
+    5.000000000000, 3.000000000000, 6.000000000000,
+                                        !- x,y,z  1 {m}
+    5.000000000000, 3.000000000000, 3.000000000000,
+                                        !- x,y,z  2 {m}
+    0.000000000000, 3.000000000000, 3.000000000000,
+                                        !- x,y,z  3 {m}
+    0.000000000000, 3.000000000000, 6.000000000000;
+                                        !- X,Y,Z  4 {m}
+
+
