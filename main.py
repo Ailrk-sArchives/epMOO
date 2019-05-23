@@ -15,7 +15,7 @@ from utils import preamble
 
 def main():
     """parameter config"""
-    outerwall = (1, 7)
+    outerwall = (1, 7)  # TODO now it really is 1 - 6, change later.
     roof = (1, 7)
     window = (1, 3)
     easterate = (0.05, 0.3)
@@ -29,19 +29,25 @@ def main():
     """"""
 
     # define problem.
-    problem = Problem(num_of_variables=50, objectives=[f1, f2, f3],
+    problem = Problem(num_of_variables=len(paras), objectives=[f1, f2, f3],
                       variables_range=paras, preamble=preamble)
 
-    evo = Evolution(problem, mutation_param=20, num_of_generations=500)
+    evo = Evolution(problem, mutation_param=1, num_of_generations=1,
+                    num_of_individuals=3, num_of_tour_particips=2)
     func = [i.objectives for i in evo.evolve()]
 
     obj1 = [i[0] for i in func]
     obj2 = [i[1] for i in func]
     obj3 = [i[2] for i in func]
 
+    for o in list(zip(obj1, obj2, obj3)):
+        print(o)
+
     fig = plt.figure()
     ax = fig.add_subplot(111, projection='3d')
     ax.scatter(obj1, obj2, obj3, c='r', marker='o')
+    plt.draw()
+    plt.show()
 
 
 if __name__ == "__main__":

@@ -1,5 +1,6 @@
 from nsga2.population import Population
 import random
+from numba import jit
 
 
 class NSGA2Utils:
