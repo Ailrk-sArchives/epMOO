@@ -1,35 +1,67 @@
-!-Generator IDFEditor 1.47
+!-Generator IDFEditor 1.49
 !-Option OriginalOrderTop UseSpecialFormat
 
 !-NOTE: All comments with '!-' are ignored by the IDFEditor and are generated automatically.
 !-      Use '!' comments if they need to be retained when using the IDFEditor.
 
+Material,
+    50mm nanranjisujubenban, !- Name
+    MediumSmooth,            !- Roughness
+    0.05,                    !- Thickness {m}
+    0.03,                    !- Conductivity {W/m-K}
+    35,                      !- Density {kg/m3}
+    1380;                    !- Specific Heat {J/kg-K}
+
+Material,
+    60mm nanranjisujubenban, !- Name
+    MediumSmooth,            !- Roughness
+    0.06,                    !- Thickness {m}
+    0.03,                    !- Conductivity {W/m-K}
+    35,                      !- Density {kg/m3}
+    1380;                    !- Specific Heat {J/kg-K}
+
 Construction,
-    Exterior Window5,        !- Name
+    Exterior Wall8,          !- Name
+    5mm shuinishajiang,      !- Outside Layer
+    70mm nanranjisujubenban, !- Layer 2
+    20mm shuinishajiang,     !- Layer 3
+    200mm shaojieyanduokongzhuanqiti,  !- Layer 4
+    20mm shuinishajiang;     !- Layer 5
+
+Material,
+    70mm nanranjisujubenban, !- Name
+    MediumSmooth,            !- Roughness
+    0.07,                    !- Thickness {m}
+    0.03,                    !- Conductivity {W/m-K}
+    35,                      !- Density {kg/m3}
+    1380;                    !- Specific Heat {J/kg-K}
+
+Construction,
+    Exterior Roof8,          !- Name
+    40mm suishiluanshihunningtu,  !- Outside Layer
+    20mm shuinishajiang,     !- Layer 2
+    70mm nanranjisujubenban, !- Layer 3
+    5mm sbsgaixingliqingfangshuijuancai,  !- Layer 4
+    20mm shuinishajiang,     !- Layer 5
+    30mm 1551shaojieyanhunningt,  !- Layer 6
+    120mm gangjinhunningtu;  !- Layer 7
+
+Construction,
+    Exterior Window1,        !- Name
+    shuangcengzhongkongboli; !- Outside Layer
+
+Construction,
+    Exterior Window2,        !- Name
+    sancengzhongkongboli;    !- Outside Layer
+
+Construction,
+    Exterior Window3,        !- Name
     6YNEshuangcengloweboli;  !- Outside Layer
-
-Construction,
-    Exterior Window6,        !- Name
-    6CEBzheyangxingshuangcengloweboli;  !- Outside Layer
-
-Construction,
-    Exterior Window4,        !- Name
-    6CEBgaotouxingshuangcengloweboli;  !- Outside Layer
-
-WindowMaterial:SimpleGlazingSystem,
-    6CEBgaotouxingshuangcengloweboli,  !- Name
-    1.63,                    !- U-Factor {W/m2-K}
-    0.52;                    !- Solar Heat Gain Coefficient
 
 WindowMaterial:SimpleGlazingSystem,
     6YNEshuangcengloweboli,  !- Name
-    1.65,                    !- U-Factor {W/m2-K}
-    0.44;                    !- Solar Heat Gain Coefficient
-
-WindowMaterial:SimpleGlazingSystem,
-    6CEBzheyangxingshuangcengloweboli,  !- Name
-    1.63,                    !- U-Factor {W/m2-K}
-    0.34;                    !- Solar Heat Gain Coefficient
+    1.8,                     !- U-Factor {W/m2-K}
+    0.33;                    !- Solar Heat Gain Coefficient
 
 ZoneVentilation:DesignFlowRate,
     jichukitchen1.1,         !- Name
@@ -4381,24 +4413,14 @@ Material,
     1630;                    !- Specific Heat {J/kg-K}
 
 WindowMaterial:SimpleGlazingSystem,
-    putongdantengboli,       !- Name
-    5.85,                    !- U-Factor {W/m2-K}
-    0.81;                    !- Solar Heat Gain Coefficient
-
-WindowMaterial:SimpleGlazingSystem,
     shuangcengzhongkongboli, !- Name
-    2.73,                    !- U-Factor {W/m2-K}
-    0.7;                     !- Solar Heat Gain Coefficient
+    2.8,                     !- U-Factor {W/m2-K}
+    0.75;                    !- Solar Heat Gain Coefficient
 
 WindowMaterial:SimpleGlazingSystem,
     sancengzhongkongboli,    !- Name
-    1.76,                    !- U-Factor {W/m2-K}
-    0.69;                    !- Solar Heat Gain Coefficient
-
-WindowMaterial:SimpleGlazingSystem,
-    shuangcengzhongkong LOWeboli,  !- Name
-    1.65,                    !- U-Factor {W/m2-K}
-    0.29;                    !- Solar Heat Gain Coefficient
+    1.71,                    !- U-Factor {W/m2-K}
+    0.67;                    !- Solar Heat Gain Coefficient
 
 WindowMaterial:Glazing,
     Clear 3mm,               !- Name
@@ -4476,17 +4498,17 @@ Construction,
 Construction,
     Exterior Wall6,          !- Name
     5mm shuinishajiang,      !- Outside Layer
-    30mm nanranjisujubenban, !- Layer 2
+    50mm nanranjisujubenban, !- Layer 2
     20mm shuinishajiang,     !- Layer 3
-    200mm 626-725zhengyajiaqihunningtuqikuai,  !- Layer 4
+    200mm shaojieyanduokongzhuanqiti,  !- Layer 4
     20mm shuinishajiang;     !- Layer 5
 
 Construction,
     Exterior Wall7,          !- Name
     5mm shuinishajiang,      !- Outside Layer
-    40mm nanranjisujubenban, !- Layer 2
+    60mm nanranjisujubenban, !- Layer 2
     20mm shuinishajiang,     !- Layer 3
-    200mm 626-725zhengyajiaqihunningtuqikuai,  !- Layer 4
+    200mm shaojieyanduokongzhuanqiti,  !- Layer 4
     20mm shuinishajiang;     !- Layer 5
 
 Construction,
