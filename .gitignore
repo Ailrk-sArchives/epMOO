@@ -129,5 +129,5 @@ dmypy.json
 
 # ep specific
 temp/*
-results/*
+results/*.txt
 
