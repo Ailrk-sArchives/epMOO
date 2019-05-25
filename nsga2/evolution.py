@@ -55,5 +55,5 @@ class Evolution:
             for obj in individual.objectives:
                 log += str(obj) + ", "
             log += "\n\n"
-        with open(log_path, "w") as f:
+        with open(log_path, "w+") as f:
             f.write(log)
