@@ -1,9 +1,12 @@
 from idf_handler import EPOutputReader
 from typing import List
+import os.path
 
 """objective functions paras"""
 SUMMER_LAMBDA = 0.415
 WINTER_LAMBDA = 0.253
+EP_TBL = os.path.abspath("./temp/eplusout.csv")
+EP_OUT_CSV = os.path.abspath("./temp/eplusout.csv")
 
 """economic specs"""
 wall_and_roof_specs = [
@@ -27,7 +30,7 @@ def f1_energy_consumption(*args) -> float:
     summer_consumption: float = 0
     winter_consumption: float = 0
 
-    with open("./temp/eplustbl.csv", "r") as f:
+    with open(EP_TBL, "r") as f:
         data = f.readlines()
         for i, _ in enumerate(data):
             if "Utility Use Per Conditioned Floor Area" in data[i]:
@@ -43,7 +46,7 @@ def f1_energy_consumption(*args) -> float:
 
 def f2_aPMV(*args) -> float:
     # get aPMV
-    with EPOutputReader("./temp/eplusout.csv") as ep_table:
+    with EPOutputReader(EP_OUT_CSV) as ep_table:
         pmv_list: List = []
 
         for row in ep_table.reader:
@@ -69,7 +72,7 @@ def f3_economy(*args) -> float:
 
     window_area: float = 0
 
-    with open("./temp/eplustbl.csv", "r") as f:
+    with open(EP_TBL, "r") as f:
         data = f.readlines()
         for i, _ in enumerate(data):
             if "Window-Wall Ratio" in data[i]:

@@ -1,114 +1,114 @@
 ==== Base does not Surround subsurface details ====
 Surface=NORTHWALL3.3 No-Overlap
 Surface#=  358 NSides=    4
-Vertex     1=(         -18.04,          20.36,           9.00)
-Vertex     2=(         -18.04,          20.36,           6.00)
-Vertex     3=(         -19.12,          15.47,           6.00)
-Vertex     4=(         -19.12,          15.47,           9.00)
+Vertex     1=(         -10.57,         -25.07,           9.00)
+Vertex     2=(         -10.57,         -25.07,           6.00)
+Vertex     3=(          -5.70,         -23.93,           6.00)
+Vertex     4=(          -5.70,         -23.93,           9.00)
 SubSurface=NORTHWINDOW3.3
 Surface#=  359 NSides=    4
-Vertex     1=(         -17.40,          23.27,           8.10)
-Vertex     2=(         -17.40,          23.27,           6.60)
-Vertex     3=(         -17.61,          22.32,           6.60)
-Vertex     4=(         -17.61,          22.32,           8.10)
+Vertex     1=(         -13.36,         -25.72,           8.10)
+Vertex     2=(         -13.36,         -25.72,           6.60)
+Vertex     3=(         -12.65,         -25.55,           6.60)
+Vertex     4=(         -12.65,         -25.55,           8.10)
 ================================
 ==== Base does not Surround subsurface details ====
 Surface=NORTHWALL3.2 No-Overlap
 Surface#=  366 NSides=    4
-Vertex     1=(         -19.12,          15.47,           9.00)
-Vertex     2=(         -19.12,          15.47,           6.00)
-Vertex     3=(         -20.19,          10.59,           6.00)
-Vertex     4=(         -20.19,          10.59,           9.00)
+Vertex     1=(          -5.70,         -23.93,           9.00)
+Vertex     2=(          -5.70,         -23.93,           6.00)
+Vertex     3=(          -0.83,         -22.79,           6.00)
+Vertex     4=(          -0.83,         -22.79,           9.00)
 SubSurface=NORTHWINDOW3.2
 Surface#=  367 NSides=    4
-Vertex     1=(         -18.48,          18.39,           8.10)
-Vertex     2=(         -18.48,          18.39,           6.60)
-Vertex     3=(         -18.69,          17.44,           6.60)
-Vertex     4=(         -18.69,          17.44,           8.10)
+Vertex     1=(          -8.49,         -24.58,           8.10)
+Vertex     2=(          -8.49,         -24.58,           6.60)
+Vertex     3=(          -7.78,         -24.41,           6.60)
+Vertex     4=(          -7.78,         -24.41,           8.10)
 ================================
 ==== Base does not Surround subsurface details ====
 Surface=NORTHWALL3.1 No-Overlap
 Surface#=  376 NSides=    4
-Vertex     1=(         -20.19,          10.59,           9.00)
-Vertex     2=(         -20.19,          10.59,           6.00)
-Vertex     3=(         -21.49,           4.73,           6.00)
-Vertex     4=(         -21.49,           4.73,           9.00)
+Vertex     1=(          -0.83,         -22.79,           9.00)
+Vertex     2=(          -0.83,         -22.79,           6.00)
+Vertex     3=(           5.01,         -21.42,           6.00)
+Vertex     4=(           5.01,         -21.42,           9.00)
 SubSurface=NORTHWINDOW3.1
 Surface#=  377 NSides=    4
-Vertex     1=(         -19.77,          12.53,           8.10)
-Vertex     2=(         -19.77,          12.53,           6.60)
-Vertex     3=(         -19.98,          11.58,           6.60)
-Vertex     4=(         -19.98,          11.58,           8.10)
+Vertex     1=(          -2.65,         -23.21,           8.10)
+Vertex     2=(          -2.65,         -23.21,           6.60)
+Vertex     3=(          -1.94,         -23.05,           6.60)
+Vertex     4=(          -1.94,         -23.05,           8.10)
 ================================
 ==== Base does not Surround subsurface details ====
 Surface=SOUTHWALL3.4 No-Overlap
 Surface#=  407 NSides=    4
-Vertex     1=(           3.44,          15.63,           9.00)
-Vertex     2=(           3.44,          15.63,           6.00)
-Vertex     3=(           4.73,          21.49,           6.00)
-Vertex     4=(           4.73,          21.49,           9.00)
+Vertex     1=(         -15.58,          -3.64,           9.00)
+Vertex     2=(         -15.58,          -3.64,           6.00)
+Vertex     3=(         -21.42,          -5.01,           6.00)
+Vertex     4=(         -21.42,          -5.01,           9.00)
 SubSurface=SOUTHWINDOW3.4
 Surface#=  408 NSides=    4
-Vertex     1=(           4.97,          22.55,           8.10)
-Vertex     2=(           4.97,          22.55,           6.60)
-Vertex     3=(           5.14,          23.35,           6.60)
-Vertex     4=(           5.14,          23.35,           8.10)
+Vertex     1=(         -22.60,          -5.29,           8.10)
+Vertex     2=(         -22.60,          -5.29,           6.60)
+Vertex     3=(         -23.16,          -5.42,           6.60)
+Vertex     4=(         -23.16,          -5.42,           8.10)
 ================================
 ==== Base does not Surround subsurface details ====
 Surface=NORTHWALL3.4 No-Overlap
 Surface#=  433 NSides=    4
-Vertex     1=(         -16.75,          26.22,           9.00)
-Vertex     2=(         -16.75,          26.22,           6.00)
-Vertex     3=(         -18.04,          20.36,           6.00)
-Vertex     4=(         -18.04,          20.36,           9.00)
+Vertex     1=(         -16.41,         -26.43,           9.00)
+Vertex     2=(         -16.41,         -26.43,           6.00)
+Vertex     3=(         -10.57,         -25.07,           6.00)
+Vertex     4=(         -10.57,         -25.07,           9.00)
 SubSurface=NORTHWINDOW3.4
 Surface#=  434 NSides=    4
-Vertex     1=(         -16.33,          28.16,           8.10)
-Vertex     2=(         -16.33,          28.16,           6.60)
-Vertex     3=(         -16.54,          27.21,           6.60)
-Vertex     4=(         -16.54,          27.21,           8.10)
+Vertex     1=(         -18.23,         -26.86,           8.10)
+Vertex     2=(         -18.23,         -26.86,           6.60)
+Vertex     3=(         -17.52,         -26.69,           6.60)
+Vertex     4=(         -17.52,         -26.69,           8.10)
 ================================
 ==== Base does not Surround subsurface details ====
 Surface=SOUTHWALL3.3 No-Overlap
 Surface#=  452 NSides=    4
-Vertex     1=(           2.37,          10.74,           9.00)
-Vertex     2=(           2.37,          10.74,           6.00)
-Vertex     3=(           3.44,          15.63,           6.00)
-Vertex     4=(           3.44,          15.63,           9.00)
+Vertex     1=(         -10.71,          -2.51,           9.00)
+Vertex     2=(         -10.71,          -2.51,           6.00)
+Vertex     3=(         -15.58,          -3.64,           6.00)
+Vertex     4=(         -15.58,          -3.64,           9.00)
 SubSurface=SOUTHWINDOW3.3
 Surface#=  453 NSides=    4
-Vertex     1=(           3.89,          17.66,           8.10)
-Vertex     2=(           3.89,          17.66,           6.60)
-Vertex     3=(           4.07,          18.47,           6.60)
-Vertex     4=(           4.07,          18.47,           8.10)
+Vertex     1=(         -17.73,          -4.15,           8.10)
+Vertex     2=(         -17.73,          -4.15,           6.60)
+Vertex     3=(         -18.30,          -4.28,           6.60)
+Vertex     4=(         -18.30,          -4.28,           8.10)
 ================================
 ==== Base does not Surround subsurface details ====
 Surface=SOUTHWALL3.1 No-Overlap
 Surface#=  463 NSides=    4
-Vertex     1=(           0.00,           0.00,           9.00)
-Vertex     2=(           0.00,           0.00,           6.00)
-Vertex     3=(           1.29,           5.86,           6.00)
-Vertex     4=(           1.29,           5.86,           9.00)
+Vertex     1=(           0.00,          -0.00,           9.00)
+Vertex     2=(           0.00,          -0.00,           6.00)
+Vertex     3=(          -5.84,          -1.37,           6.00)
+Vertex     4=(          -5.84,          -1.37,           9.00)
 SubSurface=SOUTHWINDOW3.1
 Surface#=  464 NSides=    4
-Vertex     1=(           1.52,           6.92,           8.10)
-Vertex     2=(           1.52,           6.92,           6.60)
-Vertex     3=(           1.70,           7.73,           6.60)
-Vertex     4=(           1.70,           7.73,           8.10)
+Vertex     1=(          -7.02,          -1.64,           8.10)
+Vertex     2=(          -7.02,          -1.64,           6.60)
+Vertex     3=(          -7.58,          -1.77,           6.60)
+Vertex     4=(          -7.58,          -1.77,           8.10)
 ================================
 ==== Base does not Surround subsurface details ====
 Surface=SOUTHWALL3.2 No-Overlap
 Surface#=  475 NSides=    4
-Vertex     1=(           1.29,           5.86,           9.00)
-Vertex     2=(           1.29,           5.86,           6.00)
-Vertex     3=(           2.37,          10.74,           6.00)
-Vertex     4=(           2.37,          10.74,           9.00)
+Vertex     1=(          -5.84,          -1.37,           9.00)
+Vertex     2=(          -5.84,          -1.37,           6.00)
+Vertex     3=(         -10.71,          -2.51,           6.00)
+Vertex     4=(         -10.71,          -2.51,           9.00)
 SubSurface=SOUTHWINDOW3.2
 Surface#=  476 NSides=    4
-Vertex     1=(           2.82,          12.78,           8.10)
-Vertex     2=(           2.82,          12.78,           6.60)
-Vertex     3=(           2.99,          13.59,           6.60)
-Vertex     4=(           2.99,          13.59,           8.10)
+Vertex     1=(         -12.86,          -3.01,           8.10)
+Vertex     2=(         -12.86,          -3.01,           6.60)
+Vertex     3=(         -13.43,          -3.14,           6.60)
+Vertex     4=(         -13.43,          -3.14,           8.10)
 ================================
 Shadowing Combinations
 ..Solar Distribution=FullInteriorAndExterior

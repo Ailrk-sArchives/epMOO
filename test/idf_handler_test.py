@@ -2,7 +2,7 @@ import sys
 sys.path.append("../")
 import idf_handler as IdfH
 from typing import List
-from utils import generate_struct
+from obj_func_preamble import generate_struct
 
 winwallrate = [0.15, 0.34, 0.23, 0.11]
 args = [1, 1, 1]
@@ -26,11 +26,8 @@ with IdfH.IdfIOStream("../jizhun.idf", "idf") as idf:
         idf.sub([win_str], r"\1Exterior Window", lines, idx)  # DONE
 
         idf.grap(east_list, [r"[\s]+eastwall(.*\..*),", coord_str, coord_str, coord_str, coord_str], lines, idx)
-
         idf.grap(west_list, [r"[\s]+westwall(.*\..*),", coord_str, coord_str, coord_str, coord_str], lines, idx)
-
         idf.grap(south_list, [r"[\s]+southwall(.*\..*),", coord_str, coord_str, coord_str, coord_str], lines, idx)
-
         idf.grap(north_list, [r"[\s]+northwall(.*\..*),", coord_str, coord_str, coord_str, coord_str], lines, idx)
 
         idf.sub([r"(.*)\d+.\d+(.*North Axis.*)"], r"\g<1>{}\2".format(direction),
@@ -43,19 +40,19 @@ with IdfH.IdfIOStream("../jizhun.idf", "idf") as idf:
     for w in east_list:
         idf.append(
                 generate_struct(
-                    w[0], w[1:], winwallrate[0]))
+                    "east", w[0], w[1:], winwallrate[0]))
     for w in west_list:
         idf.append(
                 generate_struct(
-                    w[0], w[1:], winwallrate[0]))
+                    "west", w[0], w[1:], winwallrate[0]))
     for w in south_list:
         idf.append(
                 generate_struct(
-                    w[0], w[1:], winwallrate[0]))
+                    "south", w[0], w[1:], winwallrate[0]))
     for w in north_list:
         idf.append(
                 generate_struct(
-                    w[0], w[1:], winwallrate[0]))
+                    "north", w[0], w[1:], winwallrate[0]))
 
     for line in idf.rlines:
         print(line)

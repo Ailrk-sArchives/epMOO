@@ -4,21 +4,6 @@
 !-NOTE: All comments with '!-' are ignored by the IDFEditor and are generated automatically.
 !-      Use '!' comments if they need to be retained when using the IDFEditor.
 
-Material,
-    50mm nanranjisujubenban, !- Name
-    MediumSmooth,            !- Roughness
-    0.05,                    !- Thickness {m}
-    0.03,                    !- Conductivity {W/m-K}
-    35,                      !- Density {kg/m3}
-    1380;                    !- Specific Heat {J/kg-K}
-
-Material,
-    60mm nanranjisujubenban, !- Name
-    MediumSmooth,            !- Roughness
-    0.06,                    !- Thickness {m}
-    0.03,                    !- Conductivity {W/m-K}
-    35,                      !- Density {kg/m3}
-    1380;                    !- Specific Heat {J/kg-K}
 
 Construction,
     Exterior Wall8,          !- Name
@@ -4605,18 +4590,6 @@ Construction,
     20mm shuinishajiang,     !- Layer 5
     30mm 1551shaojieyanhunningt,  !- Layer 6
     120mm gangjinhunningtu;  !- Layer 7
-
-Construction,
-    Exterior Window1,        !- Name
-    putongdantengboli;       !- Outside Layer
-
-Construction,
-    Exterior Window2,        !- Name
-    shuangcengzhongkongboli; !- Outside Layer
-
-Construction,
-    Exterior Window3,        !- Name
-    sancengzhongkongboli;    !- Outside Layer
 
 Construction,
     Exterior Door,           !- Name
