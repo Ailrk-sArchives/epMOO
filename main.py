@@ -59,6 +59,7 @@ def main():
     ax = fig.add_subplot(111, projection='3d')
     ax.scatter(obj1, obj2, obj3, c='r', marker='o')
     plt.draw()
+    plt.savefig('result/epMOO_fig.png')
     plt.show()
 
 

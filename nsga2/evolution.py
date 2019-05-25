@@ -1,6 +1,7 @@
 from nsga2.utils import NSGA2Utils
 from nsga2.population import Population
 import time
+import os
 
 class Evolution:
 
@@ -40,4 +41,19 @@ class Evolution:
                 self.utils.calculate_crowding_distance(front)
             children = self.utils.create_children(self.population)
 
+            self.log(i, returned_population, "results")  # log out. 2019-05-24
         return returned_population.fronts[0]
+
+    def log(self, current_gen, returned_population, path):
+        log_path = os.path.join(os.path.abspath(path), str(current_gen) + ".txt")
+        log = "Generation {} at {}\n".format(current_gen, time.ctime())
+        for individual in returned_population.fronts[0]:  # log output.
+            log += "parameters:\n"
+            for para in individual.features:
+                log += str(para) + ", "
+            log += "\nobjectives:\n"
+            for obj in individual.objectives:
+                log += str(obj) + ", "
+            log += "\n\n"
+        with open(log_path, "w") as f:
+            f.write(log)
