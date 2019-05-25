@@ -1,5 +1,6 @@
 """ the main program """
-from typing import List
+from typing import List, Dict
+import time
 
 from mpl_toolkits.mplot3d import Axes3D
 
@@ -11,10 +12,9 @@ from objective_functions import f1_energy_consumption as f1
 from objective_functions import f2_aPMV as f2
 from objective_functions import f3_economy as f3
 from obj_func_preamble import preamble
-from utils import discrete_interval
 
 
-def moo(paras, hyperparameter):
+def moo(paras: List, hyperparameter: Dict):
     # define problem.
     problem = Problem(num_of_variables=len(paras), objectives=[f1, f2, f3],
                       variables_range=paras, preamble=preamble)
@@ -32,14 +32,10 @@ def moo(paras, hyperparameter):
     obj2 = [i[1] for i in func]
     obj3 = [i[2] for i in func]
 
-    for o in list(zip(obj1, obj2, obj3)):
-        print(o)
-
+    print("<Finished>{}".format(time.ctime()))
     fig = plt.figure()
     ax = fig.add_subplot(111, projection='3d')
     ax.scatter(obj1, obj2, obj3, c='r', marker='o')
     plt.draw()
     plt.savefig('results/epMOO_fig.png')
     plt.show()
-
-

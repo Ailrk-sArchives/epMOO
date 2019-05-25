@@ -9,10 +9,11 @@ There will be a new class handle this type of jobs exclusively for idf format.
 
 
 """path parameters."""
+W_PATH = "./WeatherData/CHN_Chongqing.Chongqing.Shapingba.575160_CSWD.epw"
 OUTPUT_PATH = os.path.abspath("./temp/")
 IDF_FILE = os.path.abspath("./jizhun.idf")
 RUN_IDF_FILE = os.path.abspath("./temp.idf")
-W_DATA = os.path.abspath("./WeatherData/CHN_Chongqing.Chongqing.Shapingba.575160_CSWD.epw")
+W_DATA = os.path.abspath(W_PATH)
 
 
 """function parameters"""

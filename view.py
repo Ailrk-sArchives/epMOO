@@ -1,5 +1,4 @@
 import wx
-
 """
 the GUI is MVC structure.
 """
