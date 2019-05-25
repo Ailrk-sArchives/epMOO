@@ -15,8 +15,6 @@ with IdfH.IdfIOStream("../jizhun.idf", "idf") as idf:
     south_list: List = []
     north_list: List = []
 
-
-
     def op(lines: List[str], idx: int):
         wall_str = r"(.*)Exterior Wall" + str(args[0])  # re.sub
         roof_str = r"(.*)Exterior Roof" + str(args[1])
