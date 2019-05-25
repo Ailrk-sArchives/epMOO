@@ -1,4 +1,5 @@
 from idf_handler import EPOutputReader
+from typing import List
 
 """objective functions paras"""
 SUMMER_LAMBDA = 0.415
@@ -16,11 +17,12 @@ C_e_win = 30
 total_AC_area = 1174.6
 wall_area = 792
 roof_area = 484
-
+# NOTE: Window area will change accroding to the winwallratio.
 
 def f1_energy_consumption(*args) -> float:
     # Energy consumption.
-    cop = args[-1]
+    print(args)
+    cop = float(args[9])
     summer_consumption: float = 0
     winter_consumption: float = 0
 
@@ -41,10 +43,16 @@ def f1_energy_consumption(*args) -> float:
 def f2_aPMV(*args) -> float:
     # get aPMV
     with EPOutputReader("./temp/eplusout.csv") as ep_table:
-        pmv_list = ep_table.read_column("BEDROOM2.2:Zone Thermal Comfort Fanger Model PMV [](Hourly) ")
+        pmv_list: List = []
+
+        for row in ep_table.reader:
+            if float(row["BEDROOM2.2:Zone Ideal Loads Zone Total Heating Energy [J](Hourly)"]) == 0 and \
+               float(row["BEDROOM2.2:Zone Ideal Loads Zone Total Cooling Energy [J](Hourly)"]) == 0:
+                pmv_list.append(row["BEDROOM2.2:Zone Thermal Comfort Fanger Model PMV [](Hourly) "])
+
         pmv_list = list(map(lambda x: float(x), pmv_list))
         pmv_list_summer = list(filter(lambda x: x >= 0, pmv_list))
-        pmv_list_winter = list(filter(lambda x: x < 0, pmv_list))
+        pmv_list_winter = list(filter(lambda x: x < 0, pmv_list))  # TODO: Pick out 0.
 
         apmv_list = list(map(lambda x: abs(x / 1 + SUMMER_LAMBDA * x), pmv_list_summer))
         apmv_list.extend(list(map(lambda x: abs(x / 1 - WINTER_LAMBDA * x), pmv_list_winter)))

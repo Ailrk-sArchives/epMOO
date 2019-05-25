@@ -49,7 +49,7 @@ def generate_struct(direction: str, floor_num: str, pos: List[tuple], rate: floa
         p1 = min(list(zip(*pos))[1])  # get max and min Y positions
         p2 = max(list(zip(*pos))[1])
     else:
-        p1 = min(list(zip(*pos))[2])  # get max and min Y positions
+        p1 = min(list(zip(*pos))[2])  # get max and min Z positions
         p2 = max(list(zip(*pos))[2])
 
     wall_length = abs(p2 - p1)

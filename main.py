@@ -23,5 +23,6 @@ hyperparameter = {
         "NUM_OF_TOUR_PARTICIPS": 2
 }
 
+
 if __name__ == "__main__":
     moo(paras, hyperparameter)

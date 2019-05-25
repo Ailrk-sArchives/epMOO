@@ -38,11 +38,11 @@ class EPOutputReader:
     def __init__(self, path: str):
         self.path = path
         self.file: IO = open(path, 'r')
+        self.reader = csv.DictReader(self.file)
 
     def read_column(self, column_name) -> List[str]:
-        reader = csv.DictReader(self.file)
         column: List[str] = []
-        for row in reader:
+        for row in self.reader:
             column.append(row[column_name])
 
         return column

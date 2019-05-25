@@ -1,7 +1,7 @@
-import wx
 """
 the GUI is MVC structure.
 """
+import wx
 
 
 class OptimizerWindow(wx.Frame):
