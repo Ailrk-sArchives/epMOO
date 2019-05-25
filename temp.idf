@@ -1719,7 +1719,7 @@ ZoneVentilation:DesignFlowRate,
     ,                        !- Design Flow Rate {m3/s}
     ,                        !- Flow Rate per Zone Floor Area {m3/s-m2}
     ,                        !- Flow Rate per Person {m3/s-person}
-    23.98175511958651,                       !- Air Changes per Hour {1/hr}
+    33.745271608602046,                       !- Air Changes per Hour {1/hr}
     Natural,                 !- Ventilation Type
     0,                       !- Fan Pressure Rise {Pa}
     1,                       !- Fan Total Efficiency
@@ -1747,7 +1747,7 @@ ZoneVentilation:DesignFlowRate,
     ,                        !- Design Flow Rate {m3/s}
     ,                        !- Flow Rate per Zone Floor Area {m3/s-m2}
     ,                        !- Flow Rate per Person {m3/s-person}
-    23.98175511958651,                       !- Air Changes per Hour {1/hr}
+    33.745271608602046,                       !- Air Changes per Hour {1/hr}
     Natural,                 !- Ventilation Type
     0,                       !- Fan Pressure Rise {Pa}
     1,                       !- Fan Total Efficiency
@@ -1775,7 +1775,7 @@ ZoneVentilation:DesignFlowRate,
     ,                        !- Design Flow Rate {m3/s}
     ,                        !- Flow Rate per Zone Floor Area {m3/s-m2}
     ,                        !- Flow Rate per Person {m3/s-person}
-    23.98175511958651,                       !- Air Changes per Hour {1/hr}
+    33.745271608602046,                       !- Air Changes per Hour {1/hr}
     Natural,                 !- Ventilation Type
     0,                       !- Fan Pressure Rise {Pa}
     1,                       !- Fan Total Efficiency
@@ -1803,7 +1803,7 @@ ZoneVentilation:DesignFlowRate,
     ,                        !- Design Flow Rate {m3/s}
     ,                        !- Flow Rate per Zone Floor Area {m3/s-m2}
     ,                        !- Flow Rate per Person {m3/s-person}
-    23.98175511958651,                       !- Air Changes per Hour {1/hr}
+    33.745271608602046,                       !- Air Changes per Hour {1/hr}
     Natural,                 !- Ventilation Type
     0,                       !- Fan Pressure Rise {Pa}
     1,                       !- Fan Total Efficiency
@@ -1831,7 +1831,7 @@ ZoneVentilation:DesignFlowRate,
     ,                        !- Design Flow Rate {m3/s}
     ,                        !- Flow Rate per Zone Floor Area {m3/s-m2}
     ,                        !- Flow Rate per Person {m3/s-person}
-    23.98175511958651,                       !- Air Changes per Hour {1/hr}
+    33.745271608602046,                       !- Air Changes per Hour {1/hr}
     Natural,                 !- Ventilation Type
     0,                       !- Fan Pressure Rise {Pa}
     1,                       !- Fan Total Efficiency
@@ -1859,7 +1859,7 @@ ZoneVentilation:DesignFlowRate,
     ,                        !- Design Flow Rate {m3/s}
     ,                        !- Flow Rate per Zone Floor Area {m3/s-m2}
     ,                        !- Flow Rate per Person {m3/s-person}
-    23.98175511958651,                       !- Air Changes per Hour {1/hr}
+    33.745271608602046,                       !- Air Changes per Hour {1/hr}
     Natural,                 !- Ventilation Type
     0,                       !- Fan Pressure Rise {Pa}
     1,                       !- Fan Total Efficiency
@@ -1887,7 +1887,7 @@ ZoneVentilation:DesignFlowRate,
     ,                        !- Design Flow Rate {m3/s}
     ,                        !- Flow Rate per Zone Floor Area {m3/s-m2}
     ,                        !- Flow Rate per Person {m3/s-person}
-    23.98175511958651,                       !- Air Changes per Hour {1/hr}
+    33.745271608602046,                       !- Air Changes per Hour {1/hr}
     Natural,                 !- Ventilation Type
     0,                       !- Fan Pressure Rise {Pa}
     1,                       !- Fan Total Efficiency
@@ -1915,7 +1915,7 @@ ZoneVentilation:DesignFlowRate,
     ,                        !- Design Flow Rate {m3/s}
     ,                        !- Flow Rate per Zone Floor Area {m3/s-m2}
     ,                        !- Flow Rate per Person {m3/s-person}
-    23.98175511958651,                       !- Air Changes per Hour {1/hr}
+    33.745271608602046,                       !- Air Changes per Hour {1/hr}
     Natural,                 !- Ventilation Type
     0,                       !- Fan Pressure Rise {Pa}
     1,                       !- Fan Total Efficiency
@@ -1943,7 +1943,7 @@ ZoneVentilation:DesignFlowRate,
     ,                        !- Design Flow Rate {m3/s}
     ,                        !- Flow Rate per Zone Floor Area {m3/s-m2}
     ,                        !- Flow Rate per Person {m3/s-person}
-    23.98175511958651,                       !- Air Changes per Hour {1/hr}
+    33.745271608602046,                       !- Air Changes per Hour {1/hr}
     Natural,                 !- Ventilation Type
     0,                       !- Fan Pressure Rise {Pa}
     1,                       !- Fan Total Efficiency
@@ -1971,7 +1971,7 @@ ZoneVentilation:DesignFlowRate,
     ,                        !- Design Flow Rate {m3/s}
     ,                        !- Flow Rate per Zone Floor Area {m3/s-m2}
     ,                        !- Flow Rate per Person {m3/s-person}
-    23.98175511958651,                       !- Air Changes per Hour {1/hr}
+    33.745271608602046,                       !- Air Changes per Hour {1/hr}
     Natural,                 !- Ventilation Type
     0,                       !- Fan Pressure Rise {Pa}
     1,                       !- Fan Total Efficiency
@@ -1999,7 +1999,7 @@ ZoneVentilation:DesignFlowRate,
     ,                        !- Design Flow Rate {m3/s}
     ,                        !- Flow Rate per Zone Floor Area {m3/s-m2}
     ,                        !- Flow Rate per Person {m3/s-person}
-    23.98175511958651,                       !- Air Changes per Hour {1/hr}
+    33.745271608602046,                       !- Air Changes per Hour {1/hr}
     Natural,                 !- Ventilation Type
     0,                       !- Fan Pressure Rise {Pa}
     1,                       !- Fan Total Efficiency
@@ -2027,7 +2027,7 @@ ZoneVentilation:DesignFlowRate,
     ,                        !- Design Flow Rate {m3/s}
     ,                        !- Flow Rate per Zone Floor Area {m3/s-m2}
     ,                        !- Flow Rate per Person {m3/s-person}
-    23.98175511958651,                       !- Air Changes per Hour {1/hr}
+    33.745271608602046,                       !- Air Changes per Hour {1/hr}
     Natural,                 !- Ventilation Type
     0,                       !- Fan Pressure Rise {Pa}
     1,                       !- Fan Total Efficiency
@@ -2055,7 +2055,7 @@ ZoneVentilation:DesignFlowRate,
     ,                        !- Design Flow Rate {m3/s}
     ,                        !- Flow Rate per Zone Floor Area {m3/s-m2}
     ,                        !- Flow Rate per Person {m3/s-person}
-    23.98175511958651,                       !- Air Changes per Hour {1/hr}
+    33.745271608602046,                       !- Air Changes per Hour {1/hr}
     Natural,                 !- Ventilation Type
     0,                       !- Fan Pressure Rise {Pa}
     1,                       !- Fan Total Efficiency
@@ -2083,7 +2083,7 @@ ZoneVentilation:DesignFlowRate,
     ,                        !- Design Flow Rate {m3/s}
     ,                        !- Flow Rate per Zone Floor Area {m3/s-m2}
     ,                        !- Flow Rate per Person {m3/s-person}
-    23.98175511958651,                       !- Air Changes per Hour {1/hr}
+    33.745271608602046,                       !- Air Changes per Hour {1/hr}
     Natural,                 !- Ventilation Type
     0,                       !- Fan Pressure Rise {Pa}
     1,                       !- Fan Total Efficiency
@@ -2111,7 +2111,7 @@ ZoneVentilation:DesignFlowRate,
     ,                        !- Design Flow Rate {m3/s}
     ,                        !- Flow Rate per Zone Floor Area {m3/s-m2}
     ,                        !- Flow Rate per Person {m3/s-person}
-    23.98175511958651,                       !- Air Changes per Hour {1/hr}
+    33.745271608602046,                       !- Air Changes per Hour {1/hr}
     Natural,                 !- Ventilation Type
     0,                       !- Fan Pressure Rise {Pa}
     1,                       !- Fan Total Efficiency
@@ -2139,7 +2139,7 @@ ZoneVentilation:DesignFlowRate,
     ,                        !- Design Flow Rate {m3/s}
     ,                        !- Flow Rate per Zone Floor Area {m3/s-m2}
     ,                        !- Flow Rate per Person {m3/s-person}
-    23.98175511958651,                       !- Air Changes per Hour {1/hr}
+    33.745271608602046,                       !- Air Changes per Hour {1/hr}
     Natural,                 !- Ventilation Type
     0,                       !- Fan Pressure Rise {Pa}
     1,                       !- Fan Total Efficiency
@@ -2167,7 +2167,7 @@ ZoneVentilation:DesignFlowRate,
     ,                        !- Design Flow Rate {m3/s}
     ,                        !- Flow Rate per Zone Floor Area {m3/s-m2}
     ,                        !- Flow Rate per Person {m3/s-person}
-    23.98175511958651,                       !- Air Changes per Hour {1/hr}
+    33.745271608602046,                       !- Air Changes per Hour {1/hr}
     Natural,                 !- Ventilation Type
     0,                       !- Fan Pressure Rise {Pa}
     1,                       !- Fan Total Efficiency
@@ -2195,7 +2195,7 @@ ZoneVentilation:DesignFlowRate,
     ,                        !- Design Flow Rate {m3/s}
     ,                        !- Flow Rate per Zone Floor Area {m3/s-m2}
     ,                        !- Flow Rate per Person {m3/s-person}
-    23.98175511958651,                       !- Air Changes per Hour {1/hr}
+    33.745271608602046,                       !- Air Changes per Hour {1/hr}
     Natural,                 !- Ventilation Type
     0,                       !- Fan Pressure Rise {Pa}
     1,                       !- Fan Total Efficiency
@@ -2223,7 +2223,7 @@ ZoneVentilation:DesignFlowRate,
     ,                        !- Design Flow Rate {m3/s}
     ,                        !- Flow Rate per Zone Floor Area {m3/s-m2}
     ,                        !- Flow Rate per Person {m3/s-person}
-    23.98175511958651,                       !- Air Changes per Hour {1/hr}
+    33.745271608602046,                       !- Air Changes per Hour {1/hr}
     Natural,                 !- Ventilation Type
     0,                       !- Fan Pressure Rise {Pa}
     1,                       !- Fan Total Efficiency
@@ -2251,7 +2251,7 @@ ZoneVentilation:DesignFlowRate,
     ,                        !- Design Flow Rate {m3/s}
     ,                        !- Flow Rate per Zone Floor Area {m3/s-m2}
     ,                        !- Flow Rate per Person {m3/s-person}
-    23.98175511958651,                       !- Air Changes per Hour {1/hr}
+    33.745271608602046,                       !- Air Changes per Hour {1/hr}
     Natural,                 !- Ventilation Type
     0,                       !- Fan Pressure Rise {Pa}
     1,                       !- Fan Total Efficiency
@@ -2279,7 +2279,7 @@ ZoneVentilation:DesignFlowRate,
     ,                        !- Design Flow Rate {m3/s}
     ,                        !- Flow Rate per Zone Floor Area {m3/s-m2}
     ,                        !- Flow Rate per Person {m3/s-person}
-    23.98175511958651,                       !- Air Changes per Hour {1/hr}
+    33.745271608602046,                       !- Air Changes per Hour {1/hr}
     Natural,                 !- Ventilation Type
     0,                       !- Fan Pressure Rise {Pa}
     1,                       !- Fan Total Efficiency
@@ -2307,7 +2307,7 @@ ZoneVentilation:DesignFlowRate,
     ,                        !- Design Flow Rate {m3/s}
     ,                        !- Flow Rate per Zone Floor Area {m3/s-m2}
     ,                        !- Flow Rate per Person {m3/s-person}
-    23.98175511958651,                       !- Air Changes per Hour {1/hr}
+    33.745271608602046,                       !- Air Changes per Hour {1/hr}
     Natural,                 !- Ventilation Type
     0,                       !- Fan Pressure Rise {Pa}
     1,                       !- Fan Total Efficiency
@@ -2335,7 +2335,7 @@ ZoneVentilation:DesignFlowRate,
     ,                        !- Design Flow Rate {m3/s}
     ,                        !- Flow Rate per Zone Floor Area {m3/s-m2}
     ,                        !- Flow Rate per Person {m3/s-person}
-    23.98175511958651,                       !- Air Changes per Hour {1/hr}
+    33.745271608602046,                       !- Air Changes per Hour {1/hr}
     Natural,                 !- Ventilation Type
     0,                       !- Fan Pressure Rise {Pa}
     1,                       !- Fan Total Efficiency
@@ -2363,7 +2363,7 @@ ZoneVentilation:DesignFlowRate,
     ,                        !- Design Flow Rate {m3/s}
     ,                        !- Flow Rate per Zone Floor Area {m3/s-m2}
     ,                        !- Flow Rate per Person {m3/s-person}
-    23.98175511958651,                       !- Air Changes per Hour {1/hr}
+    33.745271608602046,                       !- Air Changes per Hour {1/hr}
     Natural,                 !- Ventilation Type
     0,                       !- Fan Pressure Rise {Pa}
     1,                       !- Fan Total Efficiency
@@ -2391,7 +2391,7 @@ ZoneVentilation:DesignFlowRate,
     ,                        !- Design Flow Rate {m3/s}
     ,                        !- Flow Rate per Zone Floor Area {m3/s-m2}
     ,                        !- Flow Rate per Person {m3/s-person}
-    23.98175511958651,                       !- Air Changes per Hour {1/hr}
+    33.745271608602046,                       !- Air Changes per Hour {1/hr}
     Natural,                 !- Ventilation Type
     0,                       !- Fan Pressure Rise {Pa}
     1,                       !- Fan Total Efficiency
@@ -2419,7 +2419,7 @@ ZoneVentilation:DesignFlowRate,
     ,                        !- Design Flow Rate {m3/s}
     ,                        !- Flow Rate per Zone Floor Area {m3/s-m2}
     ,                        !- Flow Rate per Person {m3/s-person}
-    23.98175511958651,                       !- Air Changes per Hour {1/hr}
+    33.745271608602046,                       !- Air Changes per Hour {1/hr}
     Natural,                 !- Ventilation Type
     0,                       !- Fan Pressure Rise {Pa}
     1,                       !- Fan Total Efficiency
@@ -2447,7 +2447,7 @@ ZoneVentilation:DesignFlowRate,
     ,                        !- Design Flow Rate {m3/s}
     ,                        !- Flow Rate per Zone Floor Area {m3/s-m2}
     ,                        !- Flow Rate per Person {m3/s-person}
-    23.98175511958651,                       !- Air Changes per Hour {1/hr}
+    33.745271608602046,                       !- Air Changes per Hour {1/hr}
     Natural,                 !- Ventilation Type
     0,                       !- Fan Pressure Rise {Pa}
     1,                       !- Fan Total Efficiency
@@ -2475,7 +2475,7 @@ ZoneVentilation:DesignFlowRate,
     ,                        !- Design Flow Rate {m3/s}
     ,                        !- Flow Rate per Zone Floor Area {m3/s-m2}
     ,                        !- Flow Rate per Person {m3/s-person}
-    23.98175511958651,                       !- Air Changes per Hour {1/hr}
+    33.745271608602046,                       !- Air Changes per Hour {1/hr}
     Natural,                 !- Ventilation Type
     0,                       !- Fan Pressure Rise {Pa}
     1,                       !- Fan Total Efficiency
@@ -2503,7 +2503,7 @@ ZoneVentilation:DesignFlowRate,
     ,                        !- Design Flow Rate {m3/s}
     ,                        !- Flow Rate per Zone Floor Area {m3/s-m2}
     ,                        !- Flow Rate per Person {m3/s-person}
-    23.98175511958651,                       !- Air Changes per Hour {1/hr}
+    33.745271608602046,                       !- Air Changes per Hour {1/hr}
     Natural,                 !- Ventilation Type
     0,                       !- Fan Pressure Rise {Pa}
     1,                       !- Fan Total Efficiency
@@ -2531,7 +2531,7 @@ ZoneVentilation:DesignFlowRate,
     ,                        !- Design Flow Rate {m3/s}
     ,                        !- Flow Rate per Zone Floor Area {m3/s-m2}
     ,                        !- Flow Rate per Person {m3/s-person}
-    23.98175511958651,                       !- Air Changes per Hour {1/hr}
+    33.745271608602046,                       !- Air Changes per Hour {1/hr}
     Natural,                 !- Ventilation Type
     0,                       !- Fan Pressure Rise {Pa}
     1,                       !- Fan Total Efficiency
@@ -2559,7 +2559,7 @@ ZoneVentilation:DesignFlowRate,
     ,                        !- Design Flow Rate {m3/s}
     ,                        !- Flow Rate per Zone Floor Area {m3/s-m2}
     ,                        !- Flow Rate per Person {m3/s-person}
-    23.98175511958651,                       !- Air Changes per Hour {1/hr}
+    33.745271608602046,                       !- Air Changes per Hour {1/hr}
     Natural,                 !- Ventilation Type
     0,                       !- Fan Pressure Rise {Pa}
     1,                       !- Fan Total Efficiency
@@ -2587,7 +2587,7 @@ ZoneVentilation:DesignFlowRate,
     ,                        !- Design Flow Rate {m3/s}
     ,                        !- Flow Rate per Zone Floor Area {m3/s-m2}
     ,                        !- Flow Rate per Person {m3/s-person}
-    23.98175511958651,                       !- Air Changes per Hour {1/hr}
+    33.745271608602046,                       !- Air Changes per Hour {1/hr}
     Natural,                 !- Ventilation Type
     0,                       !- Fan Pressure Rise {Pa}
     1,                       !- Fan Total Efficiency
@@ -2615,7 +2615,7 @@ ZoneVentilation:DesignFlowRate,
     ,                        !- Design Flow Rate {m3/s}
     ,                        !- Flow Rate per Zone Floor Area {m3/s-m2}
     ,                        !- Flow Rate per Person {m3/s-person}
-    23.98175511958651,                       !- Air Changes per Hour {1/hr}
+    33.745271608602046,                       !- Air Changes per Hour {1/hr}
     Natural,                 !- Ventilation Type
     0,                       !- Fan Pressure Rise {Pa}
     1,                       !- Fan Total Efficiency
@@ -2643,7 +2643,7 @@ ZoneVentilation:DesignFlowRate,
     ,                        !- Design Flow Rate {m3/s}
     ,                        !- Flow Rate per Zone Floor Area {m3/s-m2}
     ,                        !- Flow Rate per Person {m3/s-person}
-    23.98175511958651,                       !- Air Changes per Hour {1/hr}
+    33.745271608602046,                       !- Air Changes per Hour {1/hr}
     Natural,                 !- Ventilation Type
     0,                       !- Fan Pressure Rise {Pa}
     1,                       !- Fan Total Efficiency
@@ -2671,7 +2671,7 @@ ZoneVentilation:DesignFlowRate,
     ,                        !- Design Flow Rate {m3/s}
     ,                        !- Flow Rate per Zone Floor Area {m3/s-m2}
     ,                        !- Flow Rate per Person {m3/s-person}
-    23.98175511958651,                       !- Air Changes per Hour {1/hr}
+    33.745271608602046,                       !- Air Changes per Hour {1/hr}
     Natural,                 !- Ventilation Type
     0,                       !- Fan Pressure Rise {Pa}
     1,                       !- Fan Total Efficiency
@@ -2699,7 +2699,7 @@ ZoneVentilation:DesignFlowRate,
     ,                        !- Design Flow Rate {m3/s}
     ,                        !- Flow Rate per Zone Floor Area {m3/s-m2}
     ,                        !- Flow Rate per Person {m3/s-person}
-    23.98175511958651,                       !- Air Changes per Hour {1/hr}
+    33.745271608602046,                       !- Air Changes per Hour {1/hr}
     Natural,                 !- Ventilation Type
     0,                       !- Fan Pressure Rise {Pa}
     1,                       !- Fan Total Efficiency
@@ -2727,7 +2727,7 @@ ZoneVentilation:DesignFlowRate,
     ,                        !- Design Flow Rate {m3/s}
     ,                        !- Flow Rate per Zone Floor Area {m3/s-m2}
     ,                        !- Flow Rate per Person {m3/s-person}
-    23.98175511958651,                       !- Air Changes per Hour {1/hr}
+    33.745271608602046,                       !- Air Changes per Hour {1/hr}
     Natural,                 !- Ventilation Type
     0,                       !- Fan Pressure Rise {Pa}
     1,                       !- Fan Total Efficiency
@@ -2755,7 +2755,7 @@ ZoneVentilation:DesignFlowRate,
     ,                        !- Design Flow Rate {m3/s}
     ,                        !- Flow Rate per Zone Floor Area {m3/s-m2}
     ,                        !- Flow Rate per Person {m3/s-person}
-    23.98175511958651,                       !- Air Changes per Hour {1/hr}
+    33.745271608602046,                       !- Air Changes per Hour {1/hr}
     Natural,                 !- Ventilation Type
     0,                       !- Fan Pressure Rise {Pa}
     1,                       !- Fan Total Efficiency
@@ -2783,7 +2783,7 @@ ZoneVentilation:DesignFlowRate,
     ,                        !- Design Flow Rate {m3/s}
     ,                        !- Flow Rate per Zone Floor Area {m3/s-m2}
     ,                        !- Flow Rate per Person {m3/s-person}
-    23.98175511958651,                       !- Air Changes per Hour {1/hr}
+    33.745271608602046,                       !- Air Changes per Hour {1/hr}
     Natural,                 !- Ventilation Type
     0,                       !- Fan Pressure Rise {Pa}
     1,                       !- Fan Total Efficiency
@@ -2811,7 +2811,7 @@ ZoneVentilation:DesignFlowRate,
     ,                        !- Design Flow Rate {m3/s}
     ,                        !- Flow Rate per Zone Floor Area {m3/s-m2}
     ,                        !- Flow Rate per Person {m3/s-person}
-    23.98175511958651,                       !- Air Changes per Hour {1/hr}
+    33.745271608602046,                       !- Air Changes per Hour {1/hr}
     Natural,                 !- Ventilation Type
     0,                       !- Fan Pressure Rise {Pa}
     1,                       !- Fan Total Efficiency
@@ -2839,7 +2839,7 @@ ZoneVentilation:DesignFlowRate,
     ,                        !- Design Flow Rate {m3/s}
     ,                        !- Flow Rate per Zone Floor Area {m3/s-m2}
     ,                        !- Flow Rate per Person {m3/s-person}
-    23.98175511958651,                       !- Air Changes per Hour {1/hr}
+    33.745271608602046,                       !- Air Changes per Hour {1/hr}
     Natural,                 !- Ventilation Type
     0,                       !- Fan Pressure Rise {Pa}
     1,                       !- Fan Total Efficiency
@@ -2867,7 +2867,7 @@ ZoneVentilation:DesignFlowRate,
     ,                        !- Design Flow Rate {m3/s}
     ,                        !- Flow Rate per Zone Floor Area {m3/s-m2}
     ,                        !- Flow Rate per Person {m3/s-person}
-    23.98175511958651,                       !- Air Changes per Hour {1/hr}
+    33.745271608602046,                       !- Air Changes per Hour {1/hr}
     Natural,                 !- Ventilation Type
     0,                       !- Fan Pressure Rise {Pa}
     1,                       !- Fan Total Efficiency
@@ -2895,7 +2895,7 @@ ZoneVentilation:DesignFlowRate,
     ,                        !- Design Flow Rate {m3/s}
     ,                        !- Flow Rate per Zone Floor Area {m3/s-m2}
     ,                        !- Flow Rate per Person {m3/s-person}
-    23.98175511958651,                       !- Air Changes per Hour {1/hr}
+    33.745271608602046,                       !- Air Changes per Hour {1/hr}
     Natural,                 !- Ventilation Type
     0,                       !- Fan Pressure Rise {Pa}
     1,                       !- Fan Total Efficiency
@@ -2923,7 +2923,7 @@ ZoneVentilation:DesignFlowRate,
     ,                        !- Design Flow Rate {m3/s}
     ,                        !- Flow Rate per Zone Floor Area {m3/s-m2}
     ,                        !- Flow Rate per Person {m3/s-person}
-    23.98175511958651,                       !- Air Changes per Hour {1/hr}
+    33.745271608602046,                       !- Air Changes per Hour {1/hr}
     Natural,                 !- Ventilation Type
     0,                       !- Fan Pressure Rise {Pa}
     1,                       !- Fan Total Efficiency
@@ -2951,7 +2951,7 @@ ZoneVentilation:DesignFlowRate,
     ,                        !- Design Flow Rate {m3/s}
     ,                        !- Flow Rate per Zone Floor Area {m3/s-m2}
     ,                        !- Flow Rate per Person {m3/s-person}
-    23.98175511958651,                       !- Air Changes per Hour {1/hr}
+    33.745271608602046,                       !- Air Changes per Hour {1/hr}
     Natural,                 !- Ventilation Type
     0,                       !- Fan Pressure Rise {Pa}
     1,                       !- Fan Total Efficiency
@@ -2979,7 +2979,7 @@ ZoneVentilation:DesignFlowRate,
     ,                        !- Design Flow Rate {m3/s}
     ,                        !- Flow Rate per Zone Floor Area {m3/s-m2}
     ,                        !- Flow Rate per Person {m3/s-person}
-    23.98175511958651,                       !- Air Changes per Hour {1/hr}
+    33.745271608602046,                       !- Air Changes per Hour {1/hr}
     Natural,                 !- Ventilation Type
     0,                       !- Fan Pressure Rise {Pa}
     1,                       !- Fan Total Efficiency
@@ -3007,7 +3007,7 @@ ZoneVentilation:DesignFlowRate,
     ,                        !- Design Flow Rate {m3/s}
     ,                        !- Flow Rate per Zone Floor Area {m3/s-m2}
     ,                        !- Flow Rate per Person {m3/s-person}
-    23.98175511958651,                       !- Air Changes per Hour {1/hr}
+    33.745271608602046,                       !- Air Changes per Hour {1/hr}
     Natural,                 !- Ventilation Type
     0,                       !- Fan Pressure Rise {Pa}
     1,                       !- Fan Total Efficiency
@@ -3035,7 +3035,7 @@ ZoneVentilation:DesignFlowRate,
     ,                        !- Design Flow Rate {m3/s}
     ,                        !- Flow Rate per Zone Floor Area {m3/s-m2}
     ,                        !- Flow Rate per Person {m3/s-person}
-    23.98175511958651,                       !- Air Changes per Hour {1/hr}
+    33.745271608602046,                       !- Air Changes per Hour {1/hr}
     Natural,                 !- Ventilation Type
     0,                       !- Fan Pressure Rise {Pa}
     1,                       !- Fan Total Efficiency
@@ -3063,7 +3063,7 @@ ZoneVentilation:DesignFlowRate,
     ,                        !- Design Flow Rate {m3/s}
     ,                        !- Flow Rate per Zone Floor Area {m3/s-m2}
     ,                        !- Flow Rate per Person {m3/s-person}
-    23.98175511958651,                       !- Air Changes per Hour {1/hr}
+    33.745271608602046,                       !- Air Changes per Hour {1/hr}
     Natural,                 !- Ventilation Type
     0,                       !- Fan Pressure Rise {Pa}
     1,                       !- Fan Total Efficiency
@@ -3091,7 +3091,7 @@ ZoneVentilation:DesignFlowRate,
     ,                        !- Design Flow Rate {m3/s}
     ,                        !- Flow Rate per Zone Floor Area {m3/s-m2}
     ,                        !- Flow Rate per Person {m3/s-person}
-    23.98175511958651,                       !- Air Changes per Hour {1/hr}
+    33.745271608602046,                       !- Air Changes per Hour {1/hr}
     Natural,                 !- Ventilation Type
     0,                       !- Fan Pressure Rise {Pa}
     1,                       !- Fan Total Efficiency
@@ -3119,7 +3119,7 @@ ZoneVentilation:DesignFlowRate,
     ,                        !- Design Flow Rate {m3/s}
     ,                        !- Flow Rate per Zone Floor Area {m3/s-m2}
     ,                        !- Flow Rate per Person {m3/s-person}
-    23.98175511958651,                       !- Air Changes per Hour {1/hr}
+    33.745271608602046,                       !- Air Changes per Hour {1/hr}
     Natural,                 !- Ventilation Type
     0,                       !- Fan Pressure Rise {Pa}
     1,                       !- Fan Total Efficiency
@@ -3147,7 +3147,7 @@ ZoneVentilation:DesignFlowRate,
     ,                        !- Design Flow Rate {m3/s}
     ,                        !- Flow Rate per Zone Floor Area {m3/s-m2}
     ,                        !- Flow Rate per Person {m3/s-person}
-    23.98175511958651,                       !- Air Changes per Hour {1/hr}
+    33.745271608602046,                       !- Air Changes per Hour {1/hr}
     Natural,                 !- Ventilation Type
     0,                       !- Fan Pressure Rise {Pa}
     1,                       !- Fan Total Efficiency
@@ -3175,7 +3175,7 @@ ZoneVentilation:DesignFlowRate,
     ,                        !- Design Flow Rate {m3/s}
     ,                        !- Flow Rate per Zone Floor Area {m3/s-m2}
     ,                        !- Flow Rate per Person {m3/s-person}
-    23.98175511958651,                       !- Air Changes per Hour {1/hr}
+    33.745271608602046,                       !- Air Changes per Hour {1/hr}
     Natural,                 !- Ventilation Type
     0,                       !- Fan Pressure Rise {Pa}
     1,                       !- Fan Total Efficiency
@@ -3203,7 +3203,7 @@ ZoneVentilation:DesignFlowRate,
     ,                        !- Design Flow Rate {m3/s}
     ,                        !- Flow Rate per Zone Floor Area {m3/s-m2}
     ,                        !- Flow Rate per Person {m3/s-person}
-    23.98175511958651,                       !- Air Changes per Hour {1/hr}
+    33.745271608602046,                       !- Air Changes per Hour {1/hr}
     Natural,                 !- Ventilation Type
     0,                       !- Fan Pressure Rise {Pa}
     1,                       !- Fan Total Efficiency
@@ -3231,7 +3231,7 @@ ZoneVentilation:DesignFlowRate,
     ,                        !- Design Flow Rate {m3/s}
     ,                        !- Flow Rate per Zone Floor Area {m3/s-m2}
     ,                        !- Flow Rate per Person {m3/s-person}
-    23.98175511958651,                       !- Air Changes per Hour {1/hr}
+    33.745271608602046,                       !- Air Changes per Hour {1/hr}
     Natural,                 !- Ventilation Type
     0,                       !- Fan Pressure Rise {Pa}
     1,                       !- Fan Total Efficiency
@@ -3259,7 +3259,7 @@ ZoneVentilation:DesignFlowRate,
     ,                        !- Design Flow Rate {m3/s}
     ,                        !- Flow Rate per Zone Floor Area {m3/s-m2}
     ,                        !- Flow Rate per Person {m3/s-person}
-    23.98175511958651,                       !- Air Changes per Hour {1/hr}
+    33.745271608602046,                       !- Air Changes per Hour {1/hr}
     Natural,                 !- Ventilation Type
     0,                       !- Fan Pressure Rise {Pa}
     1,                       !- Fan Total Efficiency
@@ -3287,7 +3287,7 @@ ZoneVentilation:DesignFlowRate,
     ,                        !- Design Flow Rate {m3/s}
     ,                        !- Flow Rate per Zone Floor Area {m3/s-m2}
     ,                        !- Flow Rate per Person {m3/s-person}
-    23.98175511958651,                       !- Air Changes per Hour {1/hr}
+    33.745271608602046,                       !- Air Changes per Hour {1/hr}
     Natural,                 !- Ventilation Type
     0,                       !- Fan Pressure Rise {Pa}
     1,                       !- Fan Total Efficiency
@@ -3315,7 +3315,7 @@ ZoneVentilation:DesignFlowRate,
     ,                        !- Design Flow Rate {m3/s}
     ,                        !- Flow Rate per Zone Floor Area {m3/s-m2}
     ,                        !- Flow Rate per Person {m3/s-person}
-    23.98175511958651,                       !- Air Changes per Hour {1/hr}
+    33.745271608602046,                       !- Air Changes per Hour {1/hr}
     Natural,                 !- Ventilation Type
     0,                       !- Fan Pressure Rise {Pa}
     1,                       !- Fan Total Efficiency
@@ -3343,7 +3343,7 @@ ZoneVentilation:DesignFlowRate,
     ,                        !- Design Flow Rate {m3/s}
     ,                        !- Flow Rate per Zone Floor Area {m3/s-m2}
     ,                        !- Flow Rate per Person {m3/s-person}
-    23.98175511958651,                       !- Air Changes per Hour {1/hr}
+    33.745271608602046,                       !- Air Changes per Hour {1/hr}
     Natural,                 !- Ventilation Type
     0,                       !- Fan Pressure Rise {Pa}
     1,                       !- Fan Total Efficiency
@@ -3371,7 +3371,7 @@ ZoneVentilation:DesignFlowRate,
     ,                        !- Design Flow Rate {m3/s}
     ,                        !- Flow Rate per Zone Floor Area {m3/s-m2}
     ,                        !- Flow Rate per Person {m3/s-person}
-    23.98175511958651,                       !- Air Changes per Hour {1/hr}
+    33.745271608602046,                       !- Air Changes per Hour {1/hr}
     Natural,                 !- Ventilation Type
     0,                       !- Fan Pressure Rise {Pa}
     1,                       !- Fan Total Efficiency
@@ -4435,7 +4435,7 @@ Construction,
     120mm gangjinhunningtu;  !- Layer 7
 
 Construction,
-    Exterior Wall1,          !- Name
+    Exterior Wall,          !- Name
     5mm shuinishajiang,      !- Outside Layer
     20mm shuinishajiang,     !- Layer 2
     200mm shaojieyanduokongzhuanqiti,  !- Layer 3
@@ -4450,7 +4450,7 @@ Construction,
     20mm shuinishajiang;     !- Layer 5
 
 Construction,
-    Exterior Wall,          !- Name
+    Exterior Wall3,          !- Name
     5mm shuinishajiang,      !- Outside Layer
     20mm nanranjisujubenban, !- Layer 2
     20mm shuinishajiang,     !- Layer 3
@@ -4525,7 +4525,7 @@ Construction,
     120mm gangjinhunningtu;  !- Layer 6
 
 Construction,
-    Exterior Roof2,          !- Name
+    Exterior Roof,          !- Name
     40mm suishiluanshihunningtu,  !- Outside Layer
     20mm shuinishajiang,     !- Layer 2
     10mm nanranjisujubenban, !- Layer 3
@@ -4565,7 +4565,7 @@ Construction,
     120mm gangjinhunningtu;  !- Layer 7
 
 Construction,
-    Exterior Roof,          !- Name
+    Exterior Roof6,          !- Name
     40mm suishiluanshihunningtu,  !- Outside Layer
     20mm shuinishajiang,     !- Layer 2
     50mm nanranjisujubenban, !- Layer 3
@@ -4585,7 +4585,7 @@ Construction,
     120mm gangjinhunningtu;  !- Layer 7
 
 Construction,
-    Exterior Window,        !- Name
+    Exterior Window1,        !- Name
     putongdantengboli;       !- Outside Layer
 
 Construction,
@@ -4593,7 +4593,7 @@ Construction,
     shuangcengzhongkongboli; !- Outside Layer
 
 Construction,
-    Exterior Window3,        !- Name
+    Exterior Window,        !- Name
     sancengzhongkongboli;    !- Outside Layer
 
 Construction,
@@ -10274,7 +10274,7 @@ Version,8.4;
 
 Building,
     3cengzhuzhai,            !- Name
-    77.00949573477732,                     !- North Axis {deg}
+    144.84676815005784,                     !- North Axis {deg}
     City,                    !- Terrain
     0.04,                    !- Loads Convergence Tolerance Value
     0.4,                     !- Temperature Convergence Tolerance Value {deltaC}
@@ -19527,13 +19527,13 @@ FenestrationSurface:Detailed,
     ,                        !- Frame and Divider Name
     ,                        !- Multiplier
     4,                       !- Number of Vertices
-    6.000000000000, 1.240468710738, 2.500000000000,
+    6.000000000000, 1.091738190637, 2.500000000000,
                                         !- X,Y,Z  1 {m}
-    6.000000000000, 1.240468710738, 1.000000000000,
+    6.000000000000, 1.091738190637, 1.000000000000,
                                         !- X,Y,Z  2 {m}
-    6.000000000000, 1.759531289262, 1.000000000000,
+    6.000000000000, 1.908261809363, 1.000000000000,
                                         !- X,Y,Z  3 {m}
-    6.000000000000, 1.759531289262, 2.500000000000;
+    6.000000000000, 1.908261809363, 2.500000000000;
                                         !- X,Y,Z  4 {m}
 
 FenestrationSurface:Detailed,
@@ -19547,13 +19547,13 @@ FenestrationSurface:Detailed,
     ,                        !- Frame and Divider Name
     ,                        !- Multiplier
     4,                       !- Number of Vertices
-    8.500000000000, 1.860703066107, 2.500000000000,
+    8.500000000000, 1.637607285955, 2.500000000000,
                                         !- X,Y,Z  1 {m}
-    8.500000000000, 1.860703066107, 1.000000000000,
+    8.500000000000, 1.637607285955, 1.000000000000,
                                         !- X,Y,Z  2 {m}
-    8.500000000000, 2.639296933893, 1.000000000000,
+    8.500000000000, 2.862392714045, 1.000000000000,
                                         !- X,Y,Z  3 {m}
-    8.500000000000, 2.639296933893, 2.500000000000;
+    8.500000000000, 2.862392714045, 2.500000000000;
                                         !- X,Y,Z  4 {m}
 
 FenestrationSurface:Detailed,
@@ -19567,13 +19567,13 @@ FenestrationSurface:Detailed,
     ,                        !- Frame and Divider Name
     ,                        !- Multiplier
     4,                       !- Number of Vertices
-    6.000000000000, 1.240468710738, 2.500000000000,
+    6.000000000000, 1.091738190637, 2.500000000000,
                                         !- X,Y,Z  1 {m}
-    6.000000000000, 1.240468710738, 1.000000000000,
+    6.000000000000, 1.091738190637, 1.000000000000,
                                         !- X,Y,Z  2 {m}
-    6.000000000000, 1.759531289262, 1.000000000000,
+    6.000000000000, 1.908261809363, 1.000000000000,
                                         !- X,Y,Z  3 {m}
-    6.000000000000, 1.759531289262, 2.500000000000;
+    6.000000000000, 1.908261809363, 2.500000000000;
                                         !- X,Y,Z  4 {m}
 
 FenestrationSurface:Detailed,
@@ -19587,13 +19587,13 @@ FenestrationSurface:Detailed,
     ,                        !- Frame and Divider Name
     ,                        !- Multiplier
     4,                       !- Number of Vertices
-    8.600000000000, 1.860703066107, 2.500000000000,
+    8.600000000000, 1.637607285955, 2.500000000000,
                                         !- X,Y,Z  1 {m}
-    8.600000000000, 1.860703066107, 1.000000000000,
+    8.600000000000, 1.637607285955, 1.000000000000,
                                         !- X,Y,Z  2 {m}
-    8.600000000000, 2.639296933893, 1.000000000000,
+    8.600000000000, 2.862392714045, 1.000000000000,
                                         !- X,Y,Z  3 {m}
-    8.600000000000, 2.639296933893, 2.500000000000;
+    8.600000000000, 2.862392714045, 2.500000000000;
                                         !- X,Y,Z  4 {m}
 
 FenestrationSurface:Detailed,
@@ -19607,13 +19607,13 @@ FenestrationSurface:Detailed,
     ,                        !- Frame and Divider Name
     ,                        !- Multiplier
     4,                       !- Number of Vertices
-    7.500000000000, 1.447213495861, 2.500000000000,
+    7.500000000000, 1.273694555743, 2.500000000000,
                                         !- X,Y,Z  1 {m}
-    7.500000000000, 1.447213495861, 1.000000000000,
+    7.500000000000, 1.273694555743, 1.000000000000,
                                         !- X,Y,Z  2 {m}
-    7.500000000000, 2.052786504139, 1.000000000000,
+    7.500000000000, 2.226305444257, 1.000000000000,
                                         !- X,Y,Z  3 {m}
-    7.500000000000, 2.052786504139, 2.500000000000;
+    7.500000000000, 2.226305444257, 2.500000000000;
                                         !- X,Y,Z  4 {m}
 
 FenestrationSurface:Detailed,
@@ -19627,13 +19627,13 @@ FenestrationSurface:Detailed,
     ,                        !- Frame and Divider Name
     ,                        !- Multiplier
     4,                       !- Number of Vertices
-    7.500000000000, 1.447213495861, 2.500000000000,
+    7.500000000000, 1.273694555743, 2.500000000000,
                                         !- X,Y,Z  1 {m}
-    7.500000000000, 1.447213495861, 1.000000000000,
+    7.500000000000, 1.273694555743, 1.000000000000,
                                         !- X,Y,Z  2 {m}
-    7.500000000000, 2.052786504139, 1.000000000000,
+    7.500000000000, 2.226305444257, 1.000000000000,
                                         !- X,Y,Z  3 {m}
-    7.500000000000, 2.052786504139, 2.500000000000;
+    7.500000000000, 2.226305444257, 2.500000000000;
                                         !- X,Y,Z  4 {m}
 
 FenestrationSurface:Detailed,
@@ -19647,13 +19647,13 @@ FenestrationSurface:Detailed,
     ,                        !- Frame and Divider Name
     ,                        !- Multiplier
     4,                       !- Number of Vertices
-    8.600000000000, 1.860703066107, 5.300000000000,
+    8.600000000000, 1.637607285955, 5.300000000000,
                                         !- X,Y,Z  1 {m}
-    8.600000000000, 1.860703066107, 3.800000000000,
+    8.600000000000, 1.637607285955, 3.800000000000,
                                         !- X,Y,Z  2 {m}
-    8.600000000000, 2.639296933893, 3.800000000000,
+    8.600000000000, 2.862392714045, 3.800000000000,
                                         !- X,Y,Z  3 {m}
-    8.600000000000, 2.639296933893, 5.300000000000;
+    8.600000000000, 2.862392714045, 5.300000000000;
                                         !- X,Y,Z  4 {m}
 
 FenestrationSurface:Detailed,
@@ -19667,13 +19667,13 @@ FenestrationSurface:Detailed,
     ,                        !- Frame and Divider Name
     ,                        !- Multiplier
     4,                       !- Number of Vertices
-    8.500000000000, 1.860703066107, 5.300000000000,
+    8.500000000000, 1.637607285955, 5.300000000000,
                                         !- X,Y,Z  1 {m}
-    8.500000000000, 1.860703066107, 3.800000000000,
+    8.500000000000, 1.637607285955, 3.800000000000,
                                         !- X,Y,Z  2 {m}
-    8.500000000000, 2.639296933893, 3.800000000000,
+    8.500000000000, 2.862392714045, 3.800000000000,
                                         !- X,Y,Z  3 {m}
-    8.500000000000, 2.639296933893, 5.300000000000;
+    8.500000000000, 2.862392714045, 5.300000000000;
                                         !- X,Y,Z  4 {m}
 
 FenestrationSurface:Detailed,
@@ -19687,13 +19687,13 @@ FenestrationSurface:Detailed,
     ,                        !- Frame and Divider Name
     ,                        !- Multiplier
     4,                       !- Number of Vertices
-    7.500000000000, 1.447213495861, 5.300000000000,
+    7.500000000000, 1.273694555743, 5.300000000000,
                                         !- X,Y,Z  1 {m}
-    7.500000000000, 1.447213495861, 3.800000000000,
+    7.500000000000, 1.273694555743, 3.800000000000,
                                         !- X,Y,Z  2 {m}
-    7.500000000000, 2.052786504139, 3.800000000000,
+    7.500000000000, 2.226305444257, 3.800000000000,
                                         !- X,Y,Z  3 {m}
-    7.500000000000, 2.052786504139, 5.300000000000;
+    7.500000000000, 2.226305444257, 5.300000000000;
                                         !- X,Y,Z  4 {m}
 
 FenestrationSurface:Detailed,
@@ -19707,13 +19707,13 @@ FenestrationSurface:Detailed,
     ,                        !- Frame and Divider Name
     ,                        !- Multiplier
     4,                       !- Number of Vertices
-    6.000000000000, 1.240468710738, 5.300000000000,
+    6.000000000000, 1.091738190637, 5.300000000000,
                                         !- X,Y,Z  1 {m}
-    6.000000000000, 1.240468710738, 3.800000000000,
+    6.000000000000, 1.091738190637, 3.800000000000,
                                         !- X,Y,Z  2 {m}
-    6.000000000000, 1.759531289262, 3.800000000000,
+    6.000000000000, 1.908261809363, 3.800000000000,
                                         !- X,Y,Z  3 {m}
-    6.000000000000, 1.759531289262, 5.300000000000;
+    6.000000000000, 1.908261809363, 5.300000000000;
                                         !- X,Y,Z  4 {m}
 
 FenestrationSurface:Detailed,
@@ -19727,13 +19727,13 @@ FenestrationSurface:Detailed,
     ,                        !- Frame and Divider Name
     ,                        !- Multiplier
     4,                       !- Number of Vertices
-    7.500000000000, 1.447213495861, 5.300000000000,
+    7.500000000000, 1.273694555743, 5.300000000000,
                                         !- X,Y,Z  1 {m}
-    7.500000000000, 1.447213495861, 3.800000000000,
+    7.500000000000, 1.273694555743, 3.800000000000,
                                         !- X,Y,Z  2 {m}
-    7.500000000000, 2.052786504139, 3.800000000000,
+    7.500000000000, 2.226305444257, 3.800000000000,
                                         !- X,Y,Z  3 {m}
-    7.500000000000, 2.052786504139, 5.300000000000;
+    7.500000000000, 2.226305444257, 5.300000000000;
                                         !- X,Y,Z  4 {m}
 
 FenestrationSurface:Detailed,
@@ -19747,13 +19747,13 @@ FenestrationSurface:Detailed,
     ,                        !- Frame and Divider Name
     ,                        !- Multiplier
     4,                       !- Number of Vertices
-    6.000000000000, 1.240468710738, 5.300000000000,
+    6.000000000000, 1.091738190637, 5.300000000000,
                                         !- X,Y,Z  1 {m}
-    6.000000000000, 1.240468710738, 3.800000000000,
+    6.000000000000, 1.091738190637, 3.800000000000,
                                         !- X,Y,Z  2 {m}
-    6.000000000000, 1.759531289262, 3.800000000000,
+    6.000000000000, 1.908261809363, 3.800000000000,
                                         !- X,Y,Z  3 {m}
-    6.000000000000, 1.759531289262, 5.300000000000;
+    6.000000000000, 1.908261809363, 5.300000000000;
                                         !- X,Y,Z  4 {m}
 
 FenestrationSurface:Detailed,
@@ -19767,13 +19767,13 @@ FenestrationSurface:Detailed,
     ,                        !- Frame and Divider Name
     ,                        !- Multiplier
     4,                       !- Number of Vertices
-    8.600000000000, 1.860703066107, 8.100000000000,
+    8.600000000000, 1.637607285955, 8.100000000000,
                                         !- X,Y,Z  1 {m}
-    8.600000000000, 1.860703066107, 6.600000000000,
+    8.600000000000, 1.637607285955, 6.600000000000,
                                         !- X,Y,Z  2 {m}
-    8.600000000000, 2.639296933893, 6.600000000000,
+    8.600000000000, 2.862392714045, 6.600000000000,
                                         !- X,Y,Z  3 {m}
-    8.600000000000, 2.639296933893, 8.100000000000;
+    8.600000000000, 2.862392714045, 8.100000000000;
                                         !- X,Y,Z  4 {m}
 
 FenestrationSurface:Detailed,
@@ -19787,13 +19787,13 @@ FenestrationSurface:Detailed,
     ,                        !- Frame and Divider Name
     ,                        !- Multiplier
     4,                       !- Number of Vertices
-    6.000000000000, 1.240468710738, 8.100000000000,
+    6.000000000000, 1.091738190637, 8.100000000000,
                                         !- X,Y,Z  1 {m}
-    6.000000000000, 1.240468710738, 6.600000000000,
+    6.000000000000, 1.091738190637, 6.600000000000,
                                         !- X,Y,Z  2 {m}
-    6.000000000000, 1.759531289262, 6.600000000000,
+    6.000000000000, 1.908261809363, 6.600000000000,
                                         !- X,Y,Z  3 {m}
-    6.000000000000, 1.759531289262, 8.100000000000;
+    6.000000000000, 1.908261809363, 8.100000000000;
                                         !- X,Y,Z  4 {m}
 
 FenestrationSurface:Detailed,
@@ -19807,13 +19807,13 @@ FenestrationSurface:Detailed,
     ,                        !- Frame and Divider Name
     ,                        !- Multiplier
     4,                       !- Number of Vertices
-    7.500000000000, 1.447213495861, 8.100000000000,
+    7.500000000000, 1.273694555743, 8.100000000000,
                                         !- X,Y,Z  1 {m}
-    7.500000000000, 1.447213495861, 6.600000000000,
+    7.500000000000, 1.273694555743, 6.600000000000,
                                         !- X,Y,Z  2 {m}
-    7.500000000000, 2.052786504139, 6.600000000000,
+    7.500000000000, 2.226305444257, 6.600000000000,
                                         !- X,Y,Z  3 {m}
-    7.500000000000, 2.052786504139, 8.100000000000;
+    7.500000000000, 2.226305444257, 8.100000000000;
                                         !- X,Y,Z  4 {m}
 
 FenestrationSurface:Detailed,
@@ -19827,13 +19827,13 @@ FenestrationSurface:Detailed,
     ,                        !- Frame and Divider Name
     ,                        !- Multiplier
     4,                       !- Number of Vertices
-    6.000000000000, 1.240468710738, 8.100000000000,
+    6.000000000000, 1.091738190637, 8.100000000000,
                                         !- X,Y,Z  1 {m}
-    6.000000000000, 1.240468710738, 6.600000000000,
+    6.000000000000, 1.091738190637, 6.600000000000,
                                         !- X,Y,Z  2 {m}
-    6.000000000000, 1.759531289262, 6.600000000000,
+    6.000000000000, 1.908261809363, 6.600000000000,
                                         !- X,Y,Z  3 {m}
-    6.000000000000, 1.759531289262, 8.100000000000;
+    6.000000000000, 1.908261809363, 8.100000000000;
                                         !- X,Y,Z  4 {m}
 
 FenestrationSurface:Detailed,
@@ -19847,13 +19847,13 @@ FenestrationSurface:Detailed,
     ,                        !- Frame and Divider Name
     ,                        !- Multiplier
     4,                       !- Number of Vertices
-    7.500000000000, 1.447213495861, 8.100000000000,
+    7.500000000000, 1.273694555743, 8.100000000000,
                                         !- X,Y,Z  1 {m}
-    7.500000000000, 1.447213495861, 6.600000000000,
+    7.500000000000, 1.273694555743, 6.600000000000,
                                         !- X,Y,Z  2 {m}
-    7.500000000000, 2.052786504139, 6.600000000000,
+    7.500000000000, 2.226305444257, 6.600000000000,
                                         !- X,Y,Z  3 {m}
-    7.500000000000, 2.052786504139, 8.100000000000;
+    7.500000000000, 2.226305444257, 8.100000000000;
                                         !- X,Y,Z  4 {m}
 
 FenestrationSurface:Detailed,
@@ -19867,13 +19867,13 @@ FenestrationSurface:Detailed,
     ,                        !- Frame and Divider Name
     ,                        !- Multiplier
     4,                       !- Number of Vertices
-    8.500000000000, 1.860703066107, 8.100000000000,
+    8.500000000000, 1.637607285955, 8.100000000000,
                                         !- X,Y,Z  1 {m}
-    8.500000000000, 1.860703066107, 6.600000000000,
+    8.500000000000, 1.637607285955, 6.600000000000,
                                         !- X,Y,Z  2 {m}
-    8.500000000000, 2.639296933893, 6.600000000000,
+    8.500000000000, 2.862392714045, 6.600000000000,
                                         !- X,Y,Z  3 {m}
-    8.500000000000, 2.639296933893, 8.100000000000;
+    8.500000000000, 2.862392714045, 8.100000000000;
                                         !- X,Y,Z  4 {m}
 
 FenestrationSurface:Detailed,
@@ -19887,13 +19887,13 @@ FenestrationSurface:Detailed,
     ,                        !- Frame and Divider Name
     ,                        !- Multiplier
     4,                       !- Number of Vertices
-    0.000000000000, 2.385520392683, 2.500000000000,
+    0.000000000000, 2.417283139739, 2.500000000000,
                                         !- X,Y,Z  1 {m}
-    0.000000000000, 2.385520392683, 1.000000000000,
+    0.000000000000, 2.417283139739, 1.000000000000,
                                         !- X,Y,Z  2 {m}
-    0.000000000000, 1.114479607317, 1.000000000000,
+    0.000000000000, 1.082716860261, 1.000000000000,
                                         !- X,Y,Z  3 {m}
-    0.000000000000, 1.114479607317, 2.500000000000;
+    0.000000000000, 1.082716860261, 2.500000000000;
                                         !- X,Y,Z  4 {m}
 
 FenestrationSurface:Detailed,
@@ -19907,13 +19907,13 @@ FenestrationSurface:Detailed,
     ,                        !- Frame and Divider Name
     ,                        !- Multiplier
     4,                       !- Number of Vertices
-    0.000000000000, 3.067097647736, 2.500000000000,
+    0.000000000000, 3.107935465378, 2.500000000000,
                                         !- X,Y,Z  1 {m}
-    0.000000000000, 3.067097647736, 1.000000000000,
+    0.000000000000, 3.107935465378, 1.000000000000,
                                         !- X,Y,Z  2 {m}
-    0.000000000000, 1.432902352264, 1.000000000000,
+    0.000000000000, 1.392064534622, 1.000000000000,
                                         !- X,Y,Z  3 {m}
-    0.000000000000, 1.432902352264, 2.500000000000;
+    0.000000000000, 1.392064534622, 2.500000000000;
                                         !- X,Y,Z  4 {m}
 
 FenestrationSurface:Detailed,
@@ -19927,13 +19927,13 @@ FenestrationSurface:Detailed,
     ,                        !- Frame and Divider Name
     ,                        !- Multiplier
     4,                       !- Number of Vertices
-    0.000000000000, 2.044731765157, 2.500000000000,
+    0.000000000000, 2.071956976919, 2.500000000000,
                                         !- X,Y,Z  1 {m}
-    0.000000000000, 2.044731765157, 1.000000000000,
+    0.000000000000, 2.071956976919, 1.000000000000,
                                         !- X,Y,Z  2 {m}
-    0.000000000000, 0.955268234843, 1.000000000000,
+    0.000000000000, 0.928043023081, 1.000000000000,
                                         !- X,Y,Z  3 {m}
-    0.000000000000, 0.955268234843, 2.500000000000;
+    0.000000000000, 0.928043023081, 2.500000000000;
                                         !- X,Y,Z  4 {m}
 
 FenestrationSurface:Detailed,
@@ -19947,13 +19947,13 @@ FenestrationSurface:Detailed,
     ,                        !- Frame and Divider Name
     ,                        !- Multiplier
     4,                       !- Number of Vertices
-    0.000000000000, 2.044731765157, 2.500000000000,
+    0.000000000000, 2.071956976919, 2.500000000000,
                                         !- X,Y,Z  1 {m}
-    0.000000000000, 2.044731765157, 1.000000000000,
+    0.000000000000, 2.071956976919, 1.000000000000,
                                         !- X,Y,Z  2 {m}
-    0.000000000000, 0.955268234843, 1.000000000000,
+    0.000000000000, 0.928043023081, 1.000000000000,
                                         !- X,Y,Z  3 {m}
-    0.000000000000, 0.955268234843, 2.500000000000;
+    0.000000000000, 0.928043023081, 2.500000000000;
                                         !- X,Y,Z  4 {m}
 
 FenestrationSurface:Detailed,
@@ -19967,13 +19967,13 @@ FenestrationSurface:Detailed,
     ,                        !- Frame and Divider Name
     ,                        !- Multiplier
     4,                       !- Number of Vertices
-    0.000000000000, 3.067097647736, 2.500000000000,
+    0.000000000000, 3.107935465378, 2.500000000000,
                                         !- X,Y,Z  1 {m}
-    0.000000000000, 3.067097647736, 1.000000000000,
+    0.000000000000, 3.107935465378, 1.000000000000,
                                         !- X,Y,Z  2 {m}
-    0.000000000000, 1.432902352264, 1.000000000000,
+    0.000000000000, 1.392064534622, 1.000000000000,
                                         !- X,Y,Z  3 {m}
-    0.000000000000, 1.432902352264, 2.500000000000;
+    0.000000000000, 1.392064534622, 2.500000000000;
                                         !- X,Y,Z  4 {m}
 
 FenestrationSurface:Detailed,
@@ -19987,13 +19987,13 @@ FenestrationSurface:Detailed,
     ,                        !- Frame and Divider Name
     ,                        !- Multiplier
     4,                       !- Number of Vertices
-    0.000000000000, 2.385520392683, 2.500000000000,
+    0.000000000000, 2.417283139739, 2.500000000000,
                                         !- X,Y,Z  1 {m}
-    0.000000000000, 2.385520392683, 1.000000000000,
+    0.000000000000, 2.417283139739, 1.000000000000,
                                         !- X,Y,Z  2 {m}
-    0.000000000000, 1.114479607317, 1.000000000000,
+    0.000000000000, 1.082716860261, 1.000000000000,
                                         !- X,Y,Z  3 {m}
-    0.000000000000, 1.114479607317, 2.500000000000;
+    0.000000000000, 1.082716860261, 2.500000000000;
                                         !- X,Y,Z  4 {m}
 
 FenestrationSurface:Detailed,
@@ -20007,13 +20007,13 @@ FenestrationSurface:Detailed,
     ,                        !- Frame and Divider Name
     ,                        !- Multiplier
     4,                       !- Number of Vertices
-    0.000000000000, 2.385520392683, 5.300000000000,
+    0.000000000000, 2.417283139739, 5.300000000000,
                                         !- X,Y,Z  1 {m}
-    0.000000000000, 2.385520392683, 3.800000000000,
+    0.000000000000, 2.417283139739, 3.800000000000,
                                         !- X,Y,Z  2 {m}
-    0.000000000000, 1.114479607317, 3.800000000000,
+    0.000000000000, 1.082716860261, 3.800000000000,
                                         !- X,Y,Z  3 {m}
-    0.000000000000, 1.114479607317, 5.300000000000;
+    0.000000000000, 1.082716860261, 5.300000000000;
                                         !- X,Y,Z  4 {m}
 
 FenestrationSurface:Detailed,
@@ -20027,13 +20027,13 @@ FenestrationSurface:Detailed,
     ,                        !- Frame and Divider Name
     ,                        !- Multiplier
     4,                       !- Number of Vertices
-    0.000000000000, 3.067097647736, 5.300000000000,
+    0.000000000000, 3.107935465378, 5.300000000000,
                                         !- X,Y,Z  1 {m}
-    0.000000000000, 3.067097647736, 3.800000000000,
+    0.000000000000, 3.107935465378, 3.800000000000,
                                         !- X,Y,Z  2 {m}
-    0.000000000000, 1.432902352264, 3.800000000000,
+    0.000000000000, 1.392064534622, 3.800000000000,
                                         !- X,Y,Z  3 {m}
-    0.000000000000, 1.432902352264, 5.300000000000;
+    0.000000000000, 1.392064534622, 5.300000000000;
                                         !- X,Y,Z  4 {m}
 
 FenestrationSurface:Detailed,
@@ -20047,13 +20047,13 @@ FenestrationSurface:Detailed,
     ,                        !- Frame and Divider Name
     ,                        !- Multiplier
     4,                       !- Number of Vertices
-    0.000000000000, 2.044731765157, 5.300000000000,
+    0.000000000000, 2.071956976919, 5.300000000000,
                                         !- X,Y,Z  1 {m}
-    0.000000000000, 2.044731765157, 3.800000000000,
+    0.000000000000, 2.071956976919, 3.800000000000,
                                         !- X,Y,Z  2 {m}
-    0.000000000000, 0.955268234843, 3.800000000000,
+    0.000000000000, 0.928043023081, 3.800000000000,
                                         !- X,Y,Z  3 {m}
-    0.000000000000, 0.955268234843, 5.300000000000;
+    0.000000000000, 0.928043023081, 5.300000000000;
                                         !- X,Y,Z  4 {m}
 
 FenestrationSurface:Detailed,
@@ -20067,13 +20067,13 @@ FenestrationSurface:Detailed,
     ,                        !- Frame and Divider Name
     ,                        !- Multiplier
     4,                       !- Number of Vertices
-    0.000000000000, 3.067097647736, 5.300000000000,
+    0.000000000000, 3.107935465378, 5.300000000000,
                                         !- X,Y,Z  1 {m}
-    0.000000000000, 3.067097647736, 3.800000000000,
+    0.000000000000, 3.107935465378, 3.800000000000,
                                         !- X,Y,Z  2 {m}
-    0.000000000000, 1.432902352264, 3.800000000000,
+    0.000000000000, 1.392064534622, 3.800000000000,
                                         !- X,Y,Z  3 {m}
-    0.000000000000, 1.432902352264, 5.300000000000;
+    0.000000000000, 1.392064534622, 5.300000000000;
                                         !- X,Y,Z  4 {m}
 
 FenestrationSurface:Detailed,
@@ -20087,13 +20087,13 @@ FenestrationSurface:Detailed,
     ,                        !- Frame and Divider Name
     ,                        !- Multiplier
     4,                       !- Number of Vertices
-    0.000000000000, 2.385520392683, 5.300000000000,
+    0.000000000000, 2.417283139739, 5.300000000000,
                                         !- X,Y,Z  1 {m}
-    0.000000000000, 2.385520392683, 3.800000000000,
+    0.000000000000, 2.417283139739, 3.800000000000,
                                         !- X,Y,Z  2 {m}
-    0.000000000000, 1.114479607317, 3.800000000000,
+    0.000000000000, 1.082716860261, 3.800000000000,
                                         !- X,Y,Z  3 {m}
-    0.000000000000, 1.114479607317, 5.300000000000;
+    0.000000000000, 1.082716860261, 5.300000000000;
                                         !- X,Y,Z  4 {m}
 
 FenestrationSurface:Detailed,
@@ -20107,13 +20107,13 @@ FenestrationSurface:Detailed,
     ,                        !- Frame and Divider Name
     ,                        !- Multiplier
     4,                       !- Number of Vertices
-    0.000000000000, 2.044731765157, 5.300000000000,
+    0.000000000000, 2.071956976919, 5.300000000000,
                                         !- X,Y,Z  1 {m}
-    0.000000000000, 2.044731765157, 3.800000000000,
+    0.000000000000, 2.071956976919, 3.800000000000,
                                         !- X,Y,Z  2 {m}
-    0.000000000000, 0.955268234843, 3.800000000000,
+    0.000000000000, 0.928043023081, 3.800000000000,
                                         !- X,Y,Z  3 {m}
-    0.000000000000, 0.955268234843, 5.300000000000;
+    0.000000000000, 0.928043023081, 5.300000000000;
                                         !- X,Y,Z  4 {m}
 
 FenestrationSurface:Detailed,
@@ -20127,13 +20127,13 @@ FenestrationSurface:Detailed,
     ,                        !- Frame and Divider Name
     ,                        !- Multiplier
     4,                       !- Number of Vertices
-    0.000000000000, 2.385520392683, 8.100000000000,
+    0.000000000000, 2.417283139739, 8.100000000000,
                                         !- X,Y,Z  1 {m}
-    0.000000000000, 2.385520392683, 6.600000000000,
+    0.000000000000, 2.417283139739, 6.600000000000,
                                         !- X,Y,Z  2 {m}
-    0.000000000000, 1.114479607317, 6.600000000000,
+    0.000000000000, 1.082716860261, 6.600000000000,
                                         !- X,Y,Z  3 {m}
-    0.000000000000, 1.114479607317, 8.100000000000;
+    0.000000000000, 1.082716860261, 8.100000000000;
                                         !- X,Y,Z  4 {m}
 
 FenestrationSurface:Detailed,
@@ -20147,13 +20147,13 @@ FenestrationSurface:Detailed,
     ,                        !- Frame and Divider Name
     ,                        !- Multiplier
     4,                       !- Number of Vertices
-    0.000000000000, 3.067097647736, 8.100000000000,
+    0.000000000000, 3.107935465378, 8.100000000000,
                                         !- X,Y,Z  1 {m}
-    0.000000000000, 3.067097647736, 6.600000000000,
+    0.000000000000, 3.107935465378, 6.600000000000,
                                         !- X,Y,Z  2 {m}
-    0.000000000000, 1.432902352264, 6.600000000000,
+    0.000000000000, 1.392064534622, 6.600000000000,
                                         !- X,Y,Z  3 {m}
-    0.000000000000, 1.432902352264, 8.100000000000;
+    0.000000000000, 1.392064534622, 8.100000000000;
                                         !- X,Y,Z  4 {m}
 
 FenestrationSurface:Detailed,
@@ -20167,13 +20167,13 @@ FenestrationSurface:Detailed,
     ,                        !- Frame and Divider Name
     ,                        !- Multiplier
     4,                       !- Number of Vertices
-    0.000000000000, 2.044731765157, 8.100000000000,
+    0.000000000000, 2.071956976919, 8.100000000000,
                                         !- X,Y,Z  1 {m}
-    0.000000000000, 2.044731765157, 6.600000000000,
+    0.000000000000, 2.071956976919, 6.600000000000,
                                         !- X,Y,Z  2 {m}
-    0.000000000000, 0.955268234843, 6.600000000000,
+    0.000000000000, 0.928043023081, 6.600000000000,
                                         !- X,Y,Z  3 {m}
-    0.000000000000, 0.955268234843, 8.100000000000;
+    0.000000000000, 0.928043023081, 8.100000000000;
                                         !- X,Y,Z  4 {m}
 
 FenestrationSurface:Detailed,
@@ -20187,13 +20187,13 @@ FenestrationSurface:Detailed,
     ,                        !- Frame and Divider Name
     ,                        !- Multiplier
     4,                       !- Number of Vertices
-    0.000000000000, 3.067097647736, 8.100000000000,
+    0.000000000000, 3.107935465378, 8.100000000000,
                                         !- X,Y,Z  1 {m}
-    0.000000000000, 3.067097647736, 6.600000000000,
+    0.000000000000, 3.107935465378, 6.600000000000,
                                         !- X,Y,Z  2 {m}
-    0.000000000000, 1.432902352264, 6.600000000000,
+    0.000000000000, 1.392064534622, 6.600000000000,
                                         !- X,Y,Z  3 {m}
-    0.000000000000, 1.432902352264, 8.100000000000;
+    0.000000000000, 1.392064534622, 8.100000000000;
                                         !- X,Y,Z  4 {m}
 
 FenestrationSurface:Detailed,
@@ -20207,13 +20207,13 @@ FenestrationSurface:Detailed,
     ,                        !- Frame and Divider Name
     ,                        !- Multiplier
     4,                       !- Number of Vertices
-    0.000000000000, 2.044731765157, 8.100000000000,
+    0.000000000000, 2.071956976919, 8.100000000000,
                                         !- X,Y,Z  1 {m}
-    0.000000000000, 2.044731765157, 6.600000000000,
+    0.000000000000, 2.071956976919, 6.600000000000,
                                         !- X,Y,Z  2 {m}
-    0.000000000000, 0.955268234843, 6.600000000000,
+    0.000000000000, 0.928043023081, 6.600000000000,
                                         !- X,Y,Z  3 {m}
-    0.000000000000, 0.955268234843, 8.100000000000;
+    0.000000000000, 0.928043023081, 8.100000000000;
                                         !- X,Y,Z  4 {m}
 
 FenestrationSurface:Detailed,
@@ -20227,13 +20227,13 @@ FenestrationSurface:Detailed,
     ,                        !- Frame and Divider Name
     ,                        !- Multiplier
     4,                       !- Number of Vertices
-    0.000000000000, 2.385520392683, 8.100000000000,
+    0.000000000000, 2.417283139739, 8.100000000000,
                                         !- X,Y,Z  1 {m}
-    0.000000000000, 2.385520392683, 6.600000000000,
+    0.000000000000, 2.417283139739, 6.600000000000,
                                         !- X,Y,Z  2 {m}
-    0.000000000000, 1.114479607317, 6.600000000000,
+    0.000000000000, 1.082716860261, 6.600000000000,
                                         !- X,Y,Z  3 {m}
-    0.000000000000, 1.114479607317, 8.100000000000;
+    0.000000000000, 1.082716860261, 8.100000000000;
                                         !- X,Y,Z  4 {m}
 
 FenestrationSurface:Detailed,
@@ -20247,13 +20247,13 @@ FenestrationSurface:Detailed,
     ,                        !- Frame and Divider Name
     ,                        !- Multiplier
     4,                       !- Number of Vertices
-    0.725995353586, 0.000000000000, 2.500000000000,
+    1.344429284262, 0.000000000000, 2.500000000000,
                                         !- X,Y,Z  1 {m}
-    0.725995353586, 0.000000000000, 1.000000000000,
+    1.344429284262, 0.000000000000, 1.000000000000,
                                         !- X,Y,Z  2 {m}
-    2.274004646414, 0.000000000000, 1.000000000000,
+    1.655570715738, 0.000000000000, 1.000000000000,
                                         !- X,Y,Z  3 {m}
-    2.274004646414, 0.000000000000, 2.500000000000;
+    1.655570715738, 0.000000000000, 2.500000000000;
                                         !- X,Y,Z  4 {m}
 
 FenestrationSurface:Detailed,
@@ -20267,13 +20267,13 @@ FenestrationSurface:Detailed,
     ,                        !- Frame and Divider Name
     ,                        !- Multiplier
     4,                       !- Number of Vertices
-    0.725995353586, 0.000000000000, 2.500000000000,
+    1.344429284262, 0.000000000000, 2.500000000000,
                                         !- X,Y,Z  1 {m}
-    0.725995353586, 0.000000000000, 1.000000000000,
+    1.344429284262, 0.000000000000, 1.000000000000,
                                         !- X,Y,Z  2 {m}
-    2.274004646414, 0.000000000000, 1.000000000000,
+    1.655570715738, 0.000000000000, 1.000000000000,
                                         !- X,Y,Z  3 {m}
-    2.274004646414, 0.000000000000, 2.500000000000;
+    1.655570715738, 0.000000000000, 2.500000000000;
                                         !- X,Y,Z  4 {m}
 
 FenestrationSurface:Detailed,
@@ -20287,13 +20287,13 @@ FenestrationSurface:Detailed,
     ,                        !- Frame and Divider Name
     ,                        !- Multiplier
     4,                       !- Number of Vertices
-    0.725995353586, 0.000000000000, 2.500000000000,
+    1.344429284262, 0.000000000000, 2.500000000000,
                                         !- X,Y,Z  1 {m}
-    0.725995353586, 0.000000000000, 1.000000000000,
+    1.344429284262, 0.000000000000, 1.000000000000,
                                         !- X,Y,Z  2 {m}
-    2.274004646414, 0.000000000000, 1.000000000000,
+    1.655570715738, 0.000000000000, 1.000000000000,
                                         !- X,Y,Z  3 {m}
-    2.274004646414, 0.000000000000, 2.500000000000;
+    1.655570715738, 0.000000000000, 2.500000000000;
                                         !- X,Y,Z  4 {m}
 
 FenestrationSurface:Detailed,
@@ -20307,13 +20307,13 @@ FenestrationSurface:Detailed,
     ,                        !- Frame and Divider Name
     ,                        !- Multiplier
     4,                       !- Number of Vertices
-    0.725995353586, 0.000000000000, 2.500000000000,
+    1.344429284262, 0.000000000000, 2.500000000000,
                                         !- X,Y,Z  1 {m}
-    0.725995353586, 0.000000000000, 1.000000000000,
+    1.344429284262, 0.000000000000, 1.000000000000,
                                         !- X,Y,Z  2 {m}
-    2.274004646414, 0.000000000000, 1.000000000000,
+    1.655570715738, 0.000000000000, 1.000000000000,
                                         !- X,Y,Z  3 {m}
-    2.274004646414, 0.000000000000, 2.500000000000;
+    1.655570715738, 0.000000000000, 2.500000000000;
                                         !- X,Y,Z  4 {m}
 
 FenestrationSurface:Detailed,
@@ -20327,13 +20327,13 @@ FenestrationSurface:Detailed,
     ,                        !- Frame and Divider Name
     ,                        !- Multiplier
     4,                       !- Number of Vertices
-    3.725995353586, 0.000000000000, 5.300000000000,
+    4.344429284262, 0.000000000000, 5.300000000000,
                                         !- X,Y,Z  1 {m}
-    3.725995353586, 0.000000000000, 3.800000000000,
+    4.344429284262, 0.000000000000, 3.800000000000,
                                         !- X,Y,Z  2 {m}
-    5.274004646414, 0.000000000000, 3.800000000000,
+    4.655570715738, 0.000000000000, 3.800000000000,
                                         !- X,Y,Z  3 {m}
-    5.274004646414, 0.000000000000, 5.300000000000;
+    4.655570715738, 0.000000000000, 5.300000000000;
                                         !- X,Y,Z  4 {m}
 
 FenestrationSurface:Detailed,
@@ -20347,13 +20347,13 @@ FenestrationSurface:Detailed,
     ,                        !- Frame and Divider Name
     ,                        !- Multiplier
     4,                       !- Number of Vertices
-    3.725995353586, 0.000000000000, 5.300000000000,
+    4.344429284262, 0.000000000000, 5.300000000000,
                                         !- X,Y,Z  1 {m}
-    3.725995353586, 0.000000000000, 3.800000000000,
+    4.344429284262, 0.000000000000, 3.800000000000,
                                         !- X,Y,Z  2 {m}
-    5.274004646414, 0.000000000000, 3.800000000000,
+    4.655570715738, 0.000000000000, 3.800000000000,
                                         !- X,Y,Z  3 {m}
-    5.274004646414, 0.000000000000, 5.300000000000;
+    4.655570715738, 0.000000000000, 5.300000000000;
                                         !- X,Y,Z  4 {m}
 
 FenestrationSurface:Detailed,
@@ -20367,13 +20367,13 @@ FenestrationSurface:Detailed,
     ,                        !- Frame and Divider Name
     ,                        !- Multiplier
     4,                       !- Number of Vertices
-    3.725995353586, 0.000000000000, 5.300000000000,
+    4.344429284262, 0.000000000000, 5.300000000000,
                                         !- X,Y,Z  1 {m}
-    3.725995353586, 0.000000000000, 3.800000000000,
+    4.344429284262, 0.000000000000, 3.800000000000,
                                         !- X,Y,Z  2 {m}
-    5.274004646414, 0.000000000000, 3.800000000000,
+    4.655570715738, 0.000000000000, 3.800000000000,
                                         !- X,Y,Z  3 {m}
-    5.274004646414, 0.000000000000, 5.300000000000;
+    4.655570715738, 0.000000000000, 5.300000000000;
                                         !- X,Y,Z  4 {m}
 
 FenestrationSurface:Detailed,
@@ -20387,13 +20387,13 @@ FenestrationSurface:Detailed,
     ,                        !- Frame and Divider Name
     ,                        !- Multiplier
     4,                       !- Number of Vertices
-    3.725995353586, 0.000000000000, 5.300000000000,
+    4.344429284262, 0.000000000000, 5.300000000000,
                                         !- X,Y,Z  1 {m}
-    3.725995353586, 0.000000000000, 3.800000000000,
+    4.344429284262, 0.000000000000, 3.800000000000,
                                         !- X,Y,Z  2 {m}
-    5.274004646414, 0.000000000000, 3.800000000000,
+    4.655570715738, 0.000000000000, 3.800000000000,
                                         !- X,Y,Z  3 {m}
-    5.274004646414, 0.000000000000, 5.300000000000;
+    4.655570715738, 0.000000000000, 5.300000000000;
                                         !- X,Y,Z  4 {m}
 
 FenestrationSurface:Detailed,
@@ -20407,13 +20407,13 @@ FenestrationSurface:Detailed,
     ,                        !- Frame and Divider Name
     ,                        !- Multiplier
     4,                       !- Number of Vertices
-    6.725995353586, 0.000000000000, 8.100000000000,
+    7.344429284262, 0.000000000000, 8.100000000000,
                                         !- X,Y,Z  1 {m}
-    6.725995353586, 0.000000000000, 6.600000000000,
+    7.344429284262, 0.000000000000, 6.600000000000,
                                         !- X,Y,Z  2 {m}
-    8.274004646414, 0.000000000000, 6.600000000000,
+    7.655570715738, 0.000000000000, 6.600000000000,
                                         !- X,Y,Z  3 {m}
-    8.274004646414, 0.000000000000, 8.100000000000;
+    7.655570715738, 0.000000000000, 8.100000000000;
                                         !- X,Y,Z  4 {m}
 
 FenestrationSurface:Detailed,
@@ -20427,13 +20427,13 @@ FenestrationSurface:Detailed,
     ,                        !- Frame and Divider Name
     ,                        !- Multiplier
     4,                       !- Number of Vertices
-    6.725995353586, 0.000000000000, 8.100000000000,
+    7.344429284262, 0.000000000000, 8.100000000000,
                                         !- X,Y,Z  1 {m}
-    6.725995353586, 0.000000000000, 6.600000000000,
+    7.344429284262, 0.000000000000, 6.600000000000,
                                         !- X,Y,Z  2 {m}
-    8.274004646414, 0.000000000000, 6.600000000000,
+    7.655570715738, 0.000000000000, 6.600000000000,
                                         !- X,Y,Z  3 {m}
-    8.274004646414, 0.000000000000, 8.100000000000;
+    7.655570715738, 0.000000000000, 8.100000000000;
                                         !- X,Y,Z  4 {m}
 
 FenestrationSurface:Detailed,
@@ -20447,13 +20447,13 @@ FenestrationSurface:Detailed,
     ,                        !- Frame and Divider Name
     ,                        !- Multiplier
     4,                       !- Number of Vertices
-    6.725995353586, 0.000000000000, 8.100000000000,
+    7.344429284262, 0.000000000000, 8.100000000000,
                                         !- X,Y,Z  1 {m}
-    6.725995353586, 0.000000000000, 6.600000000000,
+    7.344429284262, 0.000000000000, 6.600000000000,
                                         !- X,Y,Z  2 {m}
-    8.274004646414, 0.000000000000, 6.600000000000,
+    7.655570715738, 0.000000000000, 6.600000000000,
                                         !- X,Y,Z  3 {m}
-    8.274004646414, 0.000000000000, 8.100000000000;
+    7.655570715738, 0.000000000000, 8.100000000000;
                                         !- X,Y,Z  4 {m}
 
 FenestrationSurface:Detailed,
@@ -20467,13 +20467,13 @@ FenestrationSurface:Detailed,
     ,                        !- Frame and Divider Name
     ,                        !- Multiplier
     4,                       !- Number of Vertices
-    6.725995353586, 0.000000000000, 8.100000000000,
+    7.344429284262, 0.000000000000, 8.100000000000,
                                         !- X,Y,Z  1 {m}
-    6.725995353586, 0.000000000000, 6.600000000000,
+    7.344429284262, 0.000000000000, 6.600000000000,
                                         !- X,Y,Z  2 {m}
-    8.274004646414, 0.000000000000, 6.600000000000,
+    7.655570715738, 0.000000000000, 6.600000000000,
                                         !- X,Y,Z  3 {m}
-    8.274004646414, 0.000000000000, 8.100000000000;
+    7.655570715738, 0.000000000000, 8.100000000000;
                                         !- X,Y,Z  4 {m}
 
 FenestrationSurface:Detailed,
@@ -20487,13 +20487,13 @@ FenestrationSurface:Detailed,
     ,                        !- Frame and Divider Name
     ,                        !- Multiplier
     4,                       !- Number of Vertices
-    2.179381531063, 3.000000000000, 2.500000000000,
+    1.677764537330, 3.000000000000, 2.500000000000,
                                         !- X,Y,Z  1 {m}
-    2.179381531063, 3.000000000000, 1.000000000000,
+    1.677764537330, 3.000000000000, 1.000000000000,
                                         !- X,Y,Z  2 {m}
-    0.820618468937, 3.000000000000, 1.000000000000,
+    1.322235462670, 3.000000000000, 1.000000000000,
                                         !- X,Y,Z  3 {m}
-    0.820618468937, 3.000000000000, 2.500000000000;
+    1.322235462670, 3.000000000000, 2.500000000000;
                                         !- X,Y,Z  4 {m}
 
 FenestrationSurface:Detailed,
@@ -20507,13 +20507,13 @@ FenestrationSurface:Detailed,
     ,                        !- Frame and Divider Name
     ,                        !- Multiplier
     4,                       !- Number of Vertices
-    2.179381531063, 3.000000000000, 2.500000000000,
+    1.677764537330, 3.000000000000, 2.500000000000,
                                         !- X,Y,Z  1 {m}
-    2.179381531063, 3.000000000000, 1.000000000000,
+    1.677764537330, 3.000000000000, 1.000000000000,
                                         !- X,Y,Z  2 {m}
-    0.820618468937, 3.000000000000, 1.000000000000,
+    1.322235462670, 3.000000000000, 1.000000000000,
                                         !- X,Y,Z  3 {m}
-    0.820618468937, 3.000000000000, 2.500000000000;
+    1.322235462670, 3.000000000000, 2.500000000000;
                                         !- X,Y,Z  4 {m}
 
 FenestrationSurface:Detailed,
@@ -20527,13 +20527,13 @@ FenestrationSurface:Detailed,
     ,                        !- Frame and Divider Name
     ,                        !- Multiplier
     4,                       !- Number of Vertices
-    2.179381531063, 3.000000000000, 2.500000000000,
+    1.677764537330, 3.000000000000, 2.500000000000,
                                         !- X,Y,Z  1 {m}
-    2.179381531063, 3.000000000000, 1.000000000000,
+    1.677764537330, 3.000000000000, 1.000000000000,
                                         !- X,Y,Z  2 {m}
-    0.820618468937, 3.000000000000, 1.000000000000,
+    1.322235462670, 3.000000000000, 1.000000000000,
                                         !- X,Y,Z  3 {m}
-    0.820618468937, 3.000000000000, 2.500000000000;
+    1.322235462670, 3.000000000000, 2.500000000000;
                                         !- X,Y,Z  4 {m}
 
 FenestrationSurface:Detailed,
@@ -20547,13 +20547,13 @@ FenestrationSurface:Detailed,
     ,                        !- Frame and Divider Name
     ,                        !- Multiplier
     4,                       !- Number of Vertices
-    2.179381531063, 3.000000000000, 2.500000000000,
+    1.677764537330, 3.000000000000, 2.500000000000,
                                         !- X,Y,Z  1 {m}
-    2.179381531063, 3.000000000000, 1.000000000000,
+    1.677764537330, 3.000000000000, 1.000000000000,
                                         !- X,Y,Z  2 {m}
-    0.820618468937, 3.000000000000, 1.000000000000,
+    1.322235462670, 3.000000000000, 1.000000000000,
                                         !- X,Y,Z  3 {m}
-    0.820618468937, 3.000000000000, 2.500000000000;
+    1.322235462670, 3.000000000000, 2.500000000000;
                                         !- X,Y,Z  4 {m}
 
 FenestrationSurface:Detailed,
@@ -20567,13 +20567,13 @@ FenestrationSurface:Detailed,
     ,                        !- Frame and Divider Name
     ,                        !- Multiplier
     4,                       !- Number of Vertices
-    5.179381531063, 3.000000000000, 5.300000000000,
+    4.677764537330, 3.000000000000, 5.300000000000,
                                         !- X,Y,Z  1 {m}
-    5.179381531063, 3.000000000000, 3.800000000000,
+    4.677764537330, 3.000000000000, 3.800000000000,
                                         !- X,Y,Z  2 {m}
-    3.820618468937, 3.000000000000, 3.800000000000,
+    4.322235462670, 3.000000000000, 3.800000000000,
                                         !- X,Y,Z  3 {m}
-    3.820618468937, 3.000000000000, 5.300000000000;
+    4.322235462670, 3.000000000000, 5.300000000000;
                                         !- X,Y,Z  4 {m}
 
 FenestrationSurface:Detailed,
@@ -20587,13 +20587,13 @@ FenestrationSurface:Detailed,
     ,                        !- Frame and Divider Name
     ,                        !- Multiplier
     4,                       !- Number of Vertices
-    5.179381531063, 3.000000000000, 5.300000000000,
+    4.677764537330, 3.000000000000, 5.300000000000,
                                         !- X,Y,Z  1 {m}
-    5.179381531063, 3.000000000000, 3.800000000000,
+    4.677764537330, 3.000000000000, 3.800000000000,
                                         !- X,Y,Z  2 {m}
-    3.820618468937, 3.000000000000, 3.800000000000,
+    4.322235462670, 3.000000000000, 3.800000000000,
                                         !- X,Y,Z  3 {m}
-    3.820618468937, 3.000000000000, 5.300000000000;
+    4.322235462670, 3.000000000000, 5.300000000000;
                                         !- X,Y,Z  4 {m}
 
 FenestrationSurface:Detailed,
@@ -20607,13 +20607,13 @@ FenestrationSurface:Detailed,
     ,                        !- Frame and Divider Name
     ,                        !- Multiplier
     4,                       !- Number of Vertices
-    5.179381531063, 3.000000000000, 5.300000000000,
+    4.677764537330, 3.000000000000, 5.300000000000,
                                         !- X,Y,Z  1 {m}
-    5.179381531063, 3.000000000000, 3.800000000000,
+    4.677764537330, 3.000000000000, 3.800000000000,
                                         !- X,Y,Z  2 {m}
-    3.820618468937, 3.000000000000, 3.800000000000,
+    4.322235462670, 3.000000000000, 3.800000000000,
                                         !- X,Y,Z  3 {m}
-    3.820618468937, 3.000000000000, 5.300000000000;
+    4.322235462670, 3.000000000000, 5.300000000000;
                                         !- X,Y,Z  4 {m}
 
 FenestrationSurface:Detailed,
@@ -20627,13 +20627,13 @@ FenestrationSurface:Detailed,
     ,                        !- Frame and Divider Name
     ,                        !- Multiplier
     4,                       !- Number of Vertices
-    5.179381531063, 3.000000000000, 5.300000000000,
+    4.677764537330, 3.000000000000, 5.300000000000,
                                         !- X,Y,Z  1 {m}
-    5.179381531063, 3.000000000000, 3.800000000000,
+    4.677764537330, 3.000000000000, 3.800000000000,
                                         !- X,Y,Z  2 {m}
-    3.820618468937, 3.000000000000, 3.800000000000,
+    4.322235462670, 3.000000000000, 3.800000000000,
                                         !- X,Y,Z  3 {m}
-    3.820618468937, 3.000000000000, 5.300000000000;
+    4.322235462670, 3.000000000000, 5.300000000000;
                                         !- X,Y,Z  4 {m}
 
 FenestrationSurface:Detailed,
@@ -20647,13 +20647,13 @@ FenestrationSurface:Detailed,
     ,                        !- Frame and Divider Name
     ,                        !- Multiplier
     4,                       !- Number of Vertices
-    8.179381531063, 3.000000000000, 8.100000000000,
+    7.677764537330, 3.000000000000, 8.100000000000,
                                         !- X,Y,Z  1 {m}
-    8.179381531063, 3.000000000000, 6.600000000000,
+    7.677764537330, 3.000000000000, 6.600000000000,
                                         !- X,Y,Z  2 {m}
-    6.820618468937, 3.000000000000, 6.600000000000,
+    7.322235462670, 3.000000000000, 6.600000000000,
                                         !- X,Y,Z  3 {m}
-    6.820618468937, 3.000000000000, 8.100000000000;
+    7.322235462670, 3.000000000000, 8.100000000000;
                                         !- X,Y,Z  4 {m}
 
 FenestrationSurface:Detailed,
@@ -20667,13 +20667,13 @@ FenestrationSurface:Detailed,
     ,                        !- Frame and Divider Name
     ,                        !- Multiplier
     4,                       !- Number of Vertices
-    8.179381531063, 3.000000000000, 8.100000000000,
+    7.677764537330, 3.000000000000, 8.100000000000,
                                         !- X,Y,Z  1 {m}
-    8.179381531063, 3.000000000000, 6.600000000000,
+    7.677764537330, 3.000000000000, 6.600000000000,
                                         !- X,Y,Z  2 {m}
-    6.820618468937, 3.000000000000, 6.600000000000,
+    7.322235462670, 3.000000000000, 6.600000000000,
                                         !- X,Y,Z  3 {m}
-    6.820618468937, 3.000000000000, 8.100000000000;
+    7.322235462670, 3.000000000000, 8.100000000000;
                                         !- X,Y,Z  4 {m}
 
 FenestrationSurface:Detailed,
@@ -20687,13 +20687,13 @@ FenestrationSurface:Detailed,
     ,                        !- Frame and Divider Name
     ,                        !- Multiplier
     4,                       !- Number of Vertices
-    8.179381531063, 3.000000000000, 8.100000000000,
+    7.677764537330, 3.000000000000, 8.100000000000,
                                         !- X,Y,Z  1 {m}
-    8.179381531063, 3.000000000000, 6.600000000000,
+    7.677764537330, 3.000000000000, 6.600000000000,
                                         !- X,Y,Z  2 {m}
-    6.820618468937, 3.000000000000, 6.600000000000,
+    7.322235462670, 3.000000000000, 6.600000000000,
                                         !- X,Y,Z  3 {m}
-    6.820618468937, 3.000000000000, 8.100000000000;
+    7.322235462670, 3.000000000000, 8.100000000000;
                                         !- X,Y,Z  4 {m}
 
 FenestrationSurface:Detailed,
@@ -20707,11 +20707,11 @@ FenestrationSurface:Detailed,
     ,                        !- Frame and Divider Name
     ,                        !- Multiplier
     4,                       !- Number of Vertices
-    8.179381531063, 3.000000000000, 8.100000000000,
+    7.677764537330, 3.000000000000, 8.100000000000,
                                         !- X,Y,Z  1 {m}
-    8.179381531063, 3.000000000000, 6.600000000000,
+    7.677764537330, 3.000000000000, 6.600000000000,
                                         !- X,Y,Z  2 {m}
-    6.820618468937, 3.000000000000, 6.600000000000,
+    7.322235462670, 3.000000000000, 6.600000000000,
                                         !- X,Y,Z  3 {m}
-    6.820618468937, 3.000000000000, 8.100000000000;
+    7.322235462670, 3.000000000000, 8.100000000000;
                                         !- X,Y,Z  4 {m}

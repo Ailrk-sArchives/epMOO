@@ -1,6 +1,6 @@
 from idf_handler import EPOutputReader
 
-"""objective functions."""
+"""objective functions paras"""
 EER = 2.3
 COP = 1.9
 SUMMER_LAMBDA = 0.415

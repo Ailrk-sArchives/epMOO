@@ -2,7 +2,7 @@ import sys
 sys.path.append("../")
 import idf_handler as IdfH
 from typing import List
-from utils import generate_new_construction
+from utils import generate_struct
 
 winwallrate = [0.15, 0.34, 0.23, 0.11]
 args = [1, 1, 1]
@@ -44,19 +44,19 @@ with IdfH.IdfIOStream("../jizhun.idf", "idf") as idf:
 
     for w in east_list:
         idf.append(
-                generate_new_construction(
+                generate_struct(
                     w[0], w[1:], winwallrate[0]))
     for w in west_list:
         idf.append(
-                generate_new_construction(
+                generate_struct(
                     w[0], w[1:], winwallrate[0]))
     for w in south_list:
         idf.append(
-                generate_new_construction(
+                generate_struct(
                     w[0], w[1:], winwallrate[0]))
     for w in north_list:
         idf.append(
-                generate_new_construction(
+                generate_struct(
                     w[0], w[1:], winwallrate[0]))
 
     for line in idf.rlines:

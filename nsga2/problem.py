@@ -1,6 +1,7 @@
 from nsga2.individual import Individual
 import random
 
+
 class Problem:
 
     def __init__(self, objectives, num_of_variables, variables_range, expand=True, same_range=False, preamble=None):
@@ -18,11 +19,7 @@ class Problem:
 
     def generate_individual(self):
         individual = Individual()
-        # if both range is integer generate randome integer.
-        if type(self.variables_range[0]) is int and type(self.variables_range[1]) is int:
-            individual.features = [int(random.uniform(*x)) for x in self.variables_range]
-        else:
-            individual.features = [random.uniform(*x) for x in self.variables_range]
+        individual.features = [random.uniform(*x) for x in self.variables_range]
         return individual
 
     def calculate_objectives(self, individual):
