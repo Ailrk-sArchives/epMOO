@@ -59,7 +59,7 @@ class LocPanel(wx.Panel):
         # title label.
         label = wx.StaticText(self, -1, "Location", size=(50, 40), pos=(0, 5))
         label.SetFont(font)
-        loc_entry = wx.TextCtrl(self, -1, "", style=wx.TE_LEFT, size=(500, 30), pos=(100, 4))
+        # loc_entry = wx.TextCtrl(self, -1, "", style=wx.TE_LEFT, size=(500, 30), pos=(100, 4))
 
         select_button = wx.Button(self, label="Select", pos=(620, 0))
         select_button.Bind(wx.EVT_BUTTON, self.onSelect)
