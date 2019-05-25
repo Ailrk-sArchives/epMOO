@@ -19,6 +19,7 @@ wall_area = 792
 roof_area = 484
 # NOTE: Window area will change accroding to the winwallratio.
 
+
 def f1_energy_consumption(*args) -> float:
     # Energy consumption.
     print(args)
