@@ -1,6 +1,110 @@
-Program Version,EnergyPlus, Version 8.7.0-78a111df4a, YMD=2019.05.25 07:15,IDD_Version 8.7.0
+Program Version,EnergyPlus, Version 8.7.0-78a111df4a, YMD=2019.05.25 07:35,IDD_Version 8.7.0
    ** Warning ** Version: in IDF="8.4" not the same as expected="8.7"
    ** Warning ** CheckEnvironmentSpecifications: SimulationControl specified doing design day simulations, but no design environments specified.
    **   ~~~   ** ...No design environment results produced. For these results, add appropriate SizingPeriod:* objects for your simulation.
    ** Warning ** Site:GroundTemperature:BuildingSurface: Some values fall outside the range of 15-25C.
    **   ~~~   ** These values may be inappropriate.  Please consult the Input Output Reference for more details.
+   ** Warning ** CheckUsedConstructions: There are 20 nominally unused constructions in input.
+   **   ~~~   ** For explicit details on each unused construction, use Output:Diagnostics,DisplayExtraWarnings;
+   ** Severe  ** Problem in interior solar distribution calculation (CHKBKS)
+   **   ~~~   **    Solar Distribution = FullInteriorExterior will not work in Zone=BEDROOM3.4
+   **   ~~~   **    because vertex 1 of back surface=SOUTHWINDOW3.4 is in front of receiving surface=EASTWALL3.1
+   **   ~~~   **    (Dot Product indicator=10.3938)
+   **   ~~~   **    Check surface geometry; if OK, use Solar Distribution = FullExterior instead.
+   ** Severe  ** Problem in interior solar distribution calculation (CHKBKS)
+   **   ~~~   **    Solar Distribution = FullInteriorExterior will not work in Zone=BEDROOM3.4
+   **   ~~~   **    because vertex 2 of back surface=SOUTHWINDOW3.4 is in front of receiving surface=EASTWALL3.1
+   **   ~~~   **    (Dot Product indicator=10.3938)
+   **   ~~~   **    Check surface geometry; if OK, use Solar Distribution = FullExterior instead.
+   ** Severe  ** Problem in interior solar distribution calculation (CHKBKS)
+   **   ~~~   **    Solar Distribution = FullInteriorExterior will not work in Zone=BEDROOM3.4
+   **   ~~~   **    because vertex 3 of back surface=SOUTHWINDOW3.4 is in front of receiving surface=EASTWALL3.1
+   **   ~~~   **    (Dot Product indicator=16.6062)
+   **   ~~~   **    Check surface geometry; if OK, use Solar Distribution = FullExterior instead.
+   ** Severe  ** Problem in interior solar distribution calculation (CHKBKS)
+   **   ~~~   **    Solar Distribution = FullInteriorExterior will not work in Zone=BEDROOM3.4
+   **   ~~~   **    because vertex 4 of back surface=SOUTHWINDOW3.4 is in front of receiving surface=EASTWALL3.1
+   **   ~~~   **    (Dot Product indicator=16.6062)
+   **   ~~~   **    Check surface geometry; if OK, use Solar Distribution = FullExterior instead.
+   ** Severe  ** Problem in interior solar distribution calculation (CHKBKS)
+   **   ~~~   **    Solar Distribution = FullInteriorExterior will not work in Zone=BEDROOM3.12
+   **   ~~~   **    because vertex 1 of back surface=NORTHWINDOW3.4 is in front of receiving surface=EASTWALL3.6
+   **   ~~~   **    (Dot Product indicator=19.4480)
+   **   ~~~   **    Check surface geometry; if OK, use Solar Distribution = FullExterior instead.
+   ** Severe  ** Problem in interior solar distribution calculation (CHKBKS)
+   **   ~~~   **    Solar Distribution = FullInteriorExterior will not work in Zone=BEDROOM3.12
+   **   ~~~   **    because vertex 2 of back surface=NORTHWINDOW3.4 is in front of receiving surface=EASTWALL3.6
+   **   ~~~   **    (Dot Product indicator=19.4480)
+   **   ~~~   **    Check surface geometry; if OK, use Solar Distribution = FullExterior instead.
+   ** Severe  ** Problem in interior solar distribution calculation (CHKBKS)
+   **   ~~~   **    Solar Distribution = FullInteriorExterior will not work in Zone=BEDROOM3.12
+   **   ~~~   **    because vertex 3 of back surface=NORTHWINDOW3.4 is in front of receiving surface=EASTWALL3.6
+   **   ~~~   **    (Dot Product indicator=7.5520)
+   **   ~~~   **    Check surface geometry; if OK, use Solar Distribution = FullExterior instead.
+   ** Severe  ** Problem in interior solar distribution calculation (CHKBKS)
+   **   ~~~   **    Solar Distribution = FullInteriorExterior will not work in Zone=BEDROOM3.12
+   **   ~~~   **    because vertex 4 of back surface=NORTHWINDOW3.4 is in front of receiving surface=EASTWALL3.6
+   **   ~~~   **    (Dot Product indicator=7.5520)
+   **   ~~~   **    Check surface geometry; if OK, use Solar Distribution = FullExterior instead.
+   ************* Testing Individual Branch Integrity
+   ************* All Branches passed integrity testing
+   ************* Testing Individual Supply Air Path Integrity
+   ************* All Supply Air Paths passed integrity testing
+   ************* Testing Individual Return Air Path Integrity
+   ************* All Return Air Paths passed integrity testing
+   ************* No node connection errors were found.
+   ************* Beginning Simulation
+   ************* Simulation Error Summary *************
+   ************* There are 2 unused schedules in input.
+   ************* Use Output:Diagnostics,DisplayUnusedSchedules; to see them.
+   *************
+   ************* ===== Recurring Surface Error Summary =====
+   ************* The following surface error messages occurred.
+   *************
+   ************* Base Surface does not surround subsurface errors occuring...
+   ************* Check that the GlobalGeometryRules object is expressing the proper starting corner and direction [CounterClockwise/Clockwise]
+   *************
+   ** Warning ** Base surface does not surround subsurface (CHKSBS), Overlap Status=Partial-Overlap
+   **   ~~~   **   The base surround errors occurred 1 times.
+   **   ~~~   ** Surface "NORTHWALL2.3" overlaps SubSurface "NORTHWINDOW2.3"
+   ** Warning ** Base surface does not surround subsurface (CHKSBS), Overlap Status=Partial-Overlap
+   **   ~~~   **   The base surround errors occurred 1 times.
+   **   ~~~   ** Surface "NORTHWALL2.2" overlaps SubSurface "NORTHWINDOW2.2"
+   ** Warning ** Base surface does not surround subsurface (CHKSBS), Overlap Status=No-Overlap
+   **   ~~~   **   The base surround errors occurred 1 times.
+   **   ~~~   ** Surface "NORTHWALL3.3" misses SubSurface "NORTHWINDOW3.3"
+   ** Warning ** Base surface does not surround subsurface (CHKSBS), Overlap Status=No-Overlap
+   **   ~~~   **   The base surround errors occurred 1 times.
+   **   ~~~   ** Surface "NORTHWALL3.2" misses SubSurface "NORTHWINDOW3.2"
+   ** Warning ** Base surface does not surround subsurface (CHKSBS), Overlap Status=No-Overlap
+   **   ~~~   **   The base surround errors occurred 1 times.
+   **   ~~~   ** Surface "NORTHWALL3.1" misses SubSurface "NORTHWINDOW3.1"
+   ** Warning ** Base surface does not surround subsurface (CHKSBS), Overlap Status=No-Overlap
+   **   ~~~   **   The base surround errors occurred 1 times.
+   **   ~~~   ** Surface "SOUTHWALL3.4" misses SubSurface "SOUTHWINDOW3.4"
+   ** Warning ** Base surface does not surround subsurface (CHKSBS), Overlap Status=No-Overlap
+   **   ~~~   **   The base surround errors occurred 1 times.
+   **   ~~~   ** Surface "NORTHWALL3.4" misses SubSurface "NORTHWINDOW3.4"
+   ** Warning ** Base surface does not surround subsurface (CHKSBS), Overlap Status=No-Overlap
+   **   ~~~   **   The base surround errors occurred 1 times.
+   **   ~~~   ** Surface "SOUTHWALL3.3" misses SubSurface "SOUTHWINDOW3.3"
+   ** Warning ** Base surface does not surround subsurface (CHKSBS), Overlap Status=No-Overlap
+   **   ~~~   **   The base surround errors occurred 1 times.
+   **   ~~~   ** Surface "SOUTHWALL3.1" misses SubSurface "SOUTHWINDOW3.1"
+   ** Warning ** Base surface does not surround subsurface (CHKSBS), Overlap Status=No-Overlap
+   **   ~~~   **   The base surround errors occurred 1 times.
+   **   ~~~   ** Surface "SOUTHWALL3.2" misses SubSurface "SOUTHWINDOW3.2"
+   *************
+   **   ~~~   **   The base surround errors occurred 10 times (total).
+   *************
+   *************
+   ************* ===== Final Error Summary =====
+   ************* The following error categories occurred.  Consider correcting or noting.
+   ************* Nominally Unused Constructions
+   ************* ..The nominally unused constructions warning is provided to alert you to potential conditions that can cause
+   ************* ..extra time during simulation. Each construction is calculated by the algorithm indicated in the HeatBalanceAlgorithm
+   ************* ..object. You may remove the constructions indicated (when you use the DisplayExtraWarnings option).
+   *************
+   ************* EnergyPlus Warmup Error Summary. During Warmup: 0 Warning; 0 Severe Errors.
+   ************* EnergyPlus Sizing Error Summary. During Sizing: 0 Warning; 0 Severe Errors.
+   ************* EnergyPlus Completed Successfully-- 14 Warning; 8 Severe Errors; Elapsed Time=00hr 00min 50.02sec

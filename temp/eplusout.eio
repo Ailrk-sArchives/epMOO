@@ -1,4 +1,4 @@
-Program Version,EnergyPlus, Version 8.7.0-78a111df4a, YMD=2019.05.25 07:15
+Program Version,EnergyPlus, Version 8.7.0-78a111df4a, YMD=2019.05.25 07:35
 ! <Version>, Version ID
  Version, 8.4
 ! <Timesteps per Hour>, #TimeSteps, Minutes per TimeStep {minutes}
@@ -681,3 +681,16 @@ Environment:WarmupDays, 11
  Warmup Convergence Information,KITCHEN3.1,RunPeriod: RUNPERIOD,7.5007649916E-002,6.2726104517E-002,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
  Warmup Convergence Information,BEDROOM3.4,RunPeriod: RUNPERIOD,0.2128191197,0.9972701020,Pass,Pass,1.7274937973E-002,8.0257747550E-002,Pass,Pass
  Warmup Convergence Information,BEDROOM3.6,RunPeriod: RUNPERIOD,0.2159135217,0.9955846681,Pass,Pass,1.8722303432E-002,8.9921121261E-002,Pass,Pass
+ Warmup Convergence Information,KITCHEN3.3,RunPeriod: RUNPERIOD,7.4980307333E-002,6.2697579744E-002,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,KITCHEN3.2,RunPeriod: RUNPERIOD,7.4978286341E-002,6.2717685788E-002,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,BEDROOM3.12,RunPeriod: RUNPERIOD,0.2125185511,0.9927007976,Pass,Pass,1.7418937357E-002,8.2389117015E-002,Pass,Pass
+ Warmup Convergence Information,STAIRCASE3.1,RunPeriod: RUNPERIOD,1.1949234781E-002,6.1410302825E-003,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,BEDROOM3.3,RunPeriod: RUNPERIOD,0.2084186637,0.9946564365,Pass,Pass,1.8170857058E-002,8.9308628138E-002,Pass,Pass
+ Warmup Convergence Information,BEDROOM3.1,RunPeriod: RUNPERIOD,0.2141271657,1.0050883115,Pass,Pass,1.8636681144E-002,8.9876849792E-002,Pass,Pass
+ Warmup Convergence Information,BEDROOM3.8,RunPeriod: RUNPERIOD,0.2158972589,0.9955084683,Pass,Pass,1.8724747849E-002,8.9958369544E-002,Pass,Pass
+ Warmup Convergence Information,BEDROOM3.2,RunPeriod: RUNPERIOD,0.2086472855,0.9956866232,Pass,Pass,1.8145924488E-002,8.9008398716E-002,Pass,Pass
+ Warmup Convergence Information,LIVINGROOM3.2,RunPeriod: RUNPERIOD,0.2244857460,1.0011917298,Pass,Pass,1.8982799065E-002,8.2178554735E-002,Pass,Pass
+ Warmup Convergence Information,BEDROOM3.7,RunPeriod: RUNPERIOD,0.2172158844,1.0027115225,Pass,Pass,1.9552916677E-002,9.5871873006E-002,Pass,Pass
+! <Program Control Information:Threads/Parallel Sims>, Threading Supported,Maximum Number of Threads, Env Set Threads (OMP_NUM_THREADS), EP Env Set Threads (EP_OMP_NUM_THREADS), IDF Set Threads, Number of Threads Used (Interior Radiant Exchange), Number Nominal Surfaces, Number Parallel Sims
+Program Control:Threads/Parallel Sims, No,1, N/A, N/A, N/A, N/A, N/A, N/A
+End of Data

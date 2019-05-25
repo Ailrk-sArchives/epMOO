@@ -1,0 +1,13 @@
+ ReadVarsESO
+ processing:.temp.rvi
+ input file:temp/eplusout.eso
+ output file:temp/eplusout.csv
+ getting all vars from:temp/eplusout.eso
+  number variables requested for output=           3
+ ReadVars Run Time=00hr 00min  0.12sec
+ ReadVarsESO program completed successfully.
+ ReadVarsESO
+ processing:.temp.mvi
+ Requested ESO file=temp/eplusout.mtr
+ does not exist.  ReadVarsESO program terminated.
+ ReadVarsESO program terminated.

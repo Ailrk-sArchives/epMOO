@@ -9,5 +9,3 @@ def discrete_interval(t: Tuple[int, int]):
     # ex. (1, 8) become (-0.99, 7.99), so int get (0 - 7)
     lower, upper = t
     return (lower - 1.01, upper - 0.01)
-
-

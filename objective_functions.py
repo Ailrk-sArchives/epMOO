@@ -5,7 +5,7 @@ import os.path
 """objective functions paras"""
 SUMMER_LAMBDA = 0.415
 WINTER_LAMBDA = 0.253
-EP_TBL = os.path.abspath("./temp/eplusout.csv")
+EP_TBL = os.path.abspath("./temp/eplustbl.csv")
 EP_OUT_CSV = os.path.abspath("./temp/eplusout.csv")
 
 """economic specs"""
@@ -27,6 +27,7 @@ def f1_energy_consumption(*args) -> float:
     # Energy consumption.
     print(args)
     cop = float(args[9])
+    print(cop)
     summer_consumption: float = 0
     winter_consumption: float = 0
 
@@ -39,6 +40,8 @@ def f1_energy_consumption(*args) -> float:
                         s = line.split(",")
                         winter_consumption = float(s[5])
                         summer_consumption = float(s[6])
+        print(winter_consumption)
+        print(summer_consumption)
         energy_consumption = winter_consumption / cop + summer_consumption / cop
 
     return energy_consumption
