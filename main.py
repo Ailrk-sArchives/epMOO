@@ -11,8 +11,9 @@ southrate = (0.05, 0.3)
 northrate = (0.05, 0.3)
 direction = (0, 359)
 airchange = (0, 39)
+cop = (2.0, 3.5)
 paras = [outerwall, roof, window, easterate, westrate, southrate,
-         northrate, direction, airchange]
+         northrate, direction, airchange, cop]
 
 """Algorithm parameter"""
 hyperparameter = {

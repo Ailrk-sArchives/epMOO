@@ -1,8 +1,6 @@
 from idf_handler import EPOutputReader
 
 """objective functions paras"""
-EER = 2.3
-COP = 1.9
 SUMMER_LAMBDA = 0.415
 WINTER_LAMBDA = 0.253
 
@@ -22,6 +20,7 @@ roof_area = 484
 
 def f1_energy_consumption(*args) -> float:
     # Energy consumption.
+    cop = args[-1]
     summer_consumption: float = 0
     winter_consumption: float = 0
 
@@ -34,7 +33,7 @@ def f1_energy_consumption(*args) -> float:
                         s = line.split(",")
                         winter_consumption = float(s[5])
                         summer_consumption = float(s[6])
-        energy_consumption = winter_consumption / EER + summer_consumption / COP
+        energy_consumption = winter_consumption / cop + summer_consumption / cop
 
     return energy_consumption
 
