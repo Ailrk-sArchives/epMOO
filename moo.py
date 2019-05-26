@@ -30,16 +30,17 @@ def moo(paras: List, hyperparameter: Dict):
             num_of_individuals=hyperparameter["NUM_OF_INDIVIDUALS"],
             num_of_tour_particips=hyperparameter["NUM_OF_TOUR_PARTICIPS"])
 
+    # draw the last one with 3d box.
     func = [i.objectives for i in evo.evolve()]
 
     obj1 = [i[0] for i in func]
     obj2 = [i[1] for i in func]
     obj3 = [i[2] for i in func]
-
-    print("<Finished>{}".format(time.ctime()))
     fig = plt.figure()
     ax = fig.add_subplot(111, projection='3d')
     ax.scatter(obj1, obj2, obj3, c='r', marker='o')
     plt.draw()
     plt.savefig('results/epMOO_fig.png')
     plt.show()
+
+    print("<Finished>{}".format(time.ctime()))

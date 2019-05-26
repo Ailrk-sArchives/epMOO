@@ -25,9 +25,8 @@ roof_area = 484
 
 def f1_energy_consumption(*args) -> float:
     # Energy consumption.
-    print(args)
+    print("running f1 ...")
     cop = float(args[9])
-    print(cop)
     summer_consumption: float = 0
     winter_consumption: float = 0
 
@@ -40,14 +39,13 @@ def f1_energy_consumption(*args) -> float:
                         s = line.split(",")
                         winter_consumption = float(s[5])
                         summer_consumption = float(s[6])
-        print(winter_consumption)
-        print(summer_consumption)
         energy_consumption = winter_consumption / cop + summer_consumption / cop
 
     return energy_consumption
 
 
 def f2_aPMV(*args) -> float:
+    print("running f2 ...")
     # get aPMV
     with EPOutputReader(EP_OUT_CSV) as ep_table:
         pmv_list: List = []
@@ -69,6 +67,7 @@ def f2_aPMV(*args) -> float:
 
 
 def f3_economy(*args) -> float:
+    print("running f3 ... ")
     wall_id = int(args[0])
     roof_id = int(args[1])
     win_id = int(args[2])

@@ -2,6 +2,7 @@ from nsga2.utils import NSGA2Utils
 from nsga2.population import Population
 import time
 import os
+from plot import plot
 
 class Evolution:
 
@@ -52,22 +53,22 @@ class Evolution:
 
         log += "[!!!]Points in the front:\n"
         for individual in returned_population.fronts[0]:  # log output.
-            log += "parameters:\n"
-            for para in individual.features:
-                log += str(para) + ", "
-            log += "\nobjectives:\n"
-            for obj in individual.objectives:
-                log += str(obj) + ", "
+            log += "parameters: "
+            log += individual.features.__str__()
+            log += "\nobjectives: "
+            log += individual.objectives.__str__()
             log += "\n\n"
 
         log += "size of all points: {}\n".format(len(returned_population))
         log += "[!!!]All points:\n"
         for individual in returned_population:
-            for para in individual.features:
-                log += str(para) + ", "
-            for obj in individual.objectives:
-                log += str(obj) + ", "
+            log += "parameters: "
+            log += individual.features.__str__()
+            log += "\nobjectives: "
+            log += individual.objectives.__str__()
             log += "\n\n"
 
         with open(log_path, "w+") as f:
             f.write(log)
+
+        plot(str(current_gen), returned_population.fronts[0])

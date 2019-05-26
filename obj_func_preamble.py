@@ -23,6 +23,7 @@ WINDOW_EDGT_HEIGHT = 1
 
 
 def run_energy_plus():
+    print("start running ep>")
     subprocess.run([
             "energyplus",
             "-w", W_DATA,
@@ -30,6 +31,7 @@ def run_energy_plus():
             "-d", OUTPUT_PATH,
             RUN_IDF_FILE
         ])
+    print("end running ep>")
 
 
 def generate_struct(direction: str, floor_num: str, pos: List[tuple], rate: float) -> List[str]:
