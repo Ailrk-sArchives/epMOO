@@ -42,11 +42,15 @@ class Evolution:
             children = self.utils.create_children(self.population)
 
             self.log(i, returned_population, "results")  # log out. 2019-05-24
+
         return returned_population.fronts[0]
 
     def log(self, current_gen, returned_population, path):
         log_path = os.path.join(os.path.abspath(path), str(current_gen) + ".txt")
-        log = "Generation {} at {}\n".format(current_gen, time.ctime())
+        log = "[!]Generation {} at {}\n".format(current_gen, time.ctime())
+        log += "size of front generated: {}\n".format(len(returned_population.fronts[0]))
+
+        log += "[!!!]Points in the front:\n"
         for individual in returned_population.fronts[0]:  # log output.
             log += "parameters:\n"
             for para in individual.features:
@@ -55,5 +59,15 @@ class Evolution:
             for obj in individual.objectives:
                 log += str(obj) + ", "
             log += "\n\n"
+
+        log += "size of all points: {}\n".format(len(returned_population))
+        log += "[!!!]All points:\n"
+        for individual in returned_population:
+            for para in individual.features:
+                log += str(para) + ", "
+            for obj in individual.objectives:
+                log += str(obj) + ", "
+            log += "\n\n"
+
         with open(log_path, "w+") as f:
             f.write(log)

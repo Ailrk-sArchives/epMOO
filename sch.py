@@ -23,7 +23,7 @@ def f3(x, y, z):
 
 
 problem = Problem(num_of_variables=3, objectives=[f1, f2, f3], variables_range=[(0, 55), (0, 100), (20, 20)])
-evo = Evolution(problem, num_of_generations=20, num_of_individuals=20)
+evo = Evolution(problem, num_of_generations=100, num_of_individuals=40)
 evol = evo.evolve()
 func = [i.objectives for i in evol]
 
