@@ -1,23 +1,23 @@
 ### Multiple objectives optimizer for Building Design.
 
-- 3 objectives. aPMV, energy consumption, economy.
+- support multple objecetives.
 
-- input: parameter vectors [old]
+- input: parameter vectors [old].
 
-- output: csv for (vector - pareto optimal solution) pair and graph
+- output: csv for (vector - pareto optimal solution) pair and graph.
 
-- optimization algorithm: NSGA2
+- optimization algorithm: NSGA2.
 
 - multiprocessing boosting.
 
-- (next goal) a better api 
+- (next goal) a better api.
 
 ### Prerequisite:
-- energyplus in PATH
+- energyplus in PATH.
 
-- python 3.7
+- python 3.7.
 
-- matplotlib
+- matplotlib.
 
 
 ### file descriptions.
