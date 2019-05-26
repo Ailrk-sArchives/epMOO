@@ -2,7 +2,7 @@
 author: jimmy yao.
 
 ## matlab Legacy 
-###2019-05-12 02:03 [DONE]
+### 2019-05-12 02:03 [DONE]
 1. [X] find the type or value of following variables:
     nsga2.m: empty_individual [X]
     nsga2.m: F                [X] 
@@ -21,11 +21,11 @@ author: jimmy yao.
 4. where did the program used objectives?
 
 
-###2019-05-14 06:52 
+### 2019-05-14 06:52 
 1. Read the %program\_path% in RunEnergyPlus.bat
 
-##New Era
-###2019-05-16 Create a module for handling idf files. [DONE] 
+## New Era
+### 2019-05-16 Create a module for handling idf files. [DONE] 
 1. Why create a module to handle idf file format exclusively.
     1. more extensible, the generic module can be reused next time.
     2. easier to use
@@ -47,10 +47,10 @@ author: jimmy yao.
 5. What I cannot do:
     1. I tried to support energy plus builtin input objects, but it is a huge projects, and I don't plan to commit into this project too much... I guess there are already some other wrote similiar functionalities.
 
-###2019-05-22 Congras! 
+### 2019-05-22 Congras! 
 1. Everyting runs in python! No more matlab. Btw it is my birthday.
 
-###2019-05-26 Multiprocessing [TODO]
+### 2019-05-26 Multiprocessing [TODO]
 Try to support multiprocessing for nsga2 algorithm while minimize the degree of coupling. (NO COUPLING!!!)
 
 1. Start to make multiprocessing. Benefits:
@@ -75,7 +75,7 @@ Try to support multiprocessing for nsga2 algorithm while minimize the degree of 
     Currently each run of energyplus takes around 40 seconds. Accroding to last time experience run 6 energyplus concurrently will take around 70 seconds, which means each turn only spend 11 seconds, so it can shorten 3/4 time of execution. A workstation with 16 cores will speed it up even further.
 
 
-###2019-05-26 A flexx based GUI [TODO]
+### 2019-05-26 A flexx based GUI [TODO]
 Need a fancy gui for the program. Flexx is a python lib for creating web based gui.
 1. Why need a gui?
     1. User of the program are not programmer.
@@ -96,12 +96,12 @@ Need a fancy gui for the program. Flexx is a python lib for creating web based g
 4. How to conncet the value in the gui to value in the model?
     MVC!
 
-###2019-05-26 Make the whole program a package [TODO]
+### 2019-05-26 Make the whole program a package [TODO]
 1. Why?
     1. Easier to cross platform.
     2. Less hassle on setting environment up.
 
-###2019-05-26 Support remote multiprocessing [OPTINAL]
+### 2019-05-26 Support remote multiprocessing [OPTINAL]
 Support remote multiprocessing to improve the performance even further.
 1. How?
     1. Maybe write a server client app, server dispatch randomly generated parameters for optimization problem into different clients, clients works out objectives and sent back to server.
@@ -114,7 +114,7 @@ Support remote multiprocessing to improve the performance even further.
     2. data will be lists of input parameters, so maybe transmitted inform of json.
     3. There might be some problem in scheduling when collecting results from different hosts, in that case just put everything in a que since the order doesn't matter.
 
-###2019-05-26 Betterl logging system. [TODO]
+### 2019-05-26 Betterl logging system. [TODO]
 Now there are full of print in the program, change them into better logging module
 
 1. Why?
