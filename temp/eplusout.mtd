@@ -5754,5 +5754,3 @@
 
  For Meter=CarbonEquivalentEmissions:Carbon Equivalent [kg], ResourceType=Carbon Equivalent, EndUse=CarbonEquivalentEmissions, contents are:
   Site:Environmental Impact Total N2O Emissions Carbon Equivalent Mass
-  Site:Environmental Impact Total CH4 Emissions Carbon Equivalent Mass
-  Site:Environmental Impact Total CO2 Emissions Carbon Equivalent Mass

@@ -13,8 +13,12 @@ from objective_functions import f2_aPMV as f2
 from objective_functions import f3_economy as f3
 from obj_func_preamble import preamble
 
+from utils import init
+
 
 def moo(paras: List, hyperparameter: Dict):
+    init()
+
     # define problem.
     problem = Problem(num_of_variables=len(paras), objectives=[f1, f2, f3],
                       variables_range=paras, preamble=preamble)

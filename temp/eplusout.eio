@@ -1,4 +1,4 @@
-Program Version,EnergyPlus, Version 8.7.0-78a111df4a, YMD=2019.05.25 07:35
+Program Version,EnergyPlus, Version 8.7.0-78a111df4a, YMD=2019.05.25 22:02
 ! <Version>, Version ID
  Version, 8.4
 ! <Timesteps per Hour>, #TimeSteps, Minutes per TimeStep {minutes}
@@ -30,7 +30,7 @@ Environment:Weather Station,10.000,0.140,270.000,1.500,1.586,9.750E-003
 ! <Site:Location>, Location Name, Latitude {N+/S- Deg}, Longitude {E+/W- Deg},  Time Zone Number {GMT+/-}, Elevation {m},  Standard Pressure at Elevation {Pa}, Standard RhoAir at Elevation
 Site:Location,Chongqing Shapingba Chongqing CHN CSWD WMO#=575160,29.58,106.47,8.00,259.10,98251,1.1678
 ! <Building Information>, Building Name,North Axis {deg},Terrain,  Loads Convergence Tolerance Value,Temperature Convergence Tolerance Value,  Solar Distribution,Maximum Number of Warmup Days,Minimum Number of Warmup Days
- Building Information,3cengzhuzhai,131.432,City,4.00000E-002,0.40000,FullInteriorAndExterior,25,6
+ Building Information,3cengzhuzhai,52.375,City,4.00000E-002,0.40000,FullInteriorAndExterior,25,6
 ! <Inside Convection Algorithm>, Algorithm {Simple | TARP | CeilingDiffuser | AdaptiveConvectionAlgorithm}
 Inside Convection Algorithm,AdaptiveConvectionAlgorithm
 ! <Outside Convection Algorithm>, Algorithm {SimpleCombined | TARP | MoWitt | DOE-2 | AdaptiveConvectionAlgorithm}
@@ -56,69 +56,69 @@ Surface Heat Transfer Algorithm, CTF - ConductionTransferFunction,200,0.10,1000.
 ! <Zone Summary>, Number of Zones, Number of Zone Surfaces, Number of SubSurfaces
  Zone Summary,63,498,60
 ! <Zone Information>,Zone Name,North Axis {deg},Origin X-Coordinate {m},Origin Y-Coordinate {m},Origin Z-Coordinate {m},Centroid X-Coordinate {m},Centroid Y-Coordinate {m},Centroid Z-Coordinate {m},Type,Zone Multiplier,Zone List Multiplier,Minimum X {m},Maximum X {m},Minimum Y {m},Maximum Y {m},Minimum Z {m},Maximum Z {m},Ceiling Height {m},Volume {m3},Zone Inside Convection Algorithm {Simple-Detailed-CeilingDiffuser-TrombeWall},Zone Outside Convection Algorithm {Simple-Detailed-Tarp-MoWitt-DOE-2-BLAST}, Floor Area {m2},Exterior Gross Wall Area {m2},Exterior Net Wall Area {m2},Exterior Window Area {m2}, Number of Surfaces, Number of SubSurfaces, Number of Shading SubSurfaces,  Part of Total Building Area
- Zone Information, KITCHEN1.1,0.0,8.60,3.00,0.00,-2.55,-10.82,1.50,1,1,1,-5.03,-6.78E-002,-13.21,-8.43,0.00,3.00,3.00,32.40,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,10.80,0.00,0.00,0.00,6,0,0,Yes
- Zone Information, BEDROOM1.4,0.0,16.00,0.00,0.00,-11.45,-15.24,1.50,1,1,1,-14.56,-8.34,-18.48,-12.00,0.00,3.00,3.00,54.00,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,18.00,27.00,23.49,3.51,6,2,0,Yes
- Zone Information, KITCHEN1.2,0.0,11.00,3.00,0.00,-4.14,-12.62,1.50,1,1,1,-6.62,-1.66,-15.01,-10.23,0.00,3.00,3.00,32.40,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,10.80,0.00,0.00,0.00,6,0,0,Yes
- Zone Information, LIVINGROOM1.2,0.0,13.50,3.00,0.00,-7.78,-16.74,1.50,1,1,1,-12.31,-3.24,-21.46,-12.03,0.00,3.00,3.00,116.10,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,38.70,13.50,9.78,3.72,8,1,0,Yes
- Zone Information, BEDROOM1.7,0.0,0.00,11.00,0.00,7.08,-11.25,1.50,1,1,1,3.28,10.87,-15.22,-7.28,0.00,3.00,3.00,78.75,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,26.25,10.50,7.61,2.89,6,1,0,Yes
- Zone Information, LIVINGROOM1.3,0.0,0.00,14.50,0.00,9.71,-14.31,1.50,1,1,1,5.18,14.25,-19.02,-9.60,0.00,3.00,3.00,116.10,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,38.70,13.50,9.79,3.71,8,1,0,Yes
- Zone Information, BEDROOM1.9,0.0,0.00,19.00,0.00,13.38,-15.81,1.50,1,1,1,10.27,16.49,-19.06,-12.57,0.00,3.00,3.00,54.00,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,18.00,27.00,22.54,4.46,6,2,0,Yes
- Zone Information, BEDROOM1.10,0.0,6.00,19.00,0.00,9.74,-19.94,1.50,1,1,1,6.97,12.52,-22.81,-17.07,0.00,3.00,3.00,45.00,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,15.00,15.00,13.02,1.98,7,1,0,Yes
- Zone Information, BEDROOM1.11,0.0,11.00,19.00,0.00,6.44,-23.69,1.50,1,1,1,3.66,9.22,-26.55,-20.82,0.00,3.00,3.00,45.00,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,15.00,15.00,13.02,1.98,7,1,0,Yes
- Zone Information, BEDROOM1.12,0.0,16.00,19.00,0.00,2.80,-27.81,1.50,1,1,1,-0.31,5.91,-31.05,-24.57,0.00,3.00,3.00,54.00,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,18.00,27.00,22.54,4.46,6,2,0,Yes
- Zone Information, STAIRCASE1.1,0.0,7.50,7.50,0.00,0.97,-15.53,1.50,1,1,1,-3.97,5.91,-20.47,-10.59,0.00,3.00,3.00,147.00,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,49.00,0.00,0.00,0.00,14,0,0,Yes
- Zone Information, KITCHEN1.3,0.0,8.60,14.50,0.00,6.07,-18.43,1.50,1,1,1,3.59,8.55,-20.82,-16.04,0.00,3.00,3.00,32.40,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,10.80,0.00,0.00,0.00,6,0,0,Yes
- Zone Information, KITCHEN1.4,0.0,11.00,14.50,0.00,4.49,-20.23,1.50,1,1,1,2.00,6.97,-22.62,-17.84,0.00,3.00,3.00,32.40,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,10.80,0.00,0.00,0.00,6,0,0,Yes
- Zone Information, LIVINGROOM1.4,0.0,13.40,14.50,0.00,0.85,-24.35,1.50,1,1,1,-3.69,5.38,-29.07,-19.64,0.00,3.00,3.00,116.10,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,38.70,13.50,9.78,3.72,8,1,0,Yes
- Zone Information, BEDROOM1.6,0.0,14.50,7.50,0.00,-5.14,-19.80,1.50,1,1,1,-8.94,-1.35,-23.77,-15.83,0.00,3.00,3.00,78.75,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,26.25,10.50,7.61,2.89,6,1,0,Yes
- Zone Information, BEDROOM1.8,0.0,14.50,11.00,0.00,-2.52,-22.12,1.50,1,1,1,-6.31,1.28,-26.09,-18.15,0.00,3.00,3.00,78.75,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,26.25,10.50,7.61,2.89,6,1,0,Yes
- Zone Information, BEDROOM1.3,0.0,11.00,0.00,0.00,-7.81,-11.11,1.50,1,1,1,-10.59,-5.03,-13.98,-8.25,0.00,3.00,3.00,45.00,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,15.00,15.00,13.96,1.04,7,1,0,Yes
- Zone Information, BEDROOM1.2,0.0,6.00,0.00,0.00,-4.50,-7.37,1.50,1,1,1,-7.28,-1.72,-10.23,-4.50,0.00,3.00,3.00,45.00,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,15.00,15.00,13.96,1.04,7,1,0,Yes
- Zone Information, BEDROOM1.1,0.0,0.00,0.00,0.00,-0.86,-3.24,1.50,1,1,1,-3.97,2.25,-6.48,0.00,0.00,3.00,3.00,54.00,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,18.00,27.00,23.49,3.51,6,2,0,Yes
- Zone Information, LIVINGROOM1.1,0.0,0.00,3.00,0.00,1.09,-6.70,1.50,1,1,1,-3.44,5.62,-11.41,-1.99,0.00,3.00,3.00,116.10,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,38.70,13.50,9.79,3.71,8,1,0,Yes
- Zone Information, BEDROOM1.5,0.0,0.00,7.50,0.00,4.45,-8.93,1.50,1,1,1,0.66,8.25,-12.90,-4.96,0.00,3.00,3.00,78.75,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,26.25,10.50,7.61,2.89,6,1,0,Yes
- Zone Information, LIVINGROOM2.4,0.0,13.40,14.50,0.00,0.85,-24.35,4.50,1,1,1,-3.69,5.38,-29.07,-19.64,3.00,6.00,3.00,116.10,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,38.70,13.50,9.78,3.72,8,1,0,Yes
- Zone Information, BEDROOM2.5,0.0,0.00,7.50,0.00,4.45,-8.93,4.50,1,1,1,0.66,8.25,-12.90,-4.96,3.00,6.00,3.00,78.75,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,26.25,10.50,7.61,2.89,6,1,0,Yes
- Zone Information, LIVINGROOM2.1,0.0,0.00,3.00,0.00,1.09,-6.70,4.50,1,1,1,-3.44,5.62,-11.41,-1.99,3.00,6.00,3.00,116.10,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,38.70,13.50,9.79,3.71,8,1,0,Yes
- Zone Information, BEDROOM2.11,0.0,11.00,19.00,0.00,6.44,-23.69,4.50,1,1,1,3.66,9.22,-26.67,-20.82,3.00,6.00,3.00,45.00,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,15.00,15.00,13.02,1.98,7,1,0,Yes
- Zone Information, BEDROOM2.10,0.0,6.00,19.00,0.00,9.74,-19.94,4.50,1,1,1,6.97,12.52,-22.93,-17.07,3.00,6.00,3.00,45.00,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,15.00,15.00,13.02,1.98,7,1,0,Yes
- Zone Information, BEDROOM2.9,0.0,0.00,19.00,0.00,13.38,-15.81,4.50,1,1,1,10.27,16.49,-19.06,-12.57,3.00,6.00,3.00,54.00,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,18.00,27.00,22.54,4.46,6,2,0,Yes
- Zone Information, LIVINGROOM2.3,0.0,0.00,14.50,0.00,9.71,-14.31,4.50,1,1,1,5.18,14.25,-19.02,-9.60,3.00,6.00,3.00,116.10,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,38.70,13.50,9.79,3.71,8,1,0,Yes
- Zone Information, BEDROOM2.7,0.0,0.00,11.00,0.00,7.08,-11.25,4.50,1,1,1,3.28,10.87,-15.22,-7.28,3.00,6.00,3.00,78.75,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,26.25,10.50,7.61,2.89,6,1,0,Yes
- Zone Information, LIVINGROOM2.2,0.0,13.50,3.00,0.00,-7.78,-16.74,4.50,1,1,1,-12.31,-3.24,-21.46,-12.03,3.00,6.00,3.00,116.10,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,38.70,13.50,9.78,3.72,8,1,0,Yes
- Zone Information, BEDROOM2.2,0.0,6.00,0.00,0.00,-4.50,-7.37,4.50,1,1,1,-7.28,-1.72,-10.23,-4.50,3.00,6.00,3.00,45.00,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,15.00,15.00,13.96,1.04,7,1,0,Yes
- Zone Information, BEDROOM2.8,0.0,14.50,11.00,0.00,-2.52,-22.12,4.50,1,1,1,-6.31,1.28,-26.09,-18.15,3.00,6.00,3.00,78.75,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,26.25,10.50,7.61,2.89,6,1,0,Yes
- Zone Information, BEDROOM2.3,0.0,11.00,0.00,0.00,-7.81,-11.11,4.50,1,1,1,-10.59,-5.03,-13.98,-8.25,3.00,6.00,3.00,45.00,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,15.00,15.00,13.96,1.04,7,1,0,Yes
- Zone Information, BEDROOM2.1,0.0,0.00,0.00,0.00,-0.86,-3.24,4.50,1,1,1,-3.97,2.25,-6.48,0.00,3.00,6.00,3.00,54.00,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,18.00,27.00,23.49,3.51,6,2,0,Yes
- Zone Information, BEDROOM2.4,0.0,16.00,0.00,0.00,-11.45,-15.24,4.50,1,1,1,-14.56,-8.34,-18.48,-12.00,3.00,6.00,3.00,54.00,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,18.00,27.00,23.49,3.51,6,2,0,Yes
- Zone Information, BEDROOM2.6,0.0,14.50,7.50,0.00,-5.14,-19.80,4.50,1,1,1,-8.94,-1.35,-23.77,-15.83,3.00,6.00,3.00,78.75,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,26.25,10.50,7.61,2.89,6,1,0,Yes
- Zone Information, KITCHEN2.1,0.0,8.60,3.00,0.00,-2.55,-10.82,4.50,1,1,1,-5.03,-6.78E-002,-13.21,-8.43,3.00,6.00,3.00,32.40,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,10.80,0.00,0.00,0.00,6,0,0,Yes
- Zone Information, KITCHEN2.4,0.0,11.00,14.50,0.00,4.49,-20.23,4.50,1,1,1,2.00,6.97,-22.62,-17.84,3.00,6.00,3.00,32.40,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,10.80,0.00,0.00,0.00,6,0,0,Yes
- Zone Information, KITCHEN2.3,0.0,8.60,14.50,0.00,6.07,-18.43,4.50,1,1,1,3.59,8.55,-20.82,-16.04,3.00,6.00,3.00,32.40,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,10.80,0.00,0.00,0.00,6,0,0,Yes
- Zone Information, STAIRCASE2.1,0.0,7.50,7.50,0.00,0.97,-15.53,4.50,1,1,1,-3.97,5.91,-20.47,-10.59,3.00,6.00,3.00,147.00,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,49.00,0.00,0.00,0.00,14,0,0,Yes
- Zone Information, BEDROOM2.12,0.0,16.00,19.00,0.00,2.80,-27.81,4.50,1,1,1,-0.31,5.91,-31.05,-24.57,3.00,6.00,3.00,54.00,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,18.00,27.00,22.54,4.46,6,2,0,Yes
- Zone Information, KITCHEN2.2,0.0,11.00,3.00,0.00,-4.14,-12.62,4.50,1,1,1,-6.62,-1.66,-15.01,-10.23,3.00,6.00,3.00,32.40,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,10.80,0.00,0.00,0.00,6,0,0,Yes
- Zone Information, LIVINGROOM3.4,0.0,13.40,14.50,0.00,0.85,-24.35,7.50,1,1,1,-3.69,5.38,-29.07,-19.64,6.00,9.00,3.00,116.10,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,38.70,13.50,9.78,3.72,8,1,0,Yes
- Zone Information, BEDROOM3.5,0.0,0.00,7.50,0.00,4.45,-8.93,7.50,1,1,1,0.66,8.25,-12.90,-4.96,6.00,9.00,3.00,78.75,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,26.25,10.50,7.61,2.89,6,1,0,Yes
- Zone Information, LIVINGROOM3.1,0.0,0.00,3.00,0.00,1.09,-6.70,7.50,1,1,1,-3.44,5.62,-11.41,-1.99,6.00,9.00,3.00,116.10,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,38.70,13.50,9.79,3.71,8,1,0,Yes
- Zone Information, BEDROOM3.11,0.0,11.00,19.00,0.00,6.44,-23.69,7.50,1,1,1,3.66,9.22,-28.92,-20.82,6.00,9.00,3.00,45.00,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,15.00,15.00,13.02,1.98,7,1,0,Yes
- Zone Information, BEDROOM3.10,0.0,6.00,19.00,0.00,9.74,-19.94,7.50,1,1,1,6.97,12.52,-25.18,-17.07,6.00,9.00,3.00,45.00,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,15.00,15.00,13.02,1.98,7,1,0,Yes
- Zone Information, BEDROOM3.9,0.0,0.00,19.00,0.00,13.38,-15.81,7.50,1,1,1,10.27,16.49,-20.68,-12.57,6.00,9.00,3.00,54.00,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,18.00,27.00,22.54,4.46,6,2,0,Yes
- Zone Information, LIVINGROOM3.3,0.0,0.00,14.50,0.00,9.71,-14.31,7.50,1,1,1,5.18,14.25,-19.02,-9.60,6.00,9.00,3.00,116.10,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,38.70,13.50,9.79,3.71,8,1,0,Yes
- Zone Information, KITCHEN3.4,0.0,11.00,14.50,0.00,4.49,-20.23,7.50,1,1,1,2.00,6.97,-22.62,-17.84,6.00,9.00,3.00,32.40,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,10.80,0.00,0.00,0.00,6,0,0,Yes
- Zone Information, KITCHEN3.1,0.0,8.60,3.00,0.00,-2.55,-10.82,7.50,1,1,1,-5.03,-6.78E-002,-13.21,-8.43,6.00,9.00,3.00,32.40,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,10.80,0.00,0.00,0.00,6,0,0,Yes
- Zone Information, BEDROOM3.4,0.0,16.00,0.00,0.00,-11.45,-15.24,7.50,1,1,1,-15.78,-8.34,-18.48,-12.00,6.00,9.00,3.00,54.00,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,18.00,27.00,23.49,3.51,6,2,0,Yes
- Zone Information, BEDROOM3.6,0.0,14.50,7.50,0.00,-5.14,-19.80,7.50,1,1,1,-8.94,-1.35,-23.77,-15.83,6.00,9.00,3.00,78.75,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,26.25,10.50,7.61,2.89,6,1,0,Yes
- Zone Information, KITCHEN3.3,0.0,8.60,14.50,0.00,6.07,-18.43,7.50,1,1,1,3.59,8.55,-20.82,-16.04,6.00,9.00,3.00,32.40,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,10.80,0.00,0.00,0.00,6,0,0,Yes
- Zone Information, KITCHEN3.2,0.0,11.00,3.00,0.00,-4.14,-12.62,7.50,1,1,1,-6.62,-1.66,-15.01,-10.23,6.00,9.00,3.00,32.40,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,10.80,0.00,0.00,0.00,6,0,0,Yes
- Zone Information, BEDROOM3.12,0.0,16.00,19.00,0.00,2.80,-27.81,7.50,1,1,1,-0.31,5.91,-32.67,-24.57,6.00,9.00,3.00,54.00,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,18.00,27.00,22.54,4.46,6,2,0,Yes
- Zone Information, STAIRCASE3.1,0.0,7.50,7.50,0.00,0.97,-15.53,7.50,1,1,1,-3.97,5.91,-20.47,-10.59,6.00,9.00,3.00,147.00,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,49.00,0.00,0.00,0.00,14,0,0,Yes
- Zone Information, BEDROOM3.3,0.0,11.00,0.00,0.00,-7.81,-11.11,7.50,1,1,1,-12.47,-5.03,-14.13,-8.25,6.00,9.00,3.00,45.00,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,15.00,15.00,13.96,1.04,7,1,0,Yes
- Zone Information, BEDROOM3.1,0.0,0.00,0.00,0.00,-0.86,-3.24,7.50,1,1,1,-5.19,2.25,-6.48,0.00,6.00,9.00,3.00,54.00,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,18.00,27.00,23.49,3.51,6,2,0,Yes
- Zone Information, BEDROOM3.8,0.0,14.50,11.00,0.00,-2.52,-22.12,7.50,1,1,1,-6.31,1.28,-26.09,-18.15,6.00,9.00,3.00,78.75,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,26.25,10.50,7.61,2.89,6,1,0,Yes
- Zone Information, BEDROOM3.2,0.0,6.00,0.00,0.00,-4.50,-7.37,7.50,1,1,1,-9.16,-1.72,-10.38,-4.50,6.00,9.00,3.00,45.00,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,15.00,15.00,13.96,1.04,7,1,0,Yes
- Zone Information, LIVINGROOM3.2,0.0,13.50,3.00,0.00,-7.78,-16.74,7.50,1,1,1,-12.31,-3.24,-21.46,-12.03,6.00,9.00,3.00,116.10,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,38.70,13.50,9.78,3.72,8,1,0,Yes
- Zone Information, BEDROOM3.7,0.0,0.00,11.00,0.00,7.08,-11.25,7.50,1,1,1,3.28,10.87,-15.22,-7.28,6.00,9.00,3.00,78.75,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,26.25,10.50,7.61,2.89,6,1,0,Yes
+ Zone Information, KITCHEN1.1,0.0,8.60,3.00,0.00,10.14,-4.56,1.50,1,1,1,7.63,12.66,-6.88,-2.23,0.00,3.00,3.00,32.40,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,10.80,0.00,0.00,0.00,6,0,0,Yes
+ Zone Information, BEDROOM1.4,0.0,16.00,0.00,0.00,12.79,-14.13,1.50,1,1,1,9.77,15.81,-17.42,-10.84,0.00,3.00,3.00,54.00,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,18.00,27.00,24.27,2.73,6,2,0,Yes
+ Zone Information, KITCHEN1.2,0.0,11.00,3.00,0.00,11.61,-6.46,1.50,1,1,1,9.09,14.12,-8.78,-4.13,0.00,3.00,3.00,32.40,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,10.80,0.00,0.00,0.00,6,0,0,Yes
+ Zone Information, LIVINGROOM1.2,0.0,13.50,3.00,0.00,14.96,-10.81,1.50,1,1,1,10.56,19.37,-15.59,-6.03,0.00,3.00,3.00,116.10,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,38.70,13.50,11.18,2.32,8,1,0,Yes
+ Zone Information, BEDROOM1.7,0.0,0.00,11.00,0.00,12.39,4.81,1.50,1,1,1,8.71,16.06,0.78,8.85,0.00,3.00,3.00,78.75,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,26.25,10.50,8.28,2.22,6,1,0,Yes
+ Zone Information, LIVINGROOM1.3,0.0,0.00,14.50,0.00,15.89,6.82,1.50,1,1,1,11.48,20.30,2.04,11.60,0.00,3.00,3.00,116.10,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,38.70,13.50,10.65,2.85,8,1,0,Yes
+ Zone Information, BEDROOM1.9,0.0,0.00,19.00,0.00,18.07,10.14,1.50,1,1,1,15.05,21.09,6.85,13.43,0.00,3.00,3.00,54.00,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,18.00,27.00,23.66,3.34,6,2,0,Yes
+ Zone Information, BEDROOM1.10,0.0,6.00,19.00,0.00,21.43,5.78,1.50,1,1,1,18.71,24.14,2.89,8.68,0.00,3.00,3.00,45.00,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,15.00,15.00,13.56,1.44,7,1,0,Yes
+ Zone Information, BEDROOM1.11,0.0,11.00,19.00,0.00,24.48,1.82,1.50,1,1,1,21.76,27.19,-1.07,4.72,0.00,3.00,3.00,45.00,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,15.00,15.00,13.56,1.44,7,1,0,Yes
+ Zone Information, BEDROOM1.12,0.0,16.00,19.00,0.00,27.84,-2.53,1.50,1,1,1,24.82,30.86,-5.83,0.76,0.00,3.00,3.00,54.00,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,18.00,27.00,24.01,2.99,6,2,0,Yes
+ Zone Information, STAIRCASE1.1,0.0,7.50,7.50,0.00,15.43,-2.00,1.50,1,1,1,10.52,20.34,-6.91,2.91,0.00,3.00,3.00,147.00,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,49.00,0.00,0.00,0.00,14,0,0,Yes
+ Zone Information, KITCHEN1.3,0.0,8.60,14.50,0.00,19.25,2.46,1.50,1,1,1,16.73,21.76,0.14,4.79,0.00,3.00,3.00,32.40,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,10.80,0.00,0.00,0.00,6,0,0,Yes
+ Zone Information, KITCHEN1.4,0.0,11.00,14.50,0.00,20.71,0.56,1.50,1,1,1,18.20,23.23,-1.76,2.89,0.00,3.00,3.00,32.40,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,10.80,0.00,0.00,0.00,6,0,0,Yes
+ Zone Information, LIVINGROOM1.4,0.0,13.40,14.50,0.00,24.07,-3.79,1.50,1,1,1,19.66,28.48,-8.57,0.99,0.00,3.00,3.00,116.10,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,38.70,13.50,11.18,2.32,8,1,0,Yes
+ Zone Information, BEDROOM1.6,0.0,14.50,7.50,0.00,18.47,-8.81,1.50,1,1,1,14.79,22.14,-12.85,-4.77,0.00,3.00,3.00,78.75,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,26.25,10.50,8.69,1.81,6,1,0,Yes
+ Zone Information, BEDROOM1.8,0.0,14.50,11.00,0.00,21.24,-6.67,1.50,1,1,1,17.56,24.92,-10.71,-2.63,0.00,3.00,3.00,78.75,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,26.25,10.50,8.69,1.81,6,1,0,Yes
+ Zone Information, BEDROOM1.3,0.0,11.00,0.00,0.00,9.43,-9.78,1.50,1,1,1,6.72,12.14,-12.67,-6.88,0.00,3.00,3.00,45.00,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,15.00,15.00,13.82,1.18,7,1,0,Yes
+ Zone Information, BEDROOM1.2,0.0,6.00,0.00,0.00,6.38,-5.82,1.50,1,1,1,3.66,9.09,-8.71,-2.92,0.00,3.00,3.00,45.00,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,15.00,15.00,13.82,1.18,7,1,0,Yes
+ Zone Information, BEDROOM1.1,0.0,0.00,0.00,0.00,3.02,-1.46,1.50,1,1,1,0.00,6.04,-4.75,1.83,0.00,3.00,3.00,54.00,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,18.00,27.00,23.91,3.09,6,2,0,Yes
+ Zone Information, LIVINGROOM1.1,0.0,0.00,3.00,0.00,6.78,-0.20,1.50,1,1,1,2.38,11.19,-4.98,4.58,0.00,3.00,3.00,116.10,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,38.70,13.50,10.65,2.85,8,1,0,Yes
+ Zone Information, BEDROOM1.5,0.0,0.00,7.50,0.00,9.62,2.68,1.50,1,1,1,5.94,13.29,-1.36,6.72,0.00,3.00,3.00,78.75,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,26.25,10.50,8.28,2.22,6,1,0,Yes
+ Zone Information, LIVINGROOM2.4,0.0,13.40,14.50,0.00,24.07,-3.79,4.50,1,1,1,19.66,28.48,-8.57,0.99,3.00,6.00,3.00,116.10,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,38.70,13.50,11.18,2.32,8,1,0,Yes
+ Zone Information, BEDROOM2.5,0.0,0.00,7.50,0.00,9.62,2.68,4.50,1,1,1,5.94,13.29,-1.36,6.72,3.00,6.00,3.00,78.75,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,26.25,10.50,8.28,2.22,6,1,0,Yes
+ Zone Information, LIVINGROOM2.1,0.0,0.00,3.00,0.00,6.78,-0.20,4.50,1,1,1,2.38,11.19,-4.98,4.58,3.00,6.00,3.00,116.10,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,38.70,13.50,10.65,2.85,8,1,0,Yes
+ Zone Information, BEDROOM2.11,0.0,11.00,19.00,0.00,24.48,1.82,4.50,1,1,1,21.76,27.19,-1.07,4.72,3.00,6.00,3.00,45.00,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,15.00,15.00,13.56,1.44,7,1,0,Yes
+ Zone Information, BEDROOM2.10,0.0,6.00,19.00,0.00,21.43,5.78,4.50,1,1,1,18.71,24.14,2.89,8.68,3.00,6.00,3.00,45.00,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,15.00,15.00,13.56,1.44,7,1,0,Yes
+ Zone Information, BEDROOM2.9,0.0,0.00,19.00,0.00,18.07,10.14,4.50,1,1,1,15.05,21.09,6.85,13.43,3.00,6.00,3.00,54.00,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,18.00,27.00,23.66,3.34,6,2,0,Yes
+ Zone Information, LIVINGROOM2.3,0.0,0.00,14.50,0.00,15.89,6.82,4.50,1,1,1,11.48,20.30,2.04,11.60,3.00,6.00,3.00,116.10,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,38.70,13.50,10.65,2.85,8,1,0,Yes
+ Zone Information, BEDROOM2.7,0.0,0.00,11.00,0.00,12.39,4.81,4.50,1,1,1,8.71,16.06,0.78,8.85,3.00,6.00,3.00,78.75,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,26.25,10.50,8.28,2.22,6,1,0,Yes
+ Zone Information, LIVINGROOM2.2,0.0,13.50,3.00,0.00,14.96,-10.81,4.50,1,1,1,10.56,19.37,-15.59,-6.03,3.00,6.00,3.00,116.10,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,38.70,13.50,11.18,2.32,8,1,0,Yes
+ Zone Information, BEDROOM2.2,0.0,6.00,0.00,0.00,6.38,-5.82,4.50,1,1,1,3.66,9.09,-8.71,-2.92,3.00,6.00,3.00,45.00,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,15.00,15.00,13.82,1.18,7,1,0,Yes
+ Zone Information, BEDROOM2.8,0.0,14.50,11.00,0.00,21.24,-6.67,4.50,1,1,1,17.56,24.92,-10.71,-2.63,3.00,6.00,3.00,78.75,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,26.25,10.50,8.69,1.81,6,1,0,Yes
+ Zone Information, BEDROOM2.3,0.0,11.00,0.00,0.00,9.43,-9.78,4.50,1,1,1,6.72,12.14,-12.67,-6.88,3.00,6.00,3.00,45.00,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,15.00,15.00,13.82,1.18,7,1,0,Yes
+ Zone Information, BEDROOM2.1,0.0,0.00,0.00,0.00,3.02,-1.46,4.50,1,1,1,0.00,6.04,-4.75,1.83,3.00,6.00,3.00,54.00,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,18.00,27.00,23.91,3.09,6,2,0,Yes
+ Zone Information, BEDROOM2.4,0.0,16.00,0.00,0.00,12.79,-14.13,4.50,1,1,1,9.77,15.81,-17.42,-10.84,3.00,6.00,3.00,54.00,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,18.00,27.00,24.27,2.73,6,2,0,Yes
+ Zone Information, BEDROOM2.6,0.0,14.50,7.50,0.00,18.47,-8.81,4.50,1,1,1,14.79,22.14,-12.85,-4.77,3.00,6.00,3.00,78.75,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,26.25,10.50,8.69,1.81,6,1,0,Yes
+ Zone Information, KITCHEN2.1,0.0,8.60,3.00,0.00,10.14,-4.56,4.50,1,1,1,7.63,12.66,-6.88,-2.23,3.00,6.00,3.00,32.40,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,10.80,0.00,0.00,0.00,6,0,0,Yes
+ Zone Information, KITCHEN2.4,0.0,11.00,14.50,0.00,20.71,0.56,4.50,1,1,1,18.20,23.23,-1.76,2.89,3.00,6.00,3.00,32.40,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,10.80,0.00,0.00,0.00,6,0,0,Yes
+ Zone Information, KITCHEN2.3,0.0,8.60,14.50,0.00,19.25,2.46,4.50,1,1,1,16.73,21.76,0.14,4.79,3.00,6.00,3.00,32.40,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,10.80,0.00,0.00,0.00,6,0,0,Yes
+ Zone Information, STAIRCASE2.1,0.0,7.50,7.50,0.00,15.43,-2.00,4.50,1,1,1,10.52,20.34,-6.91,2.91,3.00,6.00,3.00,147.00,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,49.00,0.00,0.00,0.00,14,0,0,Yes
+ Zone Information, BEDROOM2.12,0.0,16.00,19.00,0.00,27.84,-2.53,4.50,1,1,1,24.82,30.86,-5.83,0.76,3.00,6.00,3.00,54.00,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,18.00,27.00,24.01,2.99,6,2,0,Yes
+ Zone Information, KITCHEN2.2,0.0,11.00,3.00,0.00,11.61,-6.46,4.50,1,1,1,9.09,14.12,-8.78,-4.13,3.00,6.00,3.00,32.40,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,10.80,0.00,0.00,0.00,6,0,0,Yes
+ Zone Information, LIVINGROOM3.4,0.0,13.40,14.50,0.00,24.07,-3.79,7.50,1,1,1,19.66,28.48,-8.57,0.99,6.00,9.00,3.00,116.10,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,38.70,13.50,11.18,2.32,8,1,0,Yes
+ Zone Information, BEDROOM3.5,0.0,0.00,7.50,0.00,9.62,2.68,7.50,1,1,1,5.94,13.29,-1.36,6.72,6.00,9.00,3.00,78.75,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,26.25,10.50,8.28,2.22,6,1,0,Yes
+ Zone Information, LIVINGROOM3.1,0.0,0.00,3.00,0.00,6.78,-0.20,7.50,1,1,1,2.38,11.19,-4.98,4.58,6.00,9.00,3.00,116.10,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,38.70,13.50,10.65,2.85,8,1,0,Yes
+ Zone Information, BEDROOM3.11,0.0,11.00,19.00,0.00,24.48,1.82,7.50,1,1,1,21.76,29.01,-1.60,4.72,6.00,9.00,3.00,45.00,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,15.00,15.00,13.56,1.44,7,1,0,Yes
+ Zone Information, BEDROOM3.10,0.0,6.00,19.00,0.00,21.43,5.78,7.50,1,1,1,18.71,25.96,2.36,8.68,6.00,9.00,3.00,45.00,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,15.00,15.00,13.56,1.44,7,1,0,Yes
+ Zone Information, BEDROOM3.9,0.0,0.00,19.00,0.00,18.07,10.14,7.50,1,1,1,15.05,22.30,6.85,13.43,6.00,9.00,3.00,54.00,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,18.00,27.00,23.66,3.34,6,2,0,Yes
+ Zone Information, LIVINGROOM3.3,0.0,0.00,14.50,0.00,15.89,6.82,7.50,1,1,1,11.48,20.30,2.04,11.60,6.00,9.00,3.00,116.10,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,38.70,13.50,10.65,2.85,8,1,0,Yes
+ Zone Information, KITCHEN3.4,0.0,11.00,14.50,0.00,20.71,0.56,7.50,1,1,1,18.20,23.23,-1.76,2.89,6.00,9.00,3.00,32.40,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,10.80,0.00,0.00,0.00,6,0,0,Yes
+ Zone Information, KITCHEN3.1,0.0,8.60,3.00,0.00,10.14,-4.56,7.50,1,1,1,7.63,12.66,-6.88,-2.23,6.00,9.00,3.00,32.40,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,10.80,0.00,0.00,0.00,6,0,0,Yes
+ Zone Information, BEDROOM3.4,0.0,16.00,0.00,0.00,12.79,-14.13,7.50,1,1,1,9.77,15.81,-18.93,-10.84,6.00,9.00,3.00,54.00,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,18.00,27.00,24.27,2.73,6,2,0,Yes
+ Zone Information, BEDROOM3.6,0.0,14.50,7.50,0.00,18.47,-8.81,7.50,1,1,1,14.79,22.14,-12.85,-4.77,6.00,9.00,3.00,78.75,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,26.25,10.50,8.69,1.81,6,1,0,Yes
+ Zone Information, KITCHEN3.3,0.0,8.60,14.50,0.00,19.25,2.46,7.50,1,1,1,16.73,21.76,0.14,4.79,6.00,9.00,3.00,32.40,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,10.80,0.00,0.00,0.00,6,0,0,Yes
+ Zone Information, KITCHEN3.2,0.0,11.00,3.00,0.00,11.61,-6.46,7.50,1,1,1,9.09,14.12,-8.78,-4.13,6.00,9.00,3.00,32.40,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,10.80,0.00,0.00,0.00,6,0,0,Yes
+ Zone Information, BEDROOM3.12,0.0,16.00,19.00,0.00,27.84,-2.53,7.50,1,1,1,24.82,32.06,-5.83,0.76,6.00,9.00,3.00,54.00,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,18.00,27.00,24.01,2.99,6,2,0,Yes
+ Zone Information, STAIRCASE3.1,0.0,7.50,7.50,0.00,15.43,-2.00,7.50,1,1,1,10.52,20.34,-6.91,2.91,6.00,9.00,3.00,147.00,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,49.00,0.00,0.00,0.00,14,0,0,Yes
+ Zone Information, BEDROOM3.3,0.0,11.00,0.00,0.00,9.43,-9.78,7.50,1,1,1,6.72,12.14,-14.96,-6.88,6.00,9.00,3.00,45.00,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,15.00,15.00,13.82,1.18,7,1,0,Yes
+ Zone Information, BEDROOM3.1,0.0,0.00,0.00,0.00,3.02,-1.46,7.50,1,1,1,0.00,6.04,-6.25,1.83,6.00,9.00,3.00,54.00,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,18.00,27.00,23.91,3.09,6,2,0,Yes
+ Zone Information, BEDROOM3.8,0.0,14.50,11.00,0.00,21.24,-6.67,7.50,1,1,1,17.56,24.92,-10.71,-2.63,6.00,9.00,3.00,78.75,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,26.25,10.50,8.69,1.81,6,1,0,Yes
+ Zone Information, BEDROOM3.2,0.0,6.00,0.00,0.00,6.38,-5.82,7.50,1,1,1,3.66,9.09,-11.00,-2.92,6.00,9.00,3.00,45.00,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,15.00,15.00,13.82,1.18,7,1,0,Yes
+ Zone Information, LIVINGROOM3.2,0.0,13.50,3.00,0.00,14.96,-10.81,7.50,1,1,1,10.56,19.37,-15.59,-6.03,6.00,9.00,3.00,116.10,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,38.70,13.50,11.18,2.32,8,1,0,Yes
+ Zone Information, BEDROOM3.7,0.0,0.00,11.00,0.00,12.39,4.81,7.50,1,1,1,8.71,16.06,0.78,8.85,6.00,9.00,3.00,78.75,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,26.25,10.50,8.28,2.22,6,1,0,Yes
 ! <Zone Internal Gains Nominal>,Zone Name, Floor Area {m2},# Occupants,Area per Occupant {m2/person},Occupant per Area {person/m2},Interior Lighting {W/m2},Electric Load {W/m2},Gas Load {W/m2},Other Load {W/m2},Hot Water Eq {W/m2},Steam Equipment {W/m2},Sum Loads per Area {W/m2},Outdoor Controlled Baseboard Heat
  Zone Internal Gains Nominal, KITCHEN1.1,10.80,0.3,35.630,2.807E-002,6.000,4.300,0.000,0.000,0.000,0.000,10.300,No
  Zone Internal Gains Nominal, BEDROOM1.4,18.00,0.5,35.630,2.807E-002,3.000,4.300,0.000,0.000,0.000,0.000,7.300,No
@@ -490,66 +490,66 @@ Shadowing/Sun Position Calculations Annual Simulations,AverageOverDaysInFrequenc
  ZoneVentilation Airflow Stats Nominal, JICHUBEDROOM3.10,JICHUTONGFENGBEDROOM,BEDROOM3.10,15.00,0.4,5.000E-002,3.333E-003,0.119,4.000,Natural,0.000,1.0,0.606,3.600E-002,0.118,0.000,-100.00,100.00,-100.00,-100.00,100.00,40.00
  ZoneVentilation Airflow Stats Nominal, JICHUBEDROOM3.11,JICHUTONGFENGBEDROOM,BEDROOM3.11,15.00,0.4,5.000E-002,3.333E-003,0.119,4.000,Natural,0.000,1.0,0.606,3.600E-002,0.118,0.000,-100.00,100.00,-100.00,-100.00,100.00,40.00
  ZoneVentilation Airflow Stats Nominal, JICHUBEDROOM3.12,JICHUTONGFENGBEDROOM,BEDROOM3.12,18.00,0.5,6.000E-002,3.333E-003,0.119,4.000,Natural,0.000,1.0,0.606,3.600E-002,0.118,0.000,-100.00,100.00,-100.00,-100.00,100.00,40.00
- ZoneVentilation Airflow Stats Nominal, KITCHEN1.1,TONGFENGCISHUBIANLIANG,KITCHEN1.1,10.80,0.3,6.040E-002,5.593E-003,0.199,6.711,Natural,0.000,1.0,0.606,3.600E-002,0.118,0.000,-100.00,100.00,-100.00,15.37,28.78,40.00
- ZoneVentilation Airflow Stats Nominal, KITCHEN1.2,TONGFENGCISHUBIANLIANG,KITCHEN1.2,10.80,0.3,6.040E-002,5.593E-003,0.199,6.711,Natural,0.000,1.0,0.606,3.600E-002,0.118,0.000,-100.00,100.00,-100.00,15.37,28.78,40.00
- ZoneVentilation Airflow Stats Nominal, KITCHEN1.3,TONGFENGCISHUBIANLIANG,KITCHEN1.3,10.80,0.3,6.040E-002,5.593E-003,0.199,6.711,Natural,0.000,1.0,0.606,3.600E-002,0.118,0.000,-100.00,100.00,-100.00,15.37,28.78,40.00
- ZoneVentilation Airflow Stats Nominal, KITCHEN1.4,TONGFENGCISHUBIANLIANG,KITCHEN1.4,10.80,0.3,6.040E-002,5.593E-003,0.199,6.711,Natural,0.000,1.0,0.606,3.600E-002,0.118,0.000,-100.00,100.00,-100.00,15.37,28.78,40.00
- ZoneVentilation Airflow Stats Nominal, LIVINGROOM1.1,TONGFENGCISHUBIANLIANG,LIVINGROOM1.1,38.70,1.1,0.216,5.593E-003,0.199,6.711,Natural,0.000,1.0,0.606,3.600E-002,0.118,0.000,-100.00,100.00,-100.00,15.37,28.78,40.00
- ZoneVentilation Airflow Stats Nominal, LIVINGROOM1.2,TONGFENGCISHUBIANLIANG,LIVINGROOM1.2,38.70,1.1,0.216,5.593E-003,0.199,6.711,Natural,0.000,1.0,0.606,3.600E-002,0.118,0.000,-100.00,100.00,-100.00,15.37,28.78,40.00
- ZoneVentilation Airflow Stats Nominal, LIVINGROOM1.3,TONGFENGCISHUBIANLIANG,LIVINGROOM1.3,38.70,1.1,0.216,5.593E-003,0.199,6.711,Natural,0.000,1.0,0.606,3.600E-002,0.118,0.000,-100.00,100.00,-100.00,15.37,28.78,40.00
- ZoneVentilation Airflow Stats Nominal, LIVINGROOM1.4,TONGFENGCISHUBIANLIANG,LIVINGROOM1.4,38.70,1.1,0.216,5.593E-003,0.199,6.711,Natural,0.000,1.0,0.606,3.600E-002,0.118,0.000,-100.00,100.00,-100.00,15.37,28.78,40.00
- ZoneVentilation Airflow Stats Nominal, BEDROOM1.1,TONGFENGCISHUBIANLIANG,BEDROOM1.1,18.00,0.5,0.101,5.593E-003,0.199,6.711,Natural,0.000,1.0,0.606,3.600E-002,0.118,0.000,-100.00,100.00,-100.00,15.37,28.78,40.00
- ZoneVentilation Airflow Stats Nominal, BEDROOM1.2,TONGFENGCISHUBIANLIANG,BEDROOM1.2,15.00,0.4,8.389E-002,5.593E-003,0.199,6.711,Natural,0.000,1.0,0.606,3.600E-002,0.118,0.000,-100.00,100.00,-100.00,15.37,28.78,40.00
- ZoneVentilation Airflow Stats Nominal, BEDROOM1.3,TONGFENGCISHUBIANLIANG,BEDROOM1.3,15.00,0.4,8.389E-002,5.593E-003,0.199,6.711,Natural,0.000,1.0,0.606,3.600E-002,0.118,0.000,-100.00,100.00,-100.00,15.37,28.78,40.00
- ZoneVentilation Airflow Stats Nominal, BEDROOM1.4,TONGFENGCISHUBIANLIANG,BEDROOM1.4,18.00,0.5,0.101,5.593E-003,0.199,6.711,Natural,0.000,1.0,0.606,3.600E-002,0.118,0.000,-100.00,100.00,-100.00,15.37,28.78,40.00
- ZoneVentilation Airflow Stats Nominal, BEDROOM1.5,TONGFENGCISHUBIANLIANG,BEDROOM1.5,26.25,0.7,0.147,5.593E-003,0.199,6.711,Natural,0.000,1.0,0.606,3.600E-002,0.118,0.000,-100.00,100.00,-100.00,15.37,28.78,40.00
- ZoneVentilation Airflow Stats Nominal, BEDROOM1.6,TONGFENGCISHUBIANLIANG,BEDROOM1.6,26.25,0.7,0.147,5.593E-003,0.199,6.711,Natural,0.000,1.0,0.606,3.600E-002,0.118,0.000,-100.00,100.00,-100.00,15.37,28.78,40.00
- ZoneVentilation Airflow Stats Nominal, BEDROOM1.7,TONGFENGCISHUBIANLIANG,BEDROOM1.7,26.25,0.7,0.147,5.593E-003,0.199,6.711,Natural,0.000,1.0,0.606,3.600E-002,0.118,0.000,-100.00,100.00,-100.00,15.37,28.78,40.00
- ZoneVentilation Airflow Stats Nominal, BEDROOM1.8,TONGFENGCISHUBIANLIANG,BEDROOM1.8,26.25,0.7,0.147,5.593E-003,0.199,6.711,Natural,0.000,1.0,0.606,3.600E-002,0.118,0.000,-100.00,100.00,-100.00,15.37,28.78,40.00
- ZoneVentilation Airflow Stats Nominal, BEDROOM1.9,TONGFENGCISHUBIANLIANG,BEDROOM1.9,18.00,0.5,0.101,5.593E-003,0.199,6.711,Natural,0.000,1.0,0.606,3.600E-002,0.118,0.000,-100.00,100.00,-100.00,15.37,28.78,40.00
- ZoneVentilation Airflow Stats Nominal, BEDROOM1.10,TONGFENGCISHUBIANLIANG,BEDROOM1.10,15.00,0.4,8.389E-002,5.593E-003,0.199,6.711,Natural,0.000,1.0,0.606,3.600E-002,0.118,0.000,-100.00,100.00,-100.00,15.37,28.78,40.00
- ZoneVentilation Airflow Stats Nominal, BEDROOM1.11,TONGFENGCISHUBIANLIANG,BEDROOM1.11,15.00,0.4,8.389E-002,5.593E-003,0.199,6.711,Natural,0.000,1.0,0.606,3.600E-002,0.118,0.000,-100.00,100.00,-100.00,15.37,28.78,40.00
- ZoneVentilation Airflow Stats Nominal, BEDROOM1.12,TONGFENGCISHUBIANLIANG,BEDROOM1.12,18.00,0.5,0.101,5.593E-003,0.199,6.711,Natural,0.000,1.0,0.606,3.600E-002,0.118,0.000,-100.00,100.00,-100.00,15.37,28.78,40.00
- ZoneVentilation Airflow Stats Nominal, KITCHEN2.1,TONGFENGCISHUBIANLIANG,KITCHEN2.1,10.80,0.3,6.040E-002,5.593E-003,0.199,6.711,Natural,0.000,1.0,0.606,3.600E-002,0.118,0.000,-100.00,100.00,-100.00,15.37,28.78,40.00
- ZoneVentilation Airflow Stats Nominal, KITCHEN2.2,TONGFENGCISHUBIANLIANG,KITCHEN2.2,10.80,0.3,6.040E-002,5.593E-003,0.199,6.711,Natural,0.000,1.0,0.606,3.600E-002,0.118,0.000,-100.00,100.00,-100.00,15.37,28.78,40.00
- ZoneVentilation Airflow Stats Nominal, KITCHEN2.3,TONGFENGCISHUBIANLIANG,KITCHEN2.3,10.80,0.3,6.040E-002,5.593E-003,0.199,6.711,Natural,0.000,1.0,0.606,3.600E-002,0.118,0.000,-100.00,100.00,-100.00,15.37,28.78,40.00
- ZoneVentilation Airflow Stats Nominal, KITCHEN2.4,TONGFENGCISHUBIANLIANG,KITCHEN2.4,10.80,0.3,6.040E-002,5.593E-003,0.199,6.711,Natural,0.000,1.0,0.606,3.600E-002,0.118,0.000,-100.00,100.00,-100.00,15.37,28.78,40.00
- ZoneVentilation Airflow Stats Nominal, LIVINGROOM2.1,TONGFENGCISHUBIANLIANG,LIVINGROOM2.1,38.70,1.1,0.216,5.593E-003,0.199,6.711,Natural,0.000,1.0,0.606,3.600E-002,0.118,0.000,-100.00,100.00,-100.00,15.37,28.78,40.00
- ZoneVentilation Airflow Stats Nominal, LIVINGROOM2.2,TONGFENGCISHUBIANLIANG,LIVINGROOM2.2,38.70,1.1,0.216,5.593E-003,0.199,6.711,Natural,0.000,1.0,0.606,3.600E-002,0.118,0.000,-100.00,100.00,-100.00,15.37,28.78,40.00
- ZoneVentilation Airflow Stats Nominal, LIVINGROOM2.3,TONGFENGCISHUBIANLIANG,LIVINGROOM2.3,38.70,1.1,0.216,5.593E-003,0.199,6.711,Natural,0.000,1.0,0.606,3.600E-002,0.118,0.000,-100.00,100.00,-100.00,15.37,28.78,40.00
- ZoneVentilation Airflow Stats Nominal, LIVINGROOM2.4,TONGFENGCISHUBIANLIANG,LIVINGROOM2.4,38.70,1.1,0.216,5.593E-003,0.199,6.711,Natural,0.000,1.0,0.606,3.600E-002,0.118,0.000,-100.00,100.00,-100.00,15.37,28.78,40.00
- ZoneVentilation Airflow Stats Nominal, BEDROOM2.1,TONGFENGCISHUBIANLIANG,BEDROOM2.1,18.00,0.5,0.101,5.593E-003,0.199,6.711,Natural,0.000,1.0,0.606,3.600E-002,0.118,0.000,-100.00,100.00,-100.00,15.37,28.78,40.00
- ZoneVentilation Airflow Stats Nominal, BEDROOM2.2,TONGFENGCISHUBIANLIANG,BEDROOM2.2,15.00,0.4,8.389E-002,5.593E-003,0.199,6.711,Natural,0.000,1.0,0.606,3.600E-002,0.118,0.000,-100.00,100.00,-100.00,15.37,28.78,40.00
- ZoneVentilation Airflow Stats Nominal, BEDROOM2.3,TONGFENGCISHUBIANLIANG,BEDROOM2.3,15.00,0.4,8.389E-002,5.593E-003,0.199,6.711,Natural,0.000,1.0,0.606,3.600E-002,0.118,0.000,-100.00,100.00,-100.00,15.37,28.78,40.00
- ZoneVentilation Airflow Stats Nominal, BEDROOM2.4,TONGFENGCISHUBIANLIANG,BEDROOM2.4,18.00,0.5,0.101,5.593E-003,0.199,6.711,Natural,0.000,1.0,0.606,3.600E-002,0.118,0.000,-100.00,100.00,-100.00,15.37,28.78,40.00
- ZoneVentilation Airflow Stats Nominal, BEDROOM2.5,TONGFENGCISHUBIANLIANG,BEDROOM2.5,26.25,0.7,0.147,5.593E-003,0.199,6.711,Natural,0.000,1.0,0.606,3.600E-002,0.118,0.000,-100.00,100.00,-100.00,15.37,28.78,40.00
- ZoneVentilation Airflow Stats Nominal, BEDROOM2.6,TONGFENGCISHUBIANLIANG,BEDROOM2.6,26.25,0.7,0.147,5.593E-003,0.199,6.711,Natural,0.000,1.0,0.606,3.600E-002,0.118,0.000,-100.00,100.00,-100.00,15.37,28.78,40.00
- ZoneVentilation Airflow Stats Nominal, BEDROOM2.7,TONGFENGCISHUBIANLIANG,BEDROOM2.7,26.25,0.7,0.147,5.593E-003,0.199,6.711,Natural,0.000,1.0,0.606,3.600E-002,0.118,0.000,-100.00,100.00,-100.00,15.37,28.78,40.00
- ZoneVentilation Airflow Stats Nominal, BEDROOM2.8,TONGFENGCISHUBIANLIANG,BEDROOM2.8,26.25,0.7,0.147,5.593E-003,0.199,6.711,Natural,0.000,1.0,0.606,3.600E-002,0.118,0.000,-100.00,100.00,-100.00,15.37,28.78,40.00
- ZoneVentilation Airflow Stats Nominal, BEDROOM2.9,TONGFENGCISHUBIANLIANG,BEDROOM2.9,18.00,0.5,0.101,5.593E-003,0.199,6.711,Natural,0.000,1.0,0.606,3.600E-002,0.118,0.000,-100.00,100.00,-100.00,15.37,28.78,40.00
- ZoneVentilation Airflow Stats Nominal, BEDROOM2.10,TONGFENGCISHUBIANLIANG,BEDROOM2.10,15.00,0.4,8.389E-002,5.593E-003,0.199,6.711,Natural,0.000,1.0,0.606,3.600E-002,0.118,0.000,-100.00,100.00,-100.00,15.37,28.78,40.00
- ZoneVentilation Airflow Stats Nominal, BEDROOM2.11,TONGFENGCISHUBIANLIANG,BEDROOM2.11,15.00,0.4,8.389E-002,5.593E-003,0.199,6.711,Natural,0.000,1.0,0.606,3.600E-002,0.118,0.000,-100.00,100.00,-100.00,15.37,28.78,40.00
- ZoneVentilation Airflow Stats Nominal, BEDROOM2.12,TONGFENGCISHUBIANLIANG,BEDROOM2.12,18.00,0.5,0.101,5.593E-003,0.199,6.711,Natural,0.000,1.0,0.606,3.600E-002,0.118,0.000,-100.00,100.00,-100.00,15.37,28.78,40.00
- ZoneVentilation Airflow Stats Nominal, KITCHEN3.1,TONGFENGCISHUBIANLIANG,KITCHEN3.1,10.80,0.3,6.040E-002,5.593E-003,0.199,6.711,Natural,0.000,1.0,0.606,3.600E-002,0.118,0.000,-100.00,100.00,-100.00,15.37,28.78,40.00
- ZoneVentilation Airflow Stats Nominal, KITCHEN3.2,TONGFENGCISHUBIANLIANG,KITCHEN3.2,10.80,0.3,6.040E-002,5.593E-003,0.199,6.711,Natural,0.000,1.0,0.606,3.600E-002,0.118,0.000,-100.00,100.00,-100.00,15.37,28.78,40.00
- ZoneVentilation Airflow Stats Nominal, KITCHEN3.3,TONGFENGCISHUBIANLIANG,KITCHEN3.3,10.80,0.3,6.040E-002,5.593E-003,0.199,6.711,Natural,0.000,1.0,0.606,3.600E-002,0.118,0.000,-100.00,100.00,-100.00,15.37,28.78,40.00
- ZoneVentilation Airflow Stats Nominal, KITCHEN3.4,TONGFENGCISHUBIANLIANG,KITCHEN3.4,10.80,0.3,6.040E-002,5.593E-003,0.199,6.711,Natural,0.000,1.0,0.606,3.600E-002,0.118,0.000,-100.00,100.00,-100.00,15.37,28.78,40.00
- ZoneVentilation Airflow Stats Nominal, LIVINGROOM3.1,TONGFENGCISHUBIANLIANG,LIVINGROOM3.1,38.70,1.1,0.216,5.593E-003,0.199,6.711,Natural,0.000,1.0,0.606,3.600E-002,0.118,0.000,-100.00,100.00,-100.00,15.37,28.78,40.00
- ZoneVentilation Airflow Stats Nominal, LIVINGROOM3.2,TONGFENGCISHUBIANLIANG,LIVINGROOM3.2,38.70,1.1,0.216,5.593E-003,0.199,6.711,Natural,0.000,1.0,0.606,3.600E-002,0.118,0.000,-100.00,100.00,-100.00,15.37,28.78,40.00
- ZoneVentilation Airflow Stats Nominal, LIVINGROOM3.3,TONGFENGCISHUBIANLIANG,LIVINGROOM3.3,38.70,1.1,0.216,5.593E-003,0.199,6.711,Natural,0.000,1.0,0.606,3.600E-002,0.118,0.000,-100.00,100.00,-100.00,15.37,28.78,40.00
- ZoneVentilation Airflow Stats Nominal, LIVINGROOM3.4,TONGFENGCISHUBIANLIANG,LIVINGROOM3.4,38.70,1.1,0.216,5.593E-003,0.199,6.711,Natural,0.000,1.0,0.606,3.600E-002,0.118,0.000,-100.00,100.00,-100.00,15.37,28.78,40.00
- ZoneVentilation Airflow Stats Nominal, BEDROOM3.1,TONGFENGCISHUBIANLIANG,BEDROOM3.1,18.00,0.5,0.101,5.593E-003,0.199,6.711,Natural,0.000,1.0,0.606,3.600E-002,0.118,0.000,-100.00,100.00,-100.00,15.37,28.78,40.00
- ZoneVentilation Airflow Stats Nominal, BEDROOM3.2,TONGFENGCISHUBIANLIANG,BEDROOM3.2,15.00,0.4,8.389E-002,5.593E-003,0.199,6.711,Natural,0.000,1.0,0.606,3.600E-002,0.118,0.000,-100.00,100.00,-100.00,15.37,28.78,40.00
- ZoneVentilation Airflow Stats Nominal, BEDROOM3.3,TONGFENGCISHUBIANLIANG,BEDROOM3.3,15.00,0.4,8.389E-002,5.593E-003,0.199,6.711,Natural,0.000,1.0,0.606,3.600E-002,0.118,0.000,-100.00,100.00,-100.00,15.37,28.78,40.00
- ZoneVentilation Airflow Stats Nominal, BEDROOM3.4,TONGFENGCISHUBIANLIANG,BEDROOM3.4,18.00,0.5,0.101,5.593E-003,0.199,6.711,Natural,0.000,1.0,0.606,3.600E-002,0.118,0.000,-100.00,100.00,-100.00,15.37,28.78,40.00
- ZoneVentilation Airflow Stats Nominal, BEDROOM3.5,TONGFENGCISHUBIANLIANG,BEDROOM3.5,26.25,0.7,0.147,5.593E-003,0.199,6.711,Natural,0.000,1.0,0.606,3.600E-002,0.118,0.000,-100.00,100.00,-100.00,15.37,28.78,40.00
- ZoneVentilation Airflow Stats Nominal, BEDROOM3.6,TONGFENGCISHUBIANLIANG,BEDROOM3.6,26.25,0.7,0.147,5.593E-003,0.199,6.711,Natural,0.000,1.0,0.606,3.600E-002,0.118,0.000,-100.00,100.00,-100.00,15.37,28.78,40.00
- ZoneVentilation Airflow Stats Nominal, BEDROOM3.7,TONGFENGCISHUBIANLIANG,BEDROOM3.7,26.25,0.7,0.147,5.593E-003,0.199,6.711,Natural,0.000,1.0,0.606,3.600E-002,0.118,0.000,-100.00,100.00,-100.00,15.37,28.78,40.00
- ZoneVentilation Airflow Stats Nominal, BEDROOM3.8,TONGFENGCISHUBIANLIANG,BEDROOM3.8,26.25,0.7,0.147,5.593E-003,0.199,6.711,Natural,0.000,1.0,0.606,3.600E-002,0.118,0.000,-100.00,100.00,-100.00,15.37,28.78,40.00
- ZoneVentilation Airflow Stats Nominal, BEDROOM3.9,TONGFENGCISHUBIANLIANG,BEDROOM3.9,18.00,0.5,0.101,5.593E-003,0.199,6.711,Natural,0.000,1.0,0.606,3.600E-002,0.118,0.000,-100.00,100.00,-100.00,15.37,28.78,40.00
- ZoneVentilation Airflow Stats Nominal, BEDROOM3.10,TONGFENGCISHUBIANLIANG,BEDROOM3.10,15.00,0.4,8.389E-002,5.593E-003,0.199,6.711,Natural,0.000,1.0,0.606,3.600E-002,0.118,0.000,-100.00,100.00,-100.00,15.37,28.78,40.00
- ZoneVentilation Airflow Stats Nominal, BEDROOM3.11,TONGFENGCISHUBIANLIANG,BEDROOM3.11,15.00,0.4,8.389E-002,5.593E-003,0.199,6.711,Natural,0.000,1.0,0.606,3.600E-002,0.118,0.000,-100.00,100.00,-100.00,15.37,28.78,40.00
- ZoneVentilation Airflow Stats Nominal, BEDROOM3.12,TONGFENGCISHUBIANLIANG,BEDROOM3.12,18.00,0.5,0.101,5.593E-003,0.199,6.711,Natural,0.000,1.0,0.606,3.600E-002,0.118,0.000,-100.00,100.00,-100.00,15.37,28.78,40.00
+ ZoneVentilation Airflow Stats Nominal, KITCHEN1.1,TONGFENGCISHUBIANLIANG,KITCHEN1.1,10.80,0.3,0.229,2.120E-002,0.755,25.444,Natural,0.000,1.0,0.606,3.600E-002,0.118,0.000,-100.00,100.00,-100.00,15.37,28.78,40.00
+ ZoneVentilation Airflow Stats Nominal, KITCHEN1.2,TONGFENGCISHUBIANLIANG,KITCHEN1.2,10.80,0.3,0.229,2.120E-002,0.755,25.444,Natural,0.000,1.0,0.606,3.600E-002,0.118,0.000,-100.00,100.00,-100.00,15.37,28.78,40.00
+ ZoneVentilation Airflow Stats Nominal, KITCHEN1.3,TONGFENGCISHUBIANLIANG,KITCHEN1.3,10.80,0.3,0.229,2.120E-002,0.755,25.444,Natural,0.000,1.0,0.606,3.600E-002,0.118,0.000,-100.00,100.00,-100.00,15.37,28.78,40.00
+ ZoneVentilation Airflow Stats Nominal, KITCHEN1.4,TONGFENGCISHUBIANLIANG,KITCHEN1.4,10.80,0.3,0.229,2.120E-002,0.755,25.444,Natural,0.000,1.0,0.606,3.600E-002,0.118,0.000,-100.00,100.00,-100.00,15.37,28.78,40.00
+ ZoneVentilation Airflow Stats Nominal, LIVINGROOM1.1,TONGFENGCISHUBIANLIANG,LIVINGROOM1.1,38.70,1.1,0.821,2.120E-002,0.755,25.444,Natural,0.000,1.0,0.606,3.600E-002,0.118,0.000,-100.00,100.00,-100.00,15.37,28.78,40.00
+ ZoneVentilation Airflow Stats Nominal, LIVINGROOM1.2,TONGFENGCISHUBIANLIANG,LIVINGROOM1.2,38.70,1.1,0.821,2.120E-002,0.755,25.444,Natural,0.000,1.0,0.606,3.600E-002,0.118,0.000,-100.00,100.00,-100.00,15.37,28.78,40.00
+ ZoneVentilation Airflow Stats Nominal, LIVINGROOM1.3,TONGFENGCISHUBIANLIANG,LIVINGROOM1.3,38.70,1.1,0.821,2.120E-002,0.755,25.444,Natural,0.000,1.0,0.606,3.600E-002,0.118,0.000,-100.00,100.00,-100.00,15.37,28.78,40.00
+ ZoneVentilation Airflow Stats Nominal, LIVINGROOM1.4,TONGFENGCISHUBIANLIANG,LIVINGROOM1.4,38.70,1.1,0.821,2.120E-002,0.755,25.444,Natural,0.000,1.0,0.606,3.600E-002,0.118,0.000,-100.00,100.00,-100.00,15.37,28.78,40.00
+ ZoneVentilation Airflow Stats Nominal, BEDROOM1.1,TONGFENGCISHUBIANLIANG,BEDROOM1.1,18.00,0.5,0.382,2.120E-002,0.755,25.444,Natural,0.000,1.0,0.606,3.600E-002,0.118,0.000,-100.00,100.00,-100.00,15.37,28.78,40.00
+ ZoneVentilation Airflow Stats Nominal, BEDROOM1.2,TONGFENGCISHUBIANLIANG,BEDROOM1.2,15.00,0.4,0.318,2.120E-002,0.755,25.444,Natural,0.000,1.0,0.606,3.600E-002,0.118,0.000,-100.00,100.00,-100.00,15.37,28.78,40.00
+ ZoneVentilation Airflow Stats Nominal, BEDROOM1.3,TONGFENGCISHUBIANLIANG,BEDROOM1.3,15.00,0.4,0.318,2.120E-002,0.755,25.444,Natural,0.000,1.0,0.606,3.600E-002,0.118,0.000,-100.00,100.00,-100.00,15.37,28.78,40.00
+ ZoneVentilation Airflow Stats Nominal, BEDROOM1.4,TONGFENGCISHUBIANLIANG,BEDROOM1.4,18.00,0.5,0.382,2.120E-002,0.755,25.444,Natural,0.000,1.0,0.606,3.600E-002,0.118,0.000,-100.00,100.00,-100.00,15.37,28.78,40.00
+ ZoneVentilation Airflow Stats Nominal, BEDROOM1.5,TONGFENGCISHUBIANLIANG,BEDROOM1.5,26.25,0.7,0.557,2.120E-002,0.755,25.444,Natural,0.000,1.0,0.606,3.600E-002,0.118,0.000,-100.00,100.00,-100.00,15.37,28.78,40.00
+ ZoneVentilation Airflow Stats Nominal, BEDROOM1.6,TONGFENGCISHUBIANLIANG,BEDROOM1.6,26.25,0.7,0.557,2.120E-002,0.755,25.444,Natural,0.000,1.0,0.606,3.600E-002,0.118,0.000,-100.00,100.00,-100.00,15.37,28.78,40.00
+ ZoneVentilation Airflow Stats Nominal, BEDROOM1.7,TONGFENGCISHUBIANLIANG,BEDROOM1.7,26.25,0.7,0.557,2.120E-002,0.755,25.444,Natural,0.000,1.0,0.606,3.600E-002,0.118,0.000,-100.00,100.00,-100.00,15.37,28.78,40.00
+ ZoneVentilation Airflow Stats Nominal, BEDROOM1.8,TONGFENGCISHUBIANLIANG,BEDROOM1.8,26.25,0.7,0.557,2.120E-002,0.755,25.444,Natural,0.000,1.0,0.606,3.600E-002,0.118,0.000,-100.00,100.00,-100.00,15.37,28.78,40.00
+ ZoneVentilation Airflow Stats Nominal, BEDROOM1.9,TONGFENGCISHUBIANLIANG,BEDROOM1.9,18.00,0.5,0.382,2.120E-002,0.755,25.444,Natural,0.000,1.0,0.606,3.600E-002,0.118,0.000,-100.00,100.00,-100.00,15.37,28.78,40.00
+ ZoneVentilation Airflow Stats Nominal, BEDROOM1.10,TONGFENGCISHUBIANLIANG,BEDROOM1.10,15.00,0.4,0.318,2.120E-002,0.755,25.444,Natural,0.000,1.0,0.606,3.600E-002,0.118,0.000,-100.00,100.00,-100.00,15.37,28.78,40.00
+ ZoneVentilation Airflow Stats Nominal, BEDROOM1.11,TONGFENGCISHUBIANLIANG,BEDROOM1.11,15.00,0.4,0.318,2.120E-002,0.755,25.444,Natural,0.000,1.0,0.606,3.600E-002,0.118,0.000,-100.00,100.00,-100.00,15.37,28.78,40.00
+ ZoneVentilation Airflow Stats Nominal, BEDROOM1.12,TONGFENGCISHUBIANLIANG,BEDROOM1.12,18.00,0.5,0.382,2.120E-002,0.755,25.444,Natural,0.000,1.0,0.606,3.600E-002,0.118,0.000,-100.00,100.00,-100.00,15.37,28.78,40.00
+ ZoneVentilation Airflow Stats Nominal, KITCHEN2.1,TONGFENGCISHUBIANLIANG,KITCHEN2.1,10.80,0.3,0.229,2.120E-002,0.755,25.444,Natural,0.000,1.0,0.606,3.600E-002,0.118,0.000,-100.00,100.00,-100.00,15.37,28.78,40.00
+ ZoneVentilation Airflow Stats Nominal, KITCHEN2.2,TONGFENGCISHUBIANLIANG,KITCHEN2.2,10.80,0.3,0.229,2.120E-002,0.755,25.444,Natural,0.000,1.0,0.606,3.600E-002,0.118,0.000,-100.00,100.00,-100.00,15.37,28.78,40.00
+ ZoneVentilation Airflow Stats Nominal, KITCHEN2.3,TONGFENGCISHUBIANLIANG,KITCHEN2.3,10.80,0.3,0.229,2.120E-002,0.755,25.444,Natural,0.000,1.0,0.606,3.600E-002,0.118,0.000,-100.00,100.00,-100.00,15.37,28.78,40.00
+ ZoneVentilation Airflow Stats Nominal, KITCHEN2.4,TONGFENGCISHUBIANLIANG,KITCHEN2.4,10.80,0.3,0.229,2.120E-002,0.755,25.444,Natural,0.000,1.0,0.606,3.600E-002,0.118,0.000,-100.00,100.00,-100.00,15.37,28.78,40.00
+ ZoneVentilation Airflow Stats Nominal, LIVINGROOM2.1,TONGFENGCISHUBIANLIANG,LIVINGROOM2.1,38.70,1.1,0.821,2.120E-002,0.755,25.444,Natural,0.000,1.0,0.606,3.600E-002,0.118,0.000,-100.00,100.00,-100.00,15.37,28.78,40.00
+ ZoneVentilation Airflow Stats Nominal, LIVINGROOM2.2,TONGFENGCISHUBIANLIANG,LIVINGROOM2.2,38.70,1.1,0.821,2.120E-002,0.755,25.444,Natural,0.000,1.0,0.606,3.600E-002,0.118,0.000,-100.00,100.00,-100.00,15.37,28.78,40.00
+ ZoneVentilation Airflow Stats Nominal, LIVINGROOM2.3,TONGFENGCISHUBIANLIANG,LIVINGROOM2.3,38.70,1.1,0.821,2.120E-002,0.755,25.444,Natural,0.000,1.0,0.606,3.600E-002,0.118,0.000,-100.00,100.00,-100.00,15.37,28.78,40.00
+ ZoneVentilation Airflow Stats Nominal, LIVINGROOM2.4,TONGFENGCISHUBIANLIANG,LIVINGROOM2.4,38.70,1.1,0.821,2.120E-002,0.755,25.444,Natural,0.000,1.0,0.606,3.600E-002,0.118,0.000,-100.00,100.00,-100.00,15.37,28.78,40.00
+ ZoneVentilation Airflow Stats Nominal, BEDROOM2.1,TONGFENGCISHUBIANLIANG,BEDROOM2.1,18.00,0.5,0.382,2.120E-002,0.755,25.444,Natural,0.000,1.0,0.606,3.600E-002,0.118,0.000,-100.00,100.00,-100.00,15.37,28.78,40.00
+ ZoneVentilation Airflow Stats Nominal, BEDROOM2.2,TONGFENGCISHUBIANLIANG,BEDROOM2.2,15.00,0.4,0.318,2.120E-002,0.755,25.444,Natural,0.000,1.0,0.606,3.600E-002,0.118,0.000,-100.00,100.00,-100.00,15.37,28.78,40.00
+ ZoneVentilation Airflow Stats Nominal, BEDROOM2.3,TONGFENGCISHUBIANLIANG,BEDROOM2.3,15.00,0.4,0.318,2.120E-002,0.755,25.444,Natural,0.000,1.0,0.606,3.600E-002,0.118,0.000,-100.00,100.00,-100.00,15.37,28.78,40.00
+ ZoneVentilation Airflow Stats Nominal, BEDROOM2.4,TONGFENGCISHUBIANLIANG,BEDROOM2.4,18.00,0.5,0.382,2.120E-002,0.755,25.444,Natural,0.000,1.0,0.606,3.600E-002,0.118,0.000,-100.00,100.00,-100.00,15.37,28.78,40.00
+ ZoneVentilation Airflow Stats Nominal, BEDROOM2.5,TONGFENGCISHUBIANLIANG,BEDROOM2.5,26.25,0.7,0.557,2.120E-002,0.755,25.444,Natural,0.000,1.0,0.606,3.600E-002,0.118,0.000,-100.00,100.00,-100.00,15.37,28.78,40.00
+ ZoneVentilation Airflow Stats Nominal, BEDROOM2.6,TONGFENGCISHUBIANLIANG,BEDROOM2.6,26.25,0.7,0.557,2.120E-002,0.755,25.444,Natural,0.000,1.0,0.606,3.600E-002,0.118,0.000,-100.00,100.00,-100.00,15.37,28.78,40.00
+ ZoneVentilation Airflow Stats Nominal, BEDROOM2.7,TONGFENGCISHUBIANLIANG,BEDROOM2.7,26.25,0.7,0.557,2.120E-002,0.755,25.444,Natural,0.000,1.0,0.606,3.600E-002,0.118,0.000,-100.00,100.00,-100.00,15.37,28.78,40.00
+ ZoneVentilation Airflow Stats Nominal, BEDROOM2.8,TONGFENGCISHUBIANLIANG,BEDROOM2.8,26.25,0.7,0.557,2.120E-002,0.755,25.444,Natural,0.000,1.0,0.606,3.600E-002,0.118,0.000,-100.00,100.00,-100.00,15.37,28.78,40.00
+ ZoneVentilation Airflow Stats Nominal, BEDROOM2.9,TONGFENGCISHUBIANLIANG,BEDROOM2.9,18.00,0.5,0.382,2.120E-002,0.755,25.444,Natural,0.000,1.0,0.606,3.600E-002,0.118,0.000,-100.00,100.00,-100.00,15.37,28.78,40.00
+ ZoneVentilation Airflow Stats Nominal, BEDROOM2.10,TONGFENGCISHUBIANLIANG,BEDROOM2.10,15.00,0.4,0.318,2.120E-002,0.755,25.444,Natural,0.000,1.0,0.606,3.600E-002,0.118,0.000,-100.00,100.00,-100.00,15.37,28.78,40.00
+ ZoneVentilation Airflow Stats Nominal, BEDROOM2.11,TONGFENGCISHUBIANLIANG,BEDROOM2.11,15.00,0.4,0.318,2.120E-002,0.755,25.444,Natural,0.000,1.0,0.606,3.600E-002,0.118,0.000,-100.00,100.00,-100.00,15.37,28.78,40.00
+ ZoneVentilation Airflow Stats Nominal, BEDROOM2.12,TONGFENGCISHUBIANLIANG,BEDROOM2.12,18.00,0.5,0.382,2.120E-002,0.755,25.444,Natural,0.000,1.0,0.606,3.600E-002,0.118,0.000,-100.00,100.00,-100.00,15.37,28.78,40.00
+ ZoneVentilation Airflow Stats Nominal, KITCHEN3.1,TONGFENGCISHUBIANLIANG,KITCHEN3.1,10.80,0.3,0.229,2.120E-002,0.755,25.444,Natural,0.000,1.0,0.606,3.600E-002,0.118,0.000,-100.00,100.00,-100.00,15.37,28.78,40.00
+ ZoneVentilation Airflow Stats Nominal, KITCHEN3.2,TONGFENGCISHUBIANLIANG,KITCHEN3.2,10.80,0.3,0.229,2.120E-002,0.755,25.444,Natural,0.000,1.0,0.606,3.600E-002,0.118,0.000,-100.00,100.00,-100.00,15.37,28.78,40.00
+ ZoneVentilation Airflow Stats Nominal, KITCHEN3.3,TONGFENGCISHUBIANLIANG,KITCHEN3.3,10.80,0.3,0.229,2.120E-002,0.755,25.444,Natural,0.000,1.0,0.606,3.600E-002,0.118,0.000,-100.00,100.00,-100.00,15.37,28.78,40.00
+ ZoneVentilation Airflow Stats Nominal, KITCHEN3.4,TONGFENGCISHUBIANLIANG,KITCHEN3.4,10.80,0.3,0.229,2.120E-002,0.755,25.444,Natural,0.000,1.0,0.606,3.600E-002,0.118,0.000,-100.00,100.00,-100.00,15.37,28.78,40.00
+ ZoneVentilation Airflow Stats Nominal, LIVINGROOM3.1,TONGFENGCISHUBIANLIANG,LIVINGROOM3.1,38.70,1.1,0.821,2.120E-002,0.755,25.444,Natural,0.000,1.0,0.606,3.600E-002,0.118,0.000,-100.00,100.00,-100.00,15.37,28.78,40.00
+ ZoneVentilation Airflow Stats Nominal, LIVINGROOM3.2,TONGFENGCISHUBIANLIANG,LIVINGROOM3.2,38.70,1.1,0.821,2.120E-002,0.755,25.444,Natural,0.000,1.0,0.606,3.600E-002,0.118,0.000,-100.00,100.00,-100.00,15.37,28.78,40.00
+ ZoneVentilation Airflow Stats Nominal, LIVINGROOM3.3,TONGFENGCISHUBIANLIANG,LIVINGROOM3.3,38.70,1.1,0.821,2.120E-002,0.755,25.444,Natural,0.000,1.0,0.606,3.600E-002,0.118,0.000,-100.00,100.00,-100.00,15.37,28.78,40.00
+ ZoneVentilation Airflow Stats Nominal, LIVINGROOM3.4,TONGFENGCISHUBIANLIANG,LIVINGROOM3.4,38.70,1.1,0.821,2.120E-002,0.755,25.444,Natural,0.000,1.0,0.606,3.600E-002,0.118,0.000,-100.00,100.00,-100.00,15.37,28.78,40.00
+ ZoneVentilation Airflow Stats Nominal, BEDROOM3.1,TONGFENGCISHUBIANLIANG,BEDROOM3.1,18.00,0.5,0.382,2.120E-002,0.755,25.444,Natural,0.000,1.0,0.606,3.600E-002,0.118,0.000,-100.00,100.00,-100.00,15.37,28.78,40.00
+ ZoneVentilation Airflow Stats Nominal, BEDROOM3.2,TONGFENGCISHUBIANLIANG,BEDROOM3.2,15.00,0.4,0.318,2.120E-002,0.755,25.444,Natural,0.000,1.0,0.606,3.600E-002,0.118,0.000,-100.00,100.00,-100.00,15.37,28.78,40.00
+ ZoneVentilation Airflow Stats Nominal, BEDROOM3.3,TONGFENGCISHUBIANLIANG,BEDROOM3.3,15.00,0.4,0.318,2.120E-002,0.755,25.444,Natural,0.000,1.0,0.606,3.600E-002,0.118,0.000,-100.00,100.00,-100.00,15.37,28.78,40.00
+ ZoneVentilation Airflow Stats Nominal, BEDROOM3.4,TONGFENGCISHUBIANLIANG,BEDROOM3.4,18.00,0.5,0.382,2.120E-002,0.755,25.444,Natural,0.000,1.0,0.606,3.600E-002,0.118,0.000,-100.00,100.00,-100.00,15.37,28.78,40.00
+ ZoneVentilation Airflow Stats Nominal, BEDROOM3.5,TONGFENGCISHUBIANLIANG,BEDROOM3.5,26.25,0.7,0.557,2.120E-002,0.755,25.444,Natural,0.000,1.0,0.606,3.600E-002,0.118,0.000,-100.00,100.00,-100.00,15.37,28.78,40.00
+ ZoneVentilation Airflow Stats Nominal, BEDROOM3.6,TONGFENGCISHUBIANLIANG,BEDROOM3.6,26.25,0.7,0.557,2.120E-002,0.755,25.444,Natural,0.000,1.0,0.606,3.600E-002,0.118,0.000,-100.00,100.00,-100.00,15.37,28.78,40.00
+ ZoneVentilation Airflow Stats Nominal, BEDROOM3.7,TONGFENGCISHUBIANLIANG,BEDROOM3.7,26.25,0.7,0.557,2.120E-002,0.755,25.444,Natural,0.000,1.0,0.606,3.600E-002,0.118,0.000,-100.00,100.00,-100.00,15.37,28.78,40.00
+ ZoneVentilation Airflow Stats Nominal, BEDROOM3.8,TONGFENGCISHUBIANLIANG,BEDROOM3.8,26.25,0.7,0.557,2.120E-002,0.755,25.444,Natural,0.000,1.0,0.606,3.600E-002,0.118,0.000,-100.00,100.00,-100.00,15.37,28.78,40.00
+ ZoneVentilation Airflow Stats Nominal, BEDROOM3.9,TONGFENGCISHUBIANLIANG,BEDROOM3.9,18.00,0.5,0.382,2.120E-002,0.755,25.444,Natural,0.000,1.0,0.606,3.600E-002,0.118,0.000,-100.00,100.00,-100.00,15.37,28.78,40.00
+ ZoneVentilation Airflow Stats Nominal, BEDROOM3.10,TONGFENGCISHUBIANLIANG,BEDROOM3.10,15.00,0.4,0.318,2.120E-002,0.755,25.444,Natural,0.000,1.0,0.606,3.600E-002,0.118,0.000,-100.00,100.00,-100.00,15.37,28.78,40.00
+ ZoneVentilation Airflow Stats Nominal, BEDROOM3.11,TONGFENGCISHUBIANLIANG,BEDROOM3.11,15.00,0.4,0.318,2.120E-002,0.755,25.444,Natural,0.000,1.0,0.606,3.600E-002,0.118,0.000,-100.00,100.00,-100.00,15.37,28.78,40.00
+ ZoneVentilation Airflow Stats Nominal, BEDROOM3.12,TONGFENGCISHUBIANLIANG,BEDROOM3.12,18.00,0.5,0.382,2.120E-002,0.755,25.444,Natural,0.000,1.0,0.606,3.600E-002,0.118,0.000,-100.00,100.00,-100.00,15.37,28.78,40.00
 ! <AirFlow Model>, Simple
  AirFlow Model, Simple
 ! <RoomAir Model>, Zone Name, Mixing/Mundt/UCSDDV/UCSDCV/UCSDUFI/UCSDUFE/User Defined
@@ -626,71 +626,58 @@ Zone Volume Capacitance Multiplier,   1.000 ,   1.000,   1.000,   1.000
 ! <Environment:WarmupDays>, NumberofWarmupDays
 Environment,RUNPERIOD,WeatherFileRunPeriod,01/01/2015,12/31/2016,Thursday,365,Use RunPeriod Specified Day,Yes,Yes,No,Yes,Yes
 Environment:Daylight Saving,Yes,InputFile,03/08,11/01
-Environment:WarmupDays, 11
+Environment:WarmupDays, 13
 ! <Warmup Convergence Information>,Zone Name,Environment Type/Name,Average Warmup Temperature Difference {deltaC},Std Dev Warmup Temperature Difference {deltaC},Max Temperature Pass/Fail Convergence,Min Temperature Pass/Fail Convergence,Average Warmup Load Difference {W},Std Dev Warmup Load Difference {W},Heating Load Pass/Fail Convergence,Cooling Load Pass/Fail Convergence
- Warmup Convergence Information,KITCHEN1.1,RunPeriod: RUNPERIOD,7.3413092424E-002,6.5033695429E-002,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
- Warmup Convergence Information,BEDROOM1.4,RunPeriod: RUNPERIOD,0.1899794888,0.8645779129,Pass,Pass,2.0308270136E-002,0.1106075700,Pass,Pass
- Warmup Convergence Information,KITCHEN1.2,RunPeriod: RUNPERIOD,7.3390352070E-002,6.5105818870E-002,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
- Warmup Convergence Information,LIVINGROOM1.2,RunPeriod: RUNPERIOD,0.1991872909,0.8556686963,Pass,Pass,2.2541813261E-002,8.9779355732E-002,Pass,Pass
- Warmup Convergence Information,BEDROOM1.7,RunPeriod: RUNPERIOD,0.1894157956,0.8498266272,Pass,Pass,2.5574335168E-002,0.1346966688,Pass,Pass
- Warmup Convergence Information,LIVINGROOM1.3,RunPeriod: RUNPERIOD,0.2002078724,0.8632067782,Pass,Pass,2.2481391437E-002,8.9356188697E-002,Pass,Pass
- Warmup Convergence Information,BEDROOM1.9,RunPeriod: RUNPERIOD,0.1909789332,0.8685070305,Pass,Pass,2.0300967874E-002,0.1104921319,Pass,Pass
- Warmup Convergence Information,BEDROOM1.10,RunPeriod: RUNPERIOD,0.1856557083,0.8529317725,Pass,Pass,1.9677158913E-002,0.1069475364,Pass,Pass
- Warmup Convergence Information,BEDROOM1.11,RunPeriod: RUNPERIOD,0.1854167791,0.8516232436,Pass,Pass,1.9722551413E-002,0.1073855579,Pass,Pass
- Warmup Convergence Information,BEDROOM1.12,RunPeriod: RUNPERIOD,0.1899419531,0.8611414828,Pass,Pass,2.0615536623E-002,0.1132596752,Pass,Pass
- Warmup Convergence Information,STAIRCASE1.1,RunPeriod: RUNPERIOD,2.2229731827E-003,1.0854358846E-003,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
- Warmup Convergence Information,KITCHEN1.3,RunPeriod: RUNPERIOD,7.3394510084E-002,6.5068732157E-002,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
- Warmup Convergence Information,KITCHEN1.4,RunPeriod: RUNPERIOD,7.3372157935E-002,6.5132259888E-002,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
- Warmup Convergence Information,LIVINGROOM1.4,RunPeriod: RUNPERIOD,0.1990159985,0.8547979725,Pass,Pass,2.2553140452E-002,8.9794197960E-002,Pass,Pass
- Warmup Convergence Information,BEDROOM1.6,RunPeriod: RUNPERIOD,0.1884650250,0.8428984533,Pass,Pass,2.6284831766E-002,0.1380616502,Pass,Pass
- Warmup Convergence Information,BEDROOM1.8,RunPeriod: RUNPERIOD,0.1884487270,0.8428058421,Pass,Pass,2.6295198010E-002,0.1381115883,Pass,Pass
- Warmup Convergence Information,BEDROOM1.3,RunPeriod: RUNPERIOD,0.1855775194,0.8561757754,Pass,Pass,1.9446347313E-002,0.1042400502,Pass,Pass
- Warmup Convergence Information,BEDROOM1.2,RunPeriod: RUNPERIOD,0.1858232946,0.8575133091,Pass,Pass,1.9401971359E-002,0.1038086999,Pass,Pass
- Warmup Convergence Information,BEDROOM1.1,RunPeriod: RUNPERIOD,0.1910578969,0.8721408041,Pass,Pass,2.0063838196E-002,0.1078217217,Pass,Pass
- Warmup Convergence Information,LIVINGROOM1.1,RunPeriod: RUNPERIOD,0.2003846896,0.8641027789,Pass,Pass,2.2470396038E-002,8.9348874210E-002,Pass,Pass
- Warmup Convergence Information,BEDROOM1.5,RunPeriod: RUNPERIOD,0.1894325554,0.8499209954,Pass,Pass,2.5564016735E-002,0.1346472767,Pass,Pass
- Warmup Convergence Information,LIVINGROOM2.4,RunPeriod: RUNPERIOD,0.2080061737,0.9011735158,Pass,Pass,2.1279374747E-002,8.7297750409E-002,Pass,Pass
- Warmup Convergence Information,BEDROOM2.5,RunPeriod: RUNPERIOD,0.1969578194,0.8905666294,Pass,Pass,2.2188688072E-002,0.1188051674,Pass,Pass
- Warmup Convergence Information,LIVINGROOM2.1,RunPeriod: RUNPERIOD,0.2093363291,0.9103158769,Pass,Pass,2.1222243083E-002,8.7031685420E-002,Pass,Pass
- Warmup Convergence Information,BEDROOM2.11,RunPeriod: RUNPERIOD,0.1920377220,0.8866736958,Pass,Pass,1.8872297327E-002,9.7923366897E-002,Pass,Pass
- Warmup Convergence Information,BEDROOM2.10,RunPeriod: RUNPERIOD,0.1922894989,0.8880148290,Pass,Pass,1.8835309209E-002,9.7543953081E-002,Pass,Pass
- Warmup Convergence Information,BEDROOM2.9,RunPeriod: RUNPERIOD,0.1971571466,0.9010499455,Pass,Pass,1.9501853716E-002,0.1016823501,Pass,Pass
- Warmup Convergence Information,LIVINGROOM2.3,RunPeriod: RUNPERIOD,0.2091481406,0.9093672104,Pass,Pass,2.1230422327E-002,8.7023773556E-002,Pass,Pass
- Warmup Convergence Information,BEDROOM2.7,RunPeriod: RUNPERIOD,0.1969387716,0.8904657541,Pass,Pass,2.2198337588E-002,0.1188491638,Pass,Pass
- Warmup Convergence Information,LIVINGROOM2.2,RunPeriod: RUNPERIOD,0.2081917613,0.9021196485,Pass,Pass,2.1270940630E-002,8.7301470228E-002,Pass,Pass
- Warmup Convergence Information,BEDROOM2.2,RunPeriod: RUNPERIOD,0.1926541935,0.8935399800,Pass,Pass,1.8588538648E-002,9.4645153931E-002,Pass,Pass
- Warmup Convergence Information,BEDROOM2.8,RunPeriod: RUNPERIOD,0.1958822650,0.8831733930,Pass,Pass,2.2833877036E-002,0.1217432302,Pass,Pass
- Warmup Convergence Information,BEDROOM2.3,RunPeriod: RUNPERIOD,0.1923971704,0.8921693125,Pass,Pass,1.8624726450E-002,9.5018939711E-002,Pass,Pass
- Warmup Convergence Information,BEDROOM2.1,RunPeriod: RUNPERIOD,0.1973758619,0.9053611223,Pass,Pass,1.9283282798E-002,9.9131857778E-002,Pass,Pass
- Warmup Convergence Information,BEDROOM2.4,RunPeriod: RUNPERIOD,0.1962062054,0.8974557511,Pass,Pass,1.9485699802E-002,0.1016279769,Pass,Pass
- Warmup Convergence Information,BEDROOM2.6,RunPeriod: RUNPERIOD,0.1959005536,0.8832723923,Pass,Pass,2.2824347725E-002,0.1216992505,Pass,Pass
- Warmup Convergence Information,KITCHEN2.1,RunPeriod: RUNPERIOD,7.4830610827E-002,6.3801380499E-002,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
- Warmup Convergence Information,KITCHEN2.4,RunPeriod: RUNPERIOD,7.4792476928E-002,6.3774444314E-002,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
- Warmup Convergence Information,KITCHEN2.3,RunPeriod: RUNPERIOD,7.4812972926E-002,6.3826315989E-002,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
- Warmup Convergence Information,STAIRCASE2.1,RunPeriod: RUNPERIOD,2.1459750184E-003,1.4886696367E-003,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
- Warmup Convergence Information,BEDROOM2.12,RunPeriod: RUNPERIOD,0.1960156099,0.8933837836,Pass,Pass,1.9706522435E-002,0.1041704116,Pass,Pass
- Warmup Convergence Information,KITCHEN2.2,RunPeriod: RUNPERIOD,7.4810109942E-002,6.3779544939E-002,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
- Warmup Convergence Information,LIVINGROOM3.4,RunPeriod: RUNPERIOD,0.2243199507,1.0003996109,Pass,Pass,1.8985502605E-002,8.2168360560E-002,Pass,Pass
- Warmup Convergence Information,BEDROOM3.5,RunPeriod: RUNPERIOD,0.2172329895,1.0027917129,Pass,Pass,1.9550270744E-002,9.5834879817E-002,Pass,Pass
- Warmup Convergence Information,LIVINGROOM3.1,RunPeriod: RUNPERIOD,0.2254548178,1.0080998980,Pass,Pass,1.8984511276E-002,8.2100339053E-002,Pass,Pass
- Warmup Convergence Information,BEDROOM3.11,RunPeriod: RUNPERIOD,0.2078710082,0.9887464392,Pass,Pass,1.8305986703E-002,9.1793010097E-002,Pass,Pass
- Warmup Convergence Information,BEDROOM3.10,RunPeriod: RUNPERIOD,0.2081033573,0.9897717266,Pass,Pass,1.8280295436E-002,9.1459693883E-002,Pass,Pass
- Warmup Convergence Information,BEDROOM3.9,RunPeriod: RUNPERIOD,0.2135451167,0.9993747286,Pass,Pass,1.7298071027E-002,8.0569957209E-002,Pass,Pass
- Warmup Convergence Information,LIVINGROOM3.3,RunPeriod: RUNPERIOD,0.2252802928,1.0072761976,Pass,Pass,1.8987300745E-002,8.2084152464E-002,Pass,Pass
- Warmup Convergence Information,KITCHEN3.4,RunPeriod: RUNPERIOD,7.4951019595E-002,6.2690786682E-002,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
- Warmup Convergence Information,KITCHEN3.1,RunPeriod: RUNPERIOD,7.5007649916E-002,6.2726104517E-002,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
- Warmup Convergence Information,BEDROOM3.4,RunPeriod: RUNPERIOD,0.2128191197,0.9972701020,Pass,Pass,1.7274937973E-002,8.0257747550E-002,Pass,Pass
- Warmup Convergence Information,BEDROOM3.6,RunPeriod: RUNPERIOD,0.2159135217,0.9955846681,Pass,Pass,1.8722303432E-002,8.9921121261E-002,Pass,Pass
- Warmup Convergence Information,KITCHEN3.3,RunPeriod: RUNPERIOD,7.4980307333E-002,6.2697579744E-002,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
- Warmup Convergence Information,KITCHEN3.2,RunPeriod: RUNPERIOD,7.4978286341E-002,6.2717685788E-002,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
- Warmup Convergence Information,BEDROOM3.12,RunPeriod: RUNPERIOD,0.2125185511,0.9927007976,Pass,Pass,1.7418937357E-002,8.2389117015E-002,Pass,Pass
- Warmup Convergence Information,STAIRCASE3.1,RunPeriod: RUNPERIOD,1.1949234781E-002,6.1410302825E-003,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
- Warmup Convergence Information,BEDROOM3.3,RunPeriod: RUNPERIOD,0.2084186637,0.9946564365,Pass,Pass,1.8170857058E-002,8.9308628138E-002,Pass,Pass
- Warmup Convergence Information,BEDROOM3.1,RunPeriod: RUNPERIOD,0.2141271657,1.0050883115,Pass,Pass,1.8636681144E-002,8.9876849792E-002,Pass,Pass
- Warmup Convergence Information,BEDROOM3.8,RunPeriod: RUNPERIOD,0.2158972589,0.9955084683,Pass,Pass,1.8724747849E-002,8.9958369544E-002,Pass,Pass
- Warmup Convergence Information,BEDROOM3.2,RunPeriod: RUNPERIOD,0.2086472855,0.9956866232,Pass,Pass,1.8145924488E-002,8.9008398716E-002,Pass,Pass
- Warmup Convergence Information,LIVINGROOM3.2,RunPeriod: RUNPERIOD,0.2244857460,1.0011917298,Pass,Pass,1.8982799065E-002,8.2178554735E-002,Pass,Pass
- Warmup Convergence Information,BEDROOM3.7,RunPeriod: RUNPERIOD,0.2172158844,1.0027115225,Pass,Pass,1.9552916677E-002,9.5871873006E-002,Pass,Pass
-! <Program Control Information:Threads/Parallel Sims>, Threading Supported,Maximum Number of Threads, Env Set Threads (OMP_NUM_THREADS), EP Env Set Threads (EP_OMP_NUM_THREADS), IDF Set Threads, Number of Threads Used (Interior Radiant Exchange), Number Nominal Surfaces, Number Parallel Sims
-Program Control:Threads/Parallel Sims, No,1, N/A, N/A, N/A, N/A, N/A, N/A
-End of Data
+ Warmup Convergence Information,KITCHEN1.1,RunPeriod: RUNPERIOD,7.3475610613E-002,6.5373577134E-002,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,BEDROOM1.4,RunPeriod: RUNPERIOD,0.1853528311,0.8433140286,Pass,Pass,2.1799095505E-002,0.1184637809,Pass,Pass
+ Warmup Convergence Information,KITCHEN1.2,RunPeriod: RUNPERIOD,7.3477178326E-002,6.5379746790E-002,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,LIVINGROOM1.2,RunPeriod: RUNPERIOD,0.1971560905,0.8522899291,Pass,Pass,2.2713355062E-002,8.9812322233E-002,Pass,Pass
+ Warmup Convergence Information,BEDROOM1.7,RunPeriod: RUNPERIOD,0.1872336221,0.8393895577,Pass,Pass,2.6647438298E-002,0.1398101928,Pass,Pass
+ Warmup Convergence Information,LIVINGROOM1.3,RunPeriod: RUNPERIOD,0.1976473174,0.8537094311,Pass,Pass,2.2680061449E-002,8.9776411605E-002,Pass,Pass
+ Warmup Convergence Information,BEDROOM1.9,RunPeriod: RUNPERIOD,0.1864707884,0.8486992802,Pass,Pass,2.1516357260E-002,0.1172840695,Pass,Pass
+ Warmup Convergence Information,BEDROOM1.10,RunPeriod: RUNPERIOD,0.1825559395,0.8390285999,Pass,Pass,2.0125931276E-002,0.1117380395,Pass,Pass
+ Warmup Convergence Information,BEDROOM1.11,RunPeriod: RUNPERIOD,0.1825235510,0.8388336341,Pass,Pass,2.0141917876E-002,0.1118068257,Pass,Pass
+ Warmup Convergence Information,BEDROOM1.12,RunPeriod: RUNPERIOD,0.1860237311,0.8471630172,Pass,Pass,2.1546070938E-002,0.1173612332,Pass,Pass
+ Warmup Convergence Information,STAIRCASE1.1,RunPeriod: RUNPERIOD,1.5874246164E-003,1.0847938832E-003,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,KITCHEN1.3,RunPeriod: RUNPERIOD,7.3486930194E-002,6.5376432450E-002,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,KITCHEN1.4,RunPeriod: RUNPERIOD,7.3488529115E-002,6.5382512761E-002,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,LIVINGROOM1.4,RunPeriod: RUNPERIOD,0.1972668425,0.8528612587,Pass,Pass,2.2707171355E-002,8.9804328729E-002,Pass,Pass
+ Warmup Convergence Information,BEDROOM1.6,RunPeriod: RUNPERIOD,0.1868200817,0.8379334039,Pass,Pass,2.6706700701E-002,0.1400490601,Pass,Pass
+ Warmup Convergence Information,BEDROOM1.8,RunPeriod: RUNPERIOD,0.1868321164,0.8380006299,Pass,Pass,2.6699041474E-002,0.1400121873,Pass,Pass
+ Warmup Convergence Information,BEDROOM1.3,RunPeriod: RUNPERIOD,0.1817623566,0.8344240537,Pass,Pass,2.0415453358E-002,0.1129527945,Pass,Pass
+ Warmup Convergence Information,BEDROOM1.2,RunPeriod: RUNPERIOD,0.1817949861,0.8346210546,Pass,Pass,2.0399091480E-002,0.1128820439,Pass,Pass
+ Warmup Convergence Information,BEDROOM1.1,RunPeriod: RUNPERIOD,0.1858020298,0.8448677073,Pass,Pass,2.1765386857E-002,0.1183742007,Pass,Pass
+ Warmup Convergence Information,LIVINGROOM1.1,RunPeriod: RUNPERIOD,0.1975371357,0.8531413682,Pass,Pass,2.2686154310E-002,8.9784328831E-002,Pass,Pass
+ Warmup Convergence Information,BEDROOM1.5,RunPeriod: RUNPERIOD,0.1872216919,0.8393229473,Pass,Pass,2.6655013338E-002,0.1398465447,Pass,Pass
+ Warmup Convergence Information,LIVINGROOM2.4,RunPeriod: RUNPERIOD,0.2030655824,0.8812288373,Pass,Pass,2.2350609230E-002,8.9439689993E-002,Pass,Pass
+ Warmup Convergence Information,BEDROOM2.5,RunPeriod: RUNPERIOD,0.1916228145,0.8615200226,Pass,Pass,2.5149767130E-002,0.1322673692,Pass,Pass
+ Warmup Convergence Information,LIVINGROOM2.1,RunPeriod: RUNPERIOD,0.2033205837,0.8814696980,Pass,Pass,2.2330804432E-002,8.9412739706E-002,Pass,Pass
+ Warmup Convergence Information,BEDROOM2.11,RunPeriod: RUNPERIOD,0.1866522731,0.8594950485,Pass,Pass,1.9706480418E-002,0.1068693230,Pass,Pass
+ Warmup Convergence Information,BEDROOM2.10,RunPeriod: RUNPERIOD,0.1866853981,0.8596910057,Pass,Pass,1.9700557451E-002,0.1068046604,Pass,Pass
+ Warmup Convergence Information,BEDROOM2.9,RunPeriod: RUNPERIOD,0.1903273183,0.8679245352,Pass,Pass,2.0578896810E-002,0.1127970496,Pass,Pass
+ Warmup Convergence Information,LIVINGROOM2.3,RunPeriod: RUNPERIOD,0.2034360060,0.8820700110,Pass,Pass,2.2325701617E-002,8.9414632947E-002,Pass,Pass
+ Warmup Convergence Information,BEDROOM2.7,RunPeriod: RUNPERIOD,0.1916356503,0.8615903378,Pass,Pass,2.5142326087E-002,0.1322323190,Pass,Pass
+ Warmup Convergence Information,LIVINGROOM2.2,RunPeriod: RUNPERIOD,0.2029496066,0.8806252796,Pass,Pass,2.2355783781E-002,8.9437888349E-002,Pass,Pass
+ Warmup Convergence Information,BEDROOM2.2,RunPeriod: RUNPERIOD,0.1858942060,0.8551829375,Pass,Pass,1.9808350326E-002,0.1078943676,Pass,Pass
+ Warmup Convergence Information,BEDROOM2.8,RunPeriod: RUNPERIOD,0.1912376172,0.8602326090,Pass,Pass,2.5184426159E-002,0.1323660029,Pass,Pass
+ Warmup Convergence Information,BEDROOM2.3,RunPeriod: RUNPERIOD,0.1858609020,0.8549849683,Pass,Pass,1.9814554594E-002,0.1079607856,Pass,Pass
+ Warmup Convergence Information,BEDROOM2.1,RunPeriod: RUNPERIOD,0.1896279861,0.8639937757,Pass,Pass,2.0815482454E-002,0.1138296311,Pass,Pass
+ Warmup Convergence Information,BEDROOM2.4,RunPeriod: RUNPERIOD,0.1891827447,0.8624711415,Pass,Pass,2.0836757590E-002,0.1138794355,Pass,Pass
+ Warmup Convergence Information,BEDROOM2.6,RunPeriod: RUNPERIOD,0.1912246763,0.8601616581,Pass,Pass,2.5191846787E-002,0.1324010960,Pass,Pass
+ Warmup Convergence Information,KITCHEN2.1,RunPeriod: RUNPERIOD,7.5503961771E-002,6.4934078760E-002,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,KITCHEN2.4,RunPeriod: RUNPERIOD,7.5516579319E-002,6.4912019991E-002,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,KITCHEN2.3,RunPeriod: RUNPERIOD,7.5514785569E-002,6.4913564401E-002,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,STAIRCASE2.1,RunPeriod: RUNPERIOD,1.8471779163E-003,1.2748095749E-003,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,BEDROOM2.12,RunPeriod: RUNPERIOD,0.1898833229,0.8664213508,Pass,Pass,2.0595795165E-002,0.1128371989,Pass,Pass
+ Warmup Convergence Information,KITCHEN2.2,RunPeriod: RUNPERIOD,7.5505718987E-002,6.4932593672E-002,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,LIVINGROOM3.4,RunPeriod: RUNPERIOD,0.2086290354,0.9122192536,Pass,Pass,2.1232579961E-002,8.7973786680E-002,Pass,Pass
+ Warmup Convergence Information,BEDROOM3.5,RunPeriod: RUNPERIOD,0.1973085414,0.8920350915,Pass,Pass,2.2319411638E-002,0.1199171935,Pass,Pass
+ Warmup Convergence Information,LIVINGROOM3.1,RunPeriod: RUNPERIOD,0.2088511752,0.9124083384,Pass,Pass,2.1211479791E-002,8.7917970595E-002,Pass,Pass
+ Warmup Convergence Information,BEDROOM3.11,RunPeriod: RUNPERIOD,0.1913890018,0.8861023541,Pass,Pass,1.8706938700E-002,9.8371904215E-002,Pass,Pass
+ Warmup Convergence Information,BEDROOM3.10,RunPeriod: RUNPERIOD,0.1914193531,0.8862742907,Pass,Pass,1.8702627828E-002,9.8323056296E-002,Pass,Pass
+ Warmup Convergence Information,BEDROOM3.9,RunPeriod: RUNPERIOD,0.1949868070,0.8936485754,Pass,Pass,1.9533504363E-002,0.1044360654,Pass,Pass
+ Warmup Convergence Information,LIVINGROOM3.3,RunPeriod: RUNPERIOD,0.2089604870,0.9129765209,Pass,Pass,2.1208149804E-002,8.7933306782E-002,Pass,Pass
+ Warmup Convergence Information,KITCHEN3.4,RunPeriod: RUNPERIOD,7.5390908090E-002,6.3540205511E-002,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,KITCHEN3.1,RunPeriod: RUNPERIOD,7.5379925105E-002,6.3551473210E-002,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,BEDROOM3.4,RunPeriod: RUNPERIOD,0.1938277217,0.8884436209,Pass,Pass,1.9609510837E-002,0.1051802968,Pass,Pass
+ Warmup Convergence Information,BEDROOM3.6,RunPeriod: RUNPERIOD,0.1969405267,0.8908178550,Pass,Pass,2.2331139139E-002,0.1199477468,Pass,Pass

@@ -6,7 +6,7 @@
 
 - output: csv for (vector - pareto optimal solution) pair and graph
 
-- optimization algorithm: NSAG2
+- optimization algorithm: NSGA2
 
 - multiprocessing boosting.
 

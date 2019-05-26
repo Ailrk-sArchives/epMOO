@@ -1,7 +1,7 @@
 from typing import List, Tuple
 import os
 import subprocess
-import idf_handler as Idfh
+from idfhandler import IdfIOStream
 
 """
 There will be a new class handle this type of jobs exclusively for idf format.
@@ -131,7 +131,7 @@ def preamble(*args):
     winwallrate = args[3:7]
     direction = args[7]
     airchange = args[8]
-    with Idfh.IdfIOStream(IDF_FILE, "idf") as idf:  # take idf template and modify
+    with IdfIOStream(IDF_FILE, "idf") as idf:  # take idf template and modify
         # define op: Operator.
 
         east_list: List = []

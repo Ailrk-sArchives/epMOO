@@ -22,7 +22,6 @@ Note if HVAC template is used, no regular idf file should be used.
 from typing import TextIO, IO
 from typing import Optional, Dict, Any, Union, List, Tuple, Callable
 import os.path
-import csv
 import json
 import re
 
@@ -32,26 +31,6 @@ JsonDict = Dict[str, Any]
 IdfRecords = List[int]
 Operator = Callable[..., Optional[List]]
 ApplyList = List[Tuple[str, Pattern, Pattern, Optional[Operator]]]
-
-
-class EPOutputReader:
-    def __init__(self, path: str):
-        self.path = path
-        self.file: IO = open(path, 'r')
-        self.reader = csv.DictReader(self.file)
-
-    def read_column(self, column_name) -> List[str]:
-        column: List[str] = []
-        for row in self.reader:
-            column.append(row[column_name])
-
-        return column
-
-    def __enter__(self):
-        return self
-
-    def __exit__(self, *args):
-        self.file.close()
 
 
 class EPInputModel:
@@ -235,27 +214,4 @@ class JdfModel(EPInputModel):
             return None
 
 
-# TODO Split into another file from here.
-Model = Union[IdfModel, JdfModel, None]
 
-
-class IdfIOStream:
-    """
-    A RAII manager for idf file.
-    """
-    def __init__(self, path: str, mode: str = 'idf'):
-        self.path = path
-        self.model: Model = None
-        self.mode = mode
-
-    def __enter__(self):
-        if self.mode == 'idf':
-            self.model = IdfModel(self.path)
-
-        elif self.mode == 'jdf':
-            self.model = JdfModel(self.path)
-
-        return self.model
-
-    def __exit__(self, *args):
-        self.model.close()

@@ -1,4 +1,4 @@
-from idf_handler import EPOutputReader
+from idfhandler import EPOutputReader
 from typing import List
 import os.path
 
