@@ -2,6 +2,9 @@ from typing import List, Tuple
 import os
 import subprocess
 from idfhandler import IdfIOStream
+import time
+
+# MAKE SURE EVERYTHING HERE ARE EXECUTED UNDER SAME PROCESS!
 
 """
 There will be a new class handle this type of jobs exclusively for idf format.
@@ -20,18 +23,6 @@ W_DATA = os.path.abspath(W_PATH)
 FLOOR_HEIGHT = 2.8
 WINDOW_HEIGHT = 1.5
 WINDOW_EDGT_HEIGHT = 1
-
-
-def run_energy_plus():
-    print("start running ep>")
-    subprocess.run([
-            "energyplus",
-            "-w", W_DATA,
-            "-r",
-            "-d", OUTPUT_PATH,
-            RUN_IDF_FILE
-        ])
-    print("end running ep>")
 
 
 def generate_struct(direction: str, floor_num: str, pos: List[tuple], rate: float) -> List[str]:
@@ -127,13 +118,16 @@ def generate_struct(direction: str, floor_num: str, pos: List[tuple], rate: floa
 
 
 def preamble(*args):
-    # defines args names
+    pid = os.getpid()
+    output_idf_file = os.path.join(OUTPUT_PATH, str(pid) + ".idf")
 
-    print("=========================initializing============================>")
+    print(f"=========================initializing pid: {pid}============================>")
+
+    # defines args names
     winwallrate = args[3:7]
     direction = args[7]
     airchange = args[8]
-    with IdfIOStream(IDF_FILE, "idf") as idf:  # take idf template and modify
+    with IdfIOStream(input_path=IDF_FILE, output_path=output_idf_file, mode="idf") as idf:
         # define op: Operator.
 
         east_list: List = []
@@ -149,9 +143,9 @@ def preamble(*args):
             win_str = r"(.*)Exterior Window" + str(int(args[2]))
             coord_str = r"[\s]+(\d+\.\d+),.*(\d+\.\d+),.*(\d+\.\d+)[,;]"
 
-            idf.sub([wall_str], r"\1Exterior Wall", lines, idx)  # DONE
-            idf.sub([roof_str], r"\1Exterior Roof", lines, idx)  # DONE
-            idf.sub([win_str], r"\1Exterior Window", lines, idx)  # DONE
+            idf.sub([wall_str], r"\1Exterior Wall", lines, idx)
+            idf.sub([roof_str], r"\1Exterior Roof", lines, idx)
+            idf.sub([win_str], r"\1Exterior Window", lines, idx)
 
             idf.grap(east_list, [r"[\s]+eastwall(.*\..*),", coord_str,
                      coord_str, coord_str, coord_str], lines, idx)
@@ -166,6 +160,7 @@ def preamble(*args):
                     lines, idx)
             idf.sub([r".*tongfengcishubianliang", r"([\s]+)\d+(.*Air Changes per Hour.*)"], r"\g<1>{}\2".format(str(airchange)), lines, idx)
 
+        print(f"applying preamble in {pid}")
         idf.apply(op)  # apply operator.
 
         # appaned newly calculated structures.
@@ -181,5 +176,19 @@ def preamble(*args):
         for w in north_list:
             data = generate_struct("north", w[0], w[1:], winwallrate[3])
             idf.append(data)
+    run_energy_plus(pid)
 
-    run_energy_plus()
+
+def run_energy_plus(pid):
+    output_dir = os.path.join(OUTPUT_PATH, str(pid))
+    run_idf_file = os.path.join(os.path.abspath("temp"), str(pid) + ".idf")
+
+    print("<start running ep in pid {} at {}>".format(pid, time.ctime()))
+    subprocess.run([
+            "energyplus",
+            "-w", W_DATA,
+            "-r",
+            "-d", output_dir,
+            run_idf_file  # THIS will break single proc
+        ])
+    print("<end ep in pid {} at {}>".format(pid, time.ctime()))

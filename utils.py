@@ -10,12 +10,6 @@ def init():
     if not os.path.exists("results"):
         os.mkdir("results")
 
-    if not os.path.exists("temp"):
-        os.mkdir("temp")
-
-    if os.path.exists("temp.idf"):  # remove old idf.
-        os.remove("temp.idf")
-
     try:
         if glob.glob("*.idf") == []:
             raise IOError

@@ -30,19 +30,22 @@ Pattern = str
 JsonDict = Dict[str, Any]
 IdfRecords = List[int]
 Operator = Callable[..., Optional[List]]
-ApplyList = List[Tuple[str, Pattern, Pattern, Optional[Operator]]]
 
 
 class EPInputModel:
-    """Base class for both idf and jdf input format"""
-    def __init__(self, path: str):
-        self.path = os.path.abspath(path)
+    """
+    Base class for both idf and jdf input format
+    _input_path: path for base idf file.
+    _output_path: path for generated idf file.
+    """
+    def __init__(self, input_path: str, output_path):
+        self._input_path = os.path.abspath(input_path)
+        self._output_path = os.path.abspath(output_path)
         self.updated = False  # indicate if the model is modified.
-        self.file: Optional[TextIO] = None
 
     def close(self) -> None:
-        if self.file is not None and not self.file.closed:
-            self.file.close()
+        # override by subclass.
+        pass
 
 
 class IdfModel(EPInputModel):
@@ -51,31 +54,30 @@ class IdfModel(EPInputModel):
     A simple class for text file search and replacement
     """
 
-    def __init__(self, path: str):
-        super().__init__(path=os.path.abspath(path))
-        self.temp_path = os.path.abspath("./temp.idf")
+    def __init__(self, input_path: str, output_path: str):
+        super().__init__(input_path=input_path, output_path=output_path)
 
-        self.rlines: List[str] = []
-        with open(path, "r") as f:
-            self.rlines = f.readlines()
+        self.idf_lines: List[str] = []
+        with open(self._input_path, "r") as f:
+            self.idf_lines = f.readlines()
 
     def apply(self, op: Callable):
         # def op(list, i): apply(...), sub(...), search(...)
         # op is the collection of all operations.
 
-        for idx, _ in enumerate(self.rlines):
-            op(self.rlines, idx)
+        for idx, _ in enumerate(self.idf_lines):
+            op(self.idf_lines, idx)
 
     def append(self, data: List[str]):
-        self.rlines.extend(data)
+        self.idf_lines.extend(data)
 
-    def search(self, capture_list: List, patterns: List[Pattern], rlines: List,
+    def search(self, capture_list: List, patterns: List[Pattern], idf_lines: List,
                idx=0, depth=20, matched=False):
         # recursively search, put result into capture_list.
         if depth == 0:
             return
 
-        line = rlines[idx]
+        line = idf_lines[idx]
         p = patterns.pop(0)
         match = re.match(p, line)
 
@@ -90,20 +92,20 @@ class IdfModel(EPInputModel):
                 return
 
             else:                     # in process.
-                self.search(capture_list, patterns, rlines, idx + 1, depth - 1, matched)
+                self.search(capture_list, patterns, idf_lines, idx + 1, depth - 1, matched)
             return
 
         elif matched:                 # hit anchor already.
             patterns.append(p)
-            self.search(capture_list, patterns, rlines, idx + 1, depth - 1, matched)
+            self.search(capture_list, patterns, idf_lines, idx + 1, depth - 1, matched)
 
         return
 
-    def grap(self, capture_list, patterns: List[Pattern], rlines: List,
+    def grap(self, capture_list, patterns: List[Pattern], idf_lines: List,
              idx=0, depth=20, matched=False):
         # grap all anchors after found a
 
-        line = rlines[idx]
+        line = idf_lines[idx]
         p = patterns[0]
         sub_patterns = [patterns[:i+1] for i in range(len(patterns))]
 
@@ -111,35 +113,35 @@ class IdfModel(EPInputModel):
             sub_capture_list: List = []
 
             for i, sub_pattern in enumerate(sub_patterns):  # grouping.
-                self.search(sub_capture_list, sub_pattern, rlines, idx)
+                self.search(sub_capture_list, sub_pattern, idf_lines, idx)
             capture_list.append(sub_capture_list)
 
-    def sub(self, patterns: List[Pattern], replacement: Pattern, rlines, idx, depth=20, matched=False):
+    def sub(self, patterns: List[Pattern], replacement: Pattern, idf_lines, idx, depth=20, matched=False):
         # recursively search till find the target, then do text substitution.
         if depth == 0:
             return
 
         p = patterns.pop(0)
-        line = rlines[idx]
+        line = idf_lines[idx]
         hit_anchor = self.__search_one(p, line)
 
         if len(patterns) == 0:      # Case: either hit target or in between.
             if hit_anchor:
-                rlines[idx] = re.sub(p, replacement, line)  # bingo case
+                idf_lines[idx] = re.sub(p, replacement, line)  # bingo case
                 return
             elif matched:
                 patterns.append(p)
-                self.sub(patterns, replacement, rlines, idx + 1, depth - 1, matched)
+                self.sub(patterns, replacement, idf_lines, idx + 1, depth - 1, matched)
             return
 
         if hit_anchor:              # still has patterns remains.
             matched = True
-            self.sub(patterns, replacement, rlines, idx + 1, depth - 1, matched)
+            self.sub(patterns, replacement, idf_lines, idx + 1, depth - 1, matched)
             return
 
         elif matched:
             patterns.append(p)
-            self.sub(patterns, replacement, rlines, idx + 1, depth - 1, matched)
+            self.sub(patterns, replacement, idf_lines, idx + 1, depth - 1, matched)
 
         return
 
@@ -147,9 +149,9 @@ class IdfModel(EPInputModel):
         # the last step after all operations.
         data = ""
 
-        for line in self.rlines:
+        for line in self.idf_lines:
             data += line
-        with open(self.temp_path, "w") as f:
+        with open(self._output_path, "w") as f:
             f.write(data)
 
     def __search_one(self, pattern: Pattern, line: str) -> bool:
@@ -165,21 +167,22 @@ class IdfModel(EPInputModel):
         self.__write_back()
 
 
-class JdfModel(EPInputModel):
+class JdfModel(EPInputModel):  # NOTE unused.
     """
     epJson file object
     The class support handling epJson format input file.
     """
-    def __init__(self, path: str):
-        super().__init__(path=path)
+    def __init__(self, input_path: str, output_path: str):
+        super().__init__(input_path=input_path, output_path=output_path)
         self.ep_model: Optional[JsonDict] = None
+        self.file = None
 
         # create the json model, then open the file to write.
         try:
-            with open(path, 'r') as f:
+            with open(self._input_path, 'r') as f:
                 self.ep_model = json.loads(f.read())
         except IOError:
-            print(f"Failed to read jdf file {path}")
+            print(f"Failed to read jdf file {input_path}")
 
     def update(self, struct: JsonDict) -> None:
         # update struct into epJson model
@@ -196,11 +199,11 @@ class JdfModel(EPInputModel):
         if self.file is None:
             if self.updated:
                 try:
-                    with open(self.path, "w") as f:
+                    with open(self._output_path, "w") as f:
                         json_ep_model = json.dumps(self.ep_model, indent=4)
                         f.write(json_ep_model)
                 except IOError:
-                    print("Failed to open file {}".format(self.path))
+                    print("Failed to open file {}".format(self._output_path))
 
         else:
             RuntimeError("File {} already openned".format(self.path))

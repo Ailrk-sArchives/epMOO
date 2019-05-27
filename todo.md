@@ -50,7 +50,7 @@ author: jimmy yao.
 ### 2019-05-22 Congras! 
 1. Everyting runs in python! No more matlab. Btw it is my birthday.
 
-### 2019-05-26 Multiprocessing [TODO]
+### 2019-05-26 Multiprocessing [DONE]
 Try to support multiprocessing for nsga2 algorithm while minimize the degree of coupling. (NO COUPLING!!!)
 
 1. Start to make multiprocessing. Benefits:
@@ -114,10 +114,19 @@ Support remote multiprocessing to improve the performance even further.
     2. data will be lists of input parameters, so maybe transmitted inform of json.
     3. There might be some problem in scheduling when collecting results from different hosts, in that case just put everything in a que since the order doesn't matter.
 
-### 2019-05-26 Betterl logging system. [TODO]
+### 2019-05-26 Better logging system. [TODO]
 Now there are full of print in the program, change them into better logging module
 
 1. Why?
     1. logging is more flexible, it can be controlled globally.
     2. it can output to files without handling manually.
+
+
+### 2019-05-27 A Preambletool class for creating preamble. [TODO]
+Make a callable class Preamble, and use it as a template of standard preamble input.
+1. Why?
+    It is tedious to handwrite the preamble, especially when it comes to deal with multiprocessing.
+
+2. How?
+    A preamble class encapsulate all the preamble running informations like paths, pid, etc. Overload __call__ method, and pass the entire class into nsga2.
 

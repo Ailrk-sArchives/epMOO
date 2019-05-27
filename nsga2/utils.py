@@ -1,12 +1,14 @@
 from nsga2.population import Population
 import random
+from multiprocessing import Queue, Process, cpu_count
+from functools import partial
 
 
 class NSGA2Utils:
 
     def __init__(self, problem, num_of_individuals=100,
                  num_of_tour_particips=2, tournament_prob=0.9,
-                 crossover_param=2, mutation_param=5):
+                 crossover_param=2, mutation_param=5, concurrency=False):
 
         self.problem = problem
         self.num_of_individuals = num_of_individuals
@@ -14,13 +16,49 @@ class NSGA2Utils:
         self.tournament_prob = tournament_prob
         self.crossover_param = crossover_param
         self.mutation_param = mutation_param
+        self.concurrency = concurrency
 
     def create_initial_population(self):
         population = Population()
-        for _ in range(self.num_of_individuals):
-            individual = self.problem.generate_individual()
-            self.problem.calculate_objectives(individual)
-            population.append(individual)
+
+        if self.concurrency:
+            queue = Queue()
+            calculate_objectives = partial(     # worker function.
+                    lambda individual, queue: queue.put(self.problem.calculate_objectives(individual)),
+                    queue=queue)
+
+            for _ in range(self.num_of_individuals):
+                individual = self.problem.generate_individual()
+                population.append(individual)
+
+            # generate process pool, pass individuals.
+            process_pool = [Process(target=calculate_objectives, args=(individual,)) for individual in population.population]
+            new_population = []
+
+            for p in process_pool:
+                p.start()
+                qlen = queue.qsize()  # harvest queue
+                if not queue.empty():
+                    for _ in range(qlen):
+                        new_population.append(queue.get())
+
+            for p in process_pool:
+                p.join()
+                qlen = queue.qsize()  # harvest queue
+                if not queue.empty():
+                    for _ in range(qlen):
+                        new_population.append(queue.get())
+                        for n in new_population:
+                            print(n)
+
+            population.population = new_population  # update the individual list.
+
+        else:  # SINGLE PROC CASE.
+            for _ in range(self.num_of_individuals):
+                individual = self.problem.generate_individual()
+                self.problem.calculate_objectives(individual)
+                population.append(individual)
+
         return population
 
     def fast_nondominated_sort(self, population):

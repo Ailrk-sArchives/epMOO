@@ -5,9 +5,12 @@ import os
 from plot import plot
 
 class Evolution:
+    """This class only deal with the main logic of the algorithm"""
 
-    def __init__(self, problem, num_of_generations=1000, num_of_individuals=100, num_of_tour_particips=2, tournament_prob=0.9, crossover_param=2, mutation_param=5):
-        self.utils = NSGA2Utils(problem, num_of_individuals, num_of_tour_particips, tournament_prob, crossover_param, mutation_param)
+    def __init__(self, problem, num_of_generations=1000, num_of_individuals=100, num_of_tour_particips=2, tournament_prob=0.9, crossover_param=2, mutation_param=5, concurrency=False):
+        # hyperparameters are passed into Utils directly..
+        self.utils = NSGA2Utils(problem, num_of_individuals, num_of_tour_particips, tournament_prob, crossover_param,
+                                mutation_param, concurrency)
         self.population = None
         self.num_of_generations = num_of_generations
         self.on_generation_finished = []
@@ -22,7 +25,7 @@ class Evolution:
         returned_population = None
 
         for i in range(self.num_of_generations):
-            print("Generation {} startde at {}".format(i, time.ctime()))  # DEBUG info
+            print("Generation {} started at {}".format(i, time.ctime()))  # DEBUG info
 
             self.population.extend(children)
             self.utils.fast_nondominated_sort(self.population)
@@ -47,6 +50,7 @@ class Evolution:
         return returned_population.fronts[0]
 
     def log(self, current_gen, returned_population, path):
+        # log results and draw graphs.
         log_path = os.path.join(os.path.abspath(path), str(current_gen) + ".txt")
         log = "[!]Generation {} at {}\n".format(current_gen, time.ctime())
         log += "size of front generated: {}\n".format(len(returned_population.fronts[0]))
@@ -70,5 +74,4 @@ class Evolution:
 
         with open(log_path, "w+") as f:
             f.write(log)
-
         plot(str(current_gen), returned_population.fronts[0])

@@ -1,12 +1,12 @@
 from idfhandler import EPOutputReader
 from typing import List
-import os.path
+import os
 
 """objective functions paras"""
 SUMMER_LAMBDA = 0.415
 WINTER_LAMBDA = 0.253
-EP_TBL = os.path.abspath("./temp/eplustbl.csv")
-EP_OUT_CSV = os.path.abspath("./temp/eplusout.csv")
+EP_TBL = "eplustbl.csv"
+EP_OUT_CSV = "eplusout.csv"
 
 """economic specs"""
 wall_and_roof_specs = [
@@ -25,12 +25,16 @@ roof_area = 484
 
 def f1_energy_consumption(*args) -> float:
     # Energy consumption.
-    print("running f1 ...")
+    pid = str(os.getpid())
+    ep_tbl_path = os.path.join(os.path.abspath("temp"), pid, EP_TBL)
+
+    print("running f1 ... in {}".format(os.getpid()))
     cop = float(args[9])
+    energy_consumption: float = 0
     summer_consumption: float = 0
     winter_consumption: float = 0
 
-    with open(EP_TBL, "r") as f:
+    with open(ep_tbl_path, "r") as f:
         data = f.readlines()
         for i, _ in enumerate(data):
             if "Utility Use Per Conditioned Floor Area" in data[i]:
@@ -45,11 +49,16 @@ def f1_energy_consumption(*args) -> float:
 
 
 def f2_aPMV(*args) -> float:
-    print("running f2 ...")
-    # get aPMV
-    with EPOutputReader(EP_OUT_CSV) as ep_table:
-        pmv_list: List = []
+    pid = str(os.getpid())
+    ep_out_csv_path = os.path.join(os.path.abspath("temp"), pid, EP_OUT_CSV)
 
+    print("running f2 ... in {}".format(os.getpid()))
+
+    # get aPMV
+    apmv_avg: float = 0
+
+    with EPOutputReader(ep_out_csv_path) as ep_table:
+        pmv_list: List = []
         for row in ep_table.reader:
             if float(row["BEDROOM2.2:Zone Ideal Loads Zone Total Heating Energy [J](Hourly)"]) == 0 and \
                float(row["BEDROOM2.2:Zone Ideal Loads Zone Total Cooling Energy [J](Hourly)"]) == 0:
@@ -63,18 +72,21 @@ def f2_aPMV(*args) -> float:
         apmv_list.extend(list(map(lambda x: abs(x / 1 - WINTER_LAMBDA * x), pmv_list_winter)))
 
         apmv_avg = sum(apmv_list) / len(apmv_list)
-        return apmv_avg
+    return apmv_avg
 
 
 def f3_economy(*args) -> float:
-    print("running f3 ... ")
+    pid = str(os.getpid())
+    ep_tbl_path = os.path.join(os.path.abspath("temp"), pid, EP_TBL)
+
+    print("running f3 ... in {}".format(os.getpid()))
     wall_id = int(args[0])
     roof_id = int(args[1])
     win_id = int(args[2])
 
     window_area: float = 0
 
-    with open(EP_TBL, "r") as f:
+    with open(ep_tbl_path, "r") as f:
         data = f.readlines()
         for i, _ in enumerate(data):
             if "Window-Wall Ratio" in data[i]:

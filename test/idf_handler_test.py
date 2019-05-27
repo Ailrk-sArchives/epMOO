@@ -1,7 +1,7 @@
 import sys
-sys.path.append("../")
-import idf_handler as IdfH
 from typing import List
+sys.path.append("../")
+from idfhandler import IdfIOStream
 from obj_func_preamble import generate_struct
 
 winwallrate = [0.15, 0.34, 0.23, 0.11]
@@ -9,7 +9,7 @@ args = [1, 1, 1]
 direction = 300
 airchange = 19
 
-with IdfH.IdfIOStream("../jizhun.idf", "idf") as idf:
+with IdfIOStream("../jizhun.idf", "newbase.idf", "idf") as idf:
     east_list: List = []
     west_list: List = []
     south_list: List = []
@@ -54,5 +54,5 @@ with IdfH.IdfIOStream("../jizhun.idf", "idf") as idf:
                 generate_struct(
                     "north", w[0], w[1:], winwallrate[0]))
 
-    for line in idf.rlines:
+    for line in idf.idf_lines:
         print(line)

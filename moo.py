@@ -28,7 +28,8 @@ def moo(paras: List, hyperparameter: Dict):
             mutation_param=hyperparameter["MUTATION_PARAM"],
             num_of_generations=hyperparameter["NUM_OF_GENERATIONS"],
             num_of_individuals=hyperparameter["NUM_OF_INDIVIDUALS"],
-            num_of_tour_particips=hyperparameter["NUM_OF_TOUR_PARTICIPS"])
+            num_of_tour_particips=hyperparameter["NUM_OF_TOUR_PARTICIPS"],
+            concurrency=hyperparameter["CONCURRENCY"])
 
     # draw the last one with 3d box.
     func = [i.objectives for i in evo.evolve()]

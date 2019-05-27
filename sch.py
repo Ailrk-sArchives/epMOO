@@ -31,8 +31,8 @@ def f3(x, y, z):
     return x**2 + 1 + y - z
 
 
-problem = Problem(num_of_variables=3, objectives=[f1, f2, f3], variables_range=[(0, 55), (0, 100), (20, 20)])
-evo = Evolution(problem, num_of_generations=40, num_of_individuals=40)
+problem = Problem(num_of_variables=3, objectives=[f1, f2, f3], variables_range=[(0, 55), (0, 100), (0, 20)])
+evo = Evolution(problem, num_of_generations=40, num_of_individuals=500, concurrency=True)
 evol = evo.evolve()
 
 plot("good", evol)

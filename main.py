@@ -19,8 +19,9 @@ paras = [outerwall, roof, window, easterate, westrate, southrate,
 hyperparameter = {
         "MUTATION_PARAM": 2,
         "NUM_OF_GENERATIONS": 50,
-        "NUM_OF_INDIVIDUALS": 15,
-        "NUM_OF_TOUR_PARTICIPS": 2
+        "NUM_OF_INDIVIDUALS": 50,
+        "NUM_OF_TOUR_PARTICIPS": 2,
+        "CONCURRENCY": True
 }
 
 

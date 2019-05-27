@@ -1,5 +1,6 @@
 from nsga2.individual import Individual
 import random
+import copy
 
 
 class Problem:
@@ -29,3 +30,5 @@ class Problem:
             individual.objectives = [f(*individual.features) for f in self.objectives]
         else:
             individual.objectives = [f(individual.features) for f in self.objectives]
+        return copy.deepcopy(individual)
+
