@@ -6,7 +6,7 @@ class NSGA2Utils:
 
     def __init__(self, problem, num_of_individuals=100,
                  num_of_tour_particips=2, tournament_prob=0.9,
-                 crossover_param=2, mutation_param=5, concurrency=False):
+                 crossover_param=2, mutation_param=5, concurrency=False, max_proc=1):
 
         self.problem = problem
         self.num_of_individuals = num_of_individuals
@@ -15,6 +15,7 @@ class NSGA2Utils:
         self.crossover_param = crossover_param
         self.mutation_param = mutation_param
         self.concurrency = concurrency
+        self._max_proc = max_proc
 
     def create_initial_population(self):
         population = Population()
@@ -23,7 +24,7 @@ class NSGA2Utils:
             for _ in range(self.num_of_individuals):  # generate empty list.
                 individual = self.problem.generate_individual()
                 population.append(individual)
-            pool = ProcPool(self.problem.calculate_objectives, population)
+            pool = ProcPool(self.problem.calculate_objectives, population, proc_num=self._max_proc)
             population.population = pool()
 
         else:  # SINGLE PROC CASE.
@@ -102,7 +103,7 @@ class NSGA2Utils:
             children.append(child2)
 
         if self.concurrency:
-            pool = ProcPool(self.problem.calculate_objectives, children)
+            pool = ProcPool(self.problem.calculate_objectives, children, proc_num=self._max_proc)
             children = pool()
 
         return children

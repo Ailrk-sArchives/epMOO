@@ -1,0 +1,104 @@
+Program Version,EnergyPlus, Version 8.7.0-78a111df4a, YMD=2019.05.28 05:48
+! <Version>, Version ID
+ Version, 8.4
+! <Timesteps per Hour>, #TimeSteps, Minutes per TimeStep {minutes}
+ Timesteps per Hour,  4, 15
+! <System Convergence Limits>, Minimum System TimeStep {minutes}, Max HVAC Iterations, Minimum Plant Iterations, Maximum Plant Iterations
+ System Convergence Limits, 1, 20, 2, 8
+! <Simulation Control>, Do Zone Sizing, Do System Sizing, Do Plant Sizing, Do Design Days, Do Weather Simulation, Do HVAC Sizing Simulation
+ Simulation Control, No, No, No, Yes, Yes, No
+! <Output Reporting Tolerances>, Tolerance for Time Heating Setpoint Not Met, Tolerance for Zone Cooling Setpoint Not Met Time
+ Output Reporting Tolerances, 0.200, 0.200, 
+! <Site:GroundTemperature:BuildingSurface>,Jan{C},Feb{C},Mar{C},Apr{C},May{C},Jun{C},Jul{C},Aug{C},Sep{C},Oct{C},Nov{C},Dec{C}
+ Site:GroundTemperature:BuildingSurface,  17.73,  17.58,  14.99,  15.72,  19.24,  24.78,  25.36,  25.42,  25.45,  23.67,  19.98,  19.57
+! <Site:GroundTemperature:FCfactorMethod>,Jan{C},Feb{C},Mar{C},Apr{C},May{C},Jun{C},Jul{C},Aug{C},Sep{C},Oct{C},Nov{C},Dec{C}
+ Site:GroundTemperature:FCfactorMethod,  13.31,  10.23,   9.39,  10.12,  14.28,  18.95,  23.34,  26.51,  27.44,  25.95,  22.35,  17.82
+! <Site:GroundTemperature:Shallow>,Jan{C},Feb{C},Mar{C},Apr{C},May{C},Jun{C},Jul{C},Aug{C},Sep{C},Oct{C},Nov{C},Dec{C}
+ Site:GroundTemperature:Shallow,  13.00,  13.00,  13.00,  13.00,  13.00,  13.00,  13.00,  13.00,  13.00,  13.00,  13.00,  13.00
+! <Site:GroundTemperature:Deep>,Jan{C},Feb{C},Mar{C},Apr{C},May{C},Jun{C},Jul{C},Aug{C},Sep{C},Oct{C},Nov{C},Dec{C}
+ Site:GroundTemperature:Deep,  16.00,  16.00,  16.00,  16.00,  16.00,  16.00,  16.00,  16.00,  16.00,  16.00,  16.00,  16.00
+! <Site:GroundReflectance>,Jan{dimensionless},Feb{dimensionless},Mar{dimensionless},Apr{dimensionless},May{dimensionless},Jun{dimensionless},Jul{dimensionless},Aug{dimensionless},Sep{dimensionless},Oct{dimensionless},Nov{dimensionless},Dec{dimensionless}
+ Site:GroundReflectance,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20
+! <Site:GroundReflectance:SnowModifier>, Normal, Daylighting {dimensionless}
+ Site:GroundReflectance:SnowModifier,   1.000,   1.000
+! <Site:GroundReflectance:Snow>,Jan{dimensionless},Feb{dimensionless},Mar{dimensionless},Apr{dimensionless},May{dimensionless},Jun{dimensionless},Jul{dimensionless},Aug{dimensionless},Sep{dimensionless},Oct{dimensionless},Nov{dimensionless},Dec{dimensionless}
+ Site:GroundReflectance:Snow,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20
+! <Site:GroundReflectance:Snow:Daylighting>,Jan{dimensionless},Feb{dimensionless},Mar{dimensionless},Apr{dimensionless},May{dimensionless},Jun{dimensionless},Jul{dimensionless},Aug{dimensionless},Sep{dimensionless},Oct{dimensionless},Nov{dimensionless},Dec{dimensionless}
+ Site:GroundReflectance:Snow:Daylighting,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20
+! <Environment:Weather Station>,Wind Sensor Height Above Ground {m},Wind Speed Profile Exponent {},Wind Speed Profile Boundary Layer Thickness {m},Air Temperature Sensor Height Above Ground {m},Wind Speed Modifier Coefficient-Internal,Temperature Modifier Coefficient-Internal
+Environment:Weather Station,10.000,0.140,270.000,1.500,1.586,9.750E-003
+! <Site:Location>, Location Name, Latitude {N+/S- Deg}, Longitude {E+/W- Deg},  Time Zone Number {GMT+/-}, Elevation {m},  Standard Pressure at Elevation {Pa}, Standard RhoAir at Elevation
+Site:Location,Chongqing Shapingba Chongqing CHN CSWD WMO#=575160,29.58,106.47,8.00,259.10,98251,1.1678
+! <Building Information>, Building Name,North Axis {deg},Terrain,  Loads Convergence Tolerance Value,Temperature Convergence Tolerance Value,  Solar Distribution,Maximum Number of Warmup Days,Minimum Number of Warmup Days
+ Building Information,3cengzhuzhai,92.669,City,4.00000E-002,0.40000,FullInteriorAndExterior,25,6
+! <Inside Convection Algorithm>, Algorithm {Simple | TARP | CeilingDiffuser | AdaptiveConvectionAlgorithm}
+Inside Convection Algorithm,AdaptiveConvectionAlgorithm
+! <Outside Convection Algorithm>, Algorithm {SimpleCombined | TARP | MoWitt | DOE-2 | AdaptiveConvectionAlgorithm}
+Outside Convection Algorithm,AdaptiveConvectionAlgorithm
+! <Sky Radiance Distribution>, Value {Anisotropic}
+Sky Radiance Distribution,Anisotropic
+! <Zone Air Solution Algorithm>, Value {ThirdOrderBackwardDifference | AnalyticalSolution | EulerMethod}
+ Zone Air Solution Algorithm, ThirdOrderBackwardDifference
+! <Zone Air Carbon Dioxide Balance Simulation>, Simulation {Yes/No}, Carbon Dioxide Concentration
+ Zone Air Carbon Dioxide Balance Simulation, No,N/A
+! <Zone Air Generic Contaminant Balance Simulation>, Simulation {Yes/No}, Generic Contaminant Concentration
+ Zone Air Generic Contaminant Balance Simulation, No,N/A
+! <Zone Air Mass Flow Balance Simulation>, Enforce Mass Balance, Adjust Zone Mixing, Adjust Zone Infiltration {AddInfiltration | AdjustInfiltration | None}, Infiltration Zones {MixingSourceZonesOnly | AllZones}
+ Zone Air Mass Flow Balance Simulation, No,N/A,N/A,N/A
+! <Environment:Site Atmospheric Variation>,Wind Speed Profile Exponent {},Wind Speed Profile Boundary Layer Thickness {m},Air Temperature Gradient Coefficient {K/m}
+Environment:Site Atmospheric Variation,0.330,460.000,6.500000E-003
+! <Surface Geometry>,Starting Corner,Vertex Input Direction,Coordinate System,Daylight Reference Point Coordinate System,Rectangular (Simple) Surface Coordinate System
+ Surface Geometry,UpperLeftCorner,Counterclockwise,RelativeCoordinateSystem,RelativeCoordinateSystem,RelativeToZoneOrigin
+! <Surface Heat Transfer Algorithm>, Value {CTF - ConductionTransferFunction | EMPD - MoisturePenetrationDepthConductionTransferFunction | CondFD - ConductionFiniteDifference | HAMT - CombinedHeatAndMoistureFiniteElement} - Description,Inside Surface Max Temperature Limit{C}, Surface Convection Coefficient Lower Limit {W/m2-K}, Surface Convection Coefficient Upper Limit {W/m2-K}
+Surface Heat Transfer Algorithm, CTF - ConductionTransferFunction,200,0.10,1000.0
+! <Shading Summary>, Number of Fixed Detached Shades, Number of Building Detached Shades, Number of Attached Shades
+ Shading Summary,0,0,0
+! <Zone Summary>, Number of Zones, Number of Zone Surfaces, Number of SubSurfaces
+ Zone Summary,63,498,60
+! <Zone Information>,Zone Name,North Axis {deg},Origin X-Coordinate {m},Origin Y-Coordinate {m},Origin Z-Coordinate {m},Centroid X-Coordinate {m},Centroid Y-Coordinate {m},Centroid Z-Coordinate {m},Type,Zone Multiplier,Zone List Multiplier,Minimum X {m},Maximum X {m},Minimum Y {m},Maximum Y {m},Minimum Z {m},Maximum Z {m},Ceiling Height {m},Volume {m3},Zone Inside Convection Algorithm {Simple-Detailed-CeilingDiffuser-TrombeWall},Zone Outside Convection Algorithm {Simple-Detailed-Tarp-MoWitt-DOE-2-BLAST}, Floor Area {m2},Exterior Gross Wall Area {m2},Exterior Net Wall Area {m2},Exterior Window Area {m2}, Number of Surfaces, Number of SubSurfaces, Number of Shading SubSurfaces,  Part of Total Building Area
+ Zone Information, KITCHEN1.1,0.0,8.60,3.00,0.00,4.79,-10.03,1.50,1,1,1,2.48,7.09,-11.34,-8.73,0.00,3.00,3.00,32.40,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,10.80,0.00,0.00,0.00,6,0,0,Yes
+ Zone Information, BEDROOM1.4,0.0,16.00,0.00,0.00,0.61,-19.05,1.50,1,1,1,-1.02,2.25,-22.12,-15.98,0.00,3.00,3.00,54.00,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,18.00,27.00,25.27,1.73,6,2,0,Yes
+ Zone Information, KITCHEN1.2,0.0,11.00,3.00,0.00,4.68,-12.43,1.50,1,1,1,2.37,6.98,-13.73,-11.13,0.00,3.00,3.00,32.40,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,10.80,0.00,0.00,0.00,6,0,0,Yes
+ Zone Information, LIVINGROOM1.2,0.0,13.50,3.00,0.00,4.42,-17.93,1.50,1,1,1,1.97,6.87,-22.33,-13.53,0.00,3.00,3.00,116.10,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,38.70,13.50,12.17,1.33,8,1,0,Yes
+ Zone Information, BEDROOM1.7,0.0,0.00,11.00,0.00,12.56,-4.34,1.50,1,1,1,10.64,14.48,-8.17,-0.51,0.00,3.00,3.00,78.75,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,26.25,10.50,9.54,0.96,6,1,0,Yes
+ Zone Information, LIVINGROOM1.3,0.0,0.00,14.50,0.00,16.53,-5.08,1.50,1,1,1,14.08,18.98,-9.48,-0.68,0.00,3.00,3.00,116.10,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,38.70,13.50,12.27,1.23,8,1,0,Yes
+ Zone Information, BEDROOM1.9,0.0,0.00,19.00,0.00,20.34,-3.95,1.50,1,1,1,18.70,21.98,-7.02,-0.88,0.00,3.00,3.00,54.00,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,18.00,27.00,25.29,1.71,6,2,0,Yes
+ Zone Information, BEDROOM1.10,0.0,6.00,19.00,0.00,20.08,-9.45,1.50,1,1,1,18.47,21.70,-12.01,-6.88,0.00,3.00,3.00,45.00,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,15.00,15.00,14.11,0.89,7,1,0,Yes
+ Zone Information, BEDROOM1.11,0.0,11.00,19.00,0.00,19.85,-14.44,1.50,1,1,1,18.23,21.46,-17.01,-11.87,0.00,3.00,3.00,45.00,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,15.00,15.00,14.11,0.89,7,1,0,Yes
+ Zone Information, BEDROOM1.12,0.0,16.00,19.00,0.00,19.59,-19.93,1.50,1,1,1,17.95,21.23,-23.00,-16.87,0.00,3.00,3.00,54.00,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,18.00,27.00,25.22,1.78,6,2,0,Yes
+ Zone Information, STAIRCASE1.1,0.0,7.50,7.50,0.00,10.48,-11.50,1.50,1,1,1,6.82,14.13,-15.16,-7.84,0.00,3.00,3.00,147.00,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,49.00,0.00,0.00,0.00,14,0,0,Yes
+ Zone Information, KITCHEN1.3,0.0,8.60,14.50,0.00,16.28,-10.57,1.50,1,1,1,13.97,18.58,-11.87,-9.27,0.00,3.00,3.00,32.40,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,10.80,0.00,0.00,0.00,6,0,0,Yes
+ Zone Information, KITCHEN1.4,0.0,11.00,14.50,0.00,16.16,-12.97,1.50,1,1,1,13.86,18.47,-14.27,-11.66,0.00,3.00,3.00,32.40,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,10.80,0.00,0.00,0.00,6,0,0,Yes
+ Zone Information, LIVINGROOM1.4,0.0,13.40,14.50,0.00,15.91,-18.46,1.50,1,1,1,13.46,18.36,-22.86,-14.06,0.00,3.00,3.00,116.10,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,38.70,13.50,12.17,1.33,8,1,0,Yes
+ Zone Information, BEDROOM1.6,0.0,14.50,7.50,0.00,8.39,-18.66,1.50,1,1,1,6.47,10.31,-22.49,-14.83,0.00,3.00,3.00,78.75,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,26.25,10.50,9.46,1.04,6,1,0,Yes
+ Zone Information, BEDROOM1.8,0.0,14.50,11.00,0.00,11.89,-18.82,1.50,1,1,1,9.96,13.81,-22.65,-15.00,0.00,3.00,3.00,78.75,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,26.25,10.50,9.46,1.04,6,1,0,Yes
+ Zone Information, BEDROOM1.3,0.0,11.00,0.00,0.00,0.87,-13.56,1.50,1,1,1,-0.75,2.48,-16.12,-10.99,0.00,3.00,3.00,45.00,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,15.00,15.00,14.16,0.84,7,1,0,Yes
+ Zone Information, BEDROOM1.2,0.0,6.00,0.00,0.00,1.10,-8.56,1.50,1,1,1,-0.51,2.72,-11.13,-5.99,0.00,3.00,3.00,45.00,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,15.00,15.00,14.16,0.84,7,1,0,Yes
+ Zone Information, BEDROOM1.1,0.0,0.00,0.00,0.00,1.36,-3.07,1.50,1,1,1,-0.28,3.00,-6.13,0.00,0.00,3.00,3.00,54.00,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,18.00,27.00,25.33,1.67,6,2,0,Yes
+ Zone Information, LIVINGROOM1.1,0.0,0.00,3.00,0.00,5.04,-4.54,1.50,1,1,1,2.60,7.49,-8.94,-0.14,0.00,3.00,3.00,116.10,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,38.70,13.50,12.27,1.23,8,1,0,Yes
+ Zone Information, BEDROOM1.5,0.0,0.00,7.50,0.00,9.07,-4.18,1.50,1,1,1,7.14,10.99,-8.00,-0.35,0.00,3.00,3.00,78.75,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,26.25,10.50,9.54,0.96,6,1,0,Yes
+ Zone Information, LIVINGROOM2.4,0.0,13.40,14.50,0.00,15.91,-18.46,4.50,1,1,1,13.46,18.36,-22.86,-14.06,3.00,6.00,3.00,116.10,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,38.70,13.50,12.17,1.33,8,1,0,Yes
+ Zone Information, BEDROOM2.5,0.0,0.00,7.50,0.00,9.07,-4.18,4.50,1,1,1,7.14,10.99,-8.00,-0.35,3.00,6.00,3.00,78.75,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,26.25,10.50,9.54,0.96,6,1,0,Yes
+ Zone Information, LIVINGROOM2.1,0.0,0.00,3.00,0.00,5.04,-4.54,4.50,1,1,1,2.60,7.49,-8.94,-0.14,3.00,6.00,3.00,116.10,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,38.70,13.50,12.27,1.23,8,1,0,Yes
+ Zone Information, BEDROOM2.11,0.0,11.00,19.00,0.00,19.85,-14.44,4.50,1,1,1,18.23,21.46,-17.01,-11.87,3.00,6.00,3.00,45.00,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,15.00,15.00,14.11,0.89,7,1,0,Yes
+ Zone Information, BEDROOM2.10,0.0,6.00,19.00,0.00,20.08,-9.45,4.50,1,1,1,18.47,21.70,-12.01,-6.88,3.00,6.00,3.00,45.00,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,15.00,15.00,14.11,0.89,7,1,0,Yes
+ Zone Information, BEDROOM2.9,0.0,0.00,19.00,0.00,20.34,-3.95,4.50,1,1,1,18.70,21.98,-7.02,-0.88,3.00,6.00,3.00,54.00,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,18.00,27.00,25.29,1.71,6,2,0,Yes
+ Zone Information, LIVINGROOM2.3,0.0,0.00,14.50,0.00,16.53,-5.08,4.50,1,1,1,14.08,18.98,-9.48,-0.68,3.00,6.00,3.00,116.10,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,38.70,13.50,12.27,1.23,8,1,0,Yes
+ Zone Information, BEDROOM2.7,0.0,0.00,11.00,0.00,12.56,-4.34,4.50,1,1,1,10.64,14.48,-8.17,-0.51,3.00,6.00,3.00,78.75,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,26.25,10.50,9.54,0.96,6,1,0,Yes
+ Zone Information, LIVINGROOM2.2,0.0,13.50,3.00,0.00,4.42,-17.93,4.50,1,1,1,1.97,6.87,-22.33,-13.53,3.00,6.00,3.00,116.10,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,38.70,13.50,12.17,1.33,8,1,0,Yes
+ Zone Information, BEDROOM2.2,0.0,6.00,0.00,0.00,1.10,-8.56,4.50,1,1,1,-0.51,2.72,-11.13,-5.99,3.00,6.00,3.00,45.00,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,15.00,15.00,14.16,0.84,7,1,0,Yes
+ Zone Information, BEDROOM2.8,0.0,14.50,11.00,0.00,11.89,-18.82,4.50,1,1,1,9.96,13.81,-22.65,-15.00,3.00,6.00,3.00,78.75,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,26.25,10.50,9.46,1.04,6,1,0,Yes
+ Zone Information, BEDROOM2.3,0.0,11.00,0.00,0.00,0.87,-13.56,4.50,1,1,1,-0.75,2.48,-16.12,-10.99,3.00,6.00,3.00,45.00,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,15.00,15.00,14.16,0.84,7,1,0,Yes
+ Zone Information, BEDROOM2.1,0.0,0.00,0.00,0.00,1.36,-3.07,4.50,1,1,1,-0.28,3.00,-6.13,0.00,3.00,6.00,3.00,54.00,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,18.00,27.00,25.33,1.67,6,2,0,Yes
+ Zone Information, BEDROOM2.4,0.0,16.00,0.00,0.00,0.61,-19.05,4.50,1,1,1,-1.02,2.25,-22.12,-15.98,3.00,6.00,3.00,54.00,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,18.00,27.00,25.27,1.73,6,2,0,Yes
+ Zone Information, BEDROOM2.6,0.0,14.50,7.50,0.00,8.39,-18.66,4.50,1,1,1,6.47,10.31,-22.49,-14.83,3.00,6.00,3.00,78.75,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,26.25,10.50,9.46,1.04,6,1,0,Yes
+ Zone Information, KITCHEN2.1,0.0,8.60,3.00,0.00,4.79,-10.03,4.50,1,1,1,2.48,7.09,-11.34,-8.73,3.00,6.00,3.00,32.40,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,10.80,0.00,0.00,0.00,6,0,0,Yes
+ Zone Information, KITCHEN2.4,0.0,11.00,14.50,0.00,16.16,-12.97,4.50,1,1,1,13.86,18.47,-14.27,-11.66,3.00,6.00,3.00,32.40,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,10.80,0.00,0.00,0.00,6,0,0,Yes
+ Zone Information, KITCHEN2.3,0.0,8.60,14.50,0.00,16.28,-10.57,4.50,1,1,1,13.97,18.58,-11.87,-9.27,3.00,6.00,3.00,32.40,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,10.80,0.00,0.00,0.00,6,0,0,Yes
+ Zone Information, STAIRCASE2.1,0.0,7.50,7.50,0.00,10.48,-11.50,4.50,1,1,1,6.82,14.13,-15.16,-7.84,3.00,6.00,3.00,147.00,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,49.00,0.00,0.00,0.00,14,0,0,Yes
+ Zone Information, BEDROOM2.12,0.0,16.00,19.00,0.00,19.59,-19.93,4.50,1,1,1,17.95,21.23,-23.00,-16.87,3.00,6.00,3.00,54.00,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,18.00,27.00,25.22,1.78,6,2,0,Yes
+ Zone Information, KITCHEN2.2,0.0,11.00,3.00,0.00,4.68,-12.43,4.50,1,1,1,2.37,6.98,-13.73,-11.13,3.00,6.00,3.00,32.40,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,10.80,0.00,0.00,0.00,6,0,0,Yes
+ Zone Information, LIVINGROOM3.4,0.0,13.40,14.50,0.00,15.91,-18.46,7.50,1,1,1,13.46,18.36,-22.86,-14.06,6.00,9.00,3.00,116.10,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,38.70,13.50,12.17,1.33,8,1,0,Yes
+ Zone Information, BEDROOM3.5,0.0,0.00,7.50,0.00,9.07,-4.18,7.50,1,1,1,7.14,10.99,-8.00,-0.35,6.00,9.00,3.00,78.75,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,26.25,10.50,9.54,0.96,6,1,0,Yes
+ Zone Information, LIVINGROOM3.1,0.0,0.00,3.00,0.00,5.04,-4.54,7.50,1,1,1,2.60,7.49,-8.94,-0.14,6.00,9.00,3.00,116.10,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,38.70,13.50,12.27,1.23,8,1,0,Yes
+ Zone Information, BEDROOM3.11,0.0,11.00,19.00,0.00,19.85,-14.44,7.50,1,1,1,18.23,21.46,-19.80,-11.87,6.00,9.00,3.00,45.00,AdaptiveConvectionAlgorithm,AdaptiveConvectionAlgorithm,15.00,15.00,14.11,0.89,7,1,0,Yes

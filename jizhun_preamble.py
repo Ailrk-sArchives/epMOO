@@ -5,17 +5,17 @@ import time
 import subprocess
 
 
-jizhun_paths: Dict = {
-        "WEATHER_FILE": "./WeatherData/CHN_Chongqing.Chongqing.Shapingba.575160_CSWD.epw",
-        "IDF_FILE": "jizhun.idf",
-        "OUTPUT_PATH": "temp/",
-        }
+# jizhun_paths: Dict = {
+#         "WEATHER_FILE": "./WeatherData/CHN_Chongqing.Chongqing.Shapingba.575160_CSWD.epw",
+#         "IDF_FILE": "jizhun.idf",
+#         "OUTPUT_PATH": "temp/",
+#         }
 
-jizhun_constants: Dict = {
-        "FLOOR_HEIGHT": 2.8,
-        "WINDOW_HEIGHT": 1.5,
-        "WINDOW_EDGT_HEIGHT": 1
-        }
+# jizhun_constants: Dict = {
+#         "FLOOR_HEIGHT": 2.8,
+#         "WINDOW_HEIGHT": 1.5,
+#         "WINDOW_EDGT_HEIGHT": 1
+#         }
 
 
 class JizhunPreamble(Preamble):
