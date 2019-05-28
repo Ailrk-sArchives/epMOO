@@ -1,6 +1,7 @@
 from idfhandler import EPOutputReader
 from typing import List
 import os
+from utils import interval_to_list_idx
 
 """objective functions paras"""
 SUMMER_LAMBDA = 0.415
@@ -80,9 +81,9 @@ def f3_economy(*args) -> float:
     ep_tbl_path = os.path.join(os.path.abspath("temp"), pid, EP_TBL)
 
     print("running f3 ... in {}".format(os.getpid()))
-    wall_id = int(args[0])
-    roof_id = int(args[1])
-    win_id = int(args[2])
+    wall_id = interval_to_list_idx(args[0])
+    roof_id = interval_to_list_idx(args[1])
+    win_id = interval_to_list_idx(args[2])
 
     window_area: float = 0
 

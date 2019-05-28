@@ -1,0 +1,6 @@
+Program Version,EnergyPlus, Version 8.7.0-78a111df4a, YMD=2019.05.27 21:33,IDD_Version 8.7.0
+   ** Warning ** Version: in IDF="8.4" not the same as expected="8.7"
+   ** Warning ** CheckEnvironmentSpecifications: SimulationControl specified doing design day simulations, but no design environments specified.
+   **   ~~~   ** ...No design environment results produced. For these results, add appropriate SizingPeriod:* objects for your simulation.
+   ** Warning ** Site:GroundTemperature:BuildingSurface: Some values fall outside the range of 15-25C.
+   **   ~~~   ** These values may be inappropriate.  Please consult the Input Output Reference for more details.

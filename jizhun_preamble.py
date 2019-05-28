@@ -6,8 +6,7 @@ import subprocess
 
 
 jizhun_paths: Dict = {
-        "WEATHER_FILE":
-        "./WeatherData/CHN_Chongqing.Chongqing.Shapingba.575160_CSWD.epw",
+        "WEATHER_FILE": "./WeatherData/CHN_Chongqing.Chongqing.Shapingba.575160_CSWD.epw",
         "IDF_FILE": "jizhun.idf",
         "OUTPUT_PATH": "temp/",
         }
