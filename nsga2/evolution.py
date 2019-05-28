@@ -2,7 +2,7 @@ from nsga2.utils import NSGA2Utils
 from nsga2.population import Population
 import time
 import os
-from plot import plot
+from nsga2.plot import plot
 
 class Evolution:
     """This class only deal with the main logic of the algorithm"""
@@ -52,7 +52,7 @@ class Evolution:
     def log(self, current_gen, returned_population, path):
         # log results and draw graphs.
         log_path = os.path.join(os.path.abspath(path), str(current_gen) + ".txt")
-        log = "[!]Generation {} at {}\n".format(current_gen, time.ctime())
+        log = "+++++++++Generation {} at {}+++++++++++++++++\n".format(current_gen, time.ctime())
         log += "size of front generated: {}\n".format(len(returned_population.fronts[0]))
 
         log += "[!!!]Points in the front:\n"

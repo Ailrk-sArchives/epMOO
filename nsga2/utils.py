@@ -1,8 +1,6 @@
 from nsga2.population import Population
 import random
-from multiprocessing import Queue, Process, cpu_count
-from functools import partial
-
+from nsga2.proc_pool import ProcPool
 
 class NSGA2Utils:
 
@@ -22,34 +20,11 @@ class NSGA2Utils:
         population = Population()
 
         if self.concurrency:
-            queue = Queue()
-            calculate_objectives = partial(  # worker function, only works on linux.
-                    lambda individual, queue: queue.put(self.problem.calculate_objectives(individual)),
-                    queue=queue)
-
-            for _ in range(self.num_of_individuals):
+            for _ in range(self.num_of_individuals):  # generate empty list.
                 individual = self.problem.generate_individual()
                 population.append(individual)
-
-            # generate process pool, pass individuals.
-            process_pool = [Process(target=calculate_objectives, args=(individual,)) for individual in population.population]
-            new_population = []
-
-            for p in process_pool:
-                p.start()
-                qlen = queue.qsize()  # harvest queue
-                if not queue.empty():
-                    for _ in range(qlen):
-                        new_population.append(queue.get())
-
-            for p in process_pool:
-                p.join()
-                qlen = queue.qsize()  # harvest queue
-                if not queue.empty():
-                    for _ in range(qlen):
-                        new_population.append(queue.get())
-
-            population.population = new_population  # update the individual list.
+            pool = ProcPool(self.problem.calculate_objectives, population)
+            population.population = pool()
 
         else:  # SINGLE PROC CASE.
             for _ in range(self.num_of_individuals):
@@ -118,10 +93,17 @@ class NSGA2Utils:
             child1, child2 = self.__crossover(parent1, parent2)
             self.__mutate(child1)
             self.__mutate(child2)
-            self.problem.calculate_objectives(child1)
-            self.problem.calculate_objectives(child2)
+
+            if not self.concurrency:
+                self.problem.calculate_objectives(child1)
+                self.problem.calculate_objectives(child2)
+
             children.append(child1)
             children.append(child2)
+
+        if self.concurrency:
+            pool = ProcPool(self.problem.calculate_objectives, children)
+            children = pool()
 
         return children
 

@@ -1,6 +1,5 @@
 from utils import discrete_interval
 from moo import moo
-
 """parameter"""
 outerwall = discrete_interval((1, 8))  # yield 0-7
 roof = discrete_interval((1, 8))
@@ -19,9 +18,9 @@ paras = [outerwall, roof, window, easterate, westrate, southrate,
 hyperparameter = {
         "MUTATION_PARAM": 2,
         "NUM_OF_GENERATIONS": 50,
-        "NUM_OF_INDIVIDUALS": 50,
+        "NUM_OF_INDIVIDUALS": 4,
         "NUM_OF_TOUR_PARTICIPS": 2,
-        "CONCURRENCY": False
+        "CONCURRENCY": True
 }
 
 

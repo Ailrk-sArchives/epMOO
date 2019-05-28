@@ -14,7 +14,6 @@ class Preamble:
     """
 
     def __init__(self, constants: Dict, paths: Dict):
-        self._pid = str(os.getpid())
         self._constants = constants
         self._paths = paths
         self._args: List = []
@@ -24,6 +23,7 @@ class Preamble:
 
     def __call__(self, *args):
         # override by subclass
+        self._pid = str(os.getpid())
         self._args = args
         self._start_log()
 
@@ -32,8 +32,7 @@ class Preamble:
         pass
 
     def _start_log(self):
-        print("===============start in pid {} at {}===============>".format(
-            self._pid, time.ctime()))
+        print("===============start in pid {} at {}===============>".format( self._pid, time.ctime()))
 
 
 

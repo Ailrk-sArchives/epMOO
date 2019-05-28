@@ -24,7 +24,6 @@ class JizhunPreamble(Preamble):
     """
     def __init__(self, constants: Dict, paths: Dict, *args):
         super().__init__(constants=constants, paths=paths)
-        self._output_idf_file = os.path.join(self._paths["OUTPUT_PATH"], self._pid + ".idf")
         self.east_list: List = []
         self.west_list: List = []
         self.south_list: List = []
@@ -33,6 +32,7 @@ class JizhunPreamble(Preamble):
     @override
     def __call__(self, *args):
         super().__call__(*args)
+        self._output_idf_file = os.path.join(self._paths["OUTPUT_PATH"], self._pid + ".idf")
 
         winwallrate = self._args[3:7]
         with IdfIOStream(input_path=self._paths["IDF_FILE"],

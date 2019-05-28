@@ -21,7 +21,7 @@ def f2(x):
 
 
 problem = Problem(num_of_variables=3, objectives=[f1, f2], variables_range=[(-5, 5)], same_range=True, expand=False)
-evo = Evolution(problem, mutation_param=20, num_of_generations=40, num_of_individuals=100, concurrency=False)
+evo = Evolution(problem, mutation_param=20, num_of_generations=40, num_of_individuals=100, concurrency=True)
 func = [i.objectives for i in evo.evolve()]
 
 function1 = [i[0] for i in func]
