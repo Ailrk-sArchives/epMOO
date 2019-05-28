@@ -66,7 +66,7 @@ class IdfModel(EPInputModel):
         # op is the collection of all operations.
 
         for idx, _ in enumerate(self.idf_lines):
-            op(self.idf_lines, idx)
+            op(self, self.idf_lines, idx)
 
     def append(self, data: List[str]):
         self.idf_lines.extend(data)

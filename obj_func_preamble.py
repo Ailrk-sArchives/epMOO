@@ -1,7 +1,7 @@
 from typing import List, Tuple
 import os
 import subprocess
-from idfhandler import IdfIOStream
+from idfhandler import IdfIOStream, IdfModel
 import time
 
 # MAKE SURE EVERYTHING HERE ARE EXECUTED UNDER SAME PROCESS!
@@ -135,7 +135,7 @@ def preamble(*args):
         south_list: List = []
         north_list: List = []
 
-        def op(lines: List[str], idx: int):
+        def op(idf: IdfModel, lines: List[str], idx: int):  # NOTE altered for idf
             # TODO organize capture_list order.
             # change Exterior Wall
             wall_str = r"(.*)Exterior Wall" + str(int(args[0]))  # re.sub

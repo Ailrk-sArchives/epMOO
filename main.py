@@ -21,7 +21,7 @@ hyperparameter = {
         "NUM_OF_GENERATIONS": 50,
         "NUM_OF_INDIVIDUALS": 50,
         "NUM_OF_TOUR_PARTICIPS": 2,
-        "CONCURRENCY": True
+        "CONCURRENCY": False
 }
 
 

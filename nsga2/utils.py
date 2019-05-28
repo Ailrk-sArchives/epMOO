@@ -23,7 +23,7 @@ class NSGA2Utils:
 
         if self.concurrency:
             queue = Queue()
-            calculate_objectives = partial(     # worker function.
+            calculate_objectives = partial(  # worker function, only works on linux.
                     lambda individual, queue: queue.put(self.problem.calculate_objectives(individual)),
                     queue=queue)
 
@@ -48,8 +48,6 @@ class NSGA2Utils:
                 if not queue.empty():
                     for _ in range(qlen):
                         new_population.append(queue.get())
-                        for n in new_population:
-                            print(n)
 
             population.population = new_population  # update the individual list.
 
