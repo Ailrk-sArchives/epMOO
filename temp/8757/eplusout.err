@@ -1,0 +1,74 @@
+Program Version,EnergyPlus, Version 8.7.0-78a111df4a, YMD=2019.06.02 07:15,IDD_Version 8.7.0
+   ** Severe  ** Output:PreprocessorMessage="ExpandObjects" has the following Fatal condition:
+   **   ~~~   ** No IDD object found for: HVACTemplate:Thermostat
+   ** Severe  ** Output:PreprocessorMessage="ExpandObjects" has the following Fatal condition:
+   **   ~~~   ** No IDD object found for: HVACTemplate:Zone:VAV
+   ** Severe  ** Output:PreprocessorMessage="ExpandObjects" has the following Fatal condition:
+   **   ~~~   ** No IDD object found for: HVACTemplate:Zone:VAV:FanPowered
+   ** Severe  ** Output:PreprocessorMessage="ExpandObjects" has the following Fatal condition:
+   **   ~~~   ** No IDD object found for: HVACTemplate:Zone:VAV:HeatAndCool
+   ** Severe  ** Output:PreprocessorMessage="ExpandObjects" has the following Fatal condition:
+   **   ~~~   ** No IDD object found for: HVACTemplate:System:Unitary
+   ** Severe  ** Output:PreprocessorMessage="ExpandObjects" has the following Fatal condition:
+   **   ~~~   ** No IDD object found for: HVACTemplate:System:UnitaryHeatPump:AirToAir
+   ** Severe  ** Output:PreprocessorMessage="ExpandObjects" has the following Fatal condition:
+   **   ~~~   ** No IDD object found for: HVACTemplate:System:UnitarySystem
+   ** Severe  ** Output:PreprocessorMessage="ExpandObjects" has the following Fatal condition:
+   **   ~~~   ** No IDD object found for: HVACTemplate:Zone:Unitary
+   ** Severe  ** Output:PreprocessorMessage="ExpandObjects" has the following Fatal condition:
+   **   ~~~   ** No IDD object found for: HVACTemplate:System:VAV
+   ** Severe  ** Output:PreprocessorMessage="ExpandObjects" has the following Fatal condition:
+   **   ~~~   ** No IDD object found for: HVACTemplate:System:PackagedVAV
+   ** Severe  ** Output:PreprocessorMessage="ExpandObjects" has the following Fatal condition:
+   **   ~~~   ** No IDD object found for: HVACTemplate:Zone:ConstantVolume
+   ** Severe  ** Output:PreprocessorMessage="ExpandObjects" has the following Fatal condition:
+   **   ~~~   ** No IDD object found for: HVACTemplate:System:ConstantVolume
+   ** Severe  ** Output:PreprocessorMessage="ExpandObjects" has the following Fatal condition:
+   **   ~~~   ** No IDD object found for: HVACTemplate:Zone:VRF
+   ** Severe  ** Output:PreprocessorMessage="ExpandObjects" has the following Fatal condition:
+   **   ~~~   ** No IDD object found for: HVACTemplate:System:VRF
+   ** Severe  ** Output:PreprocessorMessage="ExpandObjects" has the following Fatal condition:
+   **   ~~~   ** No IDD object found for: HVACTemplate:Zone:DualDuct
+   ** Severe  ** Output:PreprocessorMessage="ExpandObjects" has the following Fatal condition:
+   **   ~~~   ** No IDD object found for: HVACTemplate:System:DualDuct
+   ** Severe  ** Output:PreprocessorMessage="ExpandObjects" has the following Fatal condition:
+   **   ~~~   ** No IDD object found for: HVACTemplate:Zone:FanCoil
+   ** Severe  ** Output:PreprocessorMessage="ExpandObjects" has the following Fatal condition:
+   **   ~~~   ** No IDD object found for: HVACTemplate:Zone:IdealLoadsAirSystem
+   ** Severe  ** Output:PreprocessorMessage="ExpandObjects" has the following Fatal condition:
+   **   ~~~   ** No IDD object found for: HVACTemplate:Zone:BaseboardHeat
+   ** Severe  ** Output:PreprocessorMessage="ExpandObjects" has the following Fatal condition:
+   **   ~~~   ** No IDD object found for: HVACTemplate:Zone:PTAC
+   ** Severe  ** Output:PreprocessorMessage="ExpandObjects" has the following Fatal condition:
+   **   ~~~   ** No IDD object found for: HVACTemplate:Zone:PTHP
+   ** Severe  ** Output:PreprocessorMessage="ExpandObjects" has the following Fatal condition:
+   **   ~~~   ** No IDD object found for: HVACTemplate:Plant:ChilledWaterLoop
+   ** Severe  ** Output:PreprocessorMessage="ExpandObjects" has the following Fatal condition:
+   **   ~~~   ** No IDD object found for: HVACTemplate:Plant:Chiller
+   ** Severe  ** Output:PreprocessorMessage="ExpandObjects" has the following Fatal condition:
+   **   ~~~   ** No IDD object found for: HVACTemplate:Plant:Chiller:ObjectReference
+   ** Severe  ** Output:PreprocessorMessage="ExpandObjects" has the following Fatal condition:
+   **   ~~~   ** No IDD object found for: HVACTemplate:Plant:Tower
+   ** Severe  ** Output:PreprocessorMessage="ExpandObjects" has the following Fatal condition:
+   **   ~~~   ** No IDD object found for: HVACTemplate:Plant:Tower:ObjectReference
+   ** Severe  ** Output:PreprocessorMessage="ExpandObjects" has the following Fatal condition:
+   **   ~~~   ** No IDD object found for: HVACTemplate:Plant:HotWaterLoop
+   ** Severe  ** Output:PreprocessorMessage="ExpandObjects" has the following Fatal condition:
+   **   ~~~   ** No IDD object found for: HVACTemplate:Plant:Boiler
+   ** Severe  ** Output:PreprocessorMessage="ExpandObjects" has the following Fatal condition:
+   **   ~~~   ** No IDD object found for: HVACTemplate:Plant:Boiler:ObjectReference
+   ** Severe  ** Output:PreprocessorMessage="ExpandObjects" has the following Fatal condition:
+   **   ~~~   ** No IDD object found for: HVACTemplate:Zone:WaterToAirHeatPump
+   ** Severe  ** Output:PreprocessorMessage="ExpandObjects" has the following Fatal condition:
+   **   ~~~   ** No IDD object found for: HVACTemplate:Plant:MixedWaterLoop
+   ** Severe  ** Output:PreprocessorMessage="ExpandObjects" has the following Fatal condition:
+   **   ~~~   ** No IDD object found for: HVACTemplate:System:DedicatedOutdoorAir
+   **  Fatal  ** Preprocessor condition(s) cause termination.
+   ...Summary of Errors that led to program termination:
+   ..... Reference severe error count=32
+   ..... Last severe error=Output:PreprocessorMessage="ExpandObjects" has the following Fatal condition:
+   ************* Warning:  Node connection errors not checked - most system input has not been read (see previous warning).
+   ************* Fatal error -- final processing.  Program exited before simulations began.  See previous error messages.
+   ************* EnergyPlus Warmup Error Summary. During Warmup: 0 Warning; 0 Severe Errors.
+   ************* EnergyPlus Sizing Error Summary. During Sizing: 0 Warning; 0 Severe Errors.
+   ************* EnergyPlus Terminated--Fatal Error Detected. 0 Warning; 32 Severe Errors; Elapsed Time=00hr 00min  0.25sec

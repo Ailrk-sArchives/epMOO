@@ -122,7 +122,7 @@ Now there are full of print in the program, change them into better logging modu
     2. it can output to files without handling manually.
 
 
-### 2019-05-27 A Preambletool class for creating preamble. [DONE]
+### 2019-05-27 A Preamble base class for creating preamble. [DONE]
 Make a callable class Preamble, and use it as a template of standard preamble input.
 1. Why?
     It is tedious to handwrite the preamble, especially when it comes to deal with multiprocessing.

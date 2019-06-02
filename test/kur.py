@@ -1,7 +1,7 @@
 import sys
 sys.path.append("../")
-from nsga2.problem import Problem
-from nsga2.evolution import Evolution
+from moo.nsga2.problem import Problem
+from moo.nsga2.evolution import Evolution
 import matplotlib.pyplot as plt
 import math
 

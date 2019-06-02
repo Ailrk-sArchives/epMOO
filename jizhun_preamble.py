@@ -1,5 +1,5 @@
-from idfhandler import Preamble, override, IdfModel, IdfIOStream
-from typing import Dict, Callable, List, Tuple
+from moo.idfhandler import Preamble, override, IdfModel, IdfIOStream
+from typing import Dict, List, Tuple
 import os
 import time
 import subprocess
@@ -41,6 +41,7 @@ class JizhunPreamble(Preamble):
             print("applying preamble in {}".format(self._pid))
             idf.apply(self._operator)  # apply operator.
 
+            print("+++++GOOD+++++", self.east_list)
             # appaned newly calculated structures.
             for w in self.east_list:
                 data = self.generate_struct("east", w[0], w[1:], winwallrate[0])
@@ -84,7 +85,7 @@ class JizhunPreamble(Preamble):
                 lines, idx)
         idf.sub([r".*tongfengcishubianliang", r"([\s]+)\d+(.*Air Changes per Hour.*)"], r"\g<1>{}\2".format(str(airchange)), lines, idx)
 
-    def generate_struct(self, direction: str, floor_num: str, pos: List[tuple], rate: float) -> List[str]:
+    def generate_struct(self, direction: str, floor_num: str, pos: List[Tuple], rate: float) -> List[str]:
         # convert pos from string to float
         # pos = [(x1, y1, z1)
         #        (x2, y2, z2)
@@ -159,17 +160,13 @@ class JizhunPreamble(Preamble):
         data.append("    ,                        !- Multiplier\n")
         data.append("    4,                       !- Number of Vertices\n")
 
-        data.append("    " + "{:.12f}, {:.12f}, {:.12f},\n".format(
-                                new_coord[0][0], new_coord[0][1], new_coord[0][2]))
+        data.append("    " + "{:.12f}, {:.12f}, {:.12f},\n".format(new_coord[0][0], new_coord[0][1], new_coord[0][2]))
         data.append("                                        !- X,Y,Z  1 {m}\n")
-        data.append("    " + "{:.12f}, {:.12f}, {:.12f},\n".format(
-                                new_coord[1][0], new_coord[1][1], new_coord[1][2]))
+        data.append("    " + "{:.12f}, {:.12f}, {:.12f},\n".format(new_coord[1][0], new_coord[1][1], new_coord[1][2]))
         data.append("                                        !- X,Y,Z  2 {m}\n")
-        data.append("    " + "{:.12f}, {:.12f}, {:.12f},\n".format(
-                                new_coord[2][0], new_coord[2][1], new_coord[2][2]))
+        data.append("    " + "{:.12f}, {:.12f}, {:.12f},\n".format(new_coord[2][0], new_coord[2][1], new_coord[2][2]))
         data.append("                                        !- X,Y,Z  3 {m}\n")
-        data.append("    " + "{:.12f}, {:.12f}, {:.12f};\n".format(
-                                new_coord[3][0], new_coord[3][1], new_coord[3][2]))
+        data.append("    " + "{:.12f}, {:.12f}, {:.12f};\n".format(new_coord[3][0], new_coord[3][1], new_coord[3][2]))
         data.append("                                        !- X,Y,Z  4 {m}\n")
         return data
 
@@ -179,11 +176,11 @@ class JizhunPreamble(Preamble):
 
         print("<start running ep in pid {} at {}>".format(self._pid, time.ctime()))
         subprocess.run([
-                "energyplus",
-                "-w", self._paths["WEATHER_FILE"],
-                "-r",
-                "-d", output_dir,
-                run_idf_file  # THIS will break single proc
-            ])
+            "energyplus",
+            "-w", self._paths["WEATHER_FILE"],
+            "-r",
+            "-d", output_dir,
+            run_idf_file  # THIS will break single proc
+        ])
         print("<end ep in pid {} at {}>".format(self._pid, time.ctime()))
 

@@ -5,8 +5,8 @@ It is used for verifying the correctness of the alogirhm.
 import os
 import sys
 sys.path.append("../")
-from nsga2.problem import Problem
-from nsga2.evolution import Evolution
+from moo.nsga2.problem import Problem
+from moo.nsga2.evolution import Evolution
 from mpl_toolkits.mplot3d import Axes3D
 import matplotlib.pyplot as plt
 

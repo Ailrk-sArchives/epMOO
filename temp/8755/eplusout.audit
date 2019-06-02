@@ -1,0 +1,22 @@
+  Processing Data Dictionary -- Complete
+  Maximum number of Alpha Args=        4500
+  Maximum number of Numeric Args=       21040
+  Number of Object Definitions=         781
+  Number of Section Definitions=           2
+  Total Number of Alpha Fields=       18878
+  Total Number of Numeric Fields=       40216
+  Total Number of Fields=       59094
+  Processing Input Data File -- Start
+  Echo of input lines is off. May be activated by setting the environmental variable DISPLAYINPUTINAUDIT=YES
+  Processing Input Data File -- Complete
+  Maximum number of Alpha IDF Args=         121
+  Maximum number of Numeric IDF Args=          38
+  Number of IDF "Lines"=        1942
+  Number of Defaulted Fields=        2709
+  Number of Fields with Defaults=        7695
+  Number of Autosized Fields=           0
+  Number of Autosizable Fields =         280
+  Number of Autocalculated Fields=        2434
+  Number of Autocalculatable Fields =        2564
+ Getting object=OUTPUT:SQLITE
+ Getting object=OUTPUT:PREPROCESSORMESSAGE
