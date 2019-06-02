@@ -39,11 +39,12 @@ def f1_energy_consumption(*args) -> float:
         data = f.readlines()
         for i, _ in enumerate(data):
             if "Utility Use Per Conditioned Floor Area" in data[i]:
-                for line in data[i:]:
+                for line in data[i:5]:
                     if "HVAC" in line:
                         s = line.split(",")
                         winter_consumption = float(s[5])
                         summer_consumption = float(s[6])
+                        break
         energy_consumption = winter_consumption / cop + summer_consumption / cop
 
     return energy_consumption
