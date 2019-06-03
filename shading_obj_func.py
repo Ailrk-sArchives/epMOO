@@ -91,7 +91,7 @@ def f3_economy(*args) -> float:
 
     print("running f3 ... in {}".format(os.getpid()))
     wall_id = interval_to_list_idx(args[0])
-    roof_id = interval_to_list_idx(args[1])
+    roof_id = interval_to_list_idx(args[1]) + 1
     win_id = interval_to_list_idx(args[2])
 
     window_area: float = 0
@@ -108,7 +108,7 @@ def f3_economy(*args) -> float:
     wall_area = surface_area - window_area  # NOTE
 
     C_i_wall = wall_and_roof_specs[wall_id][0]
-    C_i_roof = wall_and_roof_specs[roof_id][0]
+    C_i_roof = wall_and_roof_specs[roof_id][0]  # NOTE economic
     C_i_win = window_specs[win_id]
     delta_wall = wall_and_roof_specs[wall_id][1]
     delta_roof = wall_and_roof_specs[roof_id][1]

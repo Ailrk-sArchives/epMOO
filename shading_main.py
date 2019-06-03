@@ -20,7 +20,7 @@ from moo.utils import discrete_interval
 def main():
     """parameter"""
     outerwall = discrete_interval((1, 10))  # yield 0-7
-    roof = discrete_interval((2, 10))
+    roof = discrete_interval((1, 9))
     window = discrete_interval((1, 3))
     easterate = (0.05, 0.3)
     westrate = (0.05, 0.3)
