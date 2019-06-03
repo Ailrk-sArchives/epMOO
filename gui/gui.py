@@ -14,9 +14,9 @@ class MooWidget(flx.Widget):
     def init(self):
         with flx.HFix(flex=2):
             with flx.VBox(title='leftside'):
-                with flx.GroupWidget(minsize=380) as self.model_params:
+                with flx.GroupWidget(minsize=480) as self.model_params:
                     self.model_params.set_title("MODEL PARAMTERS")
-                    with flx.FormLayout() as self.model_params_form:
+                    with flx.FormLayout(maxsize=480) as self.model_params_form:
                         flx.Widget(flex=1)
                         self.exterior_wall = flx.LineEdit(title='Exterior Wall', text='1, 10')
                         self.exterior_roof = flx.LineEdit(title='Exterior Roof', text='1, 9')
@@ -28,7 +28,10 @@ class MooWidget(flx.Widget):
                         self.direction = flx.LineEdit(title='direction(deg)', text='0, 359')
                         self.airchange = flx.LineEdit(title='airchange', text='0, 39')
                         self.cop = flx.LineEdit(title='cop', text='2.0, 3.5')
-                        self.shading_direction = flx.LineEdit(title='shading direction', text='1, 4')
+                        self.east_shading = flx.LineEdit(title='east shading', text='0, 1')
+                        self.west_shading = flx.LineEdit(title='west shading', text='0, 1')
+                        self.south_shading = flx.LineEdit(title='south shading', text='0, 1')
+                        self.north_shading = flx.LineEdit(title='north shading', text='0, 1')
                         flx.Widget(flex=1)
                 with flx.GroupWidget() as self.control_panel:
                     self.control_panel.set_title("CONTROL PANEL")
@@ -56,7 +59,7 @@ class MooWidget(flx.Widget):
                     with flx.FormLayout() as self.path_constants_model:
                         self.weather_file = flx.LineEdit(title='Weather File', text='./WeatherData/CHN_Chongqing.Chongqing.Sh  apingba.575160_CSWD.epw')
                         self.idf_file = flx.LineEdit(title='Idf file', text='shading_model_6-0603-1.idf')
-                        self.output_path = flx.LineEdit(title='Output path', text='temp/')
+                        self.output_path = flx.LineEdit(title='Output directory', text='temp/')
 
 
 if __name__ == "__main__":
