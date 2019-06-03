@@ -38,7 +38,7 @@ def f1_energy_consumption(*args) -> float:
     with open(ep_tbl_path, "r") as f:
         data = f.readlines()
         for i, _ in enumerate(data):
-            if "Utility Use Per Conditioned Floor Area" in data[i]:
+            if "Utility Use Per Total Floor Area" in data[i]:
                 for line in data[i:5]:
                     if "HVAC" in line:
                         s = line.split(",")

@@ -53,7 +53,7 @@ def main():
     """path constants"""
     shading_model_paths: Dict = {
         "WEATHER_FILE": "./WeatherData/CHN_Chongqing.Chongqing.Shapingba.575160_CSWD.epw",
-        "IDF_FILE": "shading_model_6-0603.idf",
+        "IDF_FILE": "shading_model_6-0603-1.idf",
         "OUTPUT_PATH": "temp/",
     }
 
