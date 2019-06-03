@@ -52,9 +52,9 @@ def main():
 
     """other constants"""
     shading_model_constants: Dict = {
-        "FLOOR_HEIGHT": 2.8,
+        "FLOOR_HEIGHT": 3,
         "WINDOW_HEIGHT": 1.5,
-        "WINDOW_EDGT_HEIGHT": 1
+        "WINDOW_EDG_HEIGHT": 1
     }
 
     """path constants"""

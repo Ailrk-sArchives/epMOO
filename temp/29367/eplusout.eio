@@ -1,0 +1,530 @@
+Program Version,EnergyPlus, Version 8.7.0-78a111df4a, YMD=2019.06.03 06:56
+! <Version>, Version ID
+ Version, 8.7
+! <Timesteps per Hour>, #TimeSteps, Minutes per TimeStep {minutes}
+ Timesteps per Hour,  6, 10
+! <System Convergence Limits>, Minimum System TimeStep {minutes}, Max HVAC Iterations, Minimum Plant Iterations, Maximum Plant Iterations
+ System Convergence Limits, 1, 20, 2, 8
+! <Simulation Control>, Do Zone Sizing, Do System Sizing, Do Plant Sizing, Do Design Days, Do Weather Simulation, Do HVAC Sizing Simulation
+ Simulation Control, Yes, No, No, Yes, Yes, No
+! <Output Reporting Tolerances>, Tolerance for Time Heating Setpoint Not Met, Tolerance for Zone Cooling Setpoint Not Met Time
+ Output Reporting Tolerances, 0.200, 0.200, 
+! <Site:GroundTemperature:BuildingSurface>,Jan{C},Feb{C},Mar{C},Apr{C},May{C},Jun{C},Jul{C},Aug{C},Sep{C},Oct{C},Nov{C},Dec{C}
+ Site:GroundTemperature:BuildingSurface,  18.00,  18.00,  18.00,  18.00,  18.00,  18.00,  18.00,  18.00,  18.00,  18.00,  18.00,  18.00
+! <Site:GroundTemperature:FCfactorMethod>,Jan{C},Feb{C},Mar{C},Apr{C},May{C},Jun{C},Jul{C},Aug{C},Sep{C},Oct{C},Nov{C},Dec{C}
+ Site:GroundTemperature:FCfactorMethod,  13.31,  10.23,   9.39,  10.12,  14.28,  18.95,  23.34,  26.51,  27.44,  25.95,  22.35,  17.82
+! <Site:GroundTemperature:Shallow>,Jan{C},Feb{C},Mar{C},Apr{C},May{C},Jun{C},Jul{C},Aug{C},Sep{C},Oct{C},Nov{C},Dec{C}
+ Site:GroundTemperature:Shallow,  13.00,  13.00,  13.00,  13.00,  13.00,  13.00,  13.00,  13.00,  13.00,  13.00,  13.00,  13.00
+! <Site:GroundTemperature:Deep>,Jan{C},Feb{C},Mar{C},Apr{C},May{C},Jun{C},Jul{C},Aug{C},Sep{C},Oct{C},Nov{C},Dec{C}
+ Site:GroundTemperature:Deep,  16.00,  16.00,  16.00,  16.00,  16.00,  16.00,  16.00,  16.00,  16.00,  16.00,  16.00,  16.00
+! <Site:GroundReflectance>,Jan{dimensionless},Feb{dimensionless},Mar{dimensionless},Apr{dimensionless},May{dimensionless},Jun{dimensionless},Jul{dimensionless},Aug{dimensionless},Sep{dimensionless},Oct{dimensionless},Nov{dimensionless},Dec{dimensionless}
+ Site:GroundReflectance,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20
+! <Site:GroundReflectance:SnowModifier>, Normal, Daylighting {dimensionless}
+ Site:GroundReflectance:SnowModifier,   1.000,   1.000
+! <Site:GroundReflectance:Snow>,Jan{dimensionless},Feb{dimensionless},Mar{dimensionless},Apr{dimensionless},May{dimensionless},Jun{dimensionless},Jul{dimensionless},Aug{dimensionless},Sep{dimensionless},Oct{dimensionless},Nov{dimensionless},Dec{dimensionless}
+ Site:GroundReflectance:Snow,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20
+! <Site:GroundReflectance:Snow:Daylighting>,Jan{dimensionless},Feb{dimensionless},Mar{dimensionless},Apr{dimensionless},May{dimensionless},Jun{dimensionless},Jul{dimensionless},Aug{dimensionless},Sep{dimensionless},Oct{dimensionless},Nov{dimensionless},Dec{dimensionless}
+ Site:GroundReflectance:Snow:Daylighting,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20
+! <Environment:Weather Station>,Wind Sensor Height Above Ground {m},Wind Speed Profile Exponent {},Wind Speed Profile Boundary Layer Thickness {m},Air Temperature Sensor Height Above Ground {m},Wind Speed Modifier Coefficient-Internal,Temperature Modifier Coefficient-Internal
+Environment:Weather Station,10.000,0.140,270.000,1.500,1.586,9.750E-003
+! <Site:Location>, Location Name, Latitude {N+/S- Deg}, Longitude {E+/W- Deg},  Time Zone Number {GMT+/-}, Elevation {m},  Standard Pressure at Elevation {Pa}, Standard RhoAir at Elevation
+Site:Location,Chongqing Shapingba Chongqing CHN CSWD WMO#=575160,29.58,106.47,8.00,259.10,98251,1.1678
+! <Building Information>, Building Name,North Axis {deg},Terrain,  Loads Convergence Tolerance Value,Temperature Convergence Tolerance Value,  Solar Distribution,Maximum Number of Warmup Days,Minimum Number of Warmup Days
+ Building Information,basic model,0.000,City,4.00000E-002,0.40000,FullInteriorAndExteriorWithReflectionsFromExteriorSurfaces,25,6
+! <Inside Convection Algorithm>, Algorithm {Simple | TARP | CeilingDiffuser | AdaptiveConvectionAlgorithm}
+Inside Convection Algorithm,TARP
+! <Outside Convection Algorithm>, Algorithm {SimpleCombined | TARP | MoWitt | DOE-2 | AdaptiveConvectionAlgorithm}
+Outside Convection Algorithm,DOE-2
+! <Sky Radiance Distribution>, Value {Anisotropic}
+Sky Radiance Distribution,Anisotropic
+! <Zone Air Solution Algorithm>, Value {ThirdOrderBackwardDifference | AnalyticalSolution | EulerMethod}
+ Zone Air Solution Algorithm, ThirdOrderBackwardDifference
+! <Zone Air Carbon Dioxide Balance Simulation>, Simulation {Yes/No}, Carbon Dioxide Concentration
+ Zone Air Carbon Dioxide Balance Simulation, No,N/A
+! <Zone Air Generic Contaminant Balance Simulation>, Simulation {Yes/No}, Generic Contaminant Concentration
+ Zone Air Generic Contaminant Balance Simulation, No,N/A
+! <Zone Air Mass Flow Balance Simulation>, Enforce Mass Balance, Adjust Zone Mixing, Adjust Zone Infiltration {AddInfiltration | AdjustInfiltration | None}, Infiltration Zones {MixingSourceZonesOnly | AllZones}
+ Zone Air Mass Flow Balance Simulation, No,N/A,N/A,N/A
+! <Environment:Site Atmospheric Variation>,Wind Speed Profile Exponent {},Wind Speed Profile Boundary Layer Thickness {m},Air Temperature Gradient Coefficient {K/m}
+Environment:Site Atmospheric Variation,0.330,460.000,6.500000E-003
+! <Surface Geometry>,Starting Corner,Vertex Input Direction,Coordinate System,Daylight Reference Point Coordinate System,Rectangular (Simple) Surface Coordinate System
+ Surface Geometry,UpperLeftCorner,Counterclockwise,RelativeCoordinateSystem,RelativeCoordinateSystem,RelativeToZoneOrigin
+! <ShadingProperty Reflectance>,Shading Surface Name,Shading Type,Diffuse Solar Reflectance, Diffuse Visible Reflectance,Surface Glazing Fraction,Surface Glazing Contruction
+! <Surface Heat Transfer Algorithm>, Value {CTF - ConductionTransferFunction | EMPD - MoisturePenetrationDepthConductionTransferFunction | CondFD - ConductionFiniteDifference | HAMT - CombinedHeatAndMoistureFiniteElement} - Description,Inside Surface Max Temperature Limit{C}, Surface Convection Coefficient Lower Limit {W/m2-K}, Surface Convection Coefficient Upper Limit {W/m2-K}
+Surface Heat Transfer Algorithm, CTF - ConductionTransferFunction,200,0.10,1000.0
+! <Shading Summary>, Number of Fixed Detached Shades, Number of Building Detached Shades, Number of Attached Shades
+ Shading Summary,0,0,0
+! <Zone Summary>, Number of Zones, Number of Zone Surfaces, Number of SubSurfaces
+ Zone Summary,130,1210,130
+! <Zone Information>,Zone Name,North Axis {deg},Origin X-Coordinate {m},Origin Y-Coordinate {m},Origin Z-Coordinate {m},Centroid X-Coordinate {m},Centroid Y-Coordinate {m},Centroid Z-Coordinate {m},Type,Zone Multiplier,Zone List Multiplier,Minimum X {m},Maximum X {m},Minimum Y {m},Maximum Y {m},Minimum Z {m},Maximum Z {m},Ceiling Height {m},Volume {m3},Zone Inside Convection Algorithm {Simple-Detailed-CeilingDiffuser-TrombeWall},Zone Outside Convection Algorithm {Simple-Detailed-Tarp-MoWitt-DOE-2-BLAST}, Floor Area {m2},Exterior Gross Wall Area {m2},Exterior Net Wall Area {m2},Exterior Window Area {m2}, Number of Surfaces, Number of SubSurfaces, Number of Shading SubSurfaces,  Part of Total Building Area
+ Zone Information, 1F-A'-BED1,0.0,22.30,1.50,0.00,20.50,3.60,1.50,1,1,1,18.70,23.94,1.50,5.70,0.00,3.00,3.00,45.36,TARP,DOE-2,15.12,10.80,10.37,0.43,7,1,0,Yes
+ Zone Information, 1F-A'-BED2,0.0,22.40,8.20,0.00,20.55,10.00,1.50,1,1,1,18.70,24.43,8.20,11.80,0.00,3.00,3.00,39.96,TARP,DOE-2,13.32,11.10,9.52,1.58,8,1,0,Yes
+ Zone Information, 1F-A'-KITHEN,0.0,24.75,11.80,0.00,23.57,10.56,1.50,1,1,1,22.40,26.78,9.31,11.80,0.00,3.00,3.00,17.55,TARP,DOE-2,5.85,7.05,5.47,1.58,6,1,0,Yes
+ Zone Information, 1F-A'-LIVING,0.0,22.30,1.29E-008,0.00,23.54,5.23,1.50,1,1,1,21.00,26.10,8.61E-009,9.31,0.00,3.00,3.00,102.96,TARP,DOE-2,34.32,20.40,19.97,0.43,14,1,0,Yes
+ Zone Information, 1F-A'-WASH,0.0,21.00,8.20,0.00,19.85,6.95,1.50,1,1,1,18.70,21.00,5.70,8.20,0.00,3.00,3.00,17.25,TARP,DOE-2,5.75,0.00,0.00,0.00,6,0,0,Yes
+ Zone Information, 1F-A-BED1,0.0,18.70,1.50,0.00,16.90,3.60,1.50,1,1,1,15.10,20.34,1.50,5.70,0.00,3.00,3.00,45.36,TARP,DOE-2,15.12,10.80,10.37,0.43,7,1,0,Yes
+ Zone Information, 1F-A-BED2,0.0,18.70,11.80,0.00,16.85,10.00,1.50,1,1,1,15.00,20.73,8.20,11.80,0.00,3.00,3.00,39.96,TARP,DOE-2,13.32,11.10,9.52,1.58,8,1,0,Yes
+ Zone Information, 1F-A-KITHEN,0.0,15.00,11.80,0.00,13.83,10.56,1.50,1,1,1,12.65,17.03,9.31,11.80,0.00,3.00,3.00,17.55,TARP,DOE-2,5.85,7.05,5.47,1.58,6,1,0,Yes
+ Zone Information, 1F-A-LIVING,0.0,11.30,2.54E-008,0.00,13.86,5.23,1.50,1,1,1,11.30,16.40,2.11E-008,9.31,0.00,3.00,3.00,102.96,TARP,DOE-2,34.32,20.40,19.97,0.43,14,1,0,Yes
+ Zone Information, 1F-A-WASH,0.0,18.70,8.20,0.00,17.55,6.95,1.50,1,1,1,16.40,18.70,5.70,8.20,-3.43E-050,3.00,3.00,17.25,TARP,DOE-2,5.75,0.00,0.00,0.00,6,0,0,Yes
+ Zone Information, 1F-B'-BED1,0.0,37.40,1.50,0.00,35.39,4.26,1.50,1,1,1,33.70,39.04,1.50,6.80,0.00,3.00,3.00,50.91,TARP,DOE-2,16.97,23.70,23.27,0.43,8,1,0,Yes
+ Zone Information, 1F-B'-BED2,0.0,29.35,1.50,0.00,27.72,3.85,1.50,1,1,1,26.10,30.99,1.50,6.20,0.00,3.00,3.00,45.82,TARP,DOE-2,15.27,9.75,9.32,0.43,7,1,0,Yes
+ Zone Information, 1F-B'-BED3,0.0,37.40,11.80,0.00,35.55,10.00,1.50,1,1,1,33.70,39.43,8.20,11.80,0.00,3.00,3.00,39.96,TARP,DOE-2,13.32,21.90,20.32,1.58,7,1,0,Yes
+ Zone Information, 1F-B'-KITCHEN,0.0,31.25,8.20,0.00,30.30,10.00,1.50,1,1,1,29.35,33.28,8.20,11.80,0.00,3.00,3.00,20.52,TARP,DOE-2,6.84,5.70,4.12,1.58,6,1,0,Yes
+ Zone Information, 1F-B'-LIVING,0.0,29.35,4.93E-009,0.00,31.63,6.38,1.50,1,1,1,27.45,35.00,0.00,11.80,0.00,3.00,3.00,150.33,TARP,DOE-2,50.11,29.40,27.39,2.01,17,2,0,Yes
+ Zone Information, 1F-B'-WASH1,0.0,37.40,8.20,0.00,36.20,6.95,1.50,1,1,1,35.00,37.40,5.70,8.20,0.00,3.00,3.00,18.00,TARP,DOE-2,6.00,7.50,6.04,1.46,7,1,0,Yes
+ Zone Information, 1F-B'-WASH2,0.0,29.35,8.20,0.00,28.40,10.00,1.50,1,1,1,27.45,31.38,8.20,11.80,0.00,3.00,3.00,20.52,TARP,DOE-2,6.84,5.70,4.12,1.58,6,1,0,Yes
+ Zone Information, 1F-B-BED1,0.0,2.40,5.70,0.00,2.01,4.26,1.50,1,1,1,0.00,4.04,1.50,6.80,-1.33E-050,3.00,3.00,50.91,TARP,DOE-2,16.97,23.70,23.27,0.43,8,1,0,Yes
+ Zone Information, 1F-B-BED2,0.0,11.30,1.50,0.00,9.67,3.85,1.50,1,1,1,8.05,12.94,1.50,6.20,0.00,3.00,3.00,45.83,TARP,DOE-2,15.28,9.75,9.32,0.43,7,1,0,Yes
+ Zone Information, 1F-B-BED3,0.0,0.00,11.80,0.00,1.85,10.00,1.50,1,1,1,0.00,3.70,8.20,11.80,0.00,3.00,3.00,39.96,TARP,DOE-2,13.32,21.90,20.32,1.58,7,1,0,Yes
+ Zone Information, 1F-B-KITCHEN,0.0,8.05,11.80,0.00,7.10,10.00,1.50,1,1,1,6.15,10.08,8.20,11.80,-7.44E-050,3.00,3.00,20.52,TARP,DOE-2,6.84,5.70,4.12,1.58,6,1,0,Yes
+ Zone Information, 1F-B-LIVING,0.0,3.70,11.80,0.00,5.77,6.38,1.50,1,1,1,2.40,9.95,2.91E-008,11.80,0.00,3.00,3.00,150.33,TARP,DOE-2,50.11,29.40,27.39,2.01,17,2,0,Yes
+ Zone Information, 1F-B-WASH1,0.0,0.00,8.20,0.00,1.20,6.95,1.50,1,1,1,0.00,2.40,5.70,8.20,0.00,3.00,3.00,18.00,TARP,DOE-2,6.00,7.50,5.56,1.94,7,1,0,Yes
+ Zone Information, 1F-B-WASH2,0.0,9.95,11.80,0.00,9.00,10.00,1.50,1,1,1,8.05,11.98,8.20,11.80,0.00,3.00,3.00,20.52,TARP,DOE-2,6.84,5.70,4.12,1.58,6,1,0,Yes
+ Zone Information, 1F-STAIRS-LEFT,0.0,12.65,6.20,0.00,11.30,9.00,1.50,1,1,1,9.95,14.68,6.20,11.80,0.00,3.00,3.00,45.36,TARP,DOE-2,15.12,8.10,6.52,1.58,9,1,0,Yes
+ Zone Information, 1F-STAIRS-RIGHT,0.0,27.45,6.20,0.00,26.10,9.00,1.50,1,1,1,24.75,29.48,6.20,11.80,0.00,3.00,3.00,45.36,TARP,DOE-2,15.12,8.10,6.52,1.58,9,1,0,Yes
+ Zone Information, 2F-A'-BED1,0.0,22.30,1.50,3.00,20.50,3.60,4.50,1,1,1,18.70,23.94,1.50,5.70,3.00,8.30,3.00,45.36,TARP,DOE-2,15.12,10.80,10.37,0.43,7,1,0,Yes
+ Zone Information, 2F-A'-BED2,0.0,22.40,8.20,3.00,20.55,10.00,4.50,1,1,1,18.70,24.43,8.20,11.80,3.00,8.30,3.00,39.96,TARP,DOE-2,13.32,11.10,9.52,1.58,8,1,0,Yes
+ Zone Information, 2F-A'-KITHEN,0.0,24.75,11.80,3.00,23.57,10.56,4.50,1,1,1,22.40,26.78,9.31,11.80,3.00,8.30,3.00,17.55,TARP,DOE-2,5.85,7.05,5.47,1.58,6,1,0,Yes
+ Zone Information, 2F-A'-LIVING,0.0,22.30,1.29E-008,3.00,23.54,5.23,4.50,1,1,1,21.00,26.10,8.61E-009,9.31,3.00,8.30,3.00,102.96,TARP,DOE-2,34.32,20.40,19.97,0.43,14,1,0,Yes
+ Zone Information, 2F-A'-WASH,0.0,21.00,8.20,3.00,19.85,6.95,4.50,1,1,1,18.70,21.00,5.70,8.20,3.00,6.00,3.00,17.25,TARP,DOE-2,5.75,0.00,0.00,0.00,6,0,0,Yes
+ Zone Information, 2F-A-BED1,0.0,18.70,1.50,3.00,16.90,3.60,4.50,1,1,1,15.10,20.34,1.50,5.70,3.00,8.30,3.00,45.36,TARP,DOE-2,15.12,10.80,10.37,0.43,7,1,0,Yes
+ Zone Information, 2F-A-BED2,0.0,18.70,11.80,3.00,16.85,10.00,4.50,1,1,1,15.00,20.73,8.20,11.80,3.00,8.30,3.00,39.96,TARP,DOE-2,13.32,11.10,9.52,1.58,8,1,0,Yes
+ Zone Information, 2F-A-KITHEN,0.0,15.00,11.80,3.00,13.83,10.56,4.50,1,1,1,12.65,17.03,9.31,11.80,3.00,8.30,3.00,17.55,TARP,DOE-2,5.85,7.05,5.47,1.58,6,1,0,Yes
+ Zone Information, 2F-A-LIVING,0.0,11.30,2.54E-008,3.00,13.86,5.23,4.50,1,1,1,11.30,16.40,2.11E-008,9.31,3.00,8.30,3.00,102.96,TARP,DOE-2,34.32,20.40,19.97,0.43,14,1,0,Yes
+ Zone Information, 2F-A-WASH,0.0,18.70,8.20,3.00,17.55,6.95,4.50,1,1,1,16.40,18.70,5.70,8.20,3.00,6.00,3.00,17.25,TARP,DOE-2,5.75,0.00,0.00,0.00,6,0,0,Yes
+ Zone Information, 2F-B'-BED1,0.0,37.40,1.50,3.00,35.39,4.26,4.50,1,1,1,33.70,39.04,1.50,6.80,3.00,8.30,3.00,50.91,TARP,DOE-2,16.97,23.70,23.27,0.43,8,1,0,Yes
+ Zone Information, 2F-B'-BED2,0.0,29.35,1.50,3.00,27.72,3.85,4.50,1,1,1,26.10,30.99,1.50,6.20,3.00,8.30,3.00,45.82,TARP,DOE-2,15.27,9.75,9.32,0.43,7,1,0,Yes
+ Zone Information, 2F-B'-BED3,0.0,37.40,11.80,3.00,35.55,10.00,4.50,1,1,1,33.70,39.43,8.20,11.80,3.00,8.30,3.00,39.96,TARP,DOE-2,13.32,21.90,20.32,1.58,7,1,0,Yes
+ Zone Information, 2F-B'-KITCHEN,0.0,31.25,8.20,3.00,30.30,10.00,4.50,1,1,1,29.35,33.28,8.20,11.80,3.00,8.30,3.00,20.52,TARP,DOE-2,6.84,5.70,4.12,1.58,6,1,0,Yes
+ Zone Information, 2F-B'-LIVING,0.0,29.35,4.93E-009,3.00,31.63,6.38,4.50,1,1,1,27.45,35.00,0.00,11.80,3.00,8.30,3.00,150.33,TARP,DOE-2,50.11,29.40,27.39,2.01,17,2,0,Yes
+ Zone Information, 2F-B'-WASH1,0.0,37.40,8.20,3.00,36.20,6.95,4.50,1,1,1,35.00,37.40,5.70,8.20,3.00,8.30,3.00,18.00,TARP,DOE-2,6.00,7.50,6.04,1.46,7,1,0,Yes
+ Zone Information, 2F-B'-WASH2,0.0,29.35,8.20,3.00,28.40,10.00,4.50,1,1,1,27.45,31.38,8.20,11.80,3.00,8.30,3.00,20.52,TARP,DOE-2,6.84,5.70,4.12,1.58,6,1,0,Yes
+ Zone Information, 2F-B-BED1,0.0,2.40,5.70,3.00,2.01,4.26,4.50,1,1,1,0.00,4.04,1.50,6.80,3.00,8.30,3.00,50.91,TARP,DOE-2,16.97,23.70,23.27,0.43,8,1,0,Yes
+ Zone Information, 2F-B-BED2,0.0,11.30,1.50,3.00,9.67,3.85,4.50,1,1,1,8.05,12.94,1.50,6.20,3.00,8.30,3.00,45.83,TARP,DOE-2,15.28,9.75,9.32,0.43,7,1,0,Yes
+ Zone Information, 2F-B-BED3,0.0,0.00,11.80,3.00,1.85,10.00,4.50,1,1,1,0.00,3.70,8.20,11.80,3.00,8.30,3.00,39.96,TARP,DOE-2,13.32,21.90,20.32,1.58,7,1,0,Yes
+ Zone Information, 2F-B-KITCHEN,0.0,8.05,11.80,3.00,7.10,10.00,4.50,1,1,1,6.15,10.08,8.20,11.80,3.00,8.30,3.00,20.52,TARP,DOE-2,6.84,5.70,4.12,1.58,6,1,0,Yes
+ Zone Information, 2F-B-LIVING,0.0,3.70,11.80,3.00,5.77,6.38,4.50,1,1,1,2.40,9.95,2.91E-008,11.80,3.00,8.30,3.00,150.33,TARP,DOE-2,50.11,29.40,27.39,2.01,17,2,0,Yes
+ Zone Information, 2F-B-WASH1,0.0,0.00,8.20,3.00,1.20,6.95,4.50,1,1,1,0.00,2.40,5.70,8.20,3.00,8.30,3.00,18.00,TARP,DOE-2,6.00,7.50,5.56,1.94,7,1,0,Yes
+ Zone Information, 2F-B-WASH2,0.0,9.95,11.80,3.00,9.00,10.00,4.50,1,1,1,8.05,11.98,8.20,11.80,3.00,8.30,3.00,20.52,TARP,DOE-2,6.84,5.70,4.12,1.58,6,1,0,Yes
+ Zone Information, 2F-STAIRS-LEFT,0.0,12.65,6.20,3.00,11.30,9.00,4.50,1,1,1,9.95,14.68,6.20,11.80,3.00,8.30,3.00,45.36,TARP,DOE-2,15.12,8.10,6.52,1.58,9,1,0,Yes
+ Zone Information, 2F-STAIRS-RIGHT,0.0,27.45,6.20,3.00,26.10,9.00,4.50,1,1,1,24.75,29.48,6.20,11.80,3.00,8.30,3.00,45.36,TARP,DOE-2,15.12,8.10,6.52,1.58,9,1,0,Yes
+ Zone Information, 3F-A'-BED1,0.0,22.30,1.50,6.00,20.50,3.60,7.50,1,1,1,18.70,23.94,1.50,5.70,6.00,14.10,3.00,45.36,TARP,DOE-2,15.12,10.80,10.37,0.43,7,1,0,Yes
+ Zone Information, 3F-A'-BED2,0.0,22.40,8.20,6.00,20.55,10.00,7.50,1,1,1,18.70,24.43,8.20,11.80,6.00,14.10,3.00,39.96,TARP,DOE-2,13.32,11.10,9.52,1.58,8,1,0,Yes
+ Zone Information, 3F-A'-KITHEN,0.0,24.75,11.80,6.00,23.57,10.56,7.50,1,1,1,22.40,26.78,9.31,11.80,6.00,14.10,3.00,17.55,TARP,DOE-2,5.85,7.05,5.47,1.58,6,1,0,Yes
+ Zone Information, 3F-A'-LIVING,0.0,22.30,1.29E-008,6.00,23.54,5.23,7.50,1,1,1,21.00,26.10,8.61E-009,9.31,6.00,14.10,3.00,102.96,TARP,DOE-2,34.32,20.40,19.97,0.43,14,1,0,Yes
+ Zone Information, 3F-A'-WASH,0.0,21.00,8.20,6.00,19.85,6.95,7.50,1,1,1,18.70,21.00,5.70,8.20,6.00,9.00,3.00,17.25,TARP,DOE-2,5.75,0.00,0.00,0.00,6,0,0,Yes
+ Zone Information, 3F-A-BED1,0.0,18.70,1.50,6.00,16.90,3.60,7.50,1,1,1,15.10,20.34,1.50,5.70,6.00,14.10,3.00,45.36,TARP,DOE-2,15.12,10.80,10.37,0.43,7,1,0,Yes
+ Zone Information, 3F-A-BED2,0.0,18.70,11.80,6.00,16.85,10.00,7.50,1,1,1,15.00,20.73,8.20,11.80,6.00,14.10,3.00,39.96,TARP,DOE-2,13.32,11.10,9.52,1.58,8,1,0,Yes
+ Zone Information, 3F-A-KITHEN,0.0,15.00,11.80,6.00,13.83,10.56,7.50,1,1,1,12.65,17.03,9.31,11.80,6.00,14.10,3.00,17.55,TARP,DOE-2,5.85,7.05,5.47,1.58,6,1,0,Yes
+ Zone Information, 3F-A-LIVING,0.0,11.30,2.54E-008,6.00,13.86,5.23,7.50,1,1,1,11.30,16.40,2.11E-008,9.31,6.00,14.10,3.00,102.96,TARP,DOE-2,34.32,20.40,19.97,0.43,14,1,0,Yes
+ Zone Information, 3F-A-WASH,0.0,18.70,8.20,6.00,17.55,6.95,7.50,1,1,1,16.40,18.70,5.70,8.20,6.00,9.00,3.00,17.25,TARP,DOE-2,5.75,0.00,0.00,0.00,6,0,0,Yes
+ Zone Information, 3F-B'-BED1,0.0,37.40,1.50,6.00,35.39,4.26,7.50,1,1,1,33.70,39.04,1.50,6.80,6.00,14.10,3.00,50.91,TARP,DOE-2,16.97,23.70,23.27,0.43,8,1,0,Yes
+ Zone Information, 3F-B'-BED2,0.0,29.35,1.50,6.00,27.72,3.85,7.50,1,1,1,26.10,30.99,1.50,6.20,6.00,14.10,3.00,45.82,TARP,DOE-2,15.27,9.75,9.32,0.43,7,1,0,Yes
+ Zone Information, 3F-B'-BED3,0.0,37.40,11.80,6.00,35.55,10.00,7.50,1,1,1,33.70,39.43,8.20,11.80,6.00,14.10,3.00,39.96,TARP,DOE-2,13.32,21.90,20.32,1.58,7,1,0,Yes
+ Zone Information, 3F-B'-KITCHEN,0.0,31.25,8.20,6.00,30.30,10.00,7.50,1,1,1,29.35,33.28,8.20,11.80,6.00,14.10,3.00,20.52,TARP,DOE-2,6.84,5.70,4.12,1.58,6,1,0,Yes
+ Zone Information, 3F-B'-LIVING,0.0,29.35,4.93E-009,6.00,31.63,6.38,7.50,1,1,1,27.45,35.00,0.00,11.80,6.00,14.10,3.00,150.33,TARP,DOE-2,50.11,29.40,27.39,2.01,17,2,0,Yes
+ Zone Information, 3F-B'-WASH1,0.0,37.40,8.20,6.00,36.20,6.95,7.50,1,1,1,35.00,37.40,5.70,8.20,6.00,14.10,3.00,18.00,TARP,DOE-2,6.00,7.50,6.04,1.46,7,1,0,Yes
+ Zone Information, 3F-B'-WASH2,0.0,29.35,8.20,6.00,28.40,10.00,7.50,1,1,1,27.45,31.38,8.20,11.80,6.00,14.10,3.00,20.52,TARP,DOE-2,6.84,5.70,4.12,1.58,6,1,0,Yes
+ Zone Information, 3F-B-BED1,0.0,2.40,5.70,6.00,2.01,4.26,7.50,1,1,1,0.00,4.04,1.50,6.80,6.00,14.10,3.00,50.91,TARP,DOE-2,16.97,23.70,23.27,0.43,8,1,0,Yes
+ Zone Information, 3F-B-BED2,0.0,11.30,1.50,6.00,9.67,3.85,7.50,1,1,1,8.05,12.94,1.50,6.20,6.00,14.10,3.00,45.83,TARP,DOE-2,15.28,9.75,9.32,0.43,7,1,0,Yes
+ Zone Information, 3F-B-BED3,0.0,0.00,11.80,6.00,1.85,10.00,7.50,1,1,1,0.00,3.70,8.20,11.80,6.00,14.10,3.00,39.96,TARP,DOE-2,13.32,21.90,20.32,1.58,7,1,0,Yes
+ Zone Information, 3F-B-KITCHEN,0.0,8.05,11.80,6.00,7.10,10.00,7.50,1,1,1,6.15,10.08,8.20,11.80,6.00,14.10,3.00,20.52,TARP,DOE-2,6.84,5.70,4.12,1.58,6,1,0,Yes
+ Zone Information, 3F-B-LIVING,0.0,3.70,11.80,6.00,5.77,6.38,7.50,1,1,1,2.40,9.95,2.91E-008,11.80,6.00,14.10,3.00,150.33,TARP,DOE-2,50.11,29.40,27.39,2.01,17,2,0,Yes
+ Zone Information, 3F-B-WASH1,0.0,0.00,8.20,6.00,1.20,6.95,7.50,1,1,1,0.00,2.40,5.70,8.20,6.00,14.10,3.00,18.00,TARP,DOE-2,6.00,7.50,5.56,1.94,7,1,0,Yes
+ Zone Information, 3F-B-WASH2,0.0,9.95,11.80,6.00,9.00,10.00,7.50,1,1,1,8.05,11.98,8.20,11.80,6.00,14.10,3.00,20.52,TARP,DOE-2,6.84,5.70,4.12,1.58,6,1,0,Yes
+ Zone Information, 3F-STAIRS-LEFT,0.0,12.65,6.20,6.00,11.30,9.00,7.50,1,1,1,9.95,14.68,6.20,11.80,6.00,14.10,3.00,45.36,TARP,DOE-2,15.12,8.10,6.52,1.58,9,1,0,Yes
+ Zone Information, 3F-STAIRS-RIGHT,0.0,27.45,6.20,6.00,26.10,9.00,7.50,1,1,1,24.75,29.48,6.20,11.80,6.00,14.10,3.00,45.36,TARP,DOE-2,15.12,8.10,6.52,1.58,9,1,0,Yes
+ Zone Information, 4F-A'-BED1,0.0,22.30,1.50,9.00,20.50,3.60,10.50,1,1,1,18.70,23.94,1.50,5.70,9.00,19.90,3.00,45.36,TARP,DOE-2,15.12,10.80,10.37,0.43,7,1,0,Yes
+ Zone Information, 4F-A'-BED2,0.0,22.40,8.20,9.00,20.55,10.00,10.50,1,1,1,18.70,24.43,8.20,11.80,9.00,19.90,3.00,39.96,TARP,DOE-2,13.32,11.10,9.52,1.58,8,1,0,Yes
+ Zone Information, 4F-A'-KITHEN,0.0,24.75,11.80,9.00,23.57,10.56,10.50,1,1,1,22.40,26.78,9.31,11.80,9.00,19.90,3.00,17.55,TARP,DOE-2,5.85,7.05,5.47,1.58,6,1,0,Yes
+ Zone Information, 4F-A'-LIVING,0.0,22.30,1.29E-008,9.00,23.54,5.23,10.50,1,1,1,21.00,26.10,8.61E-009,9.31,9.00,19.90,3.00,102.96,TARP,DOE-2,34.32,20.40,19.97,0.43,14,1,0,Yes
+ Zone Information, 4F-A'-WASH,0.0,21.00,8.20,9.00,19.85,6.95,10.50,1,1,1,18.70,21.00,5.70,8.20,9.00,12.00,3.00,17.25,TARP,DOE-2,5.75,0.00,0.00,0.00,6,0,0,Yes
+ Zone Information, 4F-A-BED1,0.0,18.70,1.50,9.00,16.90,3.60,10.50,1,1,1,15.10,20.34,1.50,5.70,9.00,19.90,3.00,45.36,TARP,DOE-2,15.12,10.80,10.37,0.43,7,1,0,Yes
+ Zone Information, 4F-A-BED2,0.0,18.70,11.80,9.00,16.85,10.00,10.50,1,1,1,15.00,20.73,8.20,11.80,9.00,19.90,3.00,39.96,TARP,DOE-2,13.32,11.10,9.52,1.58,8,1,0,Yes
+ Zone Information, 4F-A-KITHEN,0.0,15.00,11.80,9.00,13.83,10.56,10.50,1,1,1,12.65,17.03,9.31,11.80,9.00,19.90,3.00,17.55,TARP,DOE-2,5.85,7.05,5.47,1.58,6,1,0,Yes
+ Zone Information, 4F-A-LIVING,0.0,11.30,2.54E-008,9.00,13.86,5.23,10.50,1,1,1,11.30,16.40,2.11E-008,9.31,9.00,19.90,3.00,102.96,TARP,DOE-2,34.32,20.40,19.97,0.43,14,1,0,Yes
+ Zone Information, 4F-A-WASH,0.0,18.70,8.20,9.00,17.55,6.95,10.50,1,1,1,16.40,18.70,5.70,8.20,9.00,12.00,3.00,17.25,TARP,DOE-2,5.75,0.00,0.00,0.00,6,0,0,Yes
+ Zone Information, 4F-B'-BED1,0.0,37.40,1.50,9.00,35.39,4.26,10.50,1,1,1,33.70,39.04,1.50,6.80,9.00,19.90,3.00,50.91,TARP,DOE-2,16.97,23.70,23.27,0.43,8,1,0,Yes
+ Zone Information, 4F-B'-BED2,0.0,29.35,1.50,9.00,27.72,3.85,10.50,1,1,1,26.10,30.99,1.50,6.20,9.00,19.90,3.00,45.82,TARP,DOE-2,15.27,9.75,9.32,0.43,7,1,0,Yes
+ Zone Information, 4F-B'-BED3,0.0,37.40,11.80,9.00,35.55,10.00,10.50,1,1,1,33.70,39.43,8.20,11.80,9.00,19.90,3.00,39.96,TARP,DOE-2,13.32,21.90,20.32,1.58,7,1,0,Yes
+ Zone Information, 4F-B'-KITCHEN,0.0,31.25,8.20,9.00,30.30,10.00,10.50,1,1,1,29.35,33.28,8.20,11.80,9.00,19.90,3.00,20.52,TARP,DOE-2,6.84,5.70,4.12,1.58,6,1,0,Yes
+ Zone Information, 4F-B'-LIVING,0.0,29.35,4.93E-009,9.00,31.63,6.38,10.50,1,1,1,27.45,35.00,0.00,11.80,9.00,19.90,3.00,150.33,TARP,DOE-2,50.11,29.40,27.39,2.01,17,2,0,Yes
+ Zone Information, 4F-B'-WASH1,0.0,37.40,8.20,9.00,36.20,6.95,10.50,1,1,1,35.00,37.40,5.70,8.20,9.00,19.90,3.00,18.00,TARP,DOE-2,6.00,7.50,6.04,1.46,7,1,0,Yes
+ Zone Information, 4F-B'-WASH2,0.0,29.35,8.20,9.00,28.40,10.00,10.50,1,1,1,27.45,31.38,8.20,11.80,9.00,19.90,3.00,20.52,TARP,DOE-2,6.84,5.70,4.12,1.58,6,1,0,Yes
+ Zone Information, 4F-B-BED1,0.0,2.40,5.70,9.00,2.01,4.26,10.50,1,1,1,0.00,4.04,1.50,6.80,9.00,19.90,3.00,50.91,TARP,DOE-2,16.97,23.70,23.27,0.43,8,1,0,Yes
+ Zone Information, 4F-B-BED2,0.0,11.30,1.50,9.00,9.67,3.85,10.50,1,1,1,8.05,12.94,1.50,6.20,9.00,19.90,3.00,45.83,TARP,DOE-2,15.28,9.75,9.32,0.43,7,1,0,Yes
+ Zone Information, 4F-B-BED3,0.0,0.00,11.80,9.00,1.85,10.00,10.50,1,1,1,0.00,3.70,8.20,11.80,9.00,19.90,3.00,39.96,TARP,DOE-2,13.32,21.90,20.32,1.58,7,1,0,Yes
+ Zone Information, 4F-B-KITCHEN,0.0,8.05,11.80,9.00,7.10,10.00,10.50,1,1,1,6.15,10.08,8.20,11.80,9.00,19.90,3.00,20.52,TARP,DOE-2,6.84,5.70,4.12,1.58,6,1,0,Yes
+ Zone Information, 4F-B-LIVING,0.0,3.70,11.80,9.00,5.77,6.38,10.50,1,1,1,2.40,9.95,2.91E-008,11.80,9.00,19.90,3.00,150.33,TARP,DOE-2,50.11,29.40,27.39,2.01,17,2,0,Yes
+ Zone Information, 4F-B-WASH1,0.0,0.00,8.20,9.00,1.20,6.95,10.50,1,1,1,0.00,2.40,5.70,8.20,9.00,19.90,3.00,18.00,TARP,DOE-2,6.00,7.50,5.56,1.94,7,1,0,Yes
+ Zone Information, 4F-B-WASH2,0.0,9.95,11.80,9.00,9.00,10.00,10.50,1,1,1,8.05,11.98,8.20,11.80,9.00,19.90,3.00,20.52,TARP,DOE-2,6.84,5.70,4.12,1.58,6,1,0,Yes
+ Zone Information, 4F-STAIRS-LEFT,0.0,12.65,6.20,9.00,11.30,9.00,10.50,1,1,1,9.95,14.68,6.20,11.80,9.00,19.90,3.00,45.36,TARP,DOE-2,15.12,8.10,6.52,1.58,9,1,0,Yes
+ Zone Information, 4F-STAIRS-RIGHT,0.0,27.45,6.20,9.00,26.10,9.00,10.50,1,1,1,24.75,29.48,6.20,11.80,9.00,19.90,3.00,45.36,TARP,DOE-2,15.12,8.10,6.52,1.58,9,1,0,Yes
+ Zone Information, 5F-A'-BED1,0.0,22.30,1.50,12.00,20.50,3.60,13.50,1,1,1,18.70,23.94,1.50,5.70,12.00,25.70,3.00,45.36,TARP,DOE-2,15.12,10.80,10.37,0.43,7,1,0,Yes
+ Zone Information, 5F-A'-BED2,0.0,22.40,8.20,12.00,20.55,10.00,13.50,1,1,1,18.70,24.43,8.20,11.80,12.00,25.70,3.00,39.96,TARP,DOE-2,13.32,11.10,9.52,1.58,8,1,0,Yes
+ Zone Information, 5F-A'-KITHEN,0.0,24.75,11.80,12.00,23.57,10.56,13.50,1,1,1,22.40,26.78,9.31,11.80,12.00,25.70,3.00,17.55,TARP,DOE-2,5.85,7.05,5.47,1.58,6,1,0,Yes
+ Zone Information, 5F-A'-LIVING,0.0,22.30,1.29E-008,12.00,23.54,5.23,13.50,1,1,1,21.00,26.10,8.61E-009,9.31,12.00,25.70,3.00,102.96,TARP,DOE-2,34.32,20.40,19.97,0.43,14,1,0,Yes
+ Zone Information, 5F-A'-WASH,0.0,21.00,8.20,12.00,19.85,6.95,13.50,1,1,1,18.70,21.00,5.70,8.20,12.00,15.00,3.00,17.25,TARP,DOE-2,5.75,0.00,0.00,0.00,6,0,0,Yes
+ Zone Information, 5F-A-BED1,0.0,18.70,1.50,12.00,16.90,3.60,13.50,1,1,1,15.10,20.34,1.50,5.70,12.00,25.70,3.00,45.36,TARP,DOE-2,15.12,10.80,10.37,0.43,7,1,0,Yes
+ Zone Information, 5F-A-BED2,0.0,18.70,11.80,12.00,16.85,10.00,13.50,1,1,1,15.00,20.73,8.20,11.80,12.00,25.70,3.00,39.96,TARP,DOE-2,13.32,11.10,9.52,1.58,8,1,0,Yes
+ Zone Information, 5F-A-KITHEN,0.0,15.00,11.80,12.00,13.83,10.56,13.50,1,1,1,12.65,17.03,9.31,11.80,12.00,25.70,3.00,17.55,TARP,DOE-2,5.85,7.05,5.47,1.58,6,1,0,Yes
+ Zone Information, 5F-A-LIVING,0.0,11.30,2.54E-008,12.00,13.86,5.23,13.50,1,1,1,11.30,16.40,2.11E-008,9.31,12.00,25.70,3.00,102.96,TARP,DOE-2,34.32,20.40,19.97,0.43,14,1,0,Yes
+ Zone Information, 5F-A-WASH,0.0,18.70,8.20,12.00,17.55,6.95,13.50,1,1,1,16.40,18.70,5.70,8.20,12.00,15.00,3.00,17.25,TARP,DOE-2,5.75,0.00,0.00,0.00,6,0,0,Yes
+ Zone Information, 5F-B'-BED1,0.0,37.40,1.50,12.00,35.39,4.26,13.50,1,1,1,33.70,39.04,1.50,6.80,12.00,25.70,3.00,50.91,TARP,DOE-2,16.97,23.70,23.27,0.43,8,1,0,Yes
+ Zone Information, 5F-B'-BED2,0.0,29.35,1.50,12.00,27.72,3.85,13.50,1,1,1,26.10,30.99,1.50,6.20,12.00,25.70,3.00,45.82,TARP,DOE-2,15.27,9.75,9.32,0.43,7,1,0,Yes
+ Zone Information, 5F-B'-BED3,0.0,37.40,11.80,12.00,35.55,10.00,13.50,1,1,1,33.70,39.43,8.20,11.80,12.00,25.70,3.00,39.96,TARP,DOE-2,13.32,21.90,20.32,1.58,7,1,0,Yes
+ Zone Information, 5F-B'-KITCHEN,0.0,31.25,8.20,12.00,30.30,10.00,13.50,1,1,1,29.35,33.28,8.20,11.80,12.00,25.70,3.00,20.52,TARP,DOE-2,6.84,5.70,4.12,1.58,6,1,0,Yes
+ Zone Information, 5F-B'-LIVING,0.0,29.35,4.93E-009,12.00,31.63,6.38,13.50,1,1,1,27.45,35.00,0.00,11.80,12.00,25.70,3.00,150.33,TARP,DOE-2,50.11,29.40,27.39,2.01,17,2,0,Yes
+ Zone Information, 5F-B'-WASH1,0.0,37.40,8.20,12.00,36.20,6.95,13.50,1,1,1,35.00,37.40,5.70,8.20,12.00,25.70,3.00,18.00,TARP,DOE-2,6.00,7.50,6.04,1.46,7,1,0,Yes
+ Zone Information, 5F-B'-WASH2,0.0,29.35,8.20,12.00,28.40,10.00,13.50,1,1,1,27.45,31.38,8.20,11.80,12.00,25.70,3.00,20.52,TARP,DOE-2,6.84,5.70,4.12,1.58,6,1,0,Yes
+ Zone Information, 5F-B-BED1,0.0,2.40,5.70,12.00,2.01,4.26,13.50,1,1,1,0.00,4.04,1.50,6.80,12.00,25.70,3.00,50.91,TARP,DOE-2,16.97,23.70,23.27,0.43,8,1,0,Yes
+ Zone Information, 5F-B-BED2,0.0,11.30,1.50,12.00,9.67,3.85,13.50,1,1,1,8.05,12.94,1.50,6.20,12.00,25.70,3.00,45.83,TARP,DOE-2,15.28,9.75,9.32,0.43,7,1,0,Yes
+ Zone Information, 5F-B-BED3,0.0,0.00,11.80,12.00,1.85,10.00,13.50,1,1,1,0.00,3.70,8.20,11.80,12.00,25.70,3.00,39.96,TARP,DOE-2,13.32,21.90,20.32,1.58,7,1,0,Yes
+ Zone Information, 5F-B-KITCHEN,0.0,8.05,11.80,12.00,7.10,10.00,13.50,1,1,1,6.15,10.08,8.20,11.80,12.00,25.70,3.00,20.52,TARP,DOE-2,6.84,5.70,4.12,1.58,6,1,0,Yes
+ Zone Information, 5F-B-LIVING,0.0,3.70,11.80,12.00,5.77,6.38,13.50,1,1,1,2.40,9.95,2.91E-008,11.80,12.00,25.70,3.00,150.33,TARP,DOE-2,50.11,29.40,27.39,2.01,17,2,0,Yes
+ Zone Information, 5F-B-WASH1,0.0,0.00,8.20,12.00,1.20,6.95,13.50,1,1,1,0.00,2.40,5.70,8.20,12.00,25.70,3.00,18.00,TARP,DOE-2,6.00,7.50,5.56,1.94,7,1,0,Yes
+ Zone Information, 5F-B-WASH2,0.0,9.95,11.80,12.00,9.00,10.00,13.50,1,1,1,8.05,11.98,8.20,11.80,12.00,25.70,3.00,20.52,TARP,DOE-2,6.84,5.70,4.12,1.58,6,1,0,Yes
+ Zone Information, 5F-STAIRS-LEFT,0.0,12.65,6.20,12.00,11.30,9.00,13.50,1,1,1,9.95,14.68,6.20,11.80,12.00,25.70,3.00,45.36,TARP,DOE-2,15.12,8.10,6.52,1.58,9,1,0,Yes
+ Zone Information, 5F-STAIRS-RIGHT,0.0,27.45,6.20,12.00,26.10,9.00,13.50,1,1,1,24.75,29.48,6.20,11.80,12.00,25.70,3.00,45.36,TARP,DOE-2,15.12,8.10,6.52,1.58,9,1,0,Yes
+! <Zone Internal Gains Nominal>,Zone Name, Floor Area {m2},# Occupants,Area per Occupant {m2/person},Occupant per Area {person/m2},Interior Lighting {W/m2},Electric Load {W/m2},Gas Load {W/m2},Other Load {W/m2},Hot Water Eq {W/m2},Steam Equipment {W/m2},Sum Loads per Area {W/m2},Outdoor Controlled Baseboard Heat
+ Zone Internal Gains Nominal, 1F-A'-BED1,15.12,2.0,7.560,0.132,6.000,4.300,0.000,0.000,0.000,0.000,10.300,No
+ Zone Internal Gains Nominal, 1F-A'-BED2,13.32,2.0,6.660,0.150,6.000,4.300,0.000,0.000,0.000,0.000,10.300,No
+ Zone Internal Gains Nominal, 1F-A'-KITHEN,5.85,0.0,N/A,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,No
+ Zone Internal Gains Nominal, 1F-A'-LIVING,34.32,3.0,11.439,8.742E-002,6.000,4.300,0.000,0.000,0.000,0.000,10.300,No
+ Zone Internal Gains Nominal, 1F-A'-WASH,5.75,0.0,N/A,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,No
+ Zone Internal Gains Nominal, 1F-A-BED1,15.12,2.0,7.560,0.132,6.000,4.300,0.000,0.000,0.000,0.000,10.300,No
+ Zone Internal Gains Nominal, 1F-A-BED2,13.32,2.0,6.660,0.150,6.000,4.300,0.000,0.000,0.000,0.000,10.300,No
+ Zone Internal Gains Nominal, 1F-A-KITHEN,5.85,0.0,N/A,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,No
+ Zone Internal Gains Nominal, 1F-A-LIVING,34.32,3.0,11.439,8.742E-002,6.000,4.300,0.000,0.000,0.000,0.000,10.300,No
+ Zone Internal Gains Nominal, 1F-A-WASH,5.75,0.0,N/A,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,No
+ Zone Internal Gains Nominal, 1F-B'-BED1,16.97,2.0,8.485,0.118,6.000,4.300,0.000,0.000,0.000,0.000,10.300,No
+ Zone Internal Gains Nominal, 1F-B'-BED2,15.27,2.0,7.637,0.131,6.000,4.300,0.000,0.000,0.000,0.000,10.300,No
+ Zone Internal Gains Nominal, 1F-B'-BED3,13.32,2.0,6.660,0.150,6.000,4.300,0.000,0.000,0.000,0.000,10.300,No
+ Zone Internal Gains Nominal, 1F-B'-KITCHEN,6.84,0.0,N/A,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,No
+ Zone Internal Gains Nominal, 1F-B'-LIVING,50.11,5.0,10.022,9.978E-002,6.000,4.300,0.000,0.000,0.000,0.000,10.300,No
+ Zone Internal Gains Nominal, 1F-B'-WASH1,6.00,0.0,N/A,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,No
+ Zone Internal Gains Nominal, 1F-B'-WASH2,6.84,0.0,N/A,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,No
+ Zone Internal Gains Nominal, 1F-B-BED1,16.97,2.0,8.485,0.118,6.000,4.300,0.000,0.000,0.000,0.000,10.300,No
+ Zone Internal Gains Nominal, 1F-B-BED2,15.28,2.0,7.638,0.131,6.000,4.300,0.000,0.000,0.000,0.000,10.300,No
+ Zone Internal Gains Nominal, 1F-B-BED3,13.32,2.0,6.660,0.150,6.000,4.300,0.000,0.000,0.000,0.000,10.300,No
+ Zone Internal Gains Nominal, 1F-B-KITCHEN,6.84,0.0,N/A,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,No
+ Zone Internal Gains Nominal, 1F-B-LIVING,50.11,5.0,10.022,9.978E-002,6.000,4.300,0.000,0.000,0.000,0.000,10.300,No
+ Zone Internal Gains Nominal, 1F-B-WASH1,6.00,0.0,N/A,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,No
+ Zone Internal Gains Nominal, 1F-B-WASH2,6.84,0.0,N/A,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,No
+ Zone Internal Gains Nominal, 1F-STAIRS-LEFT,15.12,0.0,N/A,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,No
+ Zone Internal Gains Nominal, 1F-STAIRS-RIGHT,15.12,0.0,N/A,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,No
+ Zone Internal Gains Nominal, 2F-A'-BED1,15.12,2.0,7.560,0.132,6.000,4.300,0.000,0.000,0.000,0.000,10.300,No
+ Zone Internal Gains Nominal, 2F-A'-BED2,13.32,2.0,6.660,0.150,6.000,4.300,0.000,0.000,0.000,0.000,10.300,No
+ Zone Internal Gains Nominal, 2F-A'-KITHEN,5.85,0.0,N/A,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,No
+ Zone Internal Gains Nominal, 2F-A'-LIVING,34.32,3.0,11.439,8.742E-002,6.000,4.300,0.000,0.000,0.000,0.000,10.300,No
+ Zone Internal Gains Nominal, 2F-A'-WASH,5.75,0.0,N/A,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,No
+ Zone Internal Gains Nominal, 2F-A-BED1,15.12,2.0,7.560,0.132,6.000,4.300,0.000,0.000,0.000,0.000,10.300,No
+ Zone Internal Gains Nominal, 2F-A-BED2,13.32,2.0,6.660,0.150,6.000,4.300,0.000,0.000,0.000,0.000,10.300,No
+ Zone Internal Gains Nominal, 2F-A-KITHEN,5.85,0.0,N/A,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,No
+ Zone Internal Gains Nominal, 2F-A-LIVING,34.32,3.0,11.439,8.742E-002,6.000,4.300,0.000,0.000,0.000,0.000,10.300,No
+ Zone Internal Gains Nominal, 2F-A-WASH,5.75,0.0,N/A,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,No
+ Zone Internal Gains Nominal, 2F-B'-BED1,16.97,2.0,8.485,0.118,6.000,4.300,0.000,0.000,0.000,0.000,10.300,No
+ Zone Internal Gains Nominal, 2F-B'-BED2,15.27,2.0,7.637,0.131,6.000,4.300,0.000,0.000,0.000,0.000,10.300,No
+ Zone Internal Gains Nominal, 2F-B'-BED3,13.32,2.0,6.660,0.150,6.000,4.300,0.000,0.000,0.000,0.000,10.300,No
+ Zone Internal Gains Nominal, 2F-B'-KITCHEN,6.84,0.0,N/A,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,No
+ Zone Internal Gains Nominal, 2F-B'-LIVING,50.11,5.0,10.022,9.978E-002,6.000,4.300,0.000,0.000,0.000,0.000,10.300,No
+ Zone Internal Gains Nominal, 2F-B'-WASH1,6.00,0.0,N/A,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,No
+ Zone Internal Gains Nominal, 2F-B'-WASH2,6.84,0.0,N/A,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,No
+ Zone Internal Gains Nominal, 2F-B-BED1,16.97,2.0,8.485,0.118,6.000,4.300,0.000,0.000,0.000,0.000,10.300,No
+ Zone Internal Gains Nominal, 2F-B-BED2,15.28,2.0,7.638,0.131,6.000,4.300,0.000,0.000,0.000,0.000,10.300,No
+ Zone Internal Gains Nominal, 2F-B-BED3,13.32,2.0,6.660,0.150,6.000,4.300,0.000,0.000,0.000,0.000,10.300,No
+ Zone Internal Gains Nominal, 2F-B-KITCHEN,6.84,0.0,N/A,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,No
+ Zone Internal Gains Nominal, 2F-B-LIVING,50.11,5.0,10.022,9.978E-002,6.000,4.300,0.000,0.000,0.000,0.000,10.300,No
+ Zone Internal Gains Nominal, 2F-B-WASH1,6.00,0.0,N/A,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,No
+ Zone Internal Gains Nominal, 2F-B-WASH2,6.84,0.0,N/A,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,No
+ Zone Internal Gains Nominal, 2F-STAIRS-LEFT,15.12,0.0,N/A,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,No
+ Zone Internal Gains Nominal, 2F-STAIRS-RIGHT,15.12,0.0,N/A,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,No
+ Zone Internal Gains Nominal, 3F-A'-BED1,15.12,2.0,7.560,0.132,6.000,4.300,0.000,0.000,0.000,0.000,10.300,No
+ Zone Internal Gains Nominal, 3F-A'-BED2,13.32,2.0,6.660,0.150,6.000,4.300,0.000,0.000,0.000,0.000,10.300,No
+ Zone Internal Gains Nominal, 3F-A'-KITHEN,5.85,0.0,N/A,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,No
+ Zone Internal Gains Nominal, 3F-A'-LIVING,34.32,3.0,11.439,8.742E-002,6.000,4.300,0.000,0.000,0.000,0.000,10.300,No
+ Zone Internal Gains Nominal, 3F-A'-WASH,5.75,0.0,N/A,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,No
+ Zone Internal Gains Nominal, 3F-A-BED1,15.12,2.0,7.560,0.132,6.000,4.300,0.000,0.000,0.000,0.000,10.300,No
+ Zone Internal Gains Nominal, 3F-A-BED2,13.32,2.0,6.660,0.150,6.000,4.300,0.000,0.000,0.000,0.000,10.300,No
+ Zone Internal Gains Nominal, 3F-A-KITHEN,5.85,0.0,N/A,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,No
+ Zone Internal Gains Nominal, 3F-A-LIVING,34.32,3.0,11.439,8.742E-002,6.000,4.300,0.000,0.000,0.000,0.000,10.300,No
+ Zone Internal Gains Nominal, 3F-A-WASH,5.75,0.0,N/A,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,No
+ Zone Internal Gains Nominal, 3F-B'-BED1,16.97,2.0,8.485,0.118,6.000,4.300,0.000,0.000,0.000,0.000,10.300,No
+ Zone Internal Gains Nominal, 3F-B'-BED2,15.27,2.0,7.637,0.131,6.000,4.300,0.000,0.000,0.000,0.000,10.300,No
+ Zone Internal Gains Nominal, 3F-B'-BED3,13.32,2.0,6.660,0.150,6.000,4.300,0.000,0.000,0.000,0.000,10.300,No
+ Zone Internal Gains Nominal, 3F-B'-KITCHEN,6.84,0.0,N/A,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,No
+ Zone Internal Gains Nominal, 3F-B'-LIVING,50.11,5.0,10.022,9.978E-002,6.000,4.300,0.000,0.000,0.000,0.000,10.300,No
+ Zone Internal Gains Nominal, 3F-B'-WASH1,6.00,0.0,N/A,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,No
+ Zone Internal Gains Nominal, 3F-B'-WASH2,6.84,0.0,N/A,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,No
+ Zone Internal Gains Nominal, 3F-B-BED1,16.97,2.0,8.485,0.118,6.000,4.300,0.000,0.000,0.000,0.000,10.300,No
+ Zone Internal Gains Nominal, 3F-B-BED2,15.28,2.0,7.638,0.131,6.000,4.300,0.000,0.000,0.000,0.000,10.300,No
+ Zone Internal Gains Nominal, 3F-B-BED3,13.32,2.0,6.660,0.150,6.000,4.300,0.000,0.000,0.000,0.000,10.300,No
+ Zone Internal Gains Nominal, 3F-B-KITCHEN,6.84,0.0,N/A,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,No
+ Zone Internal Gains Nominal, 3F-B-LIVING,50.11,5.0,10.022,9.978E-002,6.000,4.300,0.000,0.000,0.000,0.000,10.300,No
+ Zone Internal Gains Nominal, 3F-B-WASH1,6.00,0.0,N/A,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,No
+ Zone Internal Gains Nominal, 3F-B-WASH2,6.84,0.0,N/A,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,No
+ Zone Internal Gains Nominal, 3F-STAIRS-LEFT,15.12,0.0,N/A,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,No
+ Zone Internal Gains Nominal, 3F-STAIRS-RIGHT,15.12,0.0,N/A,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,No
+ Zone Internal Gains Nominal, 4F-A'-BED1,15.12,2.0,7.560,0.132,6.000,4.300,0.000,0.000,0.000,0.000,10.300,No
+ Zone Internal Gains Nominal, 4F-A'-BED2,13.32,2.0,6.660,0.150,6.000,4.300,0.000,0.000,0.000,0.000,10.300,No
+ Zone Internal Gains Nominal, 4F-A'-KITHEN,5.85,0.0,N/A,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,No
+ Zone Internal Gains Nominal, 4F-A'-LIVING,34.32,3.0,11.439,8.742E-002,6.000,4.300,0.000,0.000,0.000,0.000,10.300,No
+ Zone Internal Gains Nominal, 4F-A'-WASH,5.75,0.0,N/A,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,No
+ Zone Internal Gains Nominal, 4F-A-BED1,15.12,2.0,7.560,0.132,6.000,4.300,0.000,0.000,0.000,0.000,10.300,No
+ Zone Internal Gains Nominal, 4F-A-BED2,13.32,2.0,6.660,0.150,6.000,4.300,0.000,0.000,0.000,0.000,10.300,No
+ Zone Internal Gains Nominal, 4F-A-KITHEN,5.85,0.0,N/A,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,No
+ Zone Internal Gains Nominal, 4F-A-LIVING,34.32,3.0,11.439,8.742E-002,6.000,4.300,0.000,0.000,0.000,0.000,10.300,No
+ Zone Internal Gains Nominal, 4F-A-WASH,5.75,0.0,N/A,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,No
+ Zone Internal Gains Nominal, 4F-B'-BED1,16.97,2.0,8.485,0.118,6.000,4.300,0.000,0.000,0.000,0.000,10.300,No
+ Zone Internal Gains Nominal, 4F-B'-BED2,15.27,2.0,7.637,0.131,6.000,4.300,0.000,0.000,0.000,0.000,10.300,No
+ Zone Internal Gains Nominal, 4F-B'-BED3,13.32,2.0,6.660,0.150,6.000,4.300,0.000,0.000,0.000,0.000,10.300,No
+ Zone Internal Gains Nominal, 4F-B'-KITCHEN,6.84,0.0,N/A,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,No
+ Zone Internal Gains Nominal, 4F-B'-LIVING,50.11,5.0,10.022,9.978E-002,6.000,4.300,0.000,0.000,0.000,0.000,10.300,No
+ Zone Internal Gains Nominal, 4F-B'-WASH1,6.00,0.0,N/A,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,No
+ Zone Internal Gains Nominal, 4F-B'-WASH2,6.84,0.0,N/A,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,No
+ Zone Internal Gains Nominal, 4F-B-BED1,16.97,2.0,8.485,0.118,6.000,4.300,0.000,0.000,0.000,0.000,10.300,No
+ Zone Internal Gains Nominal, 4F-B-BED2,15.28,2.0,7.638,0.131,6.000,4.300,0.000,0.000,0.000,0.000,10.300,No
+ Zone Internal Gains Nominal, 4F-B-BED3,13.32,2.0,6.660,0.150,6.000,4.300,0.000,0.000,0.000,0.000,10.300,No
+ Zone Internal Gains Nominal, 4F-B-KITCHEN,6.84,0.0,N/A,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,No
+ Zone Internal Gains Nominal, 4F-B-LIVING,50.11,5.0,10.022,9.978E-002,6.000,4.300,0.000,0.000,0.000,0.000,10.300,No
+ Zone Internal Gains Nominal, 4F-B-WASH1,6.00,0.0,N/A,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,No
+ Zone Internal Gains Nominal, 4F-B-WASH2,6.84,0.0,N/A,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,No
+ Zone Internal Gains Nominal, 4F-STAIRS-LEFT,15.12,0.0,N/A,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,No
+ Zone Internal Gains Nominal, 4F-STAIRS-RIGHT,15.12,0.0,N/A,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,No
+ Zone Internal Gains Nominal, 5F-A'-BED1,15.12,2.0,7.560,0.132,6.000,4.300,0.000,0.000,0.000,0.000,10.300,No
+ Zone Internal Gains Nominal, 5F-A'-BED2,13.32,2.0,6.660,0.150,6.000,4.300,0.000,0.000,0.000,0.000,10.300,No
+ Zone Internal Gains Nominal, 5F-A'-KITHEN,5.85,0.0,N/A,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,No
+ Zone Internal Gains Nominal, 5F-A'-LIVING,34.32,3.0,11.439,8.742E-002,6.000,4.300,0.000,0.000,0.000,0.000,10.300,No
+ Zone Internal Gains Nominal, 5F-A'-WASH,5.75,0.0,N/A,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,No
+ Zone Internal Gains Nominal, 5F-A-BED1,15.12,2.0,7.560,0.132,6.000,4.300,0.000,0.000,0.000,0.000,10.300,No
+ Zone Internal Gains Nominal, 5F-A-BED2,13.32,2.0,6.660,0.150,6.000,4.300,0.000,0.000,0.000,0.000,10.300,No
+ Zone Internal Gains Nominal, 5F-A-KITHEN,5.85,0.0,N/A,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,No
+ Zone Internal Gains Nominal, 5F-A-LIVING,34.32,3.0,11.439,8.742E-002,6.000,4.300,0.000,0.000,0.000,0.000,10.300,No
+ Zone Internal Gains Nominal, 5F-A-WASH,5.75,0.0,N/A,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,No
+ Zone Internal Gains Nominal, 5F-B'-BED1,16.97,2.0,8.485,0.118,6.000,4.300,0.000,0.000,0.000,0.000,10.300,No
+ Zone Internal Gains Nominal, 5F-B'-BED2,15.27,2.0,7.637,0.131,6.000,4.300,0.000,0.000,0.000,0.000,10.300,No
+ Zone Internal Gains Nominal, 5F-B'-BED3,13.32,2.0,6.660,0.150,6.000,4.300,0.000,0.000,0.000,0.000,10.300,No
+ Zone Internal Gains Nominal, 5F-B'-KITCHEN,6.84,0.0,N/A,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,No
+ Zone Internal Gains Nominal, 5F-B'-LIVING,50.11,5.0,10.022,9.978E-002,6.000,4.300,0.000,0.000,0.000,0.000,10.300,No
+ Zone Internal Gains Nominal, 5F-B'-WASH1,6.00,0.0,N/A,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,No
+ Zone Internal Gains Nominal, 5F-B'-WASH2,6.84,0.0,N/A,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,No
+ Zone Internal Gains Nominal, 5F-B-BED1,16.97,2.0,8.485,0.118,6.000,4.300,0.000,0.000,0.000,0.000,10.300,No
+ Zone Internal Gains Nominal, 5F-B-BED2,15.28,2.0,7.638,0.131,6.000,4.300,0.000,0.000,0.000,0.000,10.300,No
+ Zone Internal Gains Nominal, 5F-B-BED3,13.32,2.0,6.660,0.150,6.000,4.300,0.000,0.000,0.000,0.000,10.300,No
+ Zone Internal Gains Nominal, 5F-B-KITCHEN,6.84,0.0,N/A,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,No
+ Zone Internal Gains Nominal, 5F-B-LIVING,50.11,5.0,10.022,9.978E-002,6.000,4.300,0.000,0.000,0.000,0.000,10.300,No
+ Zone Internal Gains Nominal, 5F-B-WASH1,6.00,0.0,N/A,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,No
+ Zone Internal Gains Nominal, 5F-B-WASH2,6.84,0.0,N/A,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,No
+ Zone Internal Gains Nominal, 5F-STAIRS-LEFT,15.12,0.0,N/A,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,No
+ Zone Internal Gains Nominal, 5F-STAIRS-RIGHT,15.12,0.0,N/A,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,No
+! <People Internal Gains Nominal>,Name,Schedule Name,Zone Name,Zone Floor Area {m2},# Zone Occupants,Number of People {},People/Floor Area {person/m2},Floor Area per person {m2/person},Fraction Radiant,Fraction Convected,Sensible Fraction Calculation,Activity level,ASHRAE 55 Warnings,Carbon Dioxide Generation Rate,Nominal Minimum Number of People,Nominal Maximum Number of People,MRT Calculation Type,Work Efficiency, Clothing Insulation Calculation Method,Clothing Insulation Calculation Method Schedule,Clothing,Air Velocity,Fanger Calculation,Pierce Calculation,KSU Calculation
+ People Internal Gains Nominal, 1F-A'-BED1 BEDROOM-A,WORKING/SCHOOLING BEDROOM OCCUPANCY,1F-A'-BED1,15.12,2.0,2.0,0.132,7.560,0.500,0.500,AutoCalculate,SEATED PEOPLE,No,3.8200E-008,0,2,Zone Averaged,WORK EFFICIENCY,Clothing Insulation Schedule,N/A,CLOTHING INSULATION SCHEDULE,AIR VELOCITY SCHEDULE,Yes,No,No
+ People Internal Gains Nominal, 1F-A'-BED2 BEDROOM-A,WORKING/SCHOOLING BEDROOM OCCUPANCY,1F-A'-BED2,13.32,2.0,2.0,0.150,6.660,0.500,0.500,AutoCalculate,SEATED PEOPLE,No,3.8200E-008,0,2,Zone Averaged,WORK EFFICIENCY,Clothing Insulation Schedule,N/A,CLOTHING INSULATION SCHEDULE,AIR VELOCITY SCHEDULE,Yes,No,No
+ People Internal Gains Nominal, 1F-A-BED1 BEDROOM-A,WORKING/SCHOOLING BEDROOM OCCUPANCY,1F-A-BED1,15.12,2.0,2.0,0.132,7.560,0.500,0.500,AutoCalculate,SEATED PEOPLE,No,3.8200E-008,0,2,Zone Averaged,WORK EFFICIENCY,Clothing Insulation Schedule,N/A,CLOTHING INSULATION SCHEDULE,AIR VELOCITY SCHEDULE,Yes,No,No
+ People Internal Gains Nominal, 1F-A-BED2 BEDROOM-A,WORKING/SCHOOLING BEDROOM OCCUPANCY,1F-A-BED2,13.32,2.0,2.0,0.150,6.660,0.500,0.500,AutoCalculate,SEATED PEOPLE,No,3.8200E-008,0,2,Zone Averaged,WORK EFFICIENCY,Clothing Insulation Schedule,N/A,CLOTHING INSULATION SCHEDULE,AIR VELOCITY SCHEDULE,Yes,No,No
+ People Internal Gains Nominal, 2F-A'-BED1 BEDROOM-A,WORKING/SCHOOLING BEDROOM OCCUPANCY,2F-A'-BED1,15.12,2.0,2.0,0.132,7.560,0.500,0.500,AutoCalculate,SEATED PEOPLE,No,3.8200E-008,0,2,Zone Averaged,WORK EFFICIENCY,Clothing Insulation Schedule,N/A,CLOTHING INSULATION SCHEDULE,AIR VELOCITY SCHEDULE,Yes,No,No
+ People Internal Gains Nominal, 2F-A'-BED2 BEDROOM-A,WORKING/SCHOOLING BEDROOM OCCUPANCY,2F-A'-BED2,13.32,2.0,2.0,0.150,6.660,0.500,0.500,AutoCalculate,SEATED PEOPLE,No,3.8200E-008,0,2,Zone Averaged,WORK EFFICIENCY,Clothing Insulation Schedule,N/A,CLOTHING INSULATION SCHEDULE,AIR VELOCITY SCHEDULE,Yes,No,No
+ People Internal Gains Nominal, 2F-A-BED1 BEDROOM-A,WORKING/SCHOOLING BEDROOM OCCUPANCY,2F-A-BED1,15.12,2.0,2.0,0.132,7.560,0.500,0.500,AutoCalculate,SEATED PEOPLE,No,3.8200E-008,0,2,Zone Averaged,WORK EFFICIENCY,Clothing Insulation Schedule,N/A,CLOTHING INSULATION SCHEDULE,AIR VELOCITY SCHEDULE,Yes,No,No
+ People Internal Gains Nominal, 2F-A-BED2 BEDROOM-A,WORKING/SCHOOLING BEDROOM OCCUPANCY,2F-A-BED2,13.32,2.0,2.0,0.150,6.660,0.500,0.500,AutoCalculate,SEATED PEOPLE,No,3.8200E-008,0,2,Zone Averaged,WORK EFFICIENCY,Clothing Insulation Schedule,N/A,CLOTHING INSULATION SCHEDULE,AIR VELOCITY SCHEDULE,Yes,No,No
+ People Internal Gains Nominal, 3F-A'-BED1 BEDROOM-A,WORKING/SCHOOLING BEDROOM OCCUPANCY,3F-A'-BED1,15.12,2.0,2.0,0.132,7.560,0.500,0.500,AutoCalculate,SEATED PEOPLE,No,3.8200E-008,0,2,Zone Averaged,WORK EFFICIENCY,Clothing Insulation Schedule,N/A,CLOTHING INSULATION SCHEDULE,AIR VELOCITY SCHEDULE,Yes,No,No
+ People Internal Gains Nominal, 3F-A'-BED2 BEDROOM-A,WORKING/SCHOOLING BEDROOM OCCUPANCY,3F-A'-BED2,13.32,2.0,2.0,0.150,6.660,0.500,0.500,AutoCalculate,SEATED PEOPLE,No,3.8200E-008,0,2,Zone Averaged,WORK EFFICIENCY,Clothing Insulation Schedule,N/A,CLOTHING INSULATION SCHEDULE,AIR VELOCITY SCHEDULE,Yes,No,No
+ People Internal Gains Nominal, 3F-A-BED1 BEDROOM-A,WORKING/SCHOOLING BEDROOM OCCUPANCY,3F-A-BED1,15.12,2.0,2.0,0.132,7.560,0.500,0.500,AutoCalculate,SEATED PEOPLE,No,3.8200E-008,0,2,Zone Averaged,WORK EFFICIENCY,Clothing Insulation Schedule,N/A,CLOTHING INSULATION SCHEDULE,AIR VELOCITY SCHEDULE,Yes,No,No
+ People Internal Gains Nominal, 3F-A-BED2 BEDROOM-A,WORKING/SCHOOLING BEDROOM OCCUPANCY,3F-A-BED2,13.32,2.0,2.0,0.150,6.660,0.500,0.500,AutoCalculate,SEATED PEOPLE,No,3.8200E-008,0,2,Zone Averaged,WORK EFFICIENCY,Clothing Insulation Schedule,N/A,CLOTHING INSULATION SCHEDULE,AIR VELOCITY SCHEDULE,Yes,No,No
+ People Internal Gains Nominal, 4F-A'-BED1 BEDROOM-A,WORKING/SCHOOLING BEDROOM OCCUPANCY,4F-A'-BED1,15.12,2.0,2.0,0.132,7.560,0.500,0.500,AutoCalculate,SEATED PEOPLE,No,3.8200E-008,0,2,Zone Averaged,WORK EFFICIENCY,Clothing Insulation Schedule,N/A,CLOTHING INSULATION SCHEDULE,AIR VELOCITY SCHEDULE,Yes,No,No
+ People Internal Gains Nominal, 4F-A'-BED2 BEDROOM-A,WORKING/SCHOOLING BEDROOM OCCUPANCY,4F-A'-BED2,13.32,2.0,2.0,0.150,6.660,0.500,0.500,AutoCalculate,SEATED PEOPLE,No,3.8200E-008,0,2,Zone Averaged,WORK EFFICIENCY,Clothing Insulation Schedule,N/A,CLOTHING INSULATION SCHEDULE,AIR VELOCITY SCHEDULE,Yes,No,No
+ People Internal Gains Nominal, 4F-A-BED1 BEDROOM-A,WORKING/SCHOOLING BEDROOM OCCUPANCY,4F-A-BED1,15.12,2.0,2.0,0.132,7.560,0.500,0.500,AutoCalculate,SEATED PEOPLE,No,3.8200E-008,0,2,Zone Averaged,WORK EFFICIENCY,Clothing Insulation Schedule,N/A,CLOTHING INSULATION SCHEDULE,AIR VELOCITY SCHEDULE,Yes,No,No
+ People Internal Gains Nominal, 4F-A-BED2 BEDROOM-A,WORKING/SCHOOLING BEDROOM OCCUPANCY,4F-A-BED2,13.32,2.0,2.0,0.150,6.660,0.500,0.500,AutoCalculate,SEATED PEOPLE,No,3.8200E-008,0,2,Zone Averaged,WORK EFFICIENCY,Clothing Insulation Schedule,N/A,CLOTHING INSULATION SCHEDULE,AIR VELOCITY SCHEDULE,Yes,No,No
+ People Internal Gains Nominal, 5F-A'-BED1 BEDROOM-A,WORKING/SCHOOLING BEDROOM OCCUPANCY,5F-A'-BED1,15.12,2.0,2.0,0.132,7.560,0.500,0.500,AutoCalculate,SEATED PEOPLE,No,3.8200E-008,0,2,Zone Averaged,WORK EFFICIENCY,Clothing Insulation Schedule,N/A,CLOTHING INSULATION SCHEDULE,AIR VELOCITY SCHEDULE,Yes,No,No
+ People Internal Gains Nominal, 5F-A'-BED2 BEDROOM-A,WORKING/SCHOOLING BEDROOM OCCUPANCY,5F-A'-BED2,13.32,2.0,2.0,0.150,6.660,0.500,0.500,AutoCalculate,SEATED PEOPLE,No,3.8200E-008,0,2,Zone Averaged,WORK EFFICIENCY,Clothing Insulation Schedule,N/A,CLOTHING INSULATION SCHEDULE,AIR VELOCITY SCHEDULE,Yes,No,No
+ People Internal Gains Nominal, 5F-A-BED1 BEDROOM-A,WORKING/SCHOOLING BEDROOM OCCUPANCY,5F-A-BED1,15.12,2.0,2.0,0.132,7.560,0.500,0.500,AutoCalculate,SEATED PEOPLE,No,3.8200E-008,0,2,Zone Averaged,WORK EFFICIENCY,Clothing Insulation Schedule,N/A,CLOTHING INSULATION SCHEDULE,AIR VELOCITY SCHEDULE,Yes,No,No
+ People Internal Gains Nominal, 5F-A-BED2 BEDROOM-A,WORKING/SCHOOLING BEDROOM OCCUPANCY,5F-A-BED2,13.32,2.0,2.0,0.150,6.660,0.500,0.500,AutoCalculate,SEATED PEOPLE,No,3.8200E-008,0,2,Zone Averaged,WORK EFFICIENCY,Clothing Insulation Schedule,N/A,CLOTHING INSULATION SCHEDULE,AIR VELOCITY SCHEDULE,Yes,No,No
+ People Internal Gains Nominal, 1F-A'-LIVING LIVING-A,RETIRED EXCLUDED FML LIVINGROOM  OCCUPANCY,1F-A'-LIVING,34.32,3.0,3.0,8.742E-002,11.439,0.500,0.500,AutoCalculate,ACTIVITY PEOPLE,No,3.8200E-008,0,3,Zone Averaged,WORK EFFICIENCY,Clothing Insulation Schedule,N/A,CLOTHING INSULATION SCHEDULE,AIR VELOCITY SCHEDULE,Yes,No,No
+ People Internal Gains Nominal, 1F-A-LIVING LIVING-A,RETIRED EXCLUDED FML LIVINGROOM  OCCUPANCY,1F-A-LIVING,34.32,3.0,3.0,8.742E-002,11.439,0.500,0.500,AutoCalculate,ACTIVITY PEOPLE,No,3.8200E-008,0,3,Zone Averaged,WORK EFFICIENCY,Clothing Insulation Schedule,N/A,CLOTHING INSULATION SCHEDULE,AIR VELOCITY SCHEDULE,Yes,No,No
+ People Internal Gains Nominal, 5F-A'-LIVING LIVING-A,RETIRED EXCLUDED FML LIVINGROOM  OCCUPANCY,5F-A'-LIVING,34.32,3.0,3.0,8.742E-002,11.439,0.500,0.500,AutoCalculate,ACTIVITY PEOPLE,No,3.8200E-008,0,3,Zone Averaged,WORK EFFICIENCY,Clothing Insulation Schedule,N/A,CLOTHING INSULATION SCHEDULE,AIR VELOCITY SCHEDULE,Yes,No,No
+ People Internal Gains Nominal, 5F-A-LIVING LIVING-A,RETIRED EXCLUDED FML LIVINGROOM  OCCUPANCY,5F-A-LIVING,34.32,3.0,3.0,8.742E-002,11.439,0.500,0.500,AutoCalculate,ACTIVITY PEOPLE,No,3.8200E-008,0,3,Zone Averaged,WORK EFFICIENCY,Clothing Insulation Schedule,N/A,CLOTHING INSULATION SCHEDULE,AIR VELOCITY SCHEDULE,Yes,No,No
+ People Internal Gains Nominal, 2F-A'-LIVING LIVING-A,RETIRED EXCLUDED FML LIVINGROOM  OCCUPANCY,2F-A'-LIVING,34.32,3.0,3.0,8.742E-002,11.439,0.500,0.500,AutoCalculate,ACTIVITY PEOPLE,No,3.8200E-008,0,3,Zone Averaged,WORK EFFICIENCY,Clothing Insulation Schedule,N/A,CLOTHING INSULATION SCHEDULE,AIR VELOCITY SCHEDULE,Yes,No,No
+ People Internal Gains Nominal, 2F-A-LIVING LIVING-A,RETIRED EXCLUDED FML LIVINGROOM  OCCUPANCY,2F-A-LIVING,34.32,3.0,3.0,8.742E-002,11.439,0.500,0.500,AutoCalculate,ACTIVITY PEOPLE,No,3.8200E-008,0,3,Zone Averaged,WORK EFFICIENCY,Clothing Insulation Schedule,N/A,CLOTHING INSULATION SCHEDULE,AIR VELOCITY SCHEDULE,Yes,No,No
+ People Internal Gains Nominal, 4F-A'-LIVING LIVING-A,RETIRED EXCLUDED FML LIVINGROOM  OCCUPANCY,4F-A'-LIVING,34.32,3.0,3.0,8.742E-002,11.439,0.500,0.500,AutoCalculate,ACTIVITY PEOPLE,No,3.8200E-008,0,3,Zone Averaged,WORK EFFICIENCY,Clothing Insulation Schedule,N/A,CLOTHING INSULATION SCHEDULE,AIR VELOCITY SCHEDULE,Yes,No,No
+ People Internal Gains Nominal, 4F-A-LIVING LIVING-A,RETIRED EXCLUDED FML LIVINGROOM  OCCUPANCY,4F-A-LIVING,34.32,3.0,3.0,8.742E-002,11.439,0.500,0.500,AutoCalculate,ACTIVITY PEOPLE,No,3.8200E-008,0,3,Zone Averaged,WORK EFFICIENCY,Clothing Insulation Schedule,N/A,CLOTHING INSULATION SCHEDULE,AIR VELOCITY SCHEDULE,Yes,No,No
+ People Internal Gains Nominal, 3F-A'-LIVING LIVING-A,RETIRED EXCLUDED FML LIVINGROOM  OCCUPANCY,3F-A'-LIVING,34.32,3.0,3.0,8.742E-002,11.439,0.500,0.500,AutoCalculate,ACTIVITY PEOPLE,No,3.8200E-008,0,3,Zone Averaged,WORK EFFICIENCY,Clothing Insulation Schedule,N/A,CLOTHING INSULATION SCHEDULE,AIR VELOCITY SCHEDULE,Yes,No,No
+ People Internal Gains Nominal, 3F-A-LIVING LIVING-A,RETIRED EXCLUDED FML LIVINGROOM  OCCUPANCY,3F-A-LIVING,34.32,3.0,3.0,8.742E-002,11.439,0.500,0.500,AutoCalculate,ACTIVITY PEOPLE,No,3.8200E-008,0,3,Zone Averaged,WORK EFFICIENCY,Clothing Insulation Schedule,N/A,CLOTHING INSULATION SCHEDULE,AIR VELOCITY SCHEDULE,Yes,No,No
+ People Internal Gains Nominal, 5F-B'-BED1 BEDROOM-B,RETIRED BEDROOM OCCUPANCY,5F-B'-BED1,16.97,2.0,2.0,0.118,8.485,0.500,0.500,AutoCalculate,SEATED PEOPLE,No,3.8200E-008,0,2,Zone Averaged,WORK EFFICIENCY,Clothing Insulation Schedule,N/A,CLOTHING INSULATION SCHEDULE,AIR VELOCITY SCHEDULE,Yes,No,No
+ People Internal Gains Nominal, 5F-B'-BED2 BEDROOM-B,RETIRED BEDROOM OCCUPANCY,5F-B'-BED2,15.27,2.0,2.0,0.131,7.637,0.500,0.500,AutoCalculate,SEATED PEOPLE,No,3.8200E-008,0,2,Zone Averaged,WORK EFFICIENCY,Clothing Insulation Schedule,N/A,CLOTHING INSULATION SCHEDULE,AIR VELOCITY SCHEDULE,Yes,No,No
+ People Internal Gains Nominal, 5F-B'-BED3 BEDROOM-B,RETIRED BEDROOM OCCUPANCY,5F-B'-BED3,13.32,2.0,2.0,0.150,6.660,0.500,0.500,AutoCalculate,SEATED PEOPLE,No,3.8200E-008,0,2,Zone Averaged,WORK EFFICIENCY,Clothing Insulation Schedule,N/A,CLOTHING INSULATION SCHEDULE,AIR VELOCITY SCHEDULE,Yes,No,No
+ People Internal Gains Nominal, 5F-B-BED1 BEDROOM-B,RETIRED BEDROOM OCCUPANCY,5F-B-BED1,16.97,2.0,2.0,0.118,8.485,0.500,0.500,AutoCalculate,SEATED PEOPLE,No,3.8200E-008,0,2,Zone Averaged,WORK EFFICIENCY,Clothing Insulation Schedule,N/A,CLOTHING INSULATION SCHEDULE,AIR VELOCITY SCHEDULE,Yes,No,No
+ People Internal Gains Nominal, 1F-B'-BED1 BEDROOM-B,RETIRED BEDROOM OCCUPANCY,1F-B'-BED1,16.97,2.0,2.0,0.118,8.485,0.500,0.500,AutoCalculate,SEATED PEOPLE,No,3.8200E-008,0,2,Zone Averaged,WORK EFFICIENCY,Clothing Insulation Schedule,N/A,CLOTHING INSULATION SCHEDULE,AIR VELOCITY SCHEDULE,Yes,No,No
+ People Internal Gains Nominal, 1F-B'-BED2 BEDROOM-B,RETIRED BEDROOM OCCUPANCY,1F-B'-BED2,15.27,2.0,2.0,0.131,7.637,0.500,0.500,AutoCalculate,SEATED PEOPLE,No,3.8200E-008,0,2,Zone Averaged,WORK EFFICIENCY,Clothing Insulation Schedule,N/A,CLOTHING INSULATION SCHEDULE,AIR VELOCITY SCHEDULE,Yes,No,No
+ People Internal Gains Nominal, 1F-B'-BED3 BEDROOM-B,RETIRED BEDROOM OCCUPANCY,1F-B'-BED3,13.32,2.0,2.0,0.150,6.660,0.500,0.500,AutoCalculate,SEATED PEOPLE,No,3.8200E-008,0,2,Zone Averaged,WORK EFFICIENCY,Clothing Insulation Schedule,N/A,CLOTHING INSULATION SCHEDULE,AIR VELOCITY SCHEDULE,Yes,No,No
+ People Internal Gains Nominal, 1F-B-BED1 BEDROOM-B,RETIRED BEDROOM OCCUPANCY,1F-B-BED1,16.97,2.0,2.0,0.118,8.485,0.500,0.500,AutoCalculate,SEATED PEOPLE,No,3.8200E-008,0,2,Zone Averaged,WORK EFFICIENCY,Clothing Insulation Schedule,N/A,CLOTHING INSULATION SCHEDULE,AIR VELOCITY SCHEDULE,Yes,No,No
+ People Internal Gains Nominal, 1F-B-BED2 BEDROOM-B,RETIRED BEDROOM OCCUPANCY,1F-B-BED2,15.28,2.0,2.0,0.131,7.638,0.500,0.500,AutoCalculate,SEATED PEOPLE,No,3.8200E-008,0,2,Zone Averaged,WORK EFFICIENCY,Clothing Insulation Schedule,N/A,CLOTHING INSULATION SCHEDULE,AIR VELOCITY SCHEDULE,Yes,No,No
+ People Internal Gains Nominal, 1F-B-BED3 BEDROOM-B,RETIRED BEDROOM OCCUPANCY,1F-B-BED3,13.32,2.0,2.0,0.150,6.660,0.500,0.500,AutoCalculate,SEATED PEOPLE,No,3.8200E-008,0,2,Zone Averaged,WORK EFFICIENCY,Clothing Insulation Schedule,N/A,CLOTHING INSULATION SCHEDULE,AIR VELOCITY SCHEDULE,Yes,No,No
+ People Internal Gains Nominal, 5F-B-BED2 BEDROOM-B,RETIRED BEDROOM OCCUPANCY,5F-B-BED2,15.28,2.0,2.0,0.131,7.638,0.500,0.500,AutoCalculate,SEATED PEOPLE,No,3.8200E-008,0,2,Zone Averaged,WORK EFFICIENCY,Clothing Insulation Schedule,N/A,CLOTHING INSULATION SCHEDULE,AIR VELOCITY SCHEDULE,Yes,No,No
+ People Internal Gains Nominal, 5F-B-BED3 BEDROOM-B,RETIRED BEDROOM OCCUPANCY,5F-B-BED3,13.32,2.0,2.0,0.150,6.660,0.500,0.500,AutoCalculate,SEATED PEOPLE,No,3.8200E-008,0,2,Zone Averaged,WORK EFFICIENCY,Clothing Insulation Schedule,N/A,CLOTHING INSULATION SCHEDULE,AIR VELOCITY SCHEDULE,Yes,No,No
+ People Internal Gains Nominal, 4F-B'-BED1 BEDROOM-B,RETIRED BEDROOM OCCUPANCY,4F-B'-BED1,16.97,2.0,2.0,0.118,8.485,0.500,0.500,AutoCalculate,SEATED PEOPLE,No,3.8200E-008,0,2,Zone Averaged,WORK EFFICIENCY,Clothing Insulation Schedule,N/A,CLOTHING INSULATION SCHEDULE,AIR VELOCITY SCHEDULE,Yes,No,No
+ People Internal Gains Nominal, 4F-B'-BED2 BEDROOM-B,RETIRED BEDROOM OCCUPANCY,4F-B'-BED2,15.27,2.0,2.0,0.131,7.637,0.500,0.500,AutoCalculate,SEATED PEOPLE,No,3.8200E-008,0,2,Zone Averaged,WORK EFFICIENCY,Clothing Insulation Schedule,N/A,CLOTHING INSULATION SCHEDULE,AIR VELOCITY SCHEDULE,Yes,No,No
+ People Internal Gains Nominal, 2F-B'-BED1 BEDROOM-B,RETIRED BEDROOM OCCUPANCY,2F-B'-BED1,16.97,2.0,2.0,0.118,8.485,0.500,0.500,AutoCalculate,SEATED PEOPLE,No,3.8200E-008,0,2,Zone Averaged,WORK EFFICIENCY,Clothing Insulation Schedule,N/A,CLOTHING INSULATION SCHEDULE,AIR VELOCITY SCHEDULE,Yes,No,No
+ People Internal Gains Nominal, 2F-B'-BED2 BEDROOM-B,RETIRED BEDROOM OCCUPANCY,2F-B'-BED2,15.27,2.0,2.0,0.131,7.637,0.500,0.500,AutoCalculate,SEATED PEOPLE,No,3.8200E-008,0,2,Zone Averaged,WORK EFFICIENCY,Clothing Insulation Schedule,N/A,CLOTHING INSULATION SCHEDULE,AIR VELOCITY SCHEDULE,Yes,No,No
+ People Internal Gains Nominal, 2F-B'-BED3 BEDROOM-B,RETIRED BEDROOM OCCUPANCY,2F-B'-BED3,13.32,2.0,2.0,0.150,6.660,0.500,0.500,AutoCalculate,SEATED PEOPLE,No,3.8200E-008,0,2,Zone Averaged,WORK EFFICIENCY,Clothing Insulation Schedule,N/A,CLOTHING INSULATION SCHEDULE,AIR VELOCITY SCHEDULE,Yes,No,No
+ People Internal Gains Nominal, 2F-B-BED1 BEDROOM-B,RETIRED BEDROOM OCCUPANCY,2F-B-BED1,16.97,2.0,2.0,0.118,8.485,0.500,0.500,AutoCalculate,SEATED PEOPLE,No,3.8200E-008,0,2,Zone Averaged,WORK EFFICIENCY,Clothing Insulation Schedule,N/A,CLOTHING INSULATION SCHEDULE,AIR VELOCITY SCHEDULE,Yes,No,No
+ People Internal Gains Nominal, 2F-B-BED2 BEDROOM-B,RETIRED BEDROOM OCCUPANCY,2F-B-BED2,15.28,2.0,2.0,0.131,7.638,0.500,0.500,AutoCalculate,SEATED PEOPLE,No,3.8200E-008,0,2,Zone Averaged,WORK EFFICIENCY,Clothing Insulation Schedule,N/A,CLOTHING INSULATION SCHEDULE,AIR VELOCITY SCHEDULE,Yes,No,No
+ People Internal Gains Nominal, 2F-B-BED3 BEDROOM-B,RETIRED BEDROOM OCCUPANCY,2F-B-BED3,13.32,2.0,2.0,0.150,6.660,0.500,0.500,AutoCalculate,SEATED PEOPLE,No,3.8200E-008,0,2,Zone Averaged,WORK EFFICIENCY,Clothing Insulation Schedule,N/A,CLOTHING INSULATION SCHEDULE,AIR VELOCITY SCHEDULE,Yes,No,No
+ People Internal Gains Nominal, 4F-B'-BED3 BEDROOM-B,RETIRED BEDROOM OCCUPANCY,4F-B'-BED3,13.32,2.0,2.0,0.150,6.660,0.500,0.500,AutoCalculate,SEATED PEOPLE,No,3.8200E-008,0,2,Zone Averaged,WORK EFFICIENCY,Clothing Insulation Schedule,N/A,CLOTHING INSULATION SCHEDULE,AIR VELOCITY SCHEDULE,Yes,No,No
+ People Internal Gains Nominal, 4F-B-BED1 BEDROOM-B,RETIRED BEDROOM OCCUPANCY,4F-B-BED1,16.97,2.0,2.0,0.118,8.485,0.500,0.500,AutoCalculate,SEATED PEOPLE,No,3.8200E-008,0,2,Zone Averaged,WORK EFFICIENCY,Clothing Insulation Schedule,N/A,CLOTHING INSULATION SCHEDULE,AIR VELOCITY SCHEDULE,Yes,No,No
+ People Internal Gains Nominal, 4F-B-BED2 BEDROOM-B,RETIRED BEDROOM OCCUPANCY,4F-B-BED2,15.28,2.0,2.0,0.131,7.638,0.500,0.500,AutoCalculate,SEATED PEOPLE,No,3.8200E-008,0,2,Zone Averaged,WORK EFFICIENCY,Clothing Insulation Schedule,N/A,CLOTHING INSULATION SCHEDULE,AIR VELOCITY SCHEDULE,Yes,No,No
+ People Internal Gains Nominal, 4F-B-BED3 BEDROOM-B,RETIRED BEDROOM OCCUPANCY,4F-B-BED3,13.32,2.0,2.0,0.150,6.660,0.500,0.500,AutoCalculate,SEATED PEOPLE,No,3.8200E-008,0,2,Zone Averaged,WORK EFFICIENCY,Clothing Insulation Schedule,N/A,CLOTHING INSULATION SCHEDULE,AIR VELOCITY SCHEDULE,Yes,No,No
+ People Internal Gains Nominal, 3F-B'-BED1 BEDROOM-B,RETIRED BEDROOM OCCUPANCY,3F-B'-BED1,16.97,2.0,2.0,0.118,8.485,0.500,0.500,AutoCalculate,SEATED PEOPLE,No,3.8200E-008,0,2,Zone Averaged,WORK EFFICIENCY,Clothing Insulation Schedule,N/A,CLOTHING INSULATION SCHEDULE,AIR VELOCITY SCHEDULE,Yes,No,No
+ People Internal Gains Nominal, 3F-B'-BED2 BEDROOM-B,RETIRED BEDROOM OCCUPANCY,3F-B'-BED2,15.27,2.0,2.0,0.131,7.637,0.500,0.500,AutoCalculate,SEATED PEOPLE,No,3.8200E-008,0,2,Zone Averaged,WORK EFFICIENCY,Clothing Insulation Schedule,N/A,CLOTHING INSULATION SCHEDULE,AIR VELOCITY SCHEDULE,Yes,No,No
+ People Internal Gains Nominal, 3F-B'-BED3 BEDROOM-B,RETIRED BEDROOM OCCUPANCY,3F-B'-BED3,13.32,2.0,2.0,0.150,6.660,0.500,0.500,AutoCalculate,SEATED PEOPLE,No,3.8200E-008,0,2,Zone Averaged,WORK EFFICIENCY,Clothing Insulation Schedule,N/A,CLOTHING INSULATION SCHEDULE,AIR VELOCITY SCHEDULE,Yes,No,No
+ People Internal Gains Nominal, 3F-B-BED1 BEDROOM-B,RETIRED BEDROOM OCCUPANCY,3F-B-BED1,16.97,2.0,2.0,0.118,8.485,0.500,0.500,AutoCalculate,SEATED PEOPLE,No,3.8200E-008,0,2,Zone Averaged,WORK EFFICIENCY,Clothing Insulation Schedule,N/A,CLOTHING INSULATION SCHEDULE,AIR VELOCITY SCHEDULE,Yes,No,No
+ People Internal Gains Nominal, 3F-B-BED2 BEDROOM-B,RETIRED BEDROOM OCCUPANCY,3F-B-BED2,15.28,2.0,2.0,0.131,7.638,0.500,0.500,AutoCalculate,SEATED PEOPLE,No,3.8200E-008,0,2,Zone Averaged,WORK EFFICIENCY,Clothing Insulation Schedule,N/A,CLOTHING INSULATION SCHEDULE,AIR VELOCITY SCHEDULE,Yes,No,No
+ People Internal Gains Nominal, 3F-B-BED3 BEDROOM-B,RETIRED BEDROOM OCCUPANCY,3F-B-BED3,13.32,2.0,2.0,0.150,6.660,0.500,0.500,AutoCalculate,SEATED PEOPLE,No,3.8200E-008,0,2,Zone Averaged,WORK EFFICIENCY,Clothing Insulation Schedule,N/A,CLOTHING INSULATION SCHEDULE,AIR VELOCITY SCHEDULE,Yes,No,No
+ People Internal Gains Nominal, 5F-B'-LIVING LIVING-B,RETIRED INCLUDED FML LIVINGROOM OCCUPANCY,5F-B'-LIVING,50.11,5.0,5.0,9.978E-002,10.022,0.500,0.500,AutoCalculate,ACTIVITY PEOPLE,No,3.8200E-008,0,5,Zone Averaged,WORK EFFICIENCY,Clothing Insulation Schedule,N/A,CLOTHING INSULATION SCHEDULE,AIR VELOCITY SCHEDULE,Yes,No,No
+ People Internal Gains Nominal, 5F-B-LIVING LIVING-B,RETIRED INCLUDED FML LIVINGROOM OCCUPANCY,5F-B-LIVING,50.11,5.0,5.0,9.978E-002,10.022,0.500,0.500,AutoCalculate,ACTIVITY PEOPLE,No,3.8200E-008,0,5,Zone Averaged,WORK EFFICIENCY,Clothing Insulation Schedule,N/A,CLOTHING INSULATION SCHEDULE,AIR VELOCITY SCHEDULE,Yes,No,No
+ People Internal Gains Nominal, 1F-B'-LIVING LIVING-B,RETIRED INCLUDED FML LIVINGROOM OCCUPANCY,1F-B'-LIVING,50.11,5.0,5.0,9.978E-002,10.022,0.500,0.500,AutoCalculate,ACTIVITY PEOPLE,No,3.8200E-008,0,5,Zone Averaged,WORK EFFICIENCY,Clothing Insulation Schedule,N/A,CLOTHING INSULATION SCHEDULE,AIR VELOCITY SCHEDULE,Yes,No,No
+ People Internal Gains Nominal, 1F-B-LIVING LIVING-B,RETIRED INCLUDED FML LIVINGROOM OCCUPANCY,1F-B-LIVING,50.11,5.0,5.0,9.978E-002,10.022,0.500,0.500,AutoCalculate,ACTIVITY PEOPLE,No,3.8200E-008,0,5,Zone Averaged,WORK EFFICIENCY,Clothing Insulation Schedule,N/A,CLOTHING INSULATION SCHEDULE,AIR VELOCITY SCHEDULE,Yes,No,No
+ People Internal Gains Nominal, 4F-B'-LIVING LIVING-B,RETIRED INCLUDED FML LIVINGROOM OCCUPANCY,4F-B'-LIVING,50.11,5.0,5.0,9.978E-002,10.022,0.500,0.500,AutoCalculate,ACTIVITY PEOPLE,No,3.8200E-008,0,5,Zone Averaged,WORK EFFICIENCY,Clothing Insulation Schedule,N/A,CLOTHING INSULATION SCHEDULE,AIR VELOCITY SCHEDULE,Yes,No,No
+ People Internal Gains Nominal, 4F-B-LIVING LIVING-B,RETIRED INCLUDED FML LIVINGROOM OCCUPANCY,4F-B-LIVING,50.11,5.0,5.0,9.978E-002,10.022,0.500,0.500,AutoCalculate,ACTIVITY PEOPLE,No,3.8200E-008,0,5,Zone Averaged,WORK EFFICIENCY,Clothing Insulation Schedule,N/A,CLOTHING INSULATION SCHEDULE,AIR VELOCITY SCHEDULE,Yes,No,No
+ People Internal Gains Nominal, 2F-B'-LIVING LIVING-B,RETIRED INCLUDED FML LIVINGROOM OCCUPANCY,2F-B'-LIVING,50.11,5.0,5.0,9.978E-002,10.022,0.500,0.500,AutoCalculate,ACTIVITY PEOPLE,No,3.8200E-008,0,5,Zone Averaged,WORK EFFICIENCY,Clothing Insulation Schedule,N/A,CLOTHING INSULATION SCHEDULE,AIR VELOCITY SCHEDULE,Yes,No,No
+ People Internal Gains Nominal, 2F-B-LIVING LIVING-B,RETIRED INCLUDED FML LIVINGROOM OCCUPANCY,2F-B-LIVING,50.11,5.0,5.0,9.978E-002,10.022,0.500,0.500,AutoCalculate,ACTIVITY PEOPLE,No,3.8200E-008,0,5,Zone Averaged,WORK EFFICIENCY,Clothing Insulation Schedule,N/A,CLOTHING INSULATION SCHEDULE,AIR VELOCITY SCHEDULE,Yes,No,No
+ People Internal Gains Nominal, 3F-B'-LIVING LIVING-B,RETIRED INCLUDED FML LIVINGROOM OCCUPANCY,3F-B'-LIVING,50.11,5.0,5.0,9.978E-002,10.022,0.500,0.500,AutoCalculate,ACTIVITY PEOPLE,No,3.8200E-008,0,5,Zone Averaged,WORK EFFICIENCY,Clothing Insulation Schedule,N/A,CLOTHING INSULATION SCHEDULE,AIR VELOCITY SCHEDULE,Yes,No,No
+ People Internal Gains Nominal, 3F-B-LIVING LIVING-B,RETIRED INCLUDED FML LIVINGROOM OCCUPANCY,3F-B-LIVING,50.11,5.0,5.0,9.978E-002,10.022,0.500,0.500,AutoCalculate,ACTIVITY PEOPLE,No,3.8200E-008,0,5,Zone Averaged,WORK EFFICIENCY,Clothing Insulation Schedule,N/A,CLOTHING INSULATION SCHEDULE,AIR VELOCITY SCHEDULE,Yes,No,No
+! <Lights Internal Gains Nominal>,Name,Schedule Name,Zone Name,Zone Floor Area {m2},# Zone Occupants,Lighting Level {W},Lights/Floor Area {W/m2},Lights per person {W/person},Fraction Return Air,Fraction Radiant,Fraction Short Wave,Fraction Convected,Fraction Replaceable,End-Use Category,Nominal Minimum Lighting Level {W},Nominal Maximum Lighting Level {W}
+ Lights Internal Gains Nominal, 1F-A'-BED1 LIGHTS-BEDROOM-A,BEDROOM LIGHT,1F-A'-BED1,15.12,2.0,90.720,6.000,45.360,0.000,0.720,0.200,8.000E-002,1.000,General,0.000,90.720
+ Lights Internal Gains Nominal, 1F-A'-BED2 LIGHTS-BEDROOM-A,BEDROOM LIGHT,1F-A'-BED2,13.32,2.0,79.920,6.000,39.960,0.000,0.720,0.200,8.000E-002,1.000,General,0.000,79.920
+ Lights Internal Gains Nominal, 1F-A-BED1 LIGHTS-BEDROOM-A,BEDROOM LIGHT,1F-A-BED1,15.12,2.0,90.720,6.000,45.360,0.000,0.720,0.200,8.000E-002,1.000,General,0.000,90.720
+ Lights Internal Gains Nominal, 1F-A-BED2 LIGHTS-BEDROOM-A,BEDROOM LIGHT,1F-A-BED2,13.32,2.0,79.920,6.000,39.960,0.000,0.720,0.200,8.000E-002,1.000,General,0.000,79.920
+ Lights Internal Gains Nominal, 2F-A'-BED1 LIGHTS-BEDROOM-A,BEDROOM LIGHT,2F-A'-BED1,15.12,2.0,90.720,6.000,45.360,0.000,0.720,0.200,8.000E-002,1.000,General,0.000,90.720
+ Lights Internal Gains Nominal, 2F-A'-BED2 LIGHTS-BEDROOM-A,BEDROOM LIGHT,2F-A'-BED2,13.32,2.0,79.920,6.000,39.960,0.000,0.720,0.200,8.000E-002,1.000,General,0.000,79.920
+ Lights Internal Gains Nominal, 2F-A-BED1 LIGHTS-BEDROOM-A,BEDROOM LIGHT,2F-A-BED1,15.12,2.0,90.720,6.000,45.360,0.000,0.720,0.200,8.000E-002,1.000,General,0.000,90.720
+ Lights Internal Gains Nominal, 2F-A-BED2 LIGHTS-BEDROOM-A,BEDROOM LIGHT,2F-A-BED2,13.32,2.0,79.920,6.000,39.960,0.000,0.720,0.200,8.000E-002,1.000,General,0.000,79.920
+ Lights Internal Gains Nominal, 3F-A'-BED1 LIGHTS-BEDROOM-A,BEDROOM LIGHT,3F-A'-BED1,15.12,2.0,90.720,6.000,45.360,0.000,0.720,0.200,8.000E-002,1.000,General,0.000,90.720
+ Lights Internal Gains Nominal, 3F-A'-BED2 LIGHTS-BEDROOM-A,BEDROOM LIGHT,3F-A'-BED2,13.32,2.0,79.920,6.000,39.960,0.000,0.720,0.200,8.000E-002,1.000,General,0.000,79.920
+ Lights Internal Gains Nominal, 3F-A-BED1 LIGHTS-BEDROOM-A,BEDROOM LIGHT,3F-A-BED1,15.12,2.0,90.720,6.000,45.360,0.000,0.720,0.200,8.000E-002,1.000,General,0.000,90.720
+ Lights Internal Gains Nominal, 3F-A-BED2 LIGHTS-BEDROOM-A,BEDROOM LIGHT,3F-A-BED2,13.32,2.0,79.920,6.000,39.960,0.000,0.720,0.200,8.000E-002,1.000,General,0.000,79.920
+ Lights Internal Gains Nominal, 4F-A'-BED1 LIGHTS-BEDROOM-A,BEDROOM LIGHT,4F-A'-BED1,15.12,2.0,90.720,6.000,45.360,0.000,0.720,0.200,8.000E-002,1.000,General,0.000,90.720
+ Lights Internal Gains Nominal, 4F-A'-BED2 LIGHTS-BEDROOM-A,BEDROOM LIGHT,4F-A'-BED2,13.32,2.0,79.920,6.000,39.960,0.000,0.720,0.200,8.000E-002,1.000,General,0.000,79.920
+ Lights Internal Gains Nominal, 4F-A-BED1 LIGHTS-BEDROOM-A,BEDROOM LIGHT,4F-A-BED1,15.12,2.0,90.720,6.000,45.360,0.000,0.720,0.200,8.000E-002,1.000,General,0.000,90.720
+ Lights Internal Gains Nominal, 4F-A-BED2 LIGHTS-BEDROOM-A,BEDROOM LIGHT,4F-A-BED2,13.32,2.0,79.920,6.000,39.960,0.000,0.720,0.200,8.000E-002,1.000,General,0.000,79.920
+ Lights Internal Gains Nominal, 5F-A'-BED1 LIGHTS-BEDROOM-A,BEDROOM LIGHT,5F-A'-BED1,15.12,2.0,90.720,6.000,45.360,0.000,0.720,0.200,8.000E-002,1.000,General,0.000,90.720
+ Lights Internal Gains Nominal, 5F-A'-BED2 LIGHTS-BEDROOM-A,BEDROOM LIGHT,5F-A'-BED2,13.32,2.0,79.920,6.000,39.960,0.000,0.720,0.200,8.000E-002,1.000,General,0.000,79.920
+ Lights Internal Gains Nominal, 5F-A-BED1 LIGHTS-BEDROOM-A,BEDROOM LIGHT,5F-A-BED1,15.12,2.0,90.720,6.000,45.360,0.000,0.720,0.200,8.000E-002,1.000,General,0.000,90.720
+ Lights Internal Gains Nominal, 5F-A-BED2 LIGHTS-BEDROOM-A,BEDROOM LIGHT,5F-A-BED2,13.32,2.0,79.920,6.000,39.960,0.000,0.720,0.200,8.000E-002,1.000,General,0.000,79.920
+ Lights Internal Gains Nominal, 5F-B'-BED1 LIGHTS-BEDROOM-B,BEDROOM LIGHT,5F-B'-BED1,16.97,2.0,101.820,6.000,50.910,0.000,0.720,0.200,8.000E-002,1.000,General,0.000,101.820
+ Lights Internal Gains Nominal, 5F-B'-BED2 LIGHTS-BEDROOM-B,BEDROOM LIGHT,5F-B'-BED2,15.27,2.0,91.650,6.000,45.825,0.000,0.720,0.200,8.000E-002,1.000,General,0.000,91.650
+ Lights Internal Gains Nominal, 5F-B'-BED3 LIGHTS-BEDROOM-B,BEDROOM LIGHT,5F-B'-BED3,13.32,2.0,79.920,6.000,39.960,0.000,0.720,0.200,8.000E-002,1.000,General,0.000,79.920
+ Lights Internal Gains Nominal, 5F-B-BED1 LIGHTS-BEDROOM-B,BEDROOM LIGHT,5F-B-BED1,16.97,2.0,101.820,6.000,50.910,0.000,0.720,0.200,8.000E-002,1.000,General,0.000,101.820
+ Lights Internal Gains Nominal, 1F-B'-BED1 LIGHTS-BEDROOM-B,BEDROOM LIGHT,1F-B'-BED1,16.97,2.0,101.820,6.000,50.910,0.000,0.720,0.200,8.000E-002,1.000,General,0.000,101.820
+ Lights Internal Gains Nominal, 1F-B'-BED2 LIGHTS-BEDROOM-B,BEDROOM LIGHT,1F-B'-BED2,15.27,2.0,91.650,6.000,45.825,0.000,0.720,0.200,8.000E-002,1.000,General,0.000,91.650
+ Lights Internal Gains Nominal, 1F-B'-BED3 LIGHTS-BEDROOM-B,BEDROOM LIGHT,1F-B'-BED3,13.32,2.0,79.920,6.000,39.960,0.000,0.720,0.200,8.000E-002,1.000,General,0.000,79.920
+ Lights Internal Gains Nominal, 1F-B-BED1 LIGHTS-BEDROOM-B,BEDROOM LIGHT,1F-B-BED1,16.97,2.0,101.820,6.000,50.910,0.000,0.720,0.200,8.000E-002,1.000,General,0.000,101.820
+ Lights Internal Gains Nominal, 1F-B-BED2 LIGHTS-BEDROOM-B,BEDROOM LIGHT,1F-B-BED2,15.28,2.0,91.650,6.000,45.825,0.000,0.720,0.200,8.000E-002,1.000,General,0.000,91.650
+ Lights Internal Gains Nominal, 1F-B-BED3 LIGHTS-BEDROOM-B,BEDROOM LIGHT,1F-B-BED3,13.32,2.0,79.920,6.000,39.960,0.000,0.720,0.200,8.000E-002,1.000,General,0.000,79.920
+ Lights Internal Gains Nominal, 5F-B-BED2 LIGHTS-BEDROOM-B,BEDROOM LIGHT,5F-B-BED2,15.28,2.0,91.650,6.000,45.825,0.000,0.720,0.200,8.000E-002,1.000,General,0.000,91.650
+ Lights Internal Gains Nominal, 5F-B-BED3 LIGHTS-BEDROOM-B,BEDROOM LIGHT,5F-B-BED3,13.32,2.0,79.920,6.000,39.960,0.000,0.720,0.200,8.000E-002,1.000,General,0.000,79.920
+ Lights Internal Gains Nominal, 4F-B'-BED1 LIGHTS-BEDROOM-B,BEDROOM LIGHT,4F-B'-BED1,16.97,2.0,101.820,6.000,50.910,0.000,0.720,0.200,8.000E-002,1.000,General,0.000,101.820
+ Lights Internal Gains Nominal, 4F-B'-BED2 LIGHTS-BEDROOM-B,BEDROOM LIGHT,4F-B'-BED2,15.27,2.0,91.650,6.000,45.825,0.000,0.720,0.200,8.000E-002,1.000,General,0.000,91.650
+ Lights Internal Gains Nominal, 2F-B'-BED1 LIGHTS-BEDROOM-B,BEDROOM LIGHT,2F-B'-BED1,16.97,2.0,101.820,6.000,50.910,0.000,0.720,0.200,8.000E-002,1.000,General,0.000,101.820
+ Lights Internal Gains Nominal, 2F-B'-BED2 LIGHTS-BEDROOM-B,BEDROOM LIGHT,2F-B'-BED2,15.27,2.0,91.650,6.000,45.825,0.000,0.720,0.200,8.000E-002,1.000,General,0.000,91.650
+ Lights Internal Gains Nominal, 2F-B'-BED3 LIGHTS-BEDROOM-B,BEDROOM LIGHT,2F-B'-BED3,13.32,2.0,79.920,6.000,39.960,0.000,0.720,0.200,8.000E-002,1.000,General,0.000,79.920
+ Lights Internal Gains Nominal, 2F-B-BED1 LIGHTS-BEDROOM-B,BEDROOM LIGHT,2F-B-BED1,16.97,2.0,101.820,6.000,50.910,0.000,0.720,0.200,8.000E-002,1.000,General,0.000,101.820
+ Lights Internal Gains Nominal, 2F-B-BED2 LIGHTS-BEDROOM-B,BEDROOM LIGHT,2F-B-BED2,15.28,2.0,91.650,6.000,45.825,0.000,0.720,0.200,8.000E-002,1.000,General,0.000,91.650
+ Lights Internal Gains Nominal, 2F-B-BED3 LIGHTS-BEDROOM-B,BEDROOM LIGHT,2F-B-BED3,13.32,2.0,79.920,6.000,39.960,0.000,0.720,0.200,8.000E-002,1.000,General,0.000,79.920
+ Lights Internal Gains Nominal, 4F-B'-BED3 LIGHTS-BEDROOM-B,BEDROOM LIGHT,4F-B'-BED3,13.32,2.0,79.920,6.000,39.960,0.000,0.720,0.200,8.000E-002,1.000,General,0.000,79.920
+ Lights Internal Gains Nominal, 4F-B-BED1 LIGHTS-BEDROOM-B,BEDROOM LIGHT,4F-B-BED1,16.97,2.0,101.820,6.000,50.910,0.000,0.720,0.200,8.000E-002,1.000,General,0.000,101.820
+ Lights Internal Gains Nominal, 4F-B-BED2 LIGHTS-BEDROOM-B,BEDROOM LIGHT,4F-B-BED2,15.28,2.0,91.650,6.000,45.825,0.000,0.720,0.200,8.000E-002,1.000,General,0.000,91.650
+ Lights Internal Gains Nominal, 4F-B-BED3 LIGHTS-BEDROOM-B,BEDROOM LIGHT,4F-B-BED3,13.32,2.0,79.920,6.000,39.960,0.000,0.720,0.200,8.000E-002,1.000,General,0.000,79.920
+ Lights Internal Gains Nominal, 3F-B'-BED1 LIGHTS-BEDROOM-B,BEDROOM LIGHT,3F-B'-BED1,16.97,2.0,101.820,6.000,50.910,0.000,0.720,0.200,8.000E-002,1.000,General,0.000,101.820
+ Lights Internal Gains Nominal, 3F-B'-BED2 LIGHTS-BEDROOM-B,BEDROOM LIGHT,3F-B'-BED2,15.27,2.0,91.650,6.000,45.825,0.000,0.720,0.200,8.000E-002,1.000,General,0.000,91.650
+ Lights Internal Gains Nominal, 3F-B'-BED3 LIGHTS-BEDROOM-B,BEDROOM LIGHT,3F-B'-BED3,13.32,2.0,79.920,6.000,39.960,0.000,0.720,0.200,8.000E-002,1.000,General,0.000,79.920
+ Lights Internal Gains Nominal, 3F-B-BED1 LIGHTS-BEDROOM-B,BEDROOM LIGHT,3F-B-BED1,16.97,2.0,101.820,6.000,50.910,0.000,0.720,0.200,8.000E-002,1.000,General,0.000,101.820
+ Lights Internal Gains Nominal, 3F-B-BED2 LIGHTS-BEDROOM-B,BEDROOM LIGHT,3F-B-BED2,15.28,2.0,91.650,6.000,45.825,0.000,0.720,0.200,8.000E-002,1.000,General,0.000,91.650
+ Lights Internal Gains Nominal, 3F-B-BED3 LIGHTS-BEDROOM-B,BEDROOM LIGHT,3F-B-BED3,13.32,2.0,79.920,6.000,39.960,0.000,0.720,0.200,8.000E-002,1.000,General,0.000,79.920
+ Lights Internal Gains Nominal, 1F-A'-LIVING LIGHTS-LIVINGROOM-A,LIVINGROOM LIGHT,1F-A'-LIVING,34.32,3.0,205.911,6.000,68.637,0.000,0.720,0.200,8.000E-002,1.000,General,0.000,205.911
+ Lights Internal Gains Nominal, 1F-A-LIVING LIGHTS-LIVINGROOM-A,LIVINGROOM LIGHT,1F-A-LIVING,34.32,3.0,205.911,6.000,68.637,0.000,0.720,0.200,8.000E-002,1.000,General,0.000,205.911
+ Lights Internal Gains Nominal, 5F-A'-LIVING LIGHTS-LIVINGROOM-A,LIVINGROOM LIGHT,5F-A'-LIVING,34.32,3.0,205.911,6.000,68.637,0.000,0.720,0.200,8.000E-002,1.000,General,0.000,205.911
+ Lights Internal Gains Nominal, 5F-A-LIVING LIGHTS-LIVINGROOM-A,LIVINGROOM LIGHT,5F-A-LIVING,34.32,3.0,205.911,6.000,68.637,0.000,0.720,0.200,8.000E-002,1.000,General,0.000,205.911
+ Lights Internal Gains Nominal, 2F-A'-LIVING LIGHTS-LIVINGROOM-A,LIVINGROOM LIGHT,2F-A'-LIVING,34.32,3.0,205.911,6.000,68.637,0.000,0.720,0.200,8.000E-002,1.000,General,0.000,205.911
+ Lights Internal Gains Nominal, 2F-A-LIVING LIGHTS-LIVINGROOM-A,LIVINGROOM LIGHT,2F-A-LIVING,34.32,3.0,205.911,6.000,68.637,0.000,0.720,0.200,8.000E-002,1.000,General,0.000,205.911
+ Lights Internal Gains Nominal, 4F-A'-LIVING LIGHTS-LIVINGROOM-A,LIVINGROOM LIGHT,4F-A'-LIVING,34.32,3.0,205.911,6.000,68.637,0.000,0.720,0.200,8.000E-002,1.000,General,0.000,205.911
+ Lights Internal Gains Nominal, 4F-A-LIVING LIGHTS-LIVINGROOM-A,LIVINGROOM LIGHT,4F-A-LIVING,34.32,3.0,205.911,6.000,68.637,0.000,0.720,0.200,8.000E-002,1.000,General,0.000,205.911
+ Lights Internal Gains Nominal, 3F-A'-LIVING LIGHTS-LIVINGROOM-A,LIVINGROOM LIGHT,3F-A'-LIVING,34.32,3.0,205.911,6.000,68.637,0.000,0.720,0.200,8.000E-002,1.000,General,0.000,205.911
+ Lights Internal Gains Nominal, 3F-A-LIVING LIGHTS-LIVINGROOM-A,LIVINGROOM LIGHT,3F-A-LIVING,34.32,3.0,205.911,6.000,68.637,0.000,0.720,0.200,8.000E-002,1.000,General,0.000,205.911
+ Lights Internal Gains Nominal, 5F-B'-LIVING LIGHTS-LIVINGROOM-B,LIVINGROOM LIGHT,5F-B'-LIVING,50.11,5.0,300.660,6.000,60.132,0.000,0.720,0.200,8.000E-002,1.000,General,0.000,300.660
+ Lights Internal Gains Nominal, 5F-B-LIVING LIGHTS-LIVINGROOM-B,LIVINGROOM LIGHT,5F-B-LIVING,50.11,5.0,300.660,6.000,60.132,0.000,0.720,0.200,8.000E-002,1.000,General,0.000,300.660
+ Lights Internal Gains Nominal, 1F-B'-LIVING LIGHTS-LIVINGROOM-B,LIVINGROOM LIGHT,1F-B'-LIVING,50.11,5.0,300.660,6.000,60.132,0.000,0.720,0.200,8.000E-002,1.000,General,0.000,300.660
+ Lights Internal Gains Nominal, 1F-B-LIVING LIGHTS-LIVINGROOM-B,LIVINGROOM LIGHT,1F-B-LIVING,50.11,5.0,300.660,6.000,60.132,0.000,0.720,0.200,8.000E-002,1.000,General,0.000,300.660
+ Lights Internal Gains Nominal, 4F-B'-LIVING LIGHTS-LIVINGROOM-B,LIVINGROOM LIGHT,4F-B'-LIVING,50.11,5.0,300.660,6.000,60.132,0.000,0.720,0.200,8.000E-002,1.000,General,0.000,300.660
+ Lights Internal Gains Nominal, 4F-B-LIVING LIGHTS-LIVINGROOM-B,LIVINGROOM LIGHT,4F-B-LIVING,50.11,5.0,300.660,6.000,60.132,0.000,0.720,0.200,8.000E-002,1.000,General,0.000,300.660
+ Lights Internal Gains Nominal, 2F-B'-LIVING LIGHTS-LIVINGROOM-B,LIVINGROOM LIGHT,2F-B'-LIVING,50.11,5.0,300.660,6.000,60.132,0.000,0.720,0.200,8.000E-002,1.000,General,0.000,300.660
+ Lights Internal Gains Nominal, 2F-B-LIVING LIGHTS-LIVINGROOM-B,LIVINGROOM LIGHT,2F-B-LIVING,50.11,5.0,300.660,6.000,60.132,0.000,0.720,0.200,8.000E-002,1.000,General,0.000,300.660
+ Lights Internal Gains Nominal, 3F-B'-LIVING LIGHTS-LIVINGROOM-B,LIVINGROOM LIGHT,3F-B'-LIVING,50.11,5.0,300.660,6.000,60.132,0.000,0.720,0.200,8.000E-002,1.000,General,0.000,300.660
+ Lights Internal Gains Nominal, 3F-B-LIVING LIGHTS-LIVINGROOM-B,LIVINGROOM LIGHT,3F-B-LIVING,50.11,5.0,300.660,6.000,60.132,0.000,0.720,0.200,8.000E-002,1.000,General,0.000,300.660
+! <ElectricEquipment Internal Gains Nominal>,Name,Schedule Name,Zone Name,Zone Floor Area {m2},# Zone Occupants,Equipment Level {W},Equipment/Floor Area {W/m2},Equipment per person {W/person},Fraction Latent,Fraction Radiant,Fraction Lost,Fraction Convected,End-Use SubCategory,Nominal Minimum Equipment Level {W},Nominal Maximum Equipment Level {W}
+ ElectricEquipment Internal Gains Nominal, 1F-A'-BED1 EQUIPMENT-BEDROOM-A,WORKING/SCHOOLING BEDROOM OCCUPANCY,1F-A'-BED1,15.12,2.0,65.016,4.300,32.508,0.000,0.200,0.000,0.800,General,0.000,65.016
+ ElectricEquipment Internal Gains Nominal, 1F-A'-BED2 EQUIPMENT-BEDROOM-A,WORKING/SCHOOLING BEDROOM OCCUPANCY,1F-A'-BED2,13.32,2.0,57.276,4.300,28.638,0.000,0.200,0.000,0.800,General,0.000,57.276
+ ElectricEquipment Internal Gains Nominal, 1F-A-BED1 EQUIPMENT-BEDROOM-A,WORKING/SCHOOLING BEDROOM OCCUPANCY,1F-A-BED1,15.12,2.0,65.016,4.300,32.508,0.000,0.200,0.000,0.800,General,0.000,65.016
+ ElectricEquipment Internal Gains Nominal, 1F-A-BED2 EQUIPMENT-BEDROOM-A,WORKING/SCHOOLING BEDROOM OCCUPANCY,1F-A-BED2,13.32,2.0,57.276,4.300,28.638,0.000,0.200,0.000,0.800,General,0.000,57.276
+ ElectricEquipment Internal Gains Nominal, 2F-A'-BED1 EQUIPMENT-BEDROOM-A,WORKING/SCHOOLING BEDROOM OCCUPANCY,2F-A'-BED1,15.12,2.0,65.016,4.300,32.508,0.000,0.200,0.000,0.800,General,0.000,65.016
+ ElectricEquipment Internal Gains Nominal, 2F-A'-BED2 EQUIPMENT-BEDROOM-A,WORKING/SCHOOLING BEDROOM OCCUPANCY,2F-A'-BED2,13.32,2.0,57.276,4.300,28.638,0.000,0.200,0.000,0.800,General,0.000,57.276
+ ElectricEquipment Internal Gains Nominal, 2F-A-BED1 EQUIPMENT-BEDROOM-A,WORKING/SCHOOLING BEDROOM OCCUPANCY,2F-A-BED1,15.12,2.0,65.016,4.300,32.508,0.000,0.200,0.000,0.800,General,0.000,65.016
+ ElectricEquipment Internal Gains Nominal, 2F-A-BED2 EQUIPMENT-BEDROOM-A,WORKING/SCHOOLING BEDROOM OCCUPANCY,2F-A-BED2,13.32,2.0,57.276,4.300,28.638,0.000,0.200,0.000,0.800,General,0.000,57.276
+ ElectricEquipment Internal Gains Nominal, 3F-A'-BED1 EQUIPMENT-BEDROOM-A,WORKING/SCHOOLING BEDROOM OCCUPANCY,3F-A'-BED1,15.12,2.0,65.016,4.300,32.508,0.000,0.200,0.000,0.800,General,0.000,65.016
+ ElectricEquipment Internal Gains Nominal, 3F-A'-BED2 EQUIPMENT-BEDROOM-A,WORKING/SCHOOLING BEDROOM OCCUPANCY,3F-A'-BED2,13.32,2.0,57.276,4.300,28.638,0.000,0.200,0.000,0.800,General,0.000,57.276
+ ElectricEquipment Internal Gains Nominal, 3F-A-BED1 EQUIPMENT-BEDROOM-A,WORKING/SCHOOLING BEDROOM OCCUPANCY,3F-A-BED1,15.12,2.0,65.016,4.300,32.508,0.000,0.200,0.000,0.800,General,0.000,65.016
+ ElectricEquipment Internal Gains Nominal, 3F-A-BED2 EQUIPMENT-BEDROOM-A,WORKING/SCHOOLING BEDROOM OCCUPANCY,3F-A-BED2,13.32,2.0,57.276,4.300,28.638,0.000,0.200,0.000,0.800,General,0.000,57.276
+ ElectricEquipment Internal Gains Nominal, 4F-A'-BED1 EQUIPMENT-BEDROOM-A,WORKING/SCHOOLING BEDROOM OCCUPANCY,4F-A'-BED1,15.12,2.0,65.016,4.300,32.508,0.000,0.200,0.000,0.800,General,0.000,65.016
+ ElectricEquipment Internal Gains Nominal, 4F-A'-BED2 EQUIPMENT-BEDROOM-A,WORKING/SCHOOLING BEDROOM OCCUPANCY,4F-A'-BED2,13.32,2.0,57.276,4.300,28.638,0.000,0.200,0.000,0.800,General,0.000,57.276
+ ElectricEquipment Internal Gains Nominal, 4F-A-BED1 EQUIPMENT-BEDROOM-A,WORKING/SCHOOLING BEDROOM OCCUPANCY,4F-A-BED1,15.12,2.0,65.016,4.300,32.508,0.000,0.200,0.000,0.800,General,0.000,65.016
+ ElectricEquipment Internal Gains Nominal, 4F-A-BED2 EQUIPMENT-BEDROOM-A,WORKING/SCHOOLING BEDROOM OCCUPANCY,4F-A-BED2,13.32,2.0,57.276,4.300,28.638,0.000,0.200,0.000,0.800,General,0.000,57.276
+ ElectricEquipment Internal Gains Nominal, 5F-A'-BED1 EQUIPMENT-BEDROOM-A,WORKING/SCHOOLING BEDROOM OCCUPANCY,5F-A'-BED1,15.12,2.0,65.016,4.300,32.508,0.000,0.200,0.000,0.800,General,0.000,65.016
+ ElectricEquipment Internal Gains Nominal, 5F-A'-BED2 EQUIPMENT-BEDROOM-A,WORKING/SCHOOLING BEDROOM OCCUPANCY,5F-A'-BED2,13.32,2.0,57.276,4.300,28.638,0.000,0.200,0.000,0.800,General,0.000,57.276
+ ElectricEquipment Internal Gains Nominal, 5F-A-BED1 EQUIPMENT-BEDROOM-A,WORKING/SCHOOLING BEDROOM OCCUPANCY,5F-A-BED1,15.12,2.0,65.016,4.300,32.508,0.000,0.200,0.000,0.800,General,0.000,65.016
+ ElectricEquipment Internal Gains Nominal, 5F-A-BED2 EQUIPMENT-BEDROOM-A,WORKING/SCHOOLING BEDROOM OCCUPANCY,5F-A-BED2,13.32,2.0,57.276,4.300,28.638,0.000,0.200,0.000,0.800,General,0.000,57.276
+ ElectricEquipment Internal Gains Nominal, 5F-B'-BED1 EQUIPMENT-BEDROOM-B,RETIRED BEDROOM OCCUPANCY,5F-B'-BED1,16.97,2.0,72.971,4.300,36.485,0.000,0.200,0.000,0.800,General,0.000,72.971
+ ElectricEquipment Internal Gains Nominal, 5F-B'-BED2 EQUIPMENT-BEDROOM-B,RETIRED BEDROOM OCCUPANCY,5F-B'-BED2,15.27,2.0,65.682,4.300,32.841,0.000,0.200,0.000,0.800,General,0.000,65.682
+ ElectricEquipment Internal Gains Nominal, 5F-B'-BED3 EQUIPMENT-BEDROOM-B,RETIRED BEDROOM OCCUPANCY,5F-B'-BED3,13.32,2.0,57.276,4.300,28.638,0.000,0.200,0.000,0.800,General,0.000,57.276
+ ElectricEquipment Internal Gains Nominal, 5F-B-BED1 EQUIPMENT-BEDROOM-B,RETIRED BEDROOM OCCUPANCY,5F-B-BED1,16.97,2.0,72.971,4.300,36.485,0.000,0.200,0.000,0.800,General,0.000,72.971
+ ElectricEquipment Internal Gains Nominal, 1F-B'-BED1 EQUIPMENT-BEDROOM-B,RETIRED BEDROOM OCCUPANCY,1F-B'-BED1,16.97,2.0,72.971,4.300,36.485,0.000,0.200,0.000,0.800,General,0.000,72.971
+ ElectricEquipment Internal Gains Nominal, 1F-B'-BED2 EQUIPMENT-BEDROOM-B,RETIRED BEDROOM OCCUPANCY,1F-B'-BED2,15.27,2.0,65.682,4.300,32.841,0.000,0.200,0.000,0.800,General,0.000,65.682
+ ElectricEquipment Internal Gains Nominal, 1F-B'-BED3 EQUIPMENT-BEDROOM-B,RETIRED BEDROOM OCCUPANCY,1F-B'-BED3,13.32,2.0,57.276,4.300,28.638,0.000,0.200,0.000,0.800,General,0.000,57.276
+ ElectricEquipment Internal Gains Nominal, 1F-B-BED1 EQUIPMENT-BEDROOM-B,RETIRED BEDROOM OCCUPANCY,1F-B-BED1,16.97,2.0,72.971,4.300,36.485,0.000,0.200,0.000,0.800,General,0.000,72.971
+ ElectricEquipment Internal Gains Nominal, 1F-B-BED2 EQUIPMENT-BEDROOM-B,RETIRED BEDROOM OCCUPANCY,1F-B-BED2,15.28,2.0,65.683,4.300,32.841,0.000,0.200,0.000,0.800,General,0.000,65.683
+ ElectricEquipment Internal Gains Nominal, 1F-B-BED3 EQUIPMENT-BEDROOM-B,RETIRED BEDROOM OCCUPANCY,1F-B-BED3,13.32,2.0,57.276,4.300,28.638,0.000,0.200,0.000,0.800,General,0.000,57.276
+ ElectricEquipment Internal Gains Nominal, 5F-B-BED2 EQUIPMENT-BEDROOM-B,RETIRED BEDROOM OCCUPANCY,5F-B-BED2,15.28,2.0,65.683,4.300,32.841,0.000,0.200,0.000,0.800,General,0.000,65.683
+ ElectricEquipment Internal Gains Nominal, 5F-B-BED3 EQUIPMENT-BEDROOM-B,RETIRED BEDROOM OCCUPANCY,5F-B-BED3,13.32,2.0,57.276,4.300,28.638,0.000,0.200,0.000,0.800,General,0.000,57.276
+ ElectricEquipment Internal Gains Nominal, 4F-B'-BED1 EQUIPMENT-BEDROOM-B,RETIRED BEDROOM OCCUPANCY,4F-B'-BED1,16.97,2.0,72.971,4.300,36.485,0.000,0.200,0.000,0.800,General,0.000,72.971
+ ElectricEquipment Internal Gains Nominal, 4F-B'-BED2 EQUIPMENT-BEDROOM-B,RETIRED BEDROOM OCCUPANCY,4F-B'-BED2,15.27,2.0,65.682,4.300,32.841,0.000,0.200,0.000,0.800,General,0.000,65.682
+ ElectricEquipment Internal Gains Nominal, 2F-B'-BED1 EQUIPMENT-BEDROOM-B,RETIRED BEDROOM OCCUPANCY,2F-B'-BED1,16.97,2.0,72.971,4.300,36.485,0.000,0.200,0.000,0.800,General,0.000,72.971
+ ElectricEquipment Internal Gains Nominal, 2F-B'-BED2 EQUIPMENT-BEDROOM-B,RETIRED BEDROOM OCCUPANCY,2F-B'-BED2,15.27,2.0,65.682,4.300,32.841,0.000,0.200,0.000,0.800,General,0.000,65.682
+ ElectricEquipment Internal Gains Nominal, 2F-B'-BED3 EQUIPMENT-BEDROOM-B,RETIRED BEDROOM OCCUPANCY,2F-B'-BED3,13.32,2.0,57.276,4.300,28.638,0.000,0.200,0.000,0.800,General,0.000,57.276
+ ElectricEquipment Internal Gains Nominal, 2F-B-BED1 EQUIPMENT-BEDROOM-B,RETIRED BEDROOM OCCUPANCY,2F-B-BED1,16.97,2.0,72.971,4.300,36.485,0.000,0.200,0.000,0.800,General,0.000,72.971
+ ElectricEquipment Internal Gains Nominal, 2F-B-BED2 EQUIPMENT-BEDROOM-B,RETIRED BEDROOM OCCUPANCY,2F-B-BED2,15.28,2.0,65.683,4.300,32.841,0.000,0.200,0.000,0.800,General,0.000,65.683
+ ElectricEquipment Internal Gains Nominal, 2F-B-BED3 EQUIPMENT-BEDROOM-B,RETIRED BEDROOM OCCUPANCY,2F-B-BED3,13.32,2.0,57.276,4.300,28.638,0.000,0.200,0.000,0.800,General,0.000,57.276
+ ElectricEquipment Internal Gains Nominal, 4F-B'-BED3 EQUIPMENT-BEDROOM-B,RETIRED BEDROOM OCCUPANCY,4F-B'-BED3,13.32,2.0,57.276,4.300,28.638,0.000,0.200,0.000,0.800,General,0.000,57.276
+ ElectricEquipment Internal Gains Nominal, 4F-B-BED1 EQUIPMENT-BEDROOM-B,RETIRED BEDROOM OCCUPANCY,4F-B-BED1,16.97,2.0,72.971,4.300,36.485,0.000,0.200,0.000,0.800,General,0.000,72.971
+ ElectricEquipment Internal Gains Nominal, 4F-B-BED2 EQUIPMENT-BEDROOM-B,RETIRED BEDROOM OCCUPANCY,4F-B-BED2,15.28,2.0,65.683,4.300,32.841,0.000,0.200,0.000,0.800,General,0.000,65.683
+ ElectricEquipment Internal Gains Nominal, 4F-B-BED3 EQUIPMENT-BEDROOM-B,RETIRED BEDROOM OCCUPANCY,4F-B-BED3,13.32,2.0,57.276,4.300,28.638,0.000,0.200,0.000,0.800,General,0.000,57.276
+ ElectricEquipment Internal Gains Nominal, 3F-B'-BED1 EQUIPMENT-BEDROOM-B,RETIRED BEDROOM OCCUPANCY,3F-B'-BED1,16.97,2.0,72.971,4.300,36.485,0.000,0.200,0.000,0.800,General,0.000,72.971
+ ElectricEquipment Internal Gains Nominal, 3F-B'-BED2 EQUIPMENT-BEDROOM-B,RETIRED BEDROOM OCCUPANCY,3F-B'-BED2,15.27,2.0,65.682,4.300,32.841,0.000,0.200,0.000,0.800,General,0.000,65.682
+ ElectricEquipment Internal Gains Nominal, 3F-B'-BED3 EQUIPMENT-BEDROOM-B,RETIRED BEDROOM OCCUPANCY,3F-B'-BED3,13.32,2.0,57.276,4.300,28.638,0.000,0.200,0.000,0.800,General,0.000,57.276
+ ElectricEquipment Internal Gains Nominal, 3F-B-BED1 EQUIPMENT-BEDROOM-B,RETIRED BEDROOM OCCUPANCY,3F-B-BED1,16.97,2.0,72.971,4.300,36.485,0.000,0.200,0.000,0.800,General,0.000,72.971
+ ElectricEquipment Internal Gains Nominal, 3F-B-BED2 EQUIPMENT-BEDROOM-B,RETIRED BEDROOM OCCUPANCY,3F-B-BED2,15.28,2.0,65.683,4.300,32.841,0.000,0.200,0.000,0.800,General,0.000,65.683
+ ElectricEquipment Internal Gains Nominal, 3F-B-BED3 EQUIPMENT-BEDROOM-B,RETIRED BEDROOM OCCUPANCY,3F-B-BED3,13.32,2.0,57.276,4.300,28.638,0.000,0.200,0.000,0.800,General,0.000,57.276
+ ElectricEquipment Internal Gains Nominal, 1F-A'-LIVING EQUIPMENT-LIVING-A,RETIRED EXCLUDED FML LIVINGROOM  OCCUPANCY,1F-A'-LIVING,34.32,3.0,147.570,4.300,49.190,0.000,0.200,0.000,0.800,General,0.000,147.570
+ ElectricEquipment Internal Gains Nominal, 1F-A-LIVING EQUIPMENT-LIVING-A,RETIRED EXCLUDED FML LIVINGROOM  OCCUPANCY,1F-A-LIVING,34.32,3.0,147.570,4.300,49.190,0.000,0.200,0.000,0.800,General,0.000,147.570
+ ElectricEquipment Internal Gains Nominal, 5F-A'-LIVING EQUIPMENT-LIVING-A,RETIRED EXCLUDED FML LIVINGROOM  OCCUPANCY,5F-A'-LIVING,34.32,3.0,147.570,4.300,49.190,0.000,0.200,0.000,0.800,General,0.000,147.570
+ ElectricEquipment Internal Gains Nominal, 5F-A-LIVING EQUIPMENT-LIVING-A,RETIRED EXCLUDED FML LIVINGROOM  OCCUPANCY,5F-A-LIVING,34.32,3.0,147.570,4.300,49.190,0.000,0.200,0.000,0.800,General,0.000,147.570
+ ElectricEquipment Internal Gains Nominal, 2F-A'-LIVING EQUIPMENT-LIVING-A,RETIRED EXCLUDED FML LIVINGROOM  OCCUPANCY,2F-A'-LIVING,34.32,3.0,147.570,4.300,49.190,0.000,0.200,0.000,0.800,General,0.000,147.570
+ ElectricEquipment Internal Gains Nominal, 2F-A-LIVING EQUIPMENT-LIVING-A,RETIRED EXCLUDED FML LIVINGROOM  OCCUPANCY,2F-A-LIVING,34.32,3.0,147.570,4.300,49.190,0.000,0.200,0.000,0.800,General,0.000,147.570
+ ElectricEquipment Internal Gains Nominal, 4F-A'-LIVING EQUIPMENT-LIVING-A,RETIRED EXCLUDED FML LIVINGROOM  OCCUPANCY,4F-A'-LIVING,34.32,3.0,147.570,4.300,49.190,0.000,0.200,0.000,0.800,General,0.000,147.570
+ ElectricEquipment Internal Gains Nominal, 4F-A-LIVING EQUIPMENT-LIVING-A,RETIRED EXCLUDED FML LIVINGROOM  OCCUPANCY,4F-A-LIVING,34.32,3.0,147.570,4.300,49.190,0.000,0.200,0.000,0.800,General,0.000,147.570
+ ElectricEquipment Internal Gains Nominal, 3F-A'-LIVING EQUIPMENT-LIVING-A,RETIRED EXCLUDED FML LIVINGROOM  OCCUPANCY,3F-A'-LIVING,34.32,3.0,147.570,4.300,49.190,0.000,0.200,0.000,0.800,General,0.000,147.570
+ ElectricEquipment Internal Gains Nominal, 3F-A-LIVING EQUIPMENT-LIVING-A,RETIRED EXCLUDED FML LIVINGROOM  OCCUPANCY,3F-A-LIVING,34.32,3.0,147.570,4.300,49.190,0.000,0.200,0.000,0.800,General,0.000,147.570
+ ElectricEquipment Internal Gains Nominal, 5F-B'-LIVING EQUIPMENT-LIVING-B,RETIRED INCLUDED FML LIVINGROOM OCCUPANCY,5F-B'-LIVING,50.11,5.0,215.473,4.300,43.095,0.000,0.200,0.000,0.800,General,0.000,215.473
+ ElectricEquipment Internal Gains Nominal, 5F-B-LIVING EQUIPMENT-LIVING-B,RETIRED INCLUDED FML LIVINGROOM OCCUPANCY,5F-B-LIVING,50.11,5.0,215.473,4.300,43.095,0.000,0.200,0.000,0.800,General,0.000,215.473
+ ElectricEquipment Internal Gains Nominal, 1F-B'-LIVING EQUIPMENT-LIVING-B,RETIRED INCLUDED FML LIVINGROOM OCCUPANCY,1F-B'-LIVING,50.11,5.0,215.473,4.300,43.095,0.000,0.200,0.000,0.800,General,0.000,215.473
+ ElectricEquipment Internal Gains Nominal, 1F-B-LIVING EQUIPMENT-LIVING-B,RETIRED INCLUDED FML LIVINGROOM OCCUPANCY,1F-B-LIVING,50.11,5.0,215.473,4.300,43.095,0.000,0.200,0.000,0.800,General,0.000,215.473
+ ElectricEquipment Internal Gains Nominal, 4F-B'-LIVING EQUIPMENT-LIVING-B,RETIRED INCLUDED FML LIVINGROOM OCCUPANCY,4F-B'-LIVING,50.11,5.0,215.473,4.300,43.095,0.000,0.200,0.000,0.800,General,0.000,215.473
+ ElectricEquipment Internal Gains Nominal, 4F-B-LIVING EQUIPMENT-LIVING-B,RETIRED INCLUDED FML LIVINGROOM OCCUPANCY,4F-B-LIVING,50.11,5.0,215.473,4.300,43.095,0.000,0.200,0.000,0.800,General,0.000,215.473
+ ElectricEquipment Internal Gains Nominal, 2F-B'-LIVING EQUIPMENT-LIVING-B,RETIRED INCLUDED FML LIVINGROOM OCCUPANCY,2F-B'-LIVING,50.11,5.0,

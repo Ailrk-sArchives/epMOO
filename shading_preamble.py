@@ -153,10 +153,10 @@ class ShadingPreamble(Preamble):
         p2 = 0.0
         if direction == "east" or direction == "west":
             p1 = min(list(zip(*pos))[1])  # get max and min Y positions
-            p2 = max(list(zip(*pos))[1])
+            p2 = max(list(zip(*pos))[1])  # delta y
         else:
-            p1 = min(list(zip(*pos))[2])  # get max and min Z positions
-            p2 = max(list(zip(*pos))[2])
+            p1 = min(list(zip(*pos))[0])  # get max and min X positions
+            p2 = max(list(zip(*pos))[0])  # delta x
         wall_length = abs(p2 - p1)
         floor = int(floor_num.split(".")[0])  # get floor number.
 
@@ -164,10 +164,10 @@ class ShadingPreamble(Preamble):
         wall_area = wall_length * self._constants["FLOOR_HEIGHT"]
         window_area = wall_area * rate
         window_length = window_area / self._constants["WINDOW_HEIGHT"]
-        CB0 = (wall_length - window_length) / 2 + p1  # win x axis1
-        CB1 = p2 - (wall_length - window_length) / 2  # win x axis2
-        CB2 = (floor - 1) * self._constants["FLOOR_HEIGHT"] + self._constants["WINDOW_EDGT_HEIGHT"]
-        CB3 = CB2 + self._constants["WINDOW_HEIGHT"]  # win y axis2
+        CB0 = (wall_length - window_length) / 2 + p1  # win x axis on one side
+        CB1 = p2 - (wall_length - window_length) / 2  # win x axis on the other side.
+        CB2 = (floor - 1) * self._constants["FLOOR_HEIGHT"] + self._constants["WINDOW_EDG_HEIGHT"]  # lower win y axis
+        CB3 = CB2 + self._constants["WINDOW_HEIGHT"]  # upper win y axis
 
         return (CB0, CB1, CB2, CB3)
 

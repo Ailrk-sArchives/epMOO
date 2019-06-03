@@ -19,7 +19,7 @@ C_e_roof = 40
 
 window_specs = [116.51, 266, 163.39]
 C_e_win = 30
-total_area = 2048.35
+total_ac_area = 1584.33
 surface_area = 1617.58  # wall_area = surface_area - window_area
 roof_area = 402.83
 # Window area will change accroding to the winwallratio.
@@ -43,7 +43,7 @@ def f1_energy_consumption(*args) -> float:
         for i, _ in enumerate(data):
             if break_word:
                 break
-            if "Utility Use Per Total Floor Area" in data[i]:
+            if "Utility Use Per Conditioned Floor Area" in data[i]:
                 for line in data[i:]:
                     if "HVAC" in line:
                         s = line.split(",")
@@ -116,6 +116,6 @@ def f3_economy(*args) -> float:
     divident = (C_i_wall * delta_wall + C_e_wall) * wall_area + \
                (C_i_win + C_e_win) * window_area + \
                (C_i_roof * delta_roof + C_e_roof) * roof_area
-    price = divident / total_area
+    price = divident / total_ac_area
 
     return price
