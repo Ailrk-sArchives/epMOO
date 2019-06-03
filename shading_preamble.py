@@ -174,9 +174,8 @@ class ShadingPreamble(Preamble):
     def __shading_direction(self, direction, shading_dirs: List) -> str:
         # control the shading base on the direction.
         dir_map = {"east": 0, "west": 1, "south": 2, "north": 3}
-        for idx, _ in shading_dirs:
-            shading_dirs[idx] = int(shading_dirs[idx])
-        return "external shading control," if dir_map[direction] == 1 else ","
+        s = [int(n) for n in shading_dirs]
+        return "external shading control," if s[dir_map[direction]] == 1 else ","
 
     def run_energy_plus(self):
         output_dir = os.path.join(os.path.abspath(self._paths["OUTPUT_PATH"]), self._pid)
