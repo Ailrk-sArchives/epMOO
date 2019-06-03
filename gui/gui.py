@@ -14,9 +14,9 @@ class MooWidget(flx.Widget):
     def init(self):
         with flx.HFix(flex=2):
             with flx.VBox(title='leftside'):
-                with flx.GroupWidget(minsize=480) as self.model_params:
+                with flx.GroupWidget(minsize=470) as self.model_params:
                     self.model_params.set_title("MODEL PARAMTERS")
-                    with flx.FormLayout(maxsize=480) as self.model_params_form:
+                    with flx.FormLayout(maxsize=470) as self.model_params_form:
                         flx.Widget(flex=1)
                         self.exterior_wall = flx.LineEdit(title='Exterior Wall', text='1, 10')
                         self.exterior_roof = flx.LineEdit(title='Exterior Roof', text='1, 9')
@@ -38,7 +38,7 @@ class MooWidget(flx.Widget):
                     self.run_button = flx.Button(text='Run')
 
             with flx.VBox(title='rightside'):
-                with flx.GroupWidget(minsize=230) as self.algo_params:
+                with flx.GroupWidget(minsize=230, maxsize=300) as self.algo_params:
                     self.algo_params.set_title("ALGORITHM PARAMETERS")
                     with flx.FormLayout() as self.algo_params_model:
                         self.mutation_param = flx.LineEdit(title='Mutation Parameter', text='3')

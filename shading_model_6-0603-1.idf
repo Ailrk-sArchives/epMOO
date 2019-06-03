@@ -1046,7 +1046,7 @@ Construction,
     Exterior Roof2,          !- Name
     20SuiShiLuanShi,         !- Outside Layer
     20shuinishajiang,        !- Layer 2
-    20NanRanXinJiSuJuBenBan, !- Layer 3
+    30NanRanXinJiSuJuBenBan, !- Layer 3
     5SBS,                    !- Layer 4
     20shuinishajiang,        !- Layer 5
     30shaojietaoli,          !- Layer 6
@@ -1056,7 +1056,7 @@ Construction,
     Exterior Roof3,          !- Name
     20SuiShiLuanShi,         !- Outside Layer
     20shuinishajiang,        !- Layer 2
-    30NanRanXinJiSuJuBenBan, !- Layer 3
+    40NanRanXinJiSuJuBenBan, !- Layer 3
     5SBS,                    !- Layer 4
     20shuinishajiang,        !- Layer 5
     30shaojietaoli,          !- Layer 6
@@ -1066,7 +1066,7 @@ Construction,
     Exterior Roof4,          !- Name
     20SuiShiLuanShi,         !- Outside Layer
     20shuinishajiang,        !- Layer 2
-    40NanRanXinJiSuJuBenBan, !- Layer 3
+    50NanRanXinJiSuJuBenBan, !- Layer 3
     5SBS,                    !- Layer 4
     20shuinishajiang,        !- Layer 5
     30shaojietaoli,          !- Layer 6
@@ -1076,7 +1076,7 @@ Construction,
     Exterior Roof5,          !- Name
     20SuiShiLuanShi,         !- Outside Layer
     20shuinishajiang,        !- Layer 2
-    50NanRanXinJiSuJuBenBan, !- Layer 3
+    60NanRanXinJiSuJuBenBan, !- Layer 3
     5SBS,                    !- Layer 4
     20shuinishajiang,        !- Layer 5
     30shaojietaoli,          !- Layer 6
@@ -1086,7 +1086,7 @@ Construction,
     Exterior Roof6,          !- Name
     20SuiShiLuanShi,         !- Outside Layer
     20shuinishajiang,        !- Layer 2
-    60NanRanXinJiSuJuBenBan, !- Layer 3
+    70NanRanXinJiSuJuBenBan, !- Layer 3
     5SBS,                    !- Layer 4
     20shuinishajiang,        !- Layer 5
     30shaojietaoli,          !- Layer 6
@@ -1096,7 +1096,7 @@ Construction,
     Exterior Roof7,          !- Name
     20SuiShiLuanShi,         !- Outside Layer
     20shuinishajiang,        !- Layer 2
-    70NanRanXinJiSuJuBenBan, !- Layer 3
+    80NanRanXinJiSuJuBenBan, !- Layer 3
     5SBS,                    !- Layer 4
     20shuinishajiang,        !- Layer 5
     30shaojietaoli,          !- Layer 6
@@ -1106,7 +1106,7 @@ Construction,
     Exterior Roof8,          !- Name
     20SuiShiLuanShi,         !- Outside Layer
     20shuinishajiang,        !- Layer 2
-    80NanRanXinJiSuJuBenBan, !- Layer 3
+    90NanRanXinJiSuJuBenBan, !- Layer 3
     5SBS,                    !- Layer 4
     20shuinishajiang,        !- Layer 5
     30shaojietaoli,          !- Layer 6
@@ -1116,7 +1116,7 @@ Construction,
     Exterior Roof9,          !- Name
     20SuiShiLuanShi,         !- Outside Layer
     20shuinishajiang,        !- Layer 2
-    90NanRanXinJiSuJuBenBan, !- Layer 3
+    100NanRanXinJiSuJuBenBan, !- Layer 3
     5SBS,                    !- Layer 4
     20shuinishajiang,        !- Layer 5
     30shaojietaoli,          !- Layer 6

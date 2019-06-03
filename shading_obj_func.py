@@ -11,9 +11,9 @@ EP_OUT_CSV = "eplusout.csv"
 
 """economic specs"""
 wall_and_roof_specs = [  # NOTE: need change for new model.
-    [14.2554, 20], [21.3831, 30], [28.5108, 40], [35.6385, 50],
-    [42.7662, 60], [49.8939, 70], [57.0216, 80], [64.1493, 90],
-    [71.277, 100]]
+    [7.1277, 10], [14.2554, 20], [21.3831, 30], [28.5108, 40],
+    [35.6385, 50], [42.7662, 60], [49.8939, 70], [57.0216, 80],
+    [64.1493, 90], [71.277, 100]]
 C_e_wall = 30
 C_e_roof = 40
 
@@ -38,17 +38,22 @@ def f1_energy_consumption(*args) -> float:
 
     with open(ep_tbl_path, "r") as f:
         data = f.readlines()
+
+        break_word = False
         for i, _ in enumerate(data):
+            if break_word:
+                break
             if "Utility Use Per Total Floor Area" in data[i]:
                 for line in data[i:]:
                     if "HVAC" in line:
                         s = line.split(",")
                         winter_consumption = float(s[5])
                         summer_consumption = float(s[6])
-                        print(winter_consumption)
-                        print(summer_consumption)
+
+                        break_word = True
                         break
         energy_consumption = winter_consumption / cop + summer_consumption / cop
+        print("energy_consumption", energy_consumption)
 
     return energy_consumption
 
