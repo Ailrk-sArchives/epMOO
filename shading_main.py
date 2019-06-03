@@ -29,9 +29,16 @@ def main():
     direction = (0, 359)
     airchange = (0, 39)
     cop = (2.0, 3.5)
-    shading_direction = discrete_interval((1, 4))  # shading in east, west, south, north respectively.
-    paras = [outerwall, roof, window, easterate, westrate, southrate,
-             northrate, direction, airchange, cop, shading_direction]
+    east_shading = discrete_interval((0, 1))
+    west_shading = discrete_interval((0, 1))
+    south_shading = discrete_interval((0, 1))
+    north_shading = discrete_interval((0, 1))
+    # shading_direction = discrete_interval((1, 4))  # shading in east, west, south, north respectively.
+    paras = [outerwall, roof, window,
+             easterate, westrate, southrate,
+             northrate, direction, airchange,
+             cop, east_shading, west_shading,
+             south_shading, north_shading]
 
     """Algorithm parameter"""
     hyperparameter = {

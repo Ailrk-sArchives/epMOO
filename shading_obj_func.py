@@ -10,18 +10,19 @@ EP_TBL = "eplustbl.csv"
 EP_OUT_CSV = "eplusout.csv"
 
 """economic specs"""
-wall_and_roof_specs = [
+wall_and_roof_specs = [  # NOTE: need change for new model.
     [14.2554, 20], [21.3831, 30], [28.5108, 40], [35.6385, 50],
-    [42.7662, 60], [49.8939, 70], [57.0216, 80], [64.1493, 90]]
+    [42.7662, 60], [49.8939, 70], [57.0216, 80], [64.1493, 90],
+    [71.277, 100]]
 C_e_wall = 30
 C_e_roof = 40
 
 window_specs = [116.51, 266, 163.39]
 C_e_win = 30
-total_AC_area = 1174.6
-wall_area = 792
-roof_area = 484
-# NOTE: Window area will change accroding to the winwallratio.
+total_area = 2048.35
+surface_area = 1617.58  # wall_area = surface_area - window_area
+roof_area = 402.83
+# Window area will change accroding to the winwallratio.
 
 
 def f1_energy_consumption(*args) -> float:
@@ -62,9 +63,9 @@ def f2_aPMV(*args) -> float:
     with EPOutputReader(ep_out_csv_path) as ep_table:
         pmv_list: List = []
         for row in ep_table.reader:
-            if float(row["BEDROOM2.2:Zone Ideal Loads Zone Total Heating Energy [J](Hourly)"]) == 0 and \
-               float(row["BEDROOM2.2:Zone Ideal Loads Zone Total Cooling Energy [J](Hourly)"]) == 0:
-                pmv_list.append(row["BEDROOM2.2:Zone Thermal Comfort Fanger Model PMV [](Hourly) "])
+            if float(row["3F-B-BED2 IDEAL LOADS AIR SYSTEM:Zone Ideal Loads Zone Total Heating Energy [J](Hourly)"]) == 0 and \
+               float(row["3F-B-BED2 IDEAL LOADS AIR SYSTEM:Zone Ideal Loads Zone Total Cooling Energy [J](Hourly)"]) == 0:
+                pmv_list.append(row["3F-B-BED2 BEDROOM-B:Zone Thermal Comfort Fanger Model PMV [](Hourly) "])
 
         pmv_list = list(map(lambda x: float(x), pmv_list))
         pmv_list_summer = list(filter(lambda x: x >= 0, pmv_list))
@@ -97,6 +98,8 @@ def f3_economy(*args) -> float:
                         s = line.split(",")
                         window_area = float(s[2])
 
+    wall_area = surface_area - window_area  # NOTE
+
     C_i_wall = wall_and_roof_specs[wall_id][0]
     C_i_roof = wall_and_roof_specs[roof_id][0]
     C_i_win = window_specs[win_id]
@@ -106,6 +109,6 @@ def f3_economy(*args) -> float:
     divident = (C_i_wall * delta_wall + C_e_wall) * wall_area + \
                (C_i_win + C_e_win) * window_area + \
                (C_i_roof * delta_roof + C_e_roof) * roof_area
-    price = divident / total_AC_area
+    price = divident / total_area
 
     return price

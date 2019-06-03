@@ -1,7 +1,6 @@
 from moo.idfhandler import Preamble, override, IdfModel, IdfIOStream
 from typing import Dict, List, Tuple
 import os
-import shutil
 import time
 import subprocess
 
@@ -27,7 +26,8 @@ class ShadingPreamble(Preamble):
         self._output_idf_file = os.path.join(self._paths["OUTPUT_PATH"], self._pid, "in.idf")  # temp/pid/in.idf
 
         winwallrate = self._args[3:7]
-        shading_dir = self.__shading_direction(args[10])
+        shading_dirs = self._args[10:14]
+
         with IdfIOStream(input_path=self._paths["IDF_FILE"],
                          output_path=self._output_idf_file, mode="idf") as idf:
 
@@ -36,16 +36,16 @@ class ShadingPreamble(Preamble):
 
             # appaned newly calculated structures.
             for w in self.east_list:
-                data = self.generate_window("east", w[0], w[1:], winwallrate[0], shading_dir)
+                data = self.generate_window("east", w[0], w[1:], winwallrate[0], shading_dirs)
                 idf.append(data)
             for w in self.west_list:
-                data = self.generate_window("west", w[0], w[1:], winwallrate[1], shading_dir)
+                data = self.generate_window("west", w[0], w[1:], winwallrate[1], shading_dirs)
                 idf.append(data)
             for w in self.south_list:
-                data = self.generate_window("south", w[0], w[1:], winwallrate[2], shading_dir)
+                data = self.generate_window("south", w[0], w[1:], winwallrate[2], shading_dirs)
                 idf.append(data)
             for w in self.north_list:
-                data = self.generate_window("north", w[0], w[1:], winwallrate[3], shading_dir)
+                data = self.generate_window("north", w[0], w[1:], winwallrate[3], shading_dirs)
                 idf.append(data)
 
         self.run_energy_plus()  # file will be written when out of the context manager.
@@ -82,7 +82,7 @@ class ShadingPreamble(Preamble):
         idf.sub([r"(.*)\d+.\d+(.*North Axis.*)"], r"\g<1>{}\2".format(direction), lines, idx)  # TODO doesn't exist.
         # idf.sub([r".*tongfengcishubianliang", r"([\s]+)\d+(.*Air Changes per Hour.*)"], r"\g<1>{}\2".format(str(airchange)), lines, idx)
 
-    def generate_window(self, direction: str, floor_num: str, pos: List[Tuple], rate: float, shading_dir: str) -> List[str]:
+    def generate_window(self, direction: str, floor_num: str, pos: List[Tuple], rate: float, shading_dirs: List) -> List[str]:
         # convert pos from string to float
         # pos = [(x1, y1, z1)
         #        (x2, y2, z2)
@@ -91,10 +91,8 @@ class ShadingPreamble(Preamble):
         data = []
         pos = [tuple([float(e.strip()) for e in one_point]) for one_point in pos]
         new_coord: List = [[], [], [], []]
-        CB0, CB1, CB2, CB3 = self.__calculate_win_pos(
-            direction, floor_num, pos, rate
-        )
-        shading = "external shading control," if shading_dir == direction else ","
+        CB0, CB1, CB2, CB3 = self.__calculate_win_pos(direction, floor_num, pos, rate)
+        shading = self.__shading_direction(direction, shading_dirs)
 
         # calculate the coordiate according to the direction.
         if direction == "east":
@@ -173,21 +171,12 @@ class ShadingPreamble(Preamble):
 
         return (CB0, CB1, CB2, CB3)
 
-    def __shading_direction(self, shading: str) -> str:
-        shading_number = int(shading)
-        assert shading_number >= 1 and shading_number <= 4
-
-        if shading_number == 1:
-            return "east"
-
-        elif shading_number == 2:
-            return "west"
-
-        elif shading_number == 3:
-            return "south"
-
-        else:
-            return "north"
+    def __shading_direction(self, direction, shading_dirs: List) -> str:
+        # control the shading base on the direction.
+        dir_map = {"east": 0, "west": 1, "south": 2, "north": 3}
+        for idx, _ in shading_dirs:
+            shading_dirs[idx] = int(shading_dirs[idx])
+        return "external shading control," if dir_map[direction] == 1 else ","
 
     def run_energy_plus(self):
         output_dir = os.path.join(os.path.abspath(self._paths["OUTPUT_PATH"]), self._pid)

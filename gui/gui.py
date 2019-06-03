@@ -13,7 +13,7 @@ class MooWidget(flx.Widget):
 
     def init(self):
         with flx.HFix(flex=2):
-            with flx.VBox():
+            with flx.VBox(title='leftside'):
                 with flx.GroupWidget(minsize=380) as self.model_params:
                     self.model_params.set_title("MODEL PARAMTERS")
                     with flx.FormLayout() as self.model_params_form:
@@ -30,12 +30,11 @@ class MooWidget(flx.Widget):
                         self.cop = flx.LineEdit(title='cop', text='2.0, 3.5')
                         self.shading_direction = flx.LineEdit(title='shading direction', text='1, 4')
                         flx.Widget(flex=1)
-
                 with flx.GroupWidget() as self.control_panel:
                     self.control_panel.set_title("CONTROL PANEL")
                     self.run_button = flx.Button(text='Run')
 
-            with flx.VBox():
+            with flx.VBox(title='rightside'):
                 with flx.GroupWidget(minsize=230) as self.algo_params:
                     self.algo_params.set_title("ALGORITHM PARAMETERS")
                     with flx.FormLayout() as self.algo_params_model:
