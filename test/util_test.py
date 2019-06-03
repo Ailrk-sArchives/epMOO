@@ -1,6 +1,6 @@
 import sys
 sys.path.append("../")
-from utils import generate_new_construction
+from moo.utils import generate_new_construction
 
 s = generate_new_construction(
         "2.1",
