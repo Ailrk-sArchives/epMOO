@@ -94,6 +94,8 @@ def f3_economy(*args) -> float:
     roof_id = interval_to_list_idx(args[1]) + 1
     win_id = interval_to_list_idx(args[2])
 
+    local_electircity_fee = 0.53
+
     window_area: float = 0
 
     with open(ep_tbl_path, "r") as f:
@@ -116,6 +118,8 @@ def f3_economy(*args) -> float:
     divident = (C_i_wall * delta_wall + C_e_wall) * wall_area + \
                (C_i_win + C_e_win) * window_area + \
                (C_i_roof * delta_roof + C_e_roof) * roof_area
-    price = divident / total_ac_area
+    C_in = divident / total_ac_area
+    C_o = f1_energy_consumption(*args) * local_electircity_fee * (1 - (1 + 0.049) ** -20) / 0.049
+    LCC = C_in + C_o
 
-    return price
+    return LCC

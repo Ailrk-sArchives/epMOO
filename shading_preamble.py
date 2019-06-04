@@ -64,10 +64,29 @@ class ShadingPreamble(Preamble):
         win_str = r"(.*)Exterior Window" + str(int(self._args[2]))
         coord_str = [r"[\s]+(-?(?:[\d+]|\d+\.[\de-]+))[,;].*Vertex .*"] * 3
 
-        idf.sub([wall_str], r"\1Exterior Wall", lines, idx)
-        idf.sub([roof_str], r"\1Exterior Roof", lines, idx)
-        idf.sub([win_str], r"\1Exterior Window", lines, idx)
+        idf.sub(
+            [
+                wall_str
+            ],
+            r"\1Exterior Wall",
+            lines, idx
+        )
+        idf.sub(
+            [
+                roof_str
+            ],
+            r"\1Exterior Roof",
+            lines, idx
+        )
+        idf.sub(
+            [
+                win_str
+            ],
+            r"\1Exterior Window",
+            lines, idx
+        )
 
+        # grap wall coordinates
         idf.grap(
             self.east_list,
             [
@@ -326,6 +345,8 @@ class ShadingPreamble(Preamble):
 
     def __create_pid_dir(self, ):
         pid_dir = os.path.join(self._paths["OUTPUT_PATH"], self._pid)  # temp/pid/in.idf
+        if not os.path.exists(os.path.abspath('temp')):
+            os.mkdir(os.path.mkdir(os.path.abspath('temp')))
         if not os.path.exists(pid_dir):
             os.mkdir(pid_dir)
         # shutil.copy('./Energy+.idd', pid_dir)
