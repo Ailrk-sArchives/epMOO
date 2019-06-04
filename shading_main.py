@@ -33,12 +33,13 @@ def main():
     west_shading = discrete_interval((0, 1))
     south_shading = discrete_interval((0, 1))
     north_shading = discrete_interval((0, 1))
+    infiltration_air_change = (0.3, 1.0)  # NOTE new param 2019-06-04
     # shading_direction = discrete_interval((1, 4))  # shading in east, west, south, north respectively.
     paras = [outerwall, roof, window,
              easterate, westrate, southrate,
              northrate, direction, airchange,
              cop, east_shading, west_shading,
-             south_shading, north_shading]
+             south_shading, north_shading, infiltration_air_change]
 
     """Algorithm parameter"""
     hyperparameter = {
@@ -54,7 +55,9 @@ def main():
     shading_model_constants: Dict = {
         "FLOOR_HEIGHT": 3,
         "WINDOW_HEIGHT": 1.5,
-        "WINDOW_EDG_HEIGHT": 1
+        "WINDOW_EDG_HEIGHT": 1,
+        "HEATING_SETPOINT": 17,  # NOTE new param 2019-06-04
+        "COOLING_SETPOINT": 25
     }
 
     """path constants"""

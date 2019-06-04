@@ -1,8 +1,9 @@
-from moo.idfhandler import Preamble, override, IdfModel, IdfIOStream
+from moo.idfhandler import Preamble, override, IdfModel, IdfIOStream, SearchAnchor, SubAnchor
 from typing import Dict, List, Tuple
 import os
 import time
 import subprocess
+
 
 # paras = [outerwall, roof, window, easterate, westrate, southrate,
 #          northrate, direction, airchange, cop, shading]
@@ -54,6 +55,7 @@ class ShadingPreamble(Preamble):
     def _operator(self, idf: IdfModel, lines: List[str], idx: int):
 
         direction = self._args[7]
+        infiltration_air_change = self._args[14]
         # airchange = self._args[8]
 
         # change Exterior Wall
@@ -66,21 +68,140 @@ class ShadingPreamble(Preamble):
         idf.sub([roof_str], r"\1Exterior Roof", lines, idx)
         idf.sub([win_str], r"\1Exterior Window", lines, idx)
 
-        idf.grap(self.east_list, [r"[\s]+eastwall(.*\..*),", *coord_str,
-                 *coord_str, *coord_str, *coord_str], lines, idx,
-                 grouping=(1, 3, 3, 3, 3))
-        idf.grap(self.west_list, [r"[\s]+westwall(.*\..*),", *coord_str,
-                 *coord_str, *coord_str, *coord_str], lines, idx,
-                 grouping=(1, 3, 3, 3, 3))
-        idf.grap(self.south_list, [r"[\s]+southwall(.*\..*),", *coord_str,
-                 *coord_str, *coord_str, *coord_str], lines, idx,
-                 grouping=(1, 3, 3, 3, 3))
-        idf.grap(self.north_list, [r"[\s]+northwall(.*\..*),", *coord_str,
-                 *coord_str, *coord_str, *coord_str], lines, idx,
-                 grouping=(1, 3, 3, 3, 3))
+        idf.grap(
+            self.east_list,
+            [
+                r"[\s]+eastwall(.*\..*),",
+                *coord_str,
+                *coord_str,
+                *coord_str,
+                *coord_str
+            ],
+            lines, idx,
+            grouping=(1, 3, 3, 3, 3)
+        )
 
-        idf.sub([r"(.*)\d+.\d+(.*North Axis.*)"], r"\g<1>{}\2".format(direction), lines, idx)  # TODO doesn't exist.
-        # idf.sub([r".*tongfengcishubianliang", r"([\s]+)\d+(.*Air Changes per Hour.*)"], r"\g<1>{}\2".format(str(airchange)), lines, idx)
+        idf.grap(
+            self.west_list,
+            [
+                r"[\s]+westwall(.*\..*),",
+                *coord_str,
+                *coord_str,
+                *coord_str,
+                *coord_str
+            ],
+            lines, idx,
+            grouping=(1, 3, 3, 3, 3)
+        )
+
+        idf.grap(
+            self.south_list,
+            [
+                r"[\s]+southwall(.*\..*),",
+                *coord_str,
+                *coord_str,
+                *coord_str,
+                *coord_str
+            ],
+            lines, idx,
+            grouping=(1, 3, 3, 3, 3)
+        )
+
+        idf.grap(
+            self.north_list,
+            [
+                r"[\s]+northwall(.*\..*),",
+                *coord_str,
+                *coord_str,
+                *coord_str,
+                *coord_str
+            ],
+            lines, idx,
+            grouping=(1, 3, 3, 3, 3)
+        )
+
+        idf.sub(
+            [
+                SubAnchor.numeric_value(r"North Axis")
+            ],
+            r"\g<1>{}\g<2>".format(direction),
+            lines, idx
+        )
+
+        idf.sub(
+            [
+
+                SearchAnchor.bypass_anchor(r"ZoneInfiltration:DesignFlowRate"),
+                SubAnchor.numeric_value(r" Air Changes per Hour \{1/hr\}")
+            ],
+            r"\g<1>{}\g<2>".format(infiltration_air_change),
+            lines, idx
+        )
+
+        # set the a heating setpoint.
+        idf.sub(
+            [
+                SearchAnchor.bypass_anchor("Heating setpoint"),
+                SubAnchor.numeric_value("Field 4")
+            ],
+            r"\g<1>{}\g<2>".format(self._constants["HEATING_SETPOINT"]),
+            lines, idx
+        )
+
+        idf.sub(
+            [
+                SearchAnchor.bypass_anchor("Heating setpoint"),
+                SubAnchor.numeric_value("Field 6")
+            ],
+            r"\g<1>{}\g<2>".format(self._constants["HEATING_SETPOINT"]),
+            lines, idx
+        )
+
+        idf.sub(
+            [
+                SearchAnchor.bypass_anchor("Heating setpoint"),
+                SubAnchor.numeric_value("Field 14")
+            ],
+            r"\g<1>{}\g<2>".format(self._constants["HEATING_SETPOINT"]),
+            lines, idx
+        )
+
+        idf.sub(
+            [
+                SearchAnchor.bypass_anchor("Heating setpoint"),
+                SubAnchor.numeric_value("Field 16")
+            ],
+            r"\g<1>{}\g<2>".format(self._constants["HEATING_SETPOINT"]),
+            lines, idx
+        )
+
+        # set the cooling set point.
+        idf.sub(
+            [
+                SearchAnchor.bypass_anchor("Cooling setpoint"),
+                SubAnchor.numeric_value("Field 4")
+            ],
+            r"\g<1>{}\g<2>".format(self._constants["COOLING_SETPOINT"]),
+            lines, idx
+        )
+
+        idf.sub(
+            [
+                SearchAnchor.bypass_anchor("Cooling setpoint"),
+                SubAnchor.numeric_value("Field 8")
+            ],
+            r"\g<1>{}\g<2>".format(self._constants["COOLING_SETPOINT"]),
+            lines, idx
+        )
+
+        idf.sub(
+            [
+                SearchAnchor.bypass_anchor("Cooling setpoint"),
+                SubAnchor.numeric_value("Field 12")
+            ],
+            r"\g<1>{}\g<2>".format(self._constants["COOLING_SETPOINT"]),
+            lines, idx
+        )
 
     def generate_window(self, direction: str, floor_num: str, pos: List[Tuple], rate: float, shading_dirs: List) -> List[str]:
         # convert pos from string to float
