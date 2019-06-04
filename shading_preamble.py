@@ -158,15 +158,16 @@ class ShadingPreamble(Preamble):
             p1 = min(list(zip(*pos))[0])  # get max and min X positions
             p2 = max(list(zip(*pos))[0])  # delta x
         wall_length = abs(p2 - p1)
-        floor = int(floor_num.split(".")[0])  # get floor number.
+        # floor = int(floor_num.split(".")[0])  # get floor number.
 
-        # calculate coordinate for window according to coordinate for wall.
+        # calculate coordinate for window according to wall coordinates.
         wall_area = wall_length * self._constants["FLOOR_HEIGHT"]
         window_area = wall_area * rate
         window_length = window_area / self._constants["WINDOW_HEIGHT"]
         CB0 = (wall_length - window_length) / 2 + p1  # win x axis on one side
         CB1 = p2 - (wall_length - window_length) / 2  # win x axis on the other side.
-        CB2 = (floor - 1) * self._constants["FLOOR_HEIGHT"] + self._constants["WINDOW_EDG_HEIGHT"]  # lower win y axis
+        # CB2 = (floor - 1) * self._constants["FLOOR_HEIGHT"] + self._constants["WINDOW_EDG_HEIGHT"]
+        CB2 = self._constants["FLOOR_HEIGHT"] + self._constants["WINDOW_EDG_HEIGHT"]  # lower win y axis
         CB3 = CB2 + self._constants["WINDOW_HEIGHT"]  # upper win y axis
 
         return (CB0, CB1, CB2, CB3)
