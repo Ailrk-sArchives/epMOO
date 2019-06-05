@@ -56,8 +56,8 @@ def main():
         "FLOOR_HEIGHT": 3,
         "WINDOW_HEIGHT": 1.5,
         "WINDOW_EDG_HEIGHT": 1,
-        "HEATING_SETPOINT": 17,  # NOTE new param 2019-06-04
-        "COOLING_SETPOINT": 25
+        "HEATING_SETPOINT": 18,  # NOTE new param 2019-06-04
+        "COOLING_SETPOINT": 26
     }
 
     """path constants"""
