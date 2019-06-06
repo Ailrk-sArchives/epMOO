@@ -1,9 +1,0 @@
-Program Version,EnergyPlus, Version 8.7.0-78a111df4a, YMD=2019.06.06 08:26,IDD_Version 8.7.0
-   ** Warning ** Output:PreprocessorMessage="ExpandObjects" has the following Warning condition:
-   **   ~~~   ** Cannot find Energy+.idd as specified in Energy+.ini.
-   ** Warning ** Output:PreprocessorMessage="ExpandObjects" has the following Warning conditions:
-   **   ~~~   ** Since the Energy+.IDD file cannot be read no range or choice checking was
-   **   ~~~   ** performed.
-   ** Warning ** CheckEnvironmentSpecifications: SimulationControl specified doing design day simulations, but no design environments specified.
-   **   ~~~   ** ...No design environment results produced. For these results, add appropriate SizingPeriod:* objects for your simulation.
-   ** Warning ** ManageSizing: For a zone sizing run, there must be at least 1 Sizing:Zone input object. SimulationControl Zone Sizing option ignored.
