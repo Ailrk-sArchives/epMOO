@@ -119,7 +119,8 @@ def f3_economy(*args) -> float:
 
     divident = (C_i_wall * delta_wall + C_e_wall) * wall_area + \
                (C_i_win + C_e_win) * window_area + \
-               (C_i_roof * delta_roof + C_e_roof) * roof_area + \
+               (C_i_roof * delta_roof + C_e_roof) * roof_area
+
     C_in = divident / total_ac_area + infiltration_specs[infiltration_id]
     C_o = f1_energy_consumption(*args) * local_electircity_fee * (1 - (1 + 0.049) ** -20) / 0.049
     LCC = C_in + C_o

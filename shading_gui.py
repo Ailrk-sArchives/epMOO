@@ -15,6 +15,7 @@ from shading_obj_func import f3_economy as f3
 from shading_preamble import ShadingPreamble
 
 from moo.utils import discrete_interval
+from moo.utils import scale_interval
 from moo.utils import init
 from typing import Tuple
 
@@ -326,7 +327,7 @@ class Run(flx.PyWidget):
             discrete_interval(tuple(self.moo.root.west_shading_tuple)),
             discrete_interval(tuple(self.moo.root.south_shading_tuple)),
             discrete_interval(tuple(self.moo.root.north_shading_tuple)),
-            tuple(self.moo.root.infiltration_airchange_tuple)
+            discrete_interval(scale_interval(tuple(self.moo.root.infiltration_airchange_tuple), 10))
         ]
 
         """Algorithm parameter"""
