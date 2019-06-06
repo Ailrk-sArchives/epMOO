@@ -18,6 +18,7 @@ C_e_wall = 30
 C_e_roof = 40
 
 window_specs = [116.51, 266, 163.39]
+infiltration_specs = [1000, 900, 800, 700, 600, 500]
 C_e_win = 30
 total_ac_area = 1584.33
 surface_area = 1617.58  # wall_area = surface_area - window_area
@@ -93,6 +94,7 @@ def f3_economy(*args) -> float:
     wall_id = interval_to_list_idx(args[0])
     roof_id = interval_to_list_idx(args[1]) + 1
     win_id = interval_to_list_idx(args[2])
+    infiltration_id = interval_to_list_idx(args[14] - 4)
 
     local_electircity_fee = 0.53
 
@@ -107,7 +109,7 @@ def f3_economy(*args) -> float:
                         s = line.split(",")
                         window_area = float(s[2])
 
-    wall_area = surface_area - window_area  # NOTE
+    wall_area = surface_area - window_area
 
     C_i_wall = wall_and_roof_specs[wall_id][0]
     C_i_roof = wall_and_roof_specs[roof_id][0]  # NOTE economic
@@ -117,8 +119,8 @@ def f3_economy(*args) -> float:
 
     divident = (C_i_wall * delta_wall + C_e_wall) * wall_area + \
                (C_i_win + C_e_win) * window_area + \
-               (C_i_roof * delta_roof + C_e_roof) * roof_area
-    C_in = divident / total_ac_area
+               (C_i_roof * delta_roof + C_e_roof) * roof_area + \
+    C_in = divident / total_ac_area + infiltration_specs[infiltration_id]
     C_o = f1_energy_consumption(*args) * local_electircity_fee * (1 - (1 + 0.049) ** -20) / 0.049
     LCC = C_in + C_o
 

@@ -29,7 +29,7 @@ def init():
                 os.remove(os.path.abspath(os.path.join('./results', f)))
 
 
-def discrete_interval(t: Tuple[int, int]):
+def discrete_interval(t: Tuple[float, float]):
     # create close interval s.t boundary int can be reached.
     lower, upper = t
     return (lower, upper + 0.9999)
@@ -38,3 +38,11 @@ def discrete_interval(t: Tuple[int, int]):
 def interval_to_list_idx(n: float):
     # convert value generated from interval into list index.
     return int(n - 1)
+
+
+def scale_interval(t: Tuple[float, float], coefficient: float):
+    lower, upper = t
+    lower = lower * coefficient
+    upper = upper * coefficient
+    return (lower, upper)
+

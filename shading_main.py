@@ -15,6 +15,7 @@ from shading_preamble import ShadingPreamble
 
 from moo.utils import init
 from moo.utils import discrete_interval
+from moo.utils import scale_interval
 
 
 def main():
@@ -33,7 +34,7 @@ def main():
     west_shading = discrete_interval((0, 1))
     south_shading = discrete_interval((0, 1))
     north_shading = discrete_interval((0, 1))
-    infiltration_air_change = (0.3, 1.0)  # NOTE new param 2019-06-04
+    infiltration_air_change = discrete_interval(scale_interval((0.5, 1.0)))  # yield 5 - 10
     # shading_direction = discrete_interval((1, 4))  # shading in east, west, south, north respectively.
     paras = [outerwall, roof, window,
              easterate, westrate, southrate,

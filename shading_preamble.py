@@ -53,9 +53,8 @@ class ShadingPreamble(Preamble):
 
     @override
     def _operator(self, idf: IdfModel, lines: List[str], idx: int):
-
         direction = self._args[7]
-        infiltration_air_change = self._args[14]
+        infiltration_air_change = int(self._args[14]) / 10
         # airchange = self._args[8]
 
         # change Exterior Wall
