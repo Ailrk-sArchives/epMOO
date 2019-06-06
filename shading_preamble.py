@@ -63,7 +63,6 @@ class ShadingPreamble(Preamble):
         roof_str = r"(.*)Exterior Roof" + str(int(self._args[1]))
         win_str = r"(.*)Exterior Window" + str(int(self._args[2]))
         coord_str = [r"[\s]+(-?(?:[\d+]|\d+\.[\de-]+))[,;].*Vertex .*"] * 3
-
         idf.sub(
             [
                 wall_str
