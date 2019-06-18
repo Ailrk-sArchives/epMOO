@@ -17,7 +17,6 @@ from moo.utils import init
 from moo.utils import discrete_interval
 from moo.utils import scale_interval
 
-
 def main():
     """parameter"""
     outerwall = discrete_interval((1, 10))  # yield 0-7
@@ -63,7 +62,7 @@ def main():
 
     """path constants"""
     shading_model_paths: Dict = {
-        "WEATHER_FILE": "./WeatherData/CHN_Chongqing.Chongqing.Shapingba.575160_CSWD.epw",
+        "WEATHER_FILE": "../WeatherData/CHN_Chongqing.Chongqing.Shapingba.575160_CSWD.epw",
         "IDF_FILE": "shading_model_6-0603-1.idf",
         "OUTPUT_PATH": "temp/",
     }

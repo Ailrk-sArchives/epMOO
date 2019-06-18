@@ -1,5 +1,5 @@
 from moo.idfhandler import EPOutputReader
-from typing import List
+from typing import List, Dict
 import os
 from moo.utils import interval_to_list_idx
 
@@ -60,6 +60,11 @@ def f1_energy_consumption(*args) -> float:
 
 
 def f2_aPMV(*args) -> float:
+    rows: Dict = {
+        "HEATING": "3F-B-BED2 IDEAL LOADS AIR SYSTEM:Zone Ideal Loads Zone Total Heating Energy [J](Hourly)",
+        "COOLING": "3F-B-BED2 IDEAL LOADS AIR SYSTEM:Zone Ideal Loads Zone Total Cooling Energy [J](Hourly)",
+        "PMV": "3F-B-BED2 BEDROOM-B:Zone Thermal Comfort Fanger Model PMV [](Hourly) "
+    }
     pid = str(os.getpid())
     ep_out_csv_path = os.path.join(os.path.abspath("temp"), pid, EP_OUT_CSV)
 
@@ -71,9 +76,9 @@ def f2_aPMV(*args) -> float:
     with EPOutputReader(ep_out_csv_path) as ep_table:
         pmv_list: List = []
         for row in ep_table.reader:
-            if float(row["3F-B-BED2 IDEAL LOADS AIR SYSTEM:Zone Ideal Loads Zone Total Heating Energy [J](Hourly)"]) == 0 and \
-               float(row["3F-B-BED2 IDEAL LOADS AIR SYSTEM:Zone Ideal Loads Zone Total Cooling Energy [J](Hourly)"]) == 0:
-                pmv_list.append(row["3F-B-BED2 BEDROOM-B:Zone Thermal Comfort Fanger Model PMV [](Hourly) "])
+            if float(row[rows["HEATING"]]) == 0 and \
+               float(row[rows["COOLING"]]) == 0:
+                pmv_list.append(row["PMV"])
 
         pmv_list = list(map(lambda x: float(x), pmv_list))
         pmv_list_summer = list(filter(lambda x: x >= 0, pmv_list))

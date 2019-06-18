@@ -8,11 +8,11 @@ import sys
 from moo.nsga2.problem import Problem
 from moo.nsga2.evolution import Evolution
 
-from shading_obj_func import f1_energy_consumption as f1
-from shading_obj_func import f2_aPMV as f2
-from shading_obj_func import f3_economy as f3
+from wkx2132_obj_func import f1_energy_consumption as f1
+from wkx2132_obj_func import f2_aPMV as f2
+from wkx2132_obj_func import f3_economy as f3
 # from obj_func_preamble import preamble
-from shading_preamble import ShadingPreamble
+from wkx2132_preamble import Wkx2132Preamble
 
 from moo.utils import discrete_interval
 from moo.utils import scale_interval
@@ -303,8 +303,8 @@ class Run(flx.PyWidget):
     heating_setpoint_float = flx.FloatProp(18, settable=True)
     cooling_setpoint_float = flx.FloatProp(26, settable=True)
 
-    weather_file_str = flx.StringProp('./WeatherData/CHN_Chongqing.Chongqing.Shapingba.575160_CSWD.epw', settable=True)
-    idf_file_str = flx.StringProp('shading_model_6-0603-1.idf', settable=True)
+    weather_file_str = flx.StringProp('../WeatherData/CHN_Chongqing.Chongqing.Shapingba.575160_CSWD.epw', settable=True)
+    idf_file_str = flx.StringProp('./wkx2132+surface+20190618+second+3.idf', settable=True)
     output_path_str = flx.StringProp('temp/', settable=True)
 
     def init(self):
@@ -374,7 +374,7 @@ def moo_run(paras, hyperparameter, constants, paths):
 
     problem = Problem(num_of_variables=len(paras), objectives=[f1, f2, f3],
                       variables_range=paras,
-                      preamble=ShadingPreamble(constants=constants, paths=paths))
+                      preamble=Wkx2132Preamble(constants=constants, paths=paths))
 
     evo = Evolution(
         problem,
