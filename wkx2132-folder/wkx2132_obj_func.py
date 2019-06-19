@@ -2,6 +2,7 @@ from moo.idfhandler import EPOutputReader
 from typing import List, Dict
 import os
 from moo.utils import interval_to_list_idx
+import re
 
 """objective functions paras"""
 SUMMER_LAMBDA = 0.415
@@ -38,33 +39,46 @@ def f1_energy_consumption(*args) -> float:
     summer_consumption: float = 0
     winter_consumption: float = 0
 
-    with open(ep_tbl_path, "r") as f:
+    with open(ep_tbl_path, "rb") as f:
         data = f.readlines()
+        data = [d.decode('utf-8') for d in data]  # some file has unsupported latin1 chars.
 
         break_word = False
+        building_area_found = False
+
         for i, _ in enumerate(data):
             if break_word:
                 break
 
-            if "Building Area" in data[i]:
+            if re.match(r"^Building Area", data[i]) and not building_area_found:
+                print("1", data[i])
+                building_area_found = True
                 for line in data[i:]:
-                    if "Net Conditioned Building Area" in line:
+                    if re.match(r",Net Conditioned Building Area", line):
+                        print("1, ", line)
                         s = line.split(",")
                         building_area = float(s[2])
-                        continue
+                        print("1 area:", building_area)
 
-            if "End Uses" in data[i]:
-                for line in data[i:]:
-                    if "Heating" in line:
+            if re.match(r"^End Uses", data[i]):
+                print("2 End Uses found: ", data[i])
+                for line in data[i:i+5]:
+                    print("Under", line)
+                    if re.match(r",Heating,\d+.*", line):
+                        print("3", line)
                         s = line.split(",")
                         winter_consumption = float(s[2])
-                    if "Cooling" in line:
+                        print("3 winter_consumption", winter_consumption)
+
+                for line in data[i:i+5]:
+                    if re.match(r",Cooling,\d+.*", line):
+                        print("4", line)
                         s = line.split(",")
                         summer_consumption = float(s[2])
-                    break_word = True
+                        print("4 summer_consumption", summer_consumption)
+                        break_word = True
 
-
-        energy_consumption = winter_consumption / cop + summer_consumption / cop
+        energy_consumption = (winter_consumption / cop + summer_consumption / cop) / building_area
         print("energy_consumption", energy_consumption)
 
     return energy_consumption
