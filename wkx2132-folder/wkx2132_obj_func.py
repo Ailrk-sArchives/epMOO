@@ -33,6 +33,7 @@ def f1_energy_consumption(*args) -> float:
 
     print("running f1 ... in {}".format(os.getpid()))
     cop = float(args[9])
+    building_area: float = 0
     energy_consumption: float = 0
     summer_consumption: float = 0
     winter_consumption: float = 0
@@ -44,15 +45,25 @@ def f1_energy_consumption(*args) -> float:
         for i, _ in enumerate(data):
             if break_word:
                 break
-            if "Utility Use Per Conditioned Floor Area" in data[i]:
-                for line in data[i:]:
-                    if "HVAC" in line:
-                        s = line.split(",")
-                        winter_consumption = float(s[5])
-                        summer_consumption = float(s[6])
 
-                        break_word = True
-                        break
+            if "Building Area" in data[i]:
+                for line in data[i:]:
+                    if "Net Conditioned Building Area" in line:
+                        s = line.split(",")
+                        building_area = float(s[2])
+                        continue
+
+            if "End Uses" in data[i]:
+                for line in data[i:]:
+                    if "Heating" in line:
+                        s = line.split(",")
+                        winter_consumption = float(s[2])
+                    if "Cooling" in line:
+                        s = line.split(",")
+                        summer_consumption = float(s[2])
+                    break_word = True
+
+
         energy_consumption = winter_consumption / cop + summer_consumption / cop
         print("energy_consumption", energy_consumption)
 
@@ -78,7 +89,7 @@ def f2_aPMV(*args) -> float:
         for row in ep_table.reader:
             if float(row[rows["HEATING"]]) == 0 and \
                float(row[rows["COOLING"]]) == 0:
-                pmv_list.append(row["PMV"])
+                pmv_list.append(row[rows["PMV"]])
 
         pmv_list = list(map(lambda x: float(x), pmv_list))
         pmv_list_summer = list(filter(lambda x: x >= 0, pmv_list))
