@@ -91,7 +91,7 @@ def f2_aPMV(*args) -> float:
         for row in ep_table.reader:
             if float(row[rows["HEATING"]]) == 0 and \
                float(row[rows["COOLING"]]) == 0:
-                pmv_list.append(row["PMV"])
+                pmv_list.append(row[rows["PMV"]])
 
         pmv_list = list(map(lambda x: float(x), pmv_list))
         pmv_list_summer = list(filter(lambda x: x >= 0, pmv_list))
