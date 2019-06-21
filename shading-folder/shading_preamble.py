@@ -1,4 +1,5 @@
 from moo.idfhandler import Preamble, override, IdfModel, IdfIOStream, SearchAnchor, SubAnchor
+from moo.utils import interval_to_list_idx
 from typing import Dict, List, Tuple
 import os
 import time
@@ -54,8 +55,9 @@ class ShadingPreamble(Preamble):
     @override
     def _operator(self, idf: IdfModel, lines: List[str], idx: int):
         direction = self._args[7]
-        infiltration_air_change = int(self._args[14]) / 10
-        # airchange = self._args[8]
+
+        # map infiltration id to actual value. now id is 1 - 3.
+        infiltration_air_change = (lambda l: lambda x: l[x])([1, 0.8, 0.5])(interval_to_list_idx(int(self._args[14])))
 
         # change Exterior Wall
         wall_str = r"(.*)Exterior Wall" + str(int(self._args[0]))  # re.sub
