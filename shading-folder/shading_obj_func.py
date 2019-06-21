@@ -1,6 +1,7 @@
 from moo.idfhandler import EPOutputReader
 from typing import List, Dict
 import os
+import re
 from moo.utils import interval_to_list_idx
 
 """objective functions paras"""
@@ -45,7 +46,7 @@ def f1_energy_consumption(*args) -> float:
     # and we cannot just specify a set of random values it generated for just one parameter
     # without making algorithm lose its generiality.
 
-    cop = (lambda l: lambda x: l[x])([2.0, 2.5, 3.0, 3.5])(int(args[9]))
+    cop = (lambda l: lambda x: l[x])([2.0, 2.5, 3.0, 3.5])(interval_to_list_idx(int(args[9])))
     energy_consumption: float = 0
     summer_consumption: float = 0
     winter_consumption: float = 0
@@ -68,6 +69,8 @@ def f1_energy_consumption(*args) -> float:
                         break
         energy_consumption = winter_consumption / cop + summer_consumption / cop
         print("energy_consumption", energy_consumption)
+    print("log: winter_consumption", winter_consumption, os.getpid())
+    print("log: summer_consumption", winter_consumption, os.getpid())
 
     return energy_consumption
 
@@ -113,7 +116,6 @@ def f3_economy(*args) -> float:
     roof_id = interval_to_list_idx(args[1])  # there was a + 1 before. 2019-06-20
     win_id = interval_to_list_idx(args[2])
 
-    shading_list = list(map(lambda x: True if x >= 1 else False, args[10:14]))
     infiltration_id = interval_to_list_idx(args[14])
     cop_id = interval_to_list_idx(int(args[9]))
 
@@ -130,22 +132,25 @@ def f3_economy(*args) -> float:
     # grap total area of windows with shaing.
     with open(ep_tbl_path, "r") as f:
         data = f.readlines()
-        for i, _ in enumerate(data):
-            if shading_list[0] and "EASTWINDOW" in data[i]:
-                shading_win_area_with_direction["east_win_area"] = float(data[i].split(",")[3])
-            if shading_list[1] and "WESTWINDOW" in data[i]:
-                shading_win_area_with_direction["west_win_area"] = float(data[i].split(",")[3])
-            if shading_list[2] and "SOUTHWINDOW" in data[i]:
-                shading_win_area_with_direction["south_win_area"] = float(data[i].split(",")[3])
-            if shading_list[3] and "NORTHWINDOW" in data[i]:
-                shading_win_area_with_direction["north_win_area"] = float(data[i].split(",")[3])
 
-            if "Window-Wall Ratio" in data[i]:
-                for line in data[i:]:
+        for i, _ in enumerate(data):
+            if "Yes" in data[i] and "EASTWINDOW" in data[i]:
+                shading_win_area_with_direction["east_win_area"] += float(data[i].split(",")[3])
+            if "Yes" in data[i] and "WESTWINDOW" in data[i]:
+                shading_win_area_with_direction["west_win_area"] += float(data[i].split(",")[3])
+            if "Yes" in data[i] and "SOUTHWINDOW" in data[i]:
+                shading_win_area_with_direction["south_win_area"] += float(data[i].split(",")[3])
+            if "Yes" in data[i] and "NORTHWINDOW" in data[i]:
+                shading_win_area_with_direction["north_win_area"] += float(data[i].split(",")[3])
+
+            if re.match(r"Window-Wall Ratio", data[i]):
+                for line in data[i:i + 6]:
                     if "Window Opening Area [m2]" in line:
                         s = line.split(",")
                         window_area = float(s[2])
 
+    print("log: shading win areas", shading_win_area_with_direction)
+    print("log: totoal win area", window_area)
     #
     # Calculating the final cost.
     #
