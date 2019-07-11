@@ -20,7 +20,10 @@ C_e_roof = 40
 
 window_specs = [116.51, 266, 163.39]
 infiltration_specs = [1000, 900, 800, 700, 600, 500]
+ac_specs = [200, 300, 500, 900]
 C_e_win = 30
+C_i_shading = 500
+
 total_ac_area = 1584.33
 surface_area = 1617.58  # wall_area = surface_area - window_area
 roof_area = 402.83
@@ -33,15 +36,14 @@ def f1_energy_consumption(*args) -> float:
     ep_tbl_path = os.path.join(os.path.abspath("temp"), pid, EP_TBL)
 
     print("running f1 ... in {}".format(os.getpid()))
-    cop = float(args[9])
+    cop = (lambda l: lambda x: l[x])([2.0, 2.5, 3.0, 3.5])(interval_to_list_idx(int(args[9])))
     building_area: float = 0
     energy_consumption: float = 0
     summer_consumption: float = 0
     winter_consumption: float = 0
 
     with open(ep_tbl_path, "rb") as f:
-        data = f.readlines()
-        data = [d.decode('utf-8') for d in data]  # some file has unsupported latin1 chars.
+        data = [d.decode('utf-8') for d in f.readlines()]
 
         break_word = False
         building_area_found = False
@@ -51,35 +53,31 @@ def f1_energy_consumption(*args) -> float:
                 break
 
             if re.match(r"^Building Area", data[i]) and not building_area_found:
-                print("1", data[i])
                 building_area_found = True
                 for line in data[i:]:
                     if re.match(r",Net Conditioned Building Area", line):
-                        print("1, ", line)
                         s = line.split(",")
                         building_area = float(s[2])
-                        print("1 area:", building_area)
 
             if re.match(r"^End Uses", data[i]):
                 print("2 End Uses found: ", data[i])
-                for line in data[i:i+5]:
+                for line in data[i:i + 5]:
                     print("Under", line)
                     if re.match(r",Heating,\d+.*", line):
-                        print("3", line)
                         s = line.split(",")
                         winter_consumption = float(s[2])
-                        print("3 winter_consumption", winter_consumption)
 
-                for line in data[i:i+5]:
+                for line in data[i:i + 5]:
                     if re.match(r",Cooling,\d+.*", line):
-                        print("4", line)
                         s = line.split(",")
                         summer_consumption = float(s[2])
-                        print("4 summer_consumption", summer_consumption)
                         break_word = True
 
         energy_consumption = (winter_consumption / cop + summer_consumption / cop) / building_area
-        print("energy_consumption", energy_consumption)
+    print("log: cop", cop)
+    print("log: energy_consumption", energy_consumption)
+    print("log: winter_consumption", winter_consumption, os.getpid())
+    print("log: summer_consumption", winter_consumption, os.getpid())
 
     return energy_consumption
 
@@ -124,15 +122,34 @@ def f3_economy(*args) -> float:
     wall_id = interval_to_list_idx(args[0])
     roof_id = interval_to_list_idx(args[1]) + 1
     win_id = interval_to_list_idx(args[2])
+
     infiltration_id = interval_to_list_idx(args[14] - 4)
+    cop_id = interval_to_list_idx(int(args[9]))
 
     local_electircity_fee = 0.53
 
     window_area: float = 0
+    shading_win_area_with_direction: Dict = {
+        "east_win_area": 0,
+        "west_win_area": 0,
+        "south_win_area": 0,
+        "north_win_area": 0,
+    }
 
     with open(ep_tbl_path, "r") as f:
         data = f.readlines()
+
         for i, _ in enumerate(data):
+            if "Yes" in data[i] and "EASTWINDOW" in data[i]:
+                shading_win_area_with_direction["east_win_area"] += float(data[i].split(",")[3])
+            if "Yes" in data[i] and "WESTWINDOW" in data[i]:
+                shading_win_area_with_direction["west_win_area"] += float(data[i].split(",")[3])
+            if "Yes" in data[i] and "SOUTHWINDOW" in data[i]:
+                shading_win_area_with_direction["south_win_area"] += float(data[i].split(",")[3])
+            if "Yes" in data[i] and "NORTHWINDOW" in data[i]:
+                shading_win_area_with_direction["north_win_area"] += float(data[i].split(",")[3])
+
+
             if "Window-Wall Ratio" in data[i]:
                 for line in data[i:]:
                     if "Window Opening Area [m2]" in line:
@@ -147,11 +164,14 @@ def f3_economy(*args) -> float:
     delta_wall = wall_and_roof_specs[wall_id][1]
     delta_roof = wall_and_roof_specs[roof_id][1]
 
-    divident = (C_i_wall * delta_wall + C_e_wall) * wall_area + \
-               (C_i_win + C_e_win) * window_area + \
-               (C_i_roof * delta_roof + C_e_roof) * roof_area
+    divident = sum([
+        (C_i_wall * delta_wall + C_e_wall) * wall_area,
+        (C_i_win + C_e_win) * window_area,
+        (C_i_roof * delta_roof + C_e_roof) * roof_area,
+        (lambda d: sum(d.values()) * C_i_shading)(shading_win_area_with_direction)
+    ])
 
-    C_in = divident / total_ac_area + infiltration_specs[infiltration_id]
+    C_in = divident / total_ac_area + infiltration_specs[infiltration_id] + ac_specs[cop_id]
     C_o = f1_energy_consumption(*args) * local_electircity_fee * (1 - (1 + 0.049) ** -20) / 0.049
     LCC = C_in + C_o
 

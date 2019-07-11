@@ -284,12 +284,12 @@ class Run(flx.PyWidget):
     northrate_tuple = flx.TupleProp((0.05, 0.3), settable=True)
     direction_tuple = flx.TupleProp((0, 359), settable=True)
     airchange_tuple = flx.TupleProp((0, 39), settable=True)
-    cop_tuple = flx.TupleProp((2.0, 2.5), settable=True)
+    cop_tuple = flx.TupleProp((1, 4), settable=True)
     east_shading_tuple = flx.TupleProp((0, 1), settable=True)
     west_shading_tuple = flx.TupleProp((0, 1), settable=True)
     south_shading_tuple = flx.TupleProp((0, 1), settable=True)
     north_shading_tuple = flx.TupleProp((0, 1), settable=True)
-    infiltration_airchange_tuple = flx.TupleProp((0.3, 1.0), settable=True)
+    infiltration_airchange_tuple = flx.TupleProp((1, 3), settable=True)
 
     mutation_param_int = flx.IntProp(4, settable=True)
     num_of_generation_int = flx.IntProp(50, settable=True)
@@ -327,7 +327,7 @@ class Run(flx.PyWidget):
             discrete_interval(tuple(self.moo.root.west_shading_tuple)),
             discrete_interval(tuple(self.moo.root.south_shading_tuple)),
             discrete_interval(tuple(self.moo.root.north_shading_tuple)),
-            discrete_interval(scale_interval(tuple(self.moo.root.infiltration_airchange_tuple), 10))
+            discrete_interval(tuple(self.moo.root.infiltration_airchange_tuple))
         ]
 
         """Algorithm parameter"""

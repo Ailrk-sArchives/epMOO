@@ -1,0 +1,40 @@
+  Processing Data Dictionary -- Complete
+  Maximum number of Alpha Args=        4500
+  Maximum number of Numeric Args=       21040
+  Number of Object Definitions=         781
+  Number of Section Definitions=           2
+  Total Number of Alpha Fields=       18878
+  Total Number of Numeric Fields=       40216
+  Total Number of Fields=       59094
+  Processing Input Data File -- Start
+  Echo of input lines is off. May be activated by setting the environmental variable DISPLAYINPUTINAUDIT=YES
+  Processing Input Data File -- Complete
+  Maximum number of Alpha IDF Args=          50
+  Maximum number of Numeric IDF Args=          27
+  Number of IDF "Lines"=        1212
+  Number of Defaulted Fields=         657
+  Number of Fields with Defaults=        2911
+  Number of Autosized Fields=         462
+  Number of Autosizable Fields =         561
+  Number of Autocalculated Fields=         445
+  Number of Autocalculatable Fields =         445
+ Getting object=OUTPUT:SQLITE
+ Getting object=OUTPUT:PREPROCESSORMESSAGE
+ Getting object=VERSION
+ Getting object=HEATBALANCEALGORITHM
+ Getting object=TIMESTEP
+ Getting object=SIMULATIONCONTROL
+ Getting object=OUTPUT:VARIABLEDICTIONARY
+ Getting object=DESIGNSPECIFICATION:OUTDOORAIR
+ Getting object=DESIGNSPECIFICATION:ZONEAIRDISTRIBUTION
+ Getting object=SIZING:PARAMETERS
+ Getting object=ZONE
+ Getting object=ZONELIST
+ Getting object=SIZING:ZONE
+ Getting object=OUTPUT:TABLE:SUMMARYREPORTS
+ Getting object=OUTPUT:VARIABLE
+ Getting object=SIZINGPERIOD:DESIGNDAY
+ Getting object=RUNPERIOD
+ Getting object=RUNPERIODCONTROL:SPECIALDAYS
+ Getting object=SITE:GROUNDTEMPERATURE:BUILDINGSURFACE
+ Getting object=SCHEDULE:COMPACT

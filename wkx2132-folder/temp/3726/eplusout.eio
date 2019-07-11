@@ -1,0 +1,1103 @@
+Program Version,EnergyPlus, Version 8.7.0-78a111df4a, YMD=2019.06.21 03:08
+! <Version>, Version ID
+ Version, 8.7
+! <Timesteps per Hour>, #TimeSteps, Minutes per TimeStep {minutes}
+ Timesteps per Hour,  6, 10
+! <System Convergence Limits>, Minimum System TimeStep {minutes}, Max HVAC Iterations, Minimum Plant Iterations, Maximum Plant Iterations
+ System Convergence Limits, 1, 20, 2, 8
+! <Simulation Control>, Do Zone Sizing, Do System Sizing, Do Plant Sizing, Do Design Days, Do Weather Simulation, Do HVAC Sizing Simulation
+ Simulation Control, Yes, No, No, Yes, Yes, No
+! <Output Reporting Tolerances>, Tolerance for Time Heating Setpoint Not Met, Tolerance for Zone Cooling Setpoint Not Met Time
+ Output Reporting Tolerances, 0.200, 0.200, 
+! <Site:GroundTemperature:BuildingSurface>,Jan{C},Feb{C},Mar{C},Apr{C},May{C},Jun{C},Jul{C},Aug{C},Sep{C},Oct{C},Nov{C},Dec{C}
+ Site:GroundTemperature:BuildingSurface,  18.00,  18.00,  18.00,  18.00,  18.00,  18.00,  18.00,  18.00,  18.00,  18.00,  18.00,  18.00
+! <Site:GroundTemperature:FCfactorMethod>,Jan{C},Feb{C},Mar{C},Apr{C},May{C},Jun{C},Jul{C},Aug{C},Sep{C},Oct{C},Nov{C},Dec{C}
+ Site:GroundTemperature:FCfactorMethod,  13.31,  10.23,   9.39,  10.12,  14.28,  18.95,  23.34,  26.51,  27.44,  25.95,  22.35,  17.82
+! <Site:GroundTemperature:Shallow>,Jan{C},Feb{C},Mar{C},Apr{C},May{C},Jun{C},Jul{C},Aug{C},Sep{C},Oct{C},Nov{C},Dec{C}
+ Site:GroundTemperature:Shallow,  13.00,  13.00,  13.00,  13.00,  13.00,  13.00,  13.00,  13.00,  13.00,  13.00,  13.00,  13.00
+! <Site:GroundTemperature:Deep>,Jan{C},Feb{C},Mar{C},Apr{C},May{C},Jun{C},Jul{C},Aug{C},Sep{C},Oct{C},Nov{C},Dec{C}
+ Site:GroundTemperature:Deep,  16.00,  16.00,  16.00,  16.00,  16.00,  16.00,  16.00,  16.00,  16.00,  16.00,  16.00,  16.00
+! <Site:GroundReflectance>,Jan{dimensionless},Feb{dimensionless},Mar{dimensionless},Apr{dimensionless},May{dimensionless},Jun{dimensionless},Jul{dimensionless},Aug{dimensionless},Sep{dimensionless},Oct{dimensionless},Nov{dimensionless},Dec{dimensionless}
+ Site:GroundReflectance,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20
+! <Site:GroundReflectance:SnowModifier>, Normal, Daylighting {dimensionless}
+ Site:GroundReflectance:SnowModifier,   1.000,   1.000
+! <Site:GroundReflectance:Snow>,Jan{dimensionless},Feb{dimensionless},Mar{dimensionless},Apr{dimensionless},May{dimensionless},Jun{dimensionless},Jul{dimensionless},Aug{dimensionless},Sep{dimensionless},Oct{dimensionless},Nov{dimensionless},Dec{dimensionless}
+ Site:GroundReflectance:Snow,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20
+! <Site:GroundReflectance:Snow:Daylighting>,Jan{dimensionless},Feb{dimensionless},Mar{dimensionless},Apr{dimensionless},May{dimensionless},Jun{dimensionless},Jul{dimensionless},Aug{dimensionless},Sep{dimensionless},Oct{dimensionless},Nov{dimensionless},Dec{dimensionless}
+ Site:GroundReflectance:Snow:Daylighting,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20
+! <Environment:Weather Station>,Wind Sensor Height Above Ground {m},Wind Speed Profile Exponent {},Wind Speed Profile Boundary Layer Thickness {m},Air Temperature Sensor Height Above Ground {m},Wind Speed Modifier Coefficient-Internal,Temperature Modifier Coefficient-Internal
+Environment:Weather Station,10.000,0.140,270.000,1.500,1.586,9.750E-003
+! <Site:Location>, Location Name, Latitude {N+/S- Deg}, Longitude {E+/W- Deg},  Time Zone Number {GMT+/-}, Elevation {m},  Standard Pressure at Elevation {Pa}, Standard RhoAir at Elevation
+Site:Location,Chongqing Shapingba Chongqing CHN CSWD WMO#=575160,29.58,106.47,8.00,259.10,98251,1.1678
+! <Building Information>, Building Name,North Axis {deg},Terrain,  Loads Convergence Tolerance Value,Temperature Convergence Tolerance Value,  Solar Distribution,Maximum Number of Warmup Days,Minimum Number of Warmup Days
+ Building Information,Three office building,245.959,City,4.00000E-002,0.40000,FullInteriorAndExteriorWithReflectionsFromExteriorSurfaces,25,6
+! <Inside Convection Algorithm>, Algorithm {Simple | TARP | CeilingDiffuser | AdaptiveConvectionAlgorithm}
+Inside Convection Algorithm,TARP
+! <Outside Convection Algorithm>, Algorithm {SimpleCombined | TARP | MoWitt | DOE-2 | AdaptiveConvectionAlgorithm}
+Outside Convection Algorithm,DOE-2
+! <Sky Radiance Distribution>, Value {Anisotropic}
+Sky Radiance Distribution,Anisotropic
+! <Zone Air Solution Algorithm>, Value {ThirdOrderBackwardDifference | AnalyticalSolution | EulerMethod}
+ Zone Air Solution Algorithm, ThirdOrderBackwardDifference
+! <Zone Air Carbon Dioxide Balance Simulation>, Simulation {Yes/No}, Carbon Dioxide Concentration
+ Zone Air Carbon Dioxide Balance Simulation, No,N/A
+! <Zone Air Generic Contaminant Balance Simulation>, Simulation {Yes/No}, Generic Contaminant Concentration
+ Zone Air Generic Contaminant Balance Simulation, No,N/A
+! <Zone Air Mass Flow Balance Simulation>, Enforce Mass Balance, Adjust Zone Mixing, Adjust Zone Infiltration {AddInfiltration | AdjustInfiltration | None}, Infiltration Zones {MixingSourceZonesOnly | AllZones}
+ Zone Air Mass Flow Balance Simulation, No,N/A,N/A,N/A
+! <Environment:Site Atmospheric Variation>,Wind Speed Profile Exponent {},Wind Speed Profile Boundary Layer Thickness {m},Air Temperature Gradient Coefficient {K/m}
+Environment:Site Atmospheric Variation,0.330,460.000,6.500000E-003
+! <Surface Geometry>,Starting Corner,Vertex Input Direction,Coordinate System,Daylight Reference Point Coordinate System,Rectangular (Simple) Surface Coordinate System
+ Surface Geometry,UpperLeftCorner,Counterclockwise,RelativeCoordinateSystem,RelativeCoordinateSystem,RelativeToZoneOrigin
+! <ShadingProperty Reflectance>,Shading Surface Name,Shading Type,Diffuse Solar Reflectance, Diffuse Visible Reflectance,Surface Glazing Fraction,Surface Glazing Contruction
+! <Surface Heat Transfer Algorithm>, Value {CTF - ConductionTransferFunction | EMPD - MoisturePenetrationDepthConductionTransferFunction | CondFD - ConductionFiniteDifference | HAMT - CombinedHeatAndMoistureFiniteElement} - Description,Inside Surface Max Temperature Limit{C}, Surface Convection Coefficient Lower Limit {W/m2-K}, Surface Convection Coefficient Upper Limit {W/m2-K}
+Surface Heat Transfer Algorithm, CTF - ConductionTransferFunction,200,0.10,1000.0
+! <Shading Summary>, Number of Fixed Detached Shades, Number of Building Detached Shades, Number of Attached Shades
+ Shading Summary,0,0,0
+! <Zone Summary>, Number of Zones, Number of Zone Surfaces, Number of SubSurfaces
+ Zone Summary,33,222,0
+! <Zone Information>,Zone Name,North Axis {deg},Origin X-Coordinate {m},Origin Y-Coordinate {m},Origin Z-Coordinate {m},Centroid X-Coordinate {m},Centroid Y-Coordinate {m},Centroid Z-Coordinate {m},Type,Zone Multiplier,Zone List Multiplier,Minimum X {m},Maximum X {m},Minimum Y {m},Maximum Y {m},Minimum Z {m},Maximum Z {m},Ceiling Height {m},Volume {m3},Zone Inside Convection Algorithm {Simple-Detailed-CeilingDiffuser-TrombeWall},Zone Outside Convection Algorithm {Simple-Detailed-Tarp-MoWitt-DOE-2-BLAST}, Floor Area {m2},Exterior Gross Wall Area {m2},Exterior Net Wall Area {m2},Exterior Window Area {m2}, Number of Surfaces, Number of SubSurfaces, Number of Shading SubSurfaces,  Part of Total Building Area
+ Zone Information, THERMAL ZONE: SPACE 101,0.0,0.00,7.20,-1.02E-015,-4.02,0.18,1.85,1,1,1,-8.04,0.00,-2.93,3.29,-1.02E-015,3.70,3.70,95.90,TARP,DOE-2,25.92,39.96,39.96,0.00,6,0,0,Yes
+ Zone Information, THERMAL ZONE: SPACE 102,0.0,3.60,7.20,-4.59E-016,-5.49,3.46,1.85,1,1,1,-9.51,-1.47,0.35,6.58,-4.59E-016,3.70,3.70,95.90,TARP,DOE-2,25.92,13.32,13.32,0.00,6,0,0,Yes
+ Zone Information, THERMAL ZONE: SPACE 103,0.0,7.20,7.20,-2.38E-016,-6.95,6.75,1.85,1,1,1,-10.98,-2.93,3.64,9.86,-2.38E-016,3.70,3.70,95.90,TARP,DOE-2,25.92,13.32,13.32,0.00,6,0,0,Yes
+ Zone Information, THERMAL ZONE: SPACE 104,0.0,10.80,7.20,-1.67E-016,-8.42,10.04,1.85,1,1,1,-12.44,-4.40,6.93,13.15,-1.67E-016,3.70,3.70,95.90,TARP,DOE-2,25.92,13.32,13.32,0.00,6,0,0,Yes
+ Zone Information, THERMAL ZONE: SPACE 105,0.0,18.00,0.00,0.00,-9.89,13.33,1.85,1,1,1,-13.91,-5.87,10.22,16.44,0.00,3.70,3.70,95.90,TARP,DOE-2,25.92,39.96,39.96,0.00,6,0,0,Yes
+ Zone Information, THERMAL ZONE: SPACE 106,0.0,18.00,9.60,-1.40E-015,-11.34,4.80,1.85,1,1,1,-16.10,-6.58,-3.91,13.51,-1.40E-015,3.70,3.70,159.84,TARP,DOE-2,43.20,17.76,17.76,0.00,14,0,0,Yes
+ Zone Information, THERMAL ZONE: SPACE 107,0.0,0.00,16.80,-4.29E-015,-12.79,-3.73,1.85,1,1,1,-16.81,-8.77,-6.84,-0.62,-4.29E-015,3.70,3.70,95.90,TARP,DOE-2,25.92,39.96,39.96,0.00,6,0,0,Yes
+ Zone Information, THERMAL ZONE: SPACE 108,0.0,3.60,16.80,-1.93E-015,-14.25,-0.45,1.85,1,1,1,-18.28,-10.23,-3.56,2.66,-1.93E-015,3.70,3.70,95.90,TARP,DOE-2,25.92,13.32,13.32,0.00,6,0,0,Yes
+ Zone Information, THERMAL ZONE: SPACE 109,0.0,7.20,16.80,-9.93E-016,-15.72,2.84,1.85,1,1,1,-19.74,-11.70,-0.27,5.95,-9.93E-016,3.70,3.70,95.90,TARP,DOE-2,25.92,13.32,13.32,0.00,6,0,0,Yes
+ Zone Information, THERMAL ZONE: SPACE 110,0.0,10.80,16.80,-6.89E-016,-17.19,6.13,1.85,1,1,1,-21.21,-13.17,3.02,9.24,-6.89E-016,3.70,3.70,95.90,TARP,DOE-2,25.92,13.32,13.32,0.00,6,0,0,Yes
+ Zone Information, THERMAL ZONE: SPACE 111,0.0,18.00,9.60,-1.40E-015,-18.65,9.42,1.85,1,1,1,-22.68,-14.63,6.31,12.53,-1.40E-015,3.70,3.70,95.90,TARP,DOE-2,25.92,39.96,39.96,0.00,6,0,0,Yes
+ Zone Information, THERMAL ZONE: SPACE 201,0.0,0.00,7.20,3.70,-4.02,0.18,5.55,1,1,1,-8.04,0.00,-2.93,3.29,3.70,7.40,3.70,95.90,TARP,DOE-2,25.92,39.96,39.96,0.00,6,0,0,Yes
+ Zone Information, THERMAL ZONE: SPACE 202,0.0,3.60,7.20,3.70,-5.49,3.46,5.55,1,1,1,-9.51,-1.47,0.35,6.58,3.70,7.40,3.70,95.90,TARP,DOE-2,25.92,13.32,13.32,0.00,6,0,0,Yes
+ Zone Information, THERMAL ZONE: SPACE 203,0.0,7.20,7.20,3.70,-6.95,6.75,5.55,1,1,1,-10.98,-2.93,3.64,9.86,3.70,7.40,3.70,95.90,TARP,DOE-2,25.92,13.32,13.32,0.00,6,0,0,Yes
+ Zone Information, THERMAL ZONE: SPACE 204,0.0,10.80,7.20,3.70,-8.42,10.04,5.55,1,1,1,-12.44,-4.40,6.93,13.15,3.70,7.40,3.70,95.90,TARP,DOE-2,25.92,13.32,13.32,0.00,6,0,0,Yes
+ Zone Information, THERMAL ZONE: SPACE 205,0.0,18.00,0.00,3.70,-9.89,13.33,5.55,1,1,1,-13.91,-5.87,10.22,16.44,3.70,7.40,3.70,95.90,TARP,DOE-2,25.92,39.96,39.96,0.00,6,0,0,Yes
+ Zone Information, THERMAL ZONE: SPACE 206,0.0,18.00,9.60,3.70,-11.34,4.80,5.55,1,1,1,-16.10,-6.58,-3.91,13.51,3.70,7.40,3.70,159.84,TARP,DOE-2,43.20,17.76,17.76,0.00,14,0,0,Yes
+ Zone Information, THERMAL ZONE: SPACE 207,0.0,0.00,16.80,3.70,-12.79,-3.73,5.55,1,1,1,-16.81,-8.77,-6.84,-0.62,3.70,7.40,3.70,95.90,TARP,DOE-2,25.92,39.96,39.96,0.00,6,0,0,Yes
+ Zone Information, THERMAL ZONE: SPACE 208,0.0,3.60,16.80,3.70,-14.25,-0.45,5.55,1,1,1,-18.28,-10.23,-3.56,2.66,3.70,7.40,3.70,95.90,TARP,DOE-2,25.92,13.32,13.32,0.00,6,0,0,Yes
+ Zone Information, THERMAL ZONE: SPACE 209,0.0,7.20,16.80,3.70,-15.72,2.84,5.55,1,1,1,-19.74,-11.70,-0.27,5.95,3.70,7.40,3.70,95.90,TARP,DOE-2,25.92,13.32,13.32,0.00,6,0,0,Yes
+ Zone Information, THERMAL ZONE: SPACE 210,0.0,10.80,16.80,3.70,-17.19,6.13,5.55,1,1,1,-21.21,-13.17,3.02,9.24,3.70,7.40,3.70,95.90,TARP,DOE-2,25.92,13.32,13.32,0.00,6,0,0,Yes
+ Zone Information, THERMAL ZONE: SPACE 211,0.0,18.00,9.60,3.70,-18.65,9.42,5.55,1,1,1,-22.68,-14.63,6.31,12.53,3.70,7.40,3.70,95.90,TARP,DOE-2,25.92,39.96,39.96,0.00,6,0,0,Yes
+ Zone Information, THERMAL ZONE: SPACE 301,0.0,0.00,7.20,7.40,-4.02,0.18,9.25,1,1,1,-8.04,0.00,-2.93,3.29,7.40,11.10,3.70,95.90,TARP,DOE-2,25.92,39.96,39.96,0.00,6,0,0,Yes
+ Zone Information, THERMAL ZONE: SPACE 302,0.0,3.60,7.20,7.40,-5.49,3.46,9.25,1,1,1,-9.51,-1.47,0.35,6.58,7.40,11.10,3.70,95.90,TARP,DOE-2,25.92,13.32,13.32,0.00,6,0,0,Yes
+ Zone Information, THERMAL ZONE: SPACE 303,0.0,7.20,7.20,7.40,-6.95,6.75,9.25,1,1,1,-10.98,-2.93,3.64,9.86,7.40,11.10,3.70,95.90,TARP,DOE-2,25.92,13.32,13.32,0.00,6,0,0,Yes
+ Zone Information, THERMAL ZONE: SPACE 304,0.0,10.80,7.20,7.40,-8.42,10.04,9.25,1,1,1,-12.44,-4.40,6.93,13.15,7.40,11.10,3.70,95.90,TARP,DOE-2,25.92,13.32,13.32,0.00,6,0,0,Yes
+ Zone Information, THERMAL ZONE: SPACE 305,0.0,18.00,0.00,7.40,-9.89,13.33,9.25,1,1,1,-13.91,-5.87,10.22,16.44,7.40,11.10,3.70,95.90,TARP,DOE-2,25.92,39.96,39.96,0.00,6,0,0,Yes
+ Zone Information, THERMAL ZONE: SPACE 306,0.0,18.00,9.60,7.40,-11.34,4.80,9.25,1,1,1,-16.10,-6.58,-3.91,13.51,7.40,11.10,3.70,159.84,TARP,DOE-2,43.20,17.76,17.76,0.00,14,0,0,Yes
+ Zone Information, THERMAL ZONE: SPACE 307,0.0,0.00,16.80,7.40,-12.79,-3.73,9.25,1,1,1,-16.81,-8.77,-6.84,-0.62,7.40,11.10,3.70,95.90,TARP,DOE-2,25.92,39.96,39.96,0.00,6,0,0,Yes
+ Zone Information, THERMAL ZONE: SPACE 308,0.0,3.60,16.80,7.40,-14.25,-0.45,9.25,1,1,1,-18.28,-10.23,-3.56,2.66,7.40,11.10,3.70,95.90,TARP,DOE-2,25.92,13.32,13.32,0.00,6,0,0,Yes
+ Zone Information, THERMAL ZONE: SPACE 309,0.0,7.20,16.80,7.40,-15.72,2.84,9.25,1,1,1,-19.74,-11.70,-0.27,5.95,7.40,11.10,3.70,95.90,TARP,DOE-2,25.92,13.32,13.32,0.00,6,0,0,Yes
+ Zone Information, THERMAL ZONE: SPACE 310,0.0,10.80,16.80,7.40,-17.19,6.13,9.25,1,1,1,-21.21,-13.17,3.02,9.24,7.40,11.10,3.70,95.90,TARP,DOE-2,25.92,13.32,13.32,0.00,6,0,0,Yes
+ Zone Information, THERMAL ZONE: SPACE 311,0.0,18.00,9.60,7.40,-18.65,9.42,9.25,1,1,1,-22.68,-14.63,6.31,12.53,7.40,11.10,3.70,95.90,TARP,DOE-2,25.92,39.96,39.96,0.00,6,0,0,Yes
+! <Zone Internal Gains Nominal>,Zone Name, Floor Area {m2},# Occupants,Area per Occupant {m2/person},Occupant per Area {person/m2},Interior Lighting {W/m2},Electric Load {W/m2},Gas Load {W/m2},Other Load {W/m2},Hot Water Eq {W/m2},Steam Equipment {W/m2},Sum Loads per Area {W/m2},Outdoor Controlled Baseboard Heat
+ Zone Internal Gains Nominal, THERMAL ZONE: SPACE 101,25.92,6.5,4.000,0.250,9.000,5.000,0.000,0.000,0.000,0.000,14.000,No
+ Zone Internal Gains Nominal, THERMAL ZONE: SPACE 102,25.92,6.5,4.000,0.250,9.000,5.000,0.000,0.000,0.000,0.000,14.000,No
+ Zone Internal Gains Nominal, THERMAL ZONE: SPACE 103,25.92,6.5,4.000,0.250,9.000,5.000,0.000,0.000,0.000,0.000,14.000,No
+ Zone Internal Gains Nominal, THERMAL ZONE: SPACE 104,25.92,6.5,4.000,0.250,9.000,5.000,0.000,0.000,0.000,0.000,14.000,No
+ Zone Internal Gains Nominal, THERMAL ZONE: SPACE 105,25.92,6.5,4.000,0.250,9.000,5.000,0.000,0.000,0.000,0.000,14.000,No
+ Zone Internal Gains Nominal, THERMAL ZONE: SPACE 106,43.20,10.8,4.000,0.250,9.000,5.000,0.000,0.000,0.000,0.000,14.000,No
+ Zone Internal Gains Nominal, THERMAL ZONE: SPACE 107,25.92,6.5,4.000,0.250,9.000,5.000,0.000,0.000,0.000,0.000,14.000,No
+ Zone Internal Gains Nominal, THERMAL ZONE: SPACE 108,25.92,6.5,4.000,0.250,9.000,5.000,0.000,0.000,0.000,0.000,14.000,No
+ Zone Internal Gains Nominal, THERMAL ZONE: SPACE 109,25.92,6.5,4.000,0.250,9.000,5.000,0.000,0.000,0.000,0.000,14.000,No
+ Zone Internal Gains Nominal, THERMAL ZONE: SPACE 110,25.92,6.5,4.000,0.250,9.000,5.000,0.000,0.000,0.000,0.000,14.000,No
+ Zone Internal Gains Nominal, THERMAL ZONE: SPACE 111,25.92,6.5,4.000,0.250,9.000,5.000,0.000,0.000,0.000,0.000,14.000,No
+ Zone Internal Gains Nominal, THERMAL ZONE: SPACE 201,25.92,6.5,4.000,0.250,9.000,5.000,0.000,0.000,0.000,0.000,14.000,No
+ Zone Internal Gains Nominal, THERMAL ZONE: SPACE 202,25.92,6.5,4.000,0.250,9.000,5.000,0.000,0.000,0.000,0.000,14.000,No
+ Zone Internal Gains Nominal, THERMAL ZONE: SPACE 203,25.92,6.5,4.000,0.250,9.000,5.000,0.000,0.000,0.000,0.000,14.000,No
+ Zone Internal Gains Nominal, THERMAL ZONE: SPACE 204,25.92,6.5,4.000,0.250,9.000,5.000,0.000,0.000,0.000,0.000,14.000,No
+ Zone Internal Gains Nominal, THERMAL ZONE: SPACE 205,25.92,6.5,4.000,0.250,9.000,5.000,0.000,0.000,0.000,0.000,14.000,No
+ Zone Internal Gains Nominal, THERMAL ZONE: SPACE 206,43.20,10.8,4.000,0.250,9.000,5.000,0.000,0.000,0.000,0.000,14.000,No
+ Zone Internal Gains Nominal, THERMAL ZONE: SPACE 207,25.92,6.5,4.000,0.250,9.000,5.000,0.000,0.000,0.000,0.000,14.000,No
+ Zone Internal Gains Nominal, THERMAL ZONE: SPACE 208,25.92,6.5,4.000,0.250,9.000,5.000,0.000,0.000,0.000,0.000,14.000,No
+ Zone Internal Gains Nominal, THERMAL ZONE: SPACE 209,25.92,6.5,4.000,0.250,9.000,5.000,0.000,0.000,0.000,0.000,14.000,No
+ Zone Internal Gains Nominal, THERMAL ZONE: SPACE 210,25.92,6.5,4.000,0.250,9.000,5.000,0.000,0.000,0.000,0.000,14.000,No
+ Zone Internal Gains Nominal, THERMAL ZONE: SPACE 211,25.92,6.5,4.000,0.250,9.000,5.000,0.000,0.000,0.000,0.000,14.000,No
+ Zone Internal Gains Nominal, THERMAL ZONE: SPACE 301,25.92,6.5,4.000,0.250,9.000,5.000,0.000,0.000,0.000,0.000,14.000,No
+ Zone Internal Gains Nominal, THERMAL ZONE: SPACE 302,25.92,6.5,4.000,0.250,9.000,5.000,0.000,0.000,0.000,0.000,14.000,No
+ Zone Internal Gains Nominal, THERMAL ZONE: SPACE 303,25.92,6.5,4.000,0.250,9.000,5.000,0.000,0.000,0.000,0.000,14.000,No
+ Zone Internal Gains Nominal, THERMAL ZONE: SPACE 304,25.92,6.5,4.000,0.250,9.000,5.000,0.000,0.000,0.000,0.000,14.000,No
+ Zone Internal Gains Nominal, THERMAL ZONE: SPACE 305,25.92,6.5,4.000,0.250,9.000,5.000,0.000,0.000,0.000,0.000,14.000,No
+ Zone Internal Gains Nominal, THERMAL ZONE: SPACE 306,43.20,10.8,4.000,0.250,9.000,5.000,0.000,0.000,0.000,0.000,14.000,No
+ Zone Internal Gains Nominal, THERMAL ZONE: SPACE 307,25.92,6.5,4.000,0.250,9.000,5.000,0.000,0.000,0.000,0.000,14.000,No
+ Zone Internal Gains Nominal, THERMAL ZONE: SPACE 308,25.92,6.5,4.000,0.250,9.000,5.000,0.000,0.000,0.000,0.000,14.000,No
+ Zone Internal Gains Nominal, THERMAL ZONE: SPACE 309,25.92,6.5,4.000,0.250,9.000,5.000,0.000,0.000,0.000,0.000,14.000,No
+ Zone Internal Gains Nominal, THERMAL ZONE: SPACE 310,25.92,6.5,4.000,0.250,9.000,5.000,0.000,0.000,0.000,0.000,14.000,No
+ Zone Internal Gains Nominal, THERMAL ZONE: SPACE 311,25.92,6.5,4.000,0.250,9.000,5.000,0.000,0.000,0.000,0.000,14.000,No
+! <People Internal Gains Nominal>,Name,Schedule Name,Zone Name,Zone Floor Area {m2},# Zone Occupants,Number of People {},People/Floor Area {person/m2},Floor Area per person {m2/person},Fraction Radiant,Fraction Convected,Sensible Fraction Calculation,Activity level,ASHRAE 55 Warnings,Carbon Dioxide Generation Rate,Nominal Minimum Number of People,Nominal Maximum Number of People,MRT Calculation Type,Work Efficiency, Clothing Insulation Calculation Method,Clothing Insulation Calculation Method Schedule,Clothing,Air Velocity,Fanger Calculation,Pierce Calculation,KSU Calculation
+ People Internal Gains Nominal, THERMAL ZONE: SPACE 101 PEOPLE,OCUPACY,THERMAL ZONE: SPACE 101,25.92,6.5,6.5,0.250,4.000,0.300,0.700,AutoCalculate,ACTSCHD,No,3.8200E-008,0,6,Zone Averaged,ACTSCHDF,Dynamic Clothing Model ASHRAE55,N/A,Constant-1.0,AIR VELOCITY SCHEDULE,Yes,No,No
+ People Internal Gains Nominal, THERMAL ZONE: SPACE 102 PEOPLE,OCUPACY,THERMAL ZONE: SPACE 102,25.92,6.5,6.5,0.250,4.000,0.300,0.700,AutoCalculate,ACTSCHD,No,3.8200E-008,0,6,Zone Averaged,ACTSCHDF,Dynamic Clothing Model ASHRAE55,N/A,Constant-1.0,AIR VELOCITY SCHEDULE,Yes,No,No
+ People Internal Gains Nominal, THERMAL ZONE: SPACE 103 PEOPLE,OCUPACY,THERMAL ZONE: SPACE 103,25.92,6.5,6.5,0.250,4.000,0.300,0.700,AutoCalculate,ACTSCHD,No,3.8200E-008,0,6,Zone Averaged,ACTSCHDF,Dynamic Clothing Model ASHRAE55,N/A,Constant-1.0,AIR VELOCITY SCHEDULE,Yes,No,No
+ People Internal Gains Nominal, THERMAL ZONE: SPACE 104 PEOPLE,OCUPACY,THERMAL ZONE: SPACE 104,25.92,6.5,6.5,0.250,4.000,0.300,0.700,AutoCalculate,ACTSCHD,No,3.8200E-008,0,6,Zone Averaged,ACTSCHDF,Dynamic Clothing Model ASHRAE55,N/A,Constant-1.0,AIR VELOCITY SCHEDULE,Yes,No,No
+ People Internal Gains Nominal, THERMAL ZONE: SPACE 105 PEOPLE,OCUPACY,THERMAL ZONE: SPACE 105,25.92,6.5,6.5,0.250,4.000,0.300,0.700,AutoCalculate,ACTSCHD,No,3.8200E-008,0,6,Zone Averaged,ACTSCHDF,Dynamic Clothing Model ASHRAE55,N/A,Constant-1.0,AIR VELOCITY SCHEDULE,Yes,No,No
+ People Internal Gains Nominal, THERMAL ZONE: SPACE 106 PEOPLE,OCUPACY,THERMAL ZONE: SPACE 106,43.20,10.8,10.8,0.250,4.000,0.300,0.700,AutoCalculate,ACTSCHD,No,3.8200E-008,0,10,Zone Averaged,ACTSCHDF,Dynamic Clothing Model ASHRAE55,N/A,Constant-1.0,AIR VELOCITY SCHEDULE,Yes,No,No
+ People Internal Gains Nominal, THERMAL ZONE: SPACE 107 PEOPLE,OCUPACY,THERMAL ZONE: SPACE 107,25.92,6.5,6.5,0.250,4.000,0.300,0.700,AutoCalculate,ACTSCHD,No,3.8200E-008,0,6,Zone Averaged,ACTSCHDF,Dynamic Clothing Model ASHRAE55,N/A,Constant-1.0,AIR VELOCITY SCHEDULE,Yes,No,No
+ People Internal Gains Nominal, THERMAL ZONE: SPACE 108 PEOPLE,OCUPACY,THERMAL ZONE: SPACE 108,25.92,6.5,6.5,0.250,4.000,0.300,0.700,AutoCalculate,ACTSCHD,No,3.8200E-008,0,6,Zone Averaged,ACTSCHDF,Dynamic Clothing Model ASHRAE55,N/A,Constant-1.0,AIR VELOCITY SCHEDULE,Yes,No,No
+ People Internal Gains Nominal, THERMAL ZONE: SPACE 109 PEOPLE,OCUPACY,THERMAL ZONE: SPACE 109,25.92,6.5,6.5,0.250,4.000,0.300,0.700,AutoCalculate,ACTSCHD,No,3.8200E-008,0,6,Zone Averaged,ACTSCHDF,Dynamic Clothing Model ASHRAE55,N/A,Constant-1.0,AIR VELOCITY SCHEDULE,Yes,No,No
+ People Internal Gains Nominal, THERMAL ZONE: SPACE 110 PEOPLE,OCUPACY,THERMAL ZONE: SPACE 110,25.92,6.5,6.5,0.250,4.000,0.300,0.700,AutoCalculate,ACTSCHD,No,3.8200E-008,0,6,Zone Averaged,ACTSCHDF,Dynamic Clothing Model ASHRAE55,N/A,Constant-1.0,AIR VELOCITY SCHEDULE,Yes,No,No
+ People Internal Gains Nominal, THERMAL ZONE: SPACE 111 PEOPLE,OCUPACY,THERMAL ZONE: SPACE 111,25.92,6.5,6.5,0.250,4.000,0.300,0.700,AutoCalculate,ACTSCHD,No,3.8200E-008,0,6,Zone Averaged,ACTSCHDF,Dynamic Clothing Model ASHRAE55,N/A,Constant-1.0,AIR VELOCITY SCHEDULE,Yes,No,No
+ People Internal Gains Nominal, THERMAL ZONE: SPACE 201 PEOPLE,OCUPACY,THERMAL ZONE: SPACE 201,25.92,6.5,6.5,0.250,4.000,0.300,0.700,AutoCalculate,ACTSCHD,No,3.8200E-008,0,6,Zone Averaged,ACTSCHDF,Dynamic Clothing Model ASHRAE55,N/A,Constant-1.0,AIR VELOCITY SCHEDULE,Yes,No,No
+ People Internal Gains Nominal, THERMAL ZONE: SPACE 202 PEOPLE,OCUPACY,THERMAL ZONE: SPACE 202,25.92,6.5,6.5,0.250,4.000,0.300,0.700,AutoCalculate,ACTSCHD,No,3.8200E-008,0,6,Zone Averaged,ACTSCHDF,Dynamic Clothing Model ASHRAE55,N/A,Constant-1.0,AIR VELOCITY SCHEDULE,Yes,No,No
+ People Internal Gains Nominal, THERMAL ZONE: SPACE 203 PEOPLE,OCUPACY,THERMAL ZONE: SPACE 203,25.92,6.5,6.5,0.250,4.000,0.300,0.700,AutoCalculate,ACTSCHD,No,3.8200E-008,0,6,Zone Averaged,ACTSCHDF,Dynamic Clothing Model ASHRAE55,N/A,Constant-1.0,AIR VELOCITY SCHEDULE,Yes,No,No
+ People Internal Gains Nominal, THERMAL ZONE: SPACE 204 PEOPLE,OCUPACY,THERMAL ZONE: SPACE 204,25.92,6.5,6.5,0.250,4.000,0.300,0.700,AutoCalculate,ACTSCHD,No,3.8200E-008,0,6,Zone Averaged,ACTSCHDF,Dynamic Clothing Model ASHRAE55,N/A,Constant-1.0,AIR VELOCITY SCHEDULE,Yes,No,No
+ People Internal Gains Nominal, THERMAL ZONE: SPACE 205 PEOPLE,OCUPACY,THERMAL ZONE: SPACE 205,25.92,6.5,6.5,0.250,4.000,0.300,0.700,AutoCalculate,ACTSCHD,No,3.8200E-008,0,6,Zone Averaged,ACTSCHDF,Dynamic Clothing Model ASHRAE55,N/A,Constant-1.0,AIR VELOCITY SCHEDULE,Yes,No,No
+ People Internal Gains Nominal, THERMAL ZONE: SPACE 206 PEOPLE,OCUPACY,THERMAL ZONE: SPACE 206,43.20,10.8,10.8,0.250,4.000,0.300,0.700,AutoCalculate,ACTSCHD,No,3.8200E-008,0,10,Zone Averaged,ACTSCHDF,Dynamic Clothing Model ASHRAE55,N/A,Constant-1.0,AIR VELOCITY SCHEDULE,Yes,No,No
+ People Internal Gains Nominal, THERMAL ZONE: SPACE 207 PEOPLE,OCUPACY,THERMAL ZONE: SPACE 207,25.92,6.5,6.5,0.250,4.000,0.300,0.700,AutoCalculate,ACTSCHD,No,3.8200E-008,0,6,Zone Averaged,ACTSCHDF,Dynamic Clothing Model ASHRAE55,N/A,Constant-1.0,AIR VELOCITY SCHEDULE,Yes,No,No
+ People Internal Gains Nominal, THERMAL ZONE: SPACE 208 PEOPLE,OCUPACY,THERMAL ZONE: SPACE 208,25.92,6.5,6.5,0.250,4.000,0.300,0.700,AutoCalculate,ACTSCHD,No,3.8200E-008,0,6,Zone Averaged,ACTSCHDF,Dynamic Clothing Model ASHRAE55,N/A,Constant-1.0,AIR VELOCITY SCHEDULE,Yes,No,No
+ People Internal Gains Nominal, THERMAL ZONE: SPACE 209 PEOPLE,OCUPACY,THERMAL ZONE: SPACE 209,25.92,6.5,6.5,0.250,4.000,0.300,0.700,AutoCalculate,ACTSCHD,No,3.8200E-008,0,6,Zone Averaged,ACTSCHDF,Dynamic Clothing Model ASHRAE55,N/A,Constant-1.0,AIR VELOCITY SCHEDULE,Yes,No,No
+ People Internal Gains Nominal, THERMAL ZONE: SPACE 210 PEOPLE,OCUPACY,THERMAL ZONE: SPACE 210,25.92,6.5,6.5,0.250,4.000,0.300,0.700,AutoCalculate,ACTSCHD,No,3.8200E-008,0,6,Zone Averaged,ACTSCHDF,Dynamic Clothing Model ASHRAE55,N/A,Constant-1.0,AIR VELOCITY SCHEDULE,Yes,No,No
+ People Internal Gains Nominal, THERMAL ZONE: SPACE 211 PEOPLE,OCUPACY,THERMAL ZONE: SPACE 211,25.92,6.5,6.5,0.250,4.000,0.300,0.700,AutoCalculate,ACTSCHD,No,3.8200E-008,0,6,Zone Averaged,ACTSCHDF,Dynamic Clothing Model ASHRAE55,N/A,Constant-1.0,AIR VELOCITY SCHEDULE,Yes,No,No
+ People Internal Gains Nominal, THERMAL ZONE: SPACE 301 PEOPLE,OCUPACY,THERMAL ZONE: SPACE 301,25.92,6.5,6.5,0.250,4.000,0.300,0.700,AutoCalculate,ACTSCHD,No,3.8200E-008,0,6,Zone Averaged,ACTSCHDF,Dynamic Clothing Model ASHRAE55,N/A,Constant-1.0,AIR VELOCITY SCHEDULE,Yes,No,No
+ People Internal Gains Nominal, THERMAL ZONE: SPACE 302 PEOPLE,OCUPACY,THERMAL ZONE: SPACE 302,25.92,6.5,6.5,0.250,4.000,0.300,0.700,AutoCalculate,ACTSCHD,No,3.8200E-008,0,6,Zone Averaged,ACTSCHDF,Dynamic Clothing Model ASHRAE55,N/A,Constant-1.0,AIR VELOCITY SCHEDULE,Yes,No,No
+ People Internal Gains Nominal, THERMAL ZONE: SPACE 303 PEOPLE,OCUPACY,THERMAL ZONE: SPACE 303,25.92,6.5,6.5,0.250,4.000,0.300,0.700,AutoCalculate,ACTSCHD,No,3.8200E-008,0,6,Zone Averaged,ACTSCHDF,Dynamic Clothing Model ASHRAE55,N/A,Constant-1.0,AIR VELOCITY SCHEDULE,Yes,No,No
+ People Internal Gains Nominal, THERMAL ZONE: SPACE 304 PEOPLE,OCUPACY,THERMAL ZONE: SPACE 304,25.92,6.5,6.5,0.250,4.000,0.300,0.700,AutoCalculate,ACTSCHD,No,3.8200E-008,0,6,Zone Averaged,ACTSCHDF,Dynamic Clothing Model ASHRAE55,N/A,Constant-1.0,AIR VELOCITY SCHEDULE,Yes,No,No
+ People Internal Gains Nominal, THERMAL ZONE: SPACE 305 PEOPLE,OCUPACY,THERMAL ZONE: SPACE 305,25.92,6.5,6.5,0.250,4.000,0.300,0.700,AutoCalculate,ACTSCHD,No,3.8200E-008,0,6,Zone Averaged,ACTSCHDF,Dynamic Clothing Model ASHRAE55,N/A,Constant-1.0,AIR VELOCITY SCHEDULE,Yes,No,No
+ People Internal Gains Nominal, THERMAL ZONE: SPACE 306 PEOPLE,OCUPACY,THERMAL ZONE: SPACE 306,43.20,10.8,10.8,0.250,4.000,0.300,0.700,AutoCalculate,ACTSCHD,No,3.8200E-008,0,10,Zone Averaged,ACTSCHDF,Dynamic Clothing Model ASHRAE55,N/A,Constant-1.0,AIR VELOCITY SCHEDULE,Yes,No,No
+ People Internal Gains Nominal, THERMAL ZONE: SPACE 307 PEOPLE,OCUPACY,THERMAL ZONE: SPACE 307,25.92,6.5,6.5,0.250,4.000,0.300,0.700,AutoCalculate,ACTSCHD,No,3.8200E-008,0,6,Zone Averaged,ACTSCHDF,Dynamic Clothing Model ASHRAE55,N/A,Constant-1.0,AIR VELOCITY SCHEDULE,Yes,No,No
+ People Internal Gains Nominal, THERMAL ZONE: SPACE 308 PEOPLE,OCUPACY,THERMAL ZONE: SPACE 308,25.92,6.5,6.5,0.250,4.000,0.300,0.700,AutoCalculate,ACTSCHD,No,3.8200E-008,0,6,Zone Averaged,ACTSCHDF,Dynamic Clothing Model ASHRAE55,N/A,Constant-1.0,AIR VELOCITY SCHEDULE,Yes,No,No
+ People Internal Gains Nominal, THERMAL ZONE: SPACE 309 PEOPLE,OCUPACY,THERMAL ZONE: SPACE 309,25.92,6.5,6.5,0.250,4.000,0.300,0.700,AutoCalculate,ACTSCHD,No,3.8200E-008,0,6,Zone Averaged,ACTSCHDF,Dynamic Clothing Model ASHRAE55,N/A,Constant-1.0,AIR VELOCITY SCHEDULE,Yes,No,No
+ People Internal Gains Nominal, THERMAL ZONE: SPACE 310 PEOPLE,OCUPACY,THERMAL ZONE: SPACE 310,25.92,6.5,6.5,0.250,4.000,0.300,0.700,AutoCalculate,ACTSCHD,No,3.8200E-008,0,6,Zone Averaged,ACTSCHDF,Dynamic Clothing Model ASHRAE55,N/A,Constant-1.0,AIR VELOCITY SCHEDULE,Yes,No,No
+ People Internal Gains Nominal, THERMAL ZONE: SPACE 311 PEOPLE,OCUPACY,THERMAL ZONE: SPACE 311,25.92,6.5,6.5,0.250,4.000,0.300,0.700,AutoCalculate,ACTSCHD,No,3.8200E-008,0,6,Zone Averaged,ACTSCHDF,Dynamic Clothing Model ASHRAE55,N/A,Constant-1.0,AIR VELOCITY SCHEDULE,Yes,No,No
+! <Lights Internal Gains Nominal>,Name,Schedule Name,Zone Name,Zone Floor Area {m2},# Zone Occupants,Lighting Level {W},Lights/Floor Area {W/m2},Lights per person {W/person},Fraction Return Air,Fraction Radiant,Fraction Short Wave,Fraction Convected,Fraction Replaceable,End-Use Category,Nominal Minimum Lighting Level {W},Nominal Maximum Lighting Level {W}
+ Lights Internal Gains Nominal, THERMAL ZONE: SPACE 101 LIGHTING,LIGHTING,THERMAL ZONE: SPACE 101,25.92,6.5,233.280,9.000,36.000,0.000,0.000,0.000,1.000,1.000,General,0.000,221.616
+ Lights Internal Gains Nominal, THERMAL ZONE: SPACE 102 LIGHTING,LIGHTING,THERMAL ZONE: SPACE 102,25.92,6.5,233.280,9.000,36.000,0.000,0.000,0.000,1.000,1.000,General,0.000,221.616
+ Lights Internal Gains Nominal, THERMAL ZONE: SPACE 103 LIGHTING,LIGHTING,THERMAL ZONE: SPACE 103,25.92,6.5,233.280,9.000,36.000,0.000,0.000,0.000,1.000,1.000,General,0.000,221.616
+ Lights Internal Gains Nominal, THERMAL ZONE: SPACE 104 LIGHTING,LIGHTING,THERMAL ZONE: SPACE 104,25.92,6.5,233.280,9.000,36.000,0.000,0.000,0.000,1.000,1.000,General,0.000,221.616
+ Lights Internal Gains Nominal, THERMAL ZONE: SPACE 105 LIGHTING,LIGHTING,THERMAL ZONE: SPACE 105,25.92,6.5,233.280,9.000,36.000,0.000,0.000,0.000,1.000,1.000,General,0.000,221.616
+ Lights Internal Gains Nominal, THERMAL ZONE: SPACE 106 LIGHTING,LIGHTING,THERMAL ZONE: SPACE 106,43.20,10.8,388.800,9.000,36.000,0.000,0.000,0.000,1.000,1.000,General,0.000,369.360
+ Lights Internal Gains Nominal, THERMAL ZONE: SPACE 107 LIGHTING,LIGHTING,THERMAL ZONE: SPACE 107,25.92,6.5,233.280,9.000,36.000,0.000,0.000,0.000,1.000,1.000,General,0.000,221.616
+ Lights Internal Gains Nominal, THERMAL ZONE: SPACE 108 LIGHTING,LIGHTING,THERMAL ZONE: SPACE 108,25.92,6.5,233.280,9.000,36.000,0.000,0.000,0.000,1.000,1.000,General,0.000,221.616
+ Lights Internal Gains Nominal, THERMAL ZONE: SPACE 109 LIGHTING,LIGHTING,THERMAL ZONE: SPACE 109,25.92,6.5,233.280,9.000,36.000,0.000,0.000,0.000,1.000,1.000,General,0.000,221.616
+ Lights Internal Gains Nominal, THERMAL ZONE: SPACE 110 LIGHTING,LIGHTING,THERMAL ZONE: SPACE 110,25.92,6.5,233.280,9.000,36.000,0.000,0.000,0.000,1.000,1.000,General,0.000,221.616
+ Lights Internal Gains Nominal, THERMAL ZONE: SPACE 111 LIGHTING,LIGHTING,THERMAL ZONE: SPACE 111,25.92,6.5,233.280,9.000,36.000,0.000,0.000,0.000,1.000,1.000,General,0.000,221.616
+ Lights Internal Gains Nominal, THERMAL ZONE: SPACE 201 LIGHTING,LIGHTING,THERMAL ZONE: SPACE 201,25.92,6.5,233.280,9.000,36.000,0.000,0.000,0.000,1.000,1.000,General,0.000,221.616
+ Lights Internal Gains Nominal, THERMAL ZONE: SPACE 202 LIGHTING,LIGHTING,THERMAL ZONE: SPACE 202,25.92,6.5,233.280,9.000,36.000,0.000,0.000,0.000,1.000,1.000,General,0.000,221.616
+ Lights Internal Gains Nominal, THERMAL ZONE: SPACE 203 LIGHTING,LIGHTING,THERMAL ZONE: SPACE 203,25.92,6.5,233.280,9.000,36.000,0.000,0.000,0.000,1.000,1.000,General,0.000,221.616
+ Lights Internal Gains Nominal, THERMAL ZONE: SPACE 204 LIGHTING,LIGHTING,THERMAL ZONE: SPACE 204,25.92,6.5,233.280,9.000,36.000,0.000,0.000,0.000,1.000,1.000,General,0.000,221.616
+ Lights Internal Gains Nominal, THERMAL ZONE: SPACE 205 LIGHTING,LIGHTING,THERMAL ZONE: SPACE 205,25.92,6.5,233.280,9.000,36.000,0.000,0.000,0.000,1.000,1.000,General,0.000,221.616
+ Lights Internal Gains Nominal, THERMAL ZONE: SPACE 206 LIGHTING,LIGHTING,THERMAL ZONE: SPACE 206,43.20,10.8,388.800,9.000,36.000,0.000,0.000,0.000,1.000,1.000,General,0.000,369.360
+ Lights Internal Gains Nominal, THERMAL ZONE: SPACE 207 LIGHTING,LIGHTING,THERMAL ZONE: SPACE 207,25.92,6.5,233.280,9.000,36.000,0.000,0.000,0.000,1.000,1.000,General,0.000,221.616
+ Lights Internal Gains Nominal, THERMAL ZONE: SPACE 208 LIGHTING,LIGHTING,THERMAL ZONE: SPACE 208,25.92,6.5,233.280,9.000,36.000,0.000,0.000,0.000,1.000,1.000,General,0.000,221.616
+ Lights Internal Gains Nominal, THERMAL ZONE: SPACE 209 LIGHTING,LIGHTING,THERMAL ZONE: SPACE 209,25.92,6.5,233.280,9.000,36.000,0.000,0.000,0.000,1.000,1.000,General,0.000,221.616
+ Lights Internal Gains Nominal, THERMAL ZONE: SPACE 210 LIGHTING,LIGHTING,THERMAL ZONE: SPACE 210,25.92,6.5,233.280,9.000,36.000,0.000,0.000,0.000,1.000,1.000,General,0.000,221.616
+ Lights Internal Gains Nominal, THERMAL ZONE: SPACE 211 LIGHTING,LIGHTING,THERMAL ZONE: SPACE 211,25.92,6.5,233.280,9.000,36.000,0.000,0.000,0.000,1.000,1.000,General,0.000,221.616
+ Lights Internal Gains Nominal, THERMAL ZONE: SPACE 301 LIGHTING,LIGHTING,THERMAL ZONE: SPACE 301,25.92,6.5,233.280,9.000,36.000,0.000,0.000,0.000,1.000,1.000,General,0.000,221.616
+ Lights Internal Gains Nominal, THERMAL ZONE: SPACE 302 LIGHTING,LIGHTING,THERMAL ZONE: SPACE 302,25.92,6.5,233.280,9.000,36.000,0.000,0.000,0.000,1.000,1.000,General,0.000,221.616
+ Lights Internal Gains Nominal, THERMAL ZONE: SPACE 303 LIGHTING,LIGHTING,THERMAL ZONE: SPACE 303,25.92,6.5,233.280,9.000,36.000,0.000,0.000,0.000,1.000,1.000,General,0.000,221.616
+ Lights Internal Gains Nominal, THERMAL ZONE: SPACE 304 LIGHTING,LIGHTING,THERMAL ZONE: SPACE 304,25.92,6.5,233.280,9.000,36.000,0.000,0.000,0.000,1.000,1.000,General,0.000,221.616
+ Lights Internal Gains Nominal, THERMAL ZONE: SPACE 305 LIGHTING,LIGHTING,THERMAL ZONE: SPACE 305,25.92,6.5,233.280,9.000,36.000,0.000,0.000,0.000,1.000,1.000,General,0.000,221.616
+ Lights Internal Gains Nominal, THERMAL ZONE: SPACE 306 LIGHTING,LIGHTING,THERMAL ZONE: SPACE 306,43.20,10.8,388.800,9.000,36.000,0.000,0.000,0.000,1.000,1.000,General,0.000,369.360
+ Lights Internal Gains Nominal, THERMAL ZONE: SPACE 307 LIGHTING,LIGHTING,THERMAL ZONE: SPACE 307,25.92,6.5,233.280,9.000,36.000,0.000,0.000,0.000,1.000,1.000,General,0.000,221.616
+ Lights Internal Gains Nominal, THERMAL ZONE: SPACE 308 LIGHTING,LIGHTING,THERMAL ZONE: SPACE 308,25.92,6.5,233.280,9.000,36.000,0.000,0.000,0.000,1.000,1.000,General,0.000,221.616
+ Lights Internal Gains Nominal, THERMAL ZONE: SPACE 309 LIGHTING,LIGHTING,THERMAL ZONE: SPACE 309,25.92,6.5,233.280,9.000,36.000,0.000,0.000,0.000,1.000,1.000,General,0.000,221.616
+ Lights Internal Gains Nominal, THERMAL ZONE: SPACE 310 LIGHTING,LIGHTING,THERMAL ZONE: SPACE 310,25.92,6.5,233.280,9.000,36.000,0.000,0.000,0.000,1.000,1.000,General,0.000,221.616
+ Lights Internal Gains Nominal, THERMAL ZONE: SPACE 311 LIGHTING,LIGHTING,THERMAL ZONE: SPACE 311,25.92,6.5,233.280,9.000,36.000,0.000,0.000,0.000,1.000,1.000,General,0.000,221.616
+! <ElectricEquipment Internal Gains Nominal>,Name,Schedule Name,Zone Name,Zone Floor Area {m2},# Zone Occupants,Equipment Level {W},Equipment/Floor Area {W/m2},Equipment per person {W/person},Fraction Latent,Fraction Radiant,Fraction Lost,Fraction Convected,End-Use SubCategory,Nominal Minimum Equipment Level {W},Nominal Maximum Equipment Level {W}
+ ElectricEquipment Internal Gains Nominal, THERMAL ZONE: SPACE 101 EQUIP,EQUIPMENT,THERMAL ZONE: SPACE 101,25.92,6.5,129.600,5.000,20.000,0.000,0.000,0.000,1.000,General,0.000,123.120
+ ElectricEquipment Internal Gains Nominal, THERMAL ZONE: SPACE 102 EQUIP,EQUIPMENT,THERMAL ZONE: SPACE 102,25.92,6.5,129.600,5.000,20.000,0.000,0.000,0.000,1.000,General,0.000,123.120
+ ElectricEquipment Internal Gains Nominal, THERMAL ZONE: SPACE 103 EQUIP,EQUIPMENT,THERMAL ZONE: SPACE 103,25.92,6.5,129.600,5.000,20.000,0.000,0.000,0.000,1.000,General,0.000,123.120
+ ElectricEquipment Internal Gains Nominal, THERMAL ZONE: SPACE 104 EQUIP,EQUIPMENT,THERMAL ZONE: SPACE 104,25.92,6.5,129.600,5.000,20.000,0.000,0.000,0.000,1.000,General,0.000,123.120
+ ElectricEquipment Internal Gains Nominal, THERMAL ZONE: SPACE 105 EQUIP,EQUIPMENT,THERMAL ZONE: SPACE 105,25.92,6.5,129.600,5.000,20.000,0.000,0.000,0.000,1.000,General,0.000,123.120
+ ElectricEquipment Internal Gains Nominal, THERMAL ZONE: SPACE 106 EQUIP,EQUIPMENT,THERMAL ZONE: SPACE 106,43.20,10.8,216.000,5.000,20.000,0.000,0.000,0.000,1.000,General,0.000,205.200
+ ElectricEquipment Internal Gains Nominal, THERMAL ZONE: SPACE 107 EQUIP,EQUIPMENT,THERMAL ZONE: SPACE 107,25.92,6.5,129.600,5.000,20.000,0.000,0.000,0.000,1.000,General,0.000,123.120
+ ElectricEquipment Internal Gains Nominal, THERMAL ZONE: SPACE 108 EQUIP,EQUIPMENT,THERMAL ZONE: SPACE 108,25.92,6.5,129.600,5.000,20.000,0.000,0.000,0.000,1.000,General,0.000,123.120
+ ElectricEquipment Internal Gains Nominal, THERMAL ZONE: SPACE 109 EQUIP,EQUIPMENT,THERMAL ZONE: SPACE 109,25.92,6.5,129.600,5.000,20.000,0.000,0.000,0.000,1.000,General,0.000,123.120
+ ElectricEquipment Internal Gains Nominal, THERMAL ZONE: SPACE 110 EQUIP,EQUIPMENT,THERMAL ZONE: SPACE 110,25.92,6.5,129.600,5.000,20.000,0.000,0.000,0.000,1.000,General,0.000,123.120
+ ElectricEquipment Internal Gains Nominal, THERMAL ZONE: SPACE 111 EQUIP,EQUIPMENT,THERMAL ZONE: SPACE 111,25.92,6.5,129.600,5.000,20.000,0.000,0.000,0.000,1.000,General,0.000,123.120
+ ElectricEquipment Internal Gains Nominal, THERMAL ZONE: SPACE 201 EQUIP,EQUIPMENT,THERMAL ZONE: SPACE 201,25.92,6.5,129.600,5.000,20.000,0.000,0.000,0.000,1.000,General,0.000,123.120
+ ElectricEquipment Internal Gains Nominal, THERMAL ZONE: SPACE 202 EQUIP,EQUIPMENT,THERMAL ZONE: SPACE 202,25.92,6.5,129.600,5.000,20.000,0.000,0.000,0.000,1.000,General,0.000,123.120
+ ElectricEquipment Internal Gains Nominal, THERMAL ZONE: SPACE 203 EQUIP,EQUIPMENT,THERMAL ZONE: SPACE 203,25.92,6.5,129.600,5.000,20.000,0.000,0.000,0.000,1.000,General,0.000,123.120
+ ElectricEquipment Internal Gains Nominal, THERMAL ZONE: SPACE 204 EQUIP,EQUIPMENT,THERMAL ZONE: SPACE 204,25.92,6.5,129.600,5.000,20.000,0.000,0.000,0.000,1.000,General,0.000,123.120
+ ElectricEquipment Internal Gains Nominal, THERMAL ZONE: SPACE 205 EQUIP,EQUIPMENT,THERMAL ZONE: SPACE 205,25.92,6.5,129.600,5.000,20.000,0.000,0.000,0.000,1.000,General,0.000,123.120
+ ElectricEquipment Internal Gains Nominal, THERMAL ZONE: SPACE 206 EQUIP,EQUIPMENT,THERMAL ZONE: SPACE 206,43.20,10.8,216.000,5.000,20.000,0.000,0.000,0.000,1.000,General,0.000,205.200
+ ElectricEquipment Internal Gains Nominal, THERMAL ZONE: SPACE 207 EQUIP,EQUIPMENT,THERMAL ZONE: SPACE 207,25.92,6.5,129.600,5.000,20.000,0.000,0.000,0.000,1.000,General,0.000,123.120
+ ElectricEquipment Internal Gains Nominal, THERMAL ZONE: SPACE 208 EQUIP,EQUIPMENT,THERMAL ZONE: SPACE 208,25.92,6.5,129.600,5.000,20.000,0.000,0.000,0.000,1.000,General,0.000,123.120
+ ElectricEquipment Internal Gains Nominal, THERMAL ZONE: SPACE 209 EQUIP,EQUIPMENT,THERMAL ZONE: SPACE 209,25.92,6.5,129.600,5.000,20.000,0.000,0.000,0.000,1.000,General,0.000,123.120
+ ElectricEquipment Internal Gains Nominal, THERMAL ZONE: SPACE 210 EQUIP,EQUIPMENT,THERMAL ZONE: SPACE 210,25.92,6.5,129.600,5.000,20.000,0.000,0.000,0.000,1.000,General,0.000,123.120
+ ElectricEquipment Internal Gains Nominal, THERMAL ZONE: SPACE 211 EQUIP,EQUIPMENT,THERMAL ZONE: SPACE 211,25.92,6.5,129.600,5.000,20.000,0.000,0.000,0.000,1.000,General,0.000,123.120
+ ElectricEquipment Internal Gains Nominal, THERMAL ZONE: SPACE 301 EQUIP,EQUIPMENT,THERMAL ZONE: SPACE 301,25.92,6.5,129.600,5.000,20.000,0.000,0.000,0.000,1.000,General,0.000,123.120
+ ElectricEquipment Internal Gains Nominal, THERMAL ZONE: SPACE 302 EQUIP,EQUIPMENT,THERMAL ZONE: SPACE 302,25.92,6.5,129.600,5.000,20.000,0.000,0.000,0.000,1.000,General,0.000,123.120
+ ElectricEquipment Internal Gains Nominal, THERMAL ZONE: SPACE 303 EQUIP,EQUIPMENT,THERMAL ZONE: SPACE 303,25.92,6.5,129.600,5.000,20.000,0.000,0.000,0.000,1.000,General,0.000,123.120
+ ElectricEquipment Internal Gains Nominal, THERMAL ZONE: SPACE 304 EQUIP,EQUIPMENT,THERMAL ZONE: SPACE 304,25.92,6.5,129.600,5.000,20.000,0.000,0.000,0.000,1.000,General,0.000,123.120
+ ElectricEquipment Internal Gains Nominal, THERMAL ZONE: SPACE 305 EQUIP,EQUIPMENT,THERMAL ZONE: SPACE 305,25.92,6.5,129.600,5.000,20.000,0.000,0.000,0.000,1.000,General,0.000,123.120
+ ElectricEquipment Internal Gains Nominal, THERMAL ZONE: SPACE 306 EQUIP,EQUIPMENT,THERMAL ZONE: SPACE 306,43.20,10.8,216.000,5.000,20.000,0.000,0.000,0.000,1.000,General,0.000,205.200
+ ElectricEquipment Internal Gains Nominal, THERMAL ZONE: SPACE 307 EQUIP,EQUIPMENT,THERMAL ZONE: SPACE 307,25.92,6.5,129.600,5.000,20.000,0.000,0.000,0.000,1.000,General,0.000,123.120
+ ElectricEquipment Internal Gains Nominal, THERMAL ZONE: SPACE 308 EQUIP,EQUIPMENT,THERMAL ZONE: SPACE 308,25.92,6.5,129.600,5.000,20.000,0.000,0.000,0.000,1.000,General,0.000,123.120
+ ElectricEquipment Internal Gains Nominal, THERMAL ZONE: SPACE 309 EQUIP,EQUIPMENT,THERMAL ZONE: SPACE 309,25.92,6.5,129.600,5.000,20.000,0.000,0.000,0.000,1.000,General,0.000,123.120
+ ElectricEquipment Internal Gains Nominal, THERMAL ZONE: SPACE 310 EQUIP,EQUIPMENT,THERMAL ZONE: SPACE 310,25.92,6.5,129.600,5.000,20.000,0.000,0.000,0.000,1.000,General,0.000,123.120
+ ElectricEquipment Internal Gains Nominal, THERMAL ZONE: SPACE 311 EQUIP,EQUIPMENT,THERMAL ZONE: SPACE 311,25.92,6.5,129.600,5.000,20.000,0.000,0.000,0.000,1.000,General,0.000,123.120
+! <Shadowing/Sun Position Calculations Annual Simulations>, Calculation Method, Value {days}, Allowable Number Figures in Shadow Overlap {}, Polygon Clipping Algorithm, Sky Diffuse Modeling Algorithm
+Shadowing/Sun Position Calculations Annual Simulations,AverageOverDaysInFrequency,20,15000,SutherlandHodgman,SimpleSkyDiffuseModeling
+! <ZoneVentilation Airflow Stats Nominal>,Name,Schedule Name,Zone Name, Zone Floor Area {m2}, # Zone Occupants,Design Volume Flow Rate {m3/s},Volume Flow Rate/Floor Area {m3/s/m2},Volume Flow Rate/person Area {m3/s/person},ACH - Air Changes per Hour,Fan Type {Exhaust;Intake;Natural},Fan Pressure Rise {Pa},Fan Efficiency {},Equation A - Constant Term Coefficient {},Equation B - Temperature Term Coefficient {1/C},Equation C - Velocity Term Coefficient {s/m}, Equation D - Velocity Squared Term Coefficient {s2/m2},Minimum Indoor Temperature{C}/Schedule,Maximum Indoor Temperature{C}/Schedule,Delta Temperature{C}/Schedule,Minimum Outdoor Temperature{C}/Schedule,Maximum Outdoor Temperature{C}/Schedule,Maximum WindSpeed{m/s}
+ ZoneVentilation Airflow Stats Nominal, THERMAL ZONE: SPACE 101 JIXIETONGFENG,OCUPACY,THERMAL ZONE: SPACE 101,25.92,6.5,5.378E-002,2.075E-003,8.300E-003,2.019,Balanced,10.000,1.0,1.000,0.000,0.000,0.000,-30.00,50.00,-100.00,-100.00,100.00,40.00
+ ZoneVentilation Airflow Stats Nominal, THERMAL ZONE: SPACE 102 JIXIETONGFENG,OCUPACY,THERMAL ZONE: SPACE 102,25.92,6.5,5.378E-002,2.075E-003,8.300E-003,2.019,Balanced,10.000,1.0,1.000,0.000,0.000,0.000,-30.00,50.00,-100.00,-100.00,100.00,40.00
+ ZoneVentilation Airflow Stats Nominal, THERMAL ZONE: SPACE 103 JIXIETONGFENG,OCUPACY,THERMAL ZONE: SPACE 103,25.92,6.5,5.378E-002,2.075E-003,8.300E-003,2.019,Balanced,10.000,1.0,1.000,0.000,0.000,0.000,-30.00,50.00,-100.00,-100.00,100.00,40.00
+ ZoneVentilation Airflow Stats Nominal, THERMAL ZONE: SPACE 104 JIXIETONGFENG,OCUPACY,THERMAL ZONE: SPACE 104,25.92,6.5,5.378E-002,2.075E-003,8.300E-003,2.019,Balanced,10.000,1.0,1.000,0.000,0.000,0.000,-30.00,50.00,-100.00,-100.00,100.00,40.00
+ ZoneVentilation Airflow Stats Nominal, THERMAL ZONE: SPACE 105 JIXIETONGFENG,OCUPACY,THERMAL ZONE: SPACE 105,25.92,6.5,5.378E-002,2.075E-003,8.300E-003,2.019,Balanced,10.000,1.0,1.000,0.000,0.000,0.000,-30.00,50.00,-100.00,-100.00,100.00,40.00
+ ZoneVentilation Airflow Stats Nominal, THERMAL ZONE: SPACE 106 JIXIETONGFENG,OCUPACY,THERMAL ZONE: SPACE 106,43.20,10.8,8.964E-002,2.075E-003,8.300E-003,2.019,Balanced,10.000,1.0,1.000,0.000,0.000,0.000,-30.00,50.00,-100.00,-100.00,100.00,40.00
+ ZoneVentilation Airflow Stats Nominal, THERMAL ZONE: SPACE 107 JIXIETONGFENG,OCUPACY,THERMAL ZONE: SPACE 107,25.92,6.5,5.378E-002,2.075E-003,8.300E-003,2.019,Balanced,10.000,1.0,1.000,0.000,0.000,0.000,-30.00,50.00,-100.00,-100.00,100.00,40.00
+ ZoneVentilation Airflow Stats Nominal, THERMAL ZONE: SPACE 108 JIXIETONGFENG,OCUPACY,THERMAL ZONE: SPACE 108,25.92,6.5,5.378E-002,2.075E-003,8.300E-003,2.019,Balanced,10.000,1.0,1.000,0.000,0.000,0.000,-30.00,50.00,-100.00,-100.00,100.00,40.00
+ ZoneVentilation Airflow Stats Nominal, THERMAL ZONE: SPACE 109 JIXIETONGFENG,OCUPACY,THERMAL ZONE: SPACE 109,25.92,6.5,5.378E-002,2.075E-003,8.300E-003,2.019,Balanced,10.000,1.0,1.000,0.000,0.000,0.000,-30.00,50.00,-100.00,-100.00,100.00,40.00
+ ZoneVentilation Airflow Stats Nominal, THERMAL ZONE: SPACE 110 JIXIETONGFENG,OCUPACY,THERMAL ZONE: SPACE 110,25.92,6.5,5.378E-002,2.075E-003,8.300E-003,2.019,Balanced,10.000,1.0,1.000,0.000,0.000,0.000,-30.00,50.00,-100.00,-100.00,100.00,40.00
+ ZoneVentilation Airflow Stats Nominal, THERMAL ZONE: SPACE 111 JIXIETONGFENG,OCUPACY,THERMAL ZONE: SPACE 111,25.92,6.5,5.378E-002,2.075E-003,8.300E-003,2.019,Balanced,10.000,1.0,1.000,0.000,0.000,0.000,-30.00,50.00,-100.00,-100.00,100.00,40.00
+ ZoneVentilation Airflow Stats Nominal, THERMAL ZONE: SPACE 201 JIXIETONGFENG,OCUPACY,THERMAL ZONE: SPACE 201,25.92,6.5,5.378E-002,2.075E-003,8.300E-003,2.019,Balanced,10.000,1.0,1.000,0.000,0.000,0.000,-30.00,50.00,-100.00,-100.00,100.00,40.00
+ ZoneVentilation Airflow Stats Nominal, THERMAL ZONE: SPACE 202 JIXIETONGFENG,OCUPACY,THERMAL ZONE: SPACE 202,25.92,6.5,5.378E-002,2.075E-003,8.300E-003,2.019,Balanced,10.000,1.0,1.000,0.000,0.000,0.000,-30.00,50.00,-100.00,-100.00,100.00,40.00
+ ZoneVentilation Airflow Stats Nominal, THERMAL ZONE: SPACE 203 JIXIETONGFENG,OCUPACY,THERMAL ZONE: SPACE 203,25.92,6.5,5.378E-002,2.075E-003,8.300E-003,2.019,Balanced,10.000,1.0,1.000,0.000,0.000,0.000,-30.00,50.00,-100.00,-100.00,100.00,40.00
+ ZoneVentilation Airflow Stats Nominal, THERMAL ZONE: SPACE 204 JIXIETONGFENG,OCUPACY,THERMAL ZONE: SPACE 204,25.92,6.5,5.378E-002,2.075E-003,8.300E-003,2.019,Balanced,10.000,1.0,1.000,0.000,0.000,0.000,-30.00,50.00,-100.00,-100.00,100.00,40.00
+ ZoneVentilation Airflow Stats Nominal, THERMAL ZONE: SPACE 205 JIXIETONGFENG,OCUPACY,THERMAL ZONE: SPACE 205,25.92,6.5,5.378E-002,2.075E-003,8.300E-003,2.019,Balanced,10.000,1.0,1.000,0.000,0.000,0.000,-30.00,50.00,-100.00,-100.00,100.00,40.00
+ ZoneVentilation Airflow Stats Nominal, THERMAL ZONE: SPACE 206 JIXIETONGFENG,OCUPACY,THERMAL ZONE: SPACE 206,43.20,10.8,8.964E-002,2.075E-003,8.300E-003,2.019,Balanced,10.000,1.0,1.000,0.000,0.000,0.000,-30.00,50.00,-100.00,-100.00,100.00,40.00
+ ZoneVentilation Airflow Stats Nominal, THERMAL ZONE: SPACE 207 JIXIETONGFENG,OCUPACY,THERMAL ZONE: SPACE 207,25.92,6.5,5.378E-002,2.075E-003,8.300E-003,2.019,Balanced,10.000,1.0,1.000,0.000,0.000,0.000,-30.00,50.00,-100.00,-100.00,100.00,40.00
+ ZoneVentilation Airflow Stats Nominal, THERMAL ZONE: SPACE 208 JIXIETONGFENG,OCUPACY,THERMAL ZONE: SPACE 208,25.92,6.5,5.378E-002,2.075E-003,8.300E-003,2.019,Balanced,10.000,1.0,1.000,0.000,0.000,0.000,-30.00,50.00,-100.00,-100.00,100.00,40.00
+ ZoneVentilation Airflow Stats Nominal, THERMAL ZONE: SPACE 209 JIXIETONGFENG,OCUPACY,THERMAL ZONE: SPACE 209,25.92,6.5,5.378E-002,2.075E-003,8.300E-003,2.019,Balanced,10.000,1.0,1.000,0.000,0.000,0.000,-30.00,50.00,-100.00,-100.00,100.00,40.00
+ ZoneVentilation Airflow Stats Nominal, THERMAL ZONE: SPACE 210 JIXIETONGFENG,OCUPACY,THERMAL ZONE: SPACE 210,25.92,6.5,5.378E-002,2.075E-003,8.300E-003,2.019,Balanced,10.000,1.0,1.000,0.000,0.000,0.000,-30.00,50.00,-100.00,-100.00,100.00,40.00
+ ZoneVentilation Airflow Stats Nominal, THERMAL ZONE: SPACE 211 JIXIETONGFENG,OCUPACY,THERMAL ZONE: SPACE 211,25.92,6.5,5.378E-002,2.075E-003,8.300E-003,2.019,Balanced,10.000,1.0,1.000,0.000,0.000,0.000,-30.00,50.00,-100.00,-100.00,100.00,40.00
+ ZoneVentilation Airflow Stats Nominal, THERMAL ZONE: SPACE 301 JIXIETONGFENG,OCUPACY,THERMAL ZONE: SPACE 301,25.92,6.5,5.378E-002,2.075E-003,8.300E-003,2.019,Balanced,10.000,1.0,1.000,0.000,0.000,0.000,-30.00,50.00,-100.00,-100.00,100.00,40.00
+ ZoneVentilation Airflow Stats Nominal, THERMAL ZONE: SPACE 302 JIXIETONGFENG,OCUPACY,THERMAL ZONE: SPACE 302,25.92,6.5,5.378E-002,2.075E-003,8.300E-003,2.019,Balanced,10.000,1.0,1.000,0.000,0.000,0.000,-30.00,50.00,-100.00,-100.00,100.00,40.00
+ ZoneVentilation Airflow Stats Nominal, THERMAL ZONE: SPACE 303 JIXIETONGFENG,OCUPACY,THERMAL ZONE: SPACE 303,25.92,6.5,5.378E-002,2.075E-003,8.300E-003,2.019,Balanced,10.000,1.0,1.000,0.000,0.000,0.000,-30.00,50.00,-100.00,-100.00,100.00,40.00
+ ZoneVentilation Airflow Stats Nominal, THERMAL ZONE: SPACE 304 JIXIETONGFENG,OCUPACY,THERMAL ZONE: SPACE 304,25.92,6.5,5.378E-002,2.075E-003,8.300E-003,2.019,Balanced,10.000,1.0,1.000,0.000,0.000,0.000,-30.00,50.00,-100.00,-100.00,100.00,40.00
+ ZoneVentilation Airflow Stats Nominal, THERMAL ZONE: SPACE 305 JIXIETONGFENG,OCUPACY,THERMAL ZONE: SPACE 305,25.92,6.5,5.378E-002,2.075E-003,8.300E-003,2.019,Balanced,10.000,1.0,1.000,0.000,0.000,0.000,-30.00,50.00,-100.00,-100.00,100.00,40.00
+ ZoneVentilation Airflow Stats Nominal, THERMAL ZONE: SPACE 306 JIXIETONGFENG,OCUPACY,THERMAL ZONE: SPACE 306,43.20,10.8,8.964E-002,2.075E-003,8.300E-003,2.019,Balanced,10.000,1.0,1.000,0.000,0.000,0.000,-30.00,50.00,-100.00,-100.00,100.00,40.00
+ ZoneVentilation Airflow Stats Nominal, THERMAL ZONE: SPACE 307 JIXIETONGFENG,OCUPACY,THERMAL ZONE: SPACE 307,25.92,6.5,5.378E-002,2.075E-003,8.300E-003,2.019,Balanced,10.000,1.0,1.000,0.000,0.000,0.000,-30.00,50.00,-100.00,-100.00,100.00,40.00
+ ZoneVentilation Airflow Stats Nominal, THERMAL ZONE: SPACE 308 JIXIETONGFENG,OCUPACY,THERMAL ZONE: SPACE 308,25.92,6.5,5.378E-002,2.075E-003,8.300E-003,2.019,Balanced,10.000,1.0,1.000,0.000,0.000,0.000,-30.00,50.00,-100.00,-100.00,100.00,40.00
+ ZoneVentilation Airflow Stats Nominal, THERMAL ZONE: SPACE 309 JIXIETONGFENG,OCUPACY,THERMAL ZONE: SPACE 309,25.92,6.5,5.378E-002,2.075E-003,8.300E-003,2.019,Balanced,10.000,1.0,1.000,0.000,0.000,0.000,-30.00,50.00,-100.00,-100.00,100.00,40.00
+ ZoneVentilation Airflow Stats Nominal, THERMAL ZONE: SPACE 310 JIXIETONGFENG,OCUPACY,THERMAL ZONE: SPACE 310,25.92,6.5,5.378E-002,2.075E-003,8.300E-003,2.019,Balanced,10.000,1.0,1.000,0.000,0.000,0.000,-30.00,50.00,-100.00,-100.00,100.00,40.00
+ ZoneVentilation Airflow Stats Nominal, THERMAL ZONE: SPACE 311 JIXIETONGFENG,OCUPACY,THERMAL ZONE: SPACE 311,25.92,6.5,5.378E-002,2.075E-003,8.300E-003,2.019,Balanced,10.000,1.0,1.000,0.000,0.000,0.000,-30.00,50.00,-100.00,-100.00,100.00,40.00
+! <AirFlow Model>, Simple
+ AirFlow Model, Simple
+! <RoomAir Model>, Zone Name, Mixing/Mundt/UCSDDV/UCSDCV/UCSDUFI/UCSDUFE/User Defined
+RoomAir Model,THERMAL ZONE: SPACE 101,Mixing/Well-Stirred
+RoomAir Model,THERMAL ZONE: SPACE 102,Mixing/Well-Stirred
+RoomAir Model,THERMAL ZONE: SPACE 103,Mixing/Well-Stirred
+RoomAir Model,THERMAL ZONE: SPACE 104,Mixing/Well-Stirred
+RoomAir Model,THERMAL ZONE: SPACE 105,Mixing/Well-Stirred
+RoomAir Model,THERMAL ZONE: SPACE 106,Mixing/Well-Stirred
+RoomAir Model,THERMAL ZONE: SPACE 107,Mixing/Well-Stirred
+RoomAir Model,THERMAL ZONE: SPACE 108,Mixing/Well-Stirred
+RoomAir Model,THERMAL ZONE: SPACE 109,Mixing/Well-Stirred
+RoomAir Model,THERMAL ZONE: SPACE 110,Mixing/Well-Stirred
+RoomAir Model,THERMAL ZONE: SPACE 111,Mixing/Well-Stirred
+RoomAir Model,THERMAL ZONE: SPACE 201,Mixing/Well-Stirred
+RoomAir Model,THERMAL ZONE: SPACE 202,Mixing/Well-Stirred
+RoomAir Model,THERMAL ZONE: SPACE 203,Mixing/Well-Stirred
+RoomAir Model,THERMAL ZONE: SPACE 204,Mixing/Well-Stirred
+RoomAir Model,THERMAL ZONE: SPACE 205,Mixing/Well-Stirred
+RoomAir Model,THERMAL ZONE: SPACE 206,Mixing/Well-Stirred
+RoomAir Model,THERMAL ZONE: SPACE 207,Mixing/Well-Stirred
+RoomAir Model,THERMAL ZONE: SPACE 208,Mixing/Well-Stirred
+RoomAir Model,THERMAL ZONE: SPACE 209,Mixing/Well-Stirred
+RoomAir Model,THERMAL ZONE: SPACE 210,Mixing/Well-Stirred
+RoomAir Model,THERMAL ZONE: SPACE 211,Mixing/Well-Stirred
+RoomAir Model,THERMAL ZONE: SPACE 301,Mixing/Well-Stirred
+RoomAir Model,THERMAL ZONE: SPACE 302,Mixing/Well-Stirred
+RoomAir Model,THERMAL ZONE: SPACE 303,Mixing/Well-Stirred
+RoomAir Model,THERMAL ZONE: SPACE 304,Mixing/Well-Stirred
+RoomAir Model,THERMAL ZONE: SPACE 305,Mixing/Well-Stirred
+RoomAir Model,THERMAL ZONE: SPACE 306,Mixing/Well-Stirred
+RoomAir Model,THERMAL ZONE: SPACE 307,Mixing/Well-Stirred
+RoomAir Model,THERMAL ZONE: SPACE 308,Mixing/Well-Stirred
+RoomAir Model,THERMAL ZONE: SPACE 309,Mixing/Well-Stirred
+RoomAir Model,THERMAL ZONE: SPACE 310,Mixing/Well-Stirred
+RoomAir Model,THERMAL ZONE: SPACE 311,Mixing/Well-Stirred
+! <AirflowNetwork Model:Control>, No Multizone or Distribution/Multizone with Distribution/Multizone without Distribution/Multizone with Distribution only during Fan Operation
+AirflowNetwork Model:Control,NoMultizoneOrDistribution
+! <Zone Volume Capacitance Multiplier>, Sensible Heat Capacity Multiplier, Moisture Capacity Multiplier, Carbon Dioxide Capacity Multiplier, Generic Contaminant Capacity Multiplier
+Zone Volume Capacitance Multiplier,   1.000 ,   1.000,   1.000,   1.000
+! <Load Timesteps in Zone Design Calculation Averaging Window>, Value
+ Load Timesteps in Zone Design Calculation Averaging Window,    6
+! <Heating Sizing Factor Information>, Sizing Factor ID, Value
+ Heating Sizing Factor Information, Global,   1.2500    
+ Heating Sizing Factor Information, Zone THERMAL ZONE: SPACE 101,   1.2500    
+ Heating Sizing Factor Information, Zone THERMAL ZONE: SPACE 102,   1.2500    
+ Heating Sizing Factor Information, Zone THERMAL ZONE: SPACE 103,   1.2500    
+ Heating Sizing Factor Information, Zone THERMAL ZONE: SPACE 104,   1.2500    
+ Heating Sizing Factor Information, Zone THERMAL ZONE: SPACE 105,   1.2500    
+ Heating Sizing Factor Information, Zone THERMAL ZONE: SPACE 106,   1.2500    
+ Heating Sizing Factor Information, Zone THERMAL ZONE: SPACE 107,   1.2500    
+ Heating Sizing Factor Information, Zone THERMAL ZONE: SPACE 108,   1.2500    
+ Heating Sizing Factor Information, Zone THERMAL ZONE: SPACE 109,   1.2500    
+ Heating Sizing Factor Information, Zone THERMAL ZONE: SPACE 110,   1.2500    
+ Heating Sizing Factor Information, Zone THERMAL ZONE: SPACE 111,   1.2500    
+ Heating Sizing Factor Information, Zone THERMAL ZONE: SPACE 201,   1.2500    
+ Heating Sizing Factor Information, Zone THERMAL ZONE: SPACE 202,   1.2500    
+ Heating Sizing Factor Information, Zone THERMAL ZONE: SPACE 203,   1.2500    
+ Heating Sizing Factor Information, Zone THERMAL ZONE: SPACE 204,   1.2500    
+ Heating Sizing Factor Information, Zone THERMAL ZONE: SPACE 205,   1.2500    
+ Heating Sizing Factor Information, Zone THERMAL ZONE: SPACE 206,   1.2500    
+ Heating Sizing Factor Information, Zone THERMAL ZONE: SPACE 207,   1.2500    
+ Heating Sizing Factor Information, Zone THERMAL ZONE: SPACE 208,   1.2500    
+ Heating Sizing Factor Information, Zone THERMAL ZONE: SPACE 209,   1.2500    
+ Heating Sizing Factor Information, Zone THERMAL ZONE: SPACE 210,   1.2500    
+ Heating Sizing Factor Information, Zone THERMAL ZONE: SPACE 211,   1.2500    
+ Heating Sizing Factor Information, Zone THERMAL ZONE: SPACE 301,   1.2500    
+ Heating Sizing Factor Information, Zone THERMAL ZONE: SPACE 302,   1.2500    
+ Heating Sizing Factor Information, Zone THERMAL ZONE: SPACE 303,   1.2500    
+ Heating Sizing Factor Information, Zone THERMAL ZONE: SPACE 304,   1.2500    
+ Heating Sizing Factor Information, Zone THERMAL ZONE: SPACE 305,   1.2500    
+ Heating Sizing Factor Information, Zone THERMAL ZONE: SPACE 306,   1.2500    
+ Heating Sizing Factor Information, Zone THERMAL ZONE: SPACE 307,   1.2500    
+ Heating Sizing Factor Information, Zone THERMAL ZONE: SPACE 308,   1.2500    
+ Heating Sizing Factor Information, Zone THERMAL ZONE: SPACE 309,   1.2500    
+ Heating Sizing Factor Information, Zone THERMAL ZONE: SPACE 310,   1.2500    
+ Heating Sizing Factor Information, Zone THERMAL ZONE: SPACE 311,   1.2500    
+! <Cooling Sizing Factor Information>, Sizing Factor ID, Value
+ Cooling Sizing Factor Information, Global,   1.1500    
+ Cooling Sizing Factor Information, Zone THERMAL ZONE: SPACE 101,   1.1500    
+ Cooling Sizing Factor Information, Zone THERMAL ZONE: SPACE 102,   1.1500    
+ Cooling Sizing Factor Information, Zone THERMAL ZONE: SPACE 103,   1.1500    
+ Cooling Sizing Factor Information, Zone THERMAL ZONE: SPACE 104,   1.1500    
+ Cooling Sizing Factor Information, Zone THERMAL ZONE: SPACE 105,   1.1500    
+ Cooling Sizing Factor Information, Zone THERMAL ZONE: SPACE 106,   1.1500    
+ Cooling Sizing Factor Information, Zone THERMAL ZONE: SPACE 107,   1.1500    
+ Cooling Sizing Factor Information, Zone THERMAL ZONE: SPACE 108,   1.1500    
+ Cooling Sizing Factor Information, Zone THERMAL ZONE: SPACE 109,   1.1500    
+ Cooling Sizing Factor Information, Zone THERMAL ZONE: SPACE 110,   1.1500    
+ Cooling Sizing Factor Information, Zone THERMAL ZONE: SPACE 111,   1.1500    
+ Cooling Sizing Factor Information, Zone THERMAL ZONE: SPACE 201,   1.1500    
+ Cooling Sizing Factor Information, Zone THERMAL ZONE: SPACE 202,   1.1500    
+ Cooling Sizing Factor Information, Zone THERMAL ZONE: SPACE 203,   1.1500    
+ Cooling Sizing Factor Information, Zone THERMAL ZONE: SPACE 204,   1.1500    
+ Cooling Sizing Factor Information, Zone THERMAL ZONE: SPACE 205,   1.1500    
+ Cooling Sizing Factor Information, Zone THERMAL ZONE: SPACE 206,   1.1500    
+ Cooling Sizing Factor Information, Zone THERMAL ZONE: SPACE 207,   1.1500    
+ Cooling Sizing Factor Information, Zone THERMAL ZONE: SPACE 208,   1.1500    
+ Cooling Sizing Factor Information, Zone THERMAL ZONE: SPACE 209,   1.1500    
+ Cooling Sizing Factor Information, Zone THERMAL ZONE: SPACE 210,   1.1500    
+ Cooling Sizing Factor Information, Zone THERMAL ZONE: SPACE 211,   1.1500    
+ Cooling Sizing Factor Information, Zone THERMAL ZONE: SPACE 301,   1.1500    
+ Cooling Sizing Factor Information, Zone THERMAL ZONE: SPACE 302,   1.1500    
+ Cooling Sizing Factor Information, Zone THERMAL ZONE: SPACE 303,   1.1500    
+ Cooling Sizing Factor Information, Zone THERMAL ZONE: SPACE 304,   1.1500    
+ Cooling Sizing Factor Information, Zone THERMAL ZONE: SPACE 305,   1.1500    
+ Cooling Sizing Factor Information, Zone THERMAL ZONE: SPACE 306,   1.1500    
+ Cooling Sizing Factor Information, Zone THERMAL ZONE: SPACE 307,   1.1500    
+ Cooling Sizing Factor Information, Zone THERMAL ZONE: SPACE 308,   1.1500    
+ Cooling Sizing Factor Information, Zone THERMAL ZONE: SPACE 309,   1.1500    
+ Cooling Sizing Factor Information, Zone THERMAL ZONE: SPACE 310,   1.1500    
+ Cooling Sizing Factor Information, Zone THERMAL ZONE: SPACE 311,   1.1500    
+! <Zone Sizing Information>, Zone Name, Load Type, Calc Des Load {W}, User Des Load {W}, Calc Des Air Flow Rate {m3/s}, User Des Air Flow Rate {m3/s}, Design Day Name, Date/Time of Peak, Temperature at Peak {C}, Humidity Ratio at Peak {kgWater/kgDryAir}, Floor Area {m2}, # Occupants, Calc Outdoor Air Flow Rate {m3/s}, Calc DOAS Heat Addition Rate {W}
+ Zone Sizing Information, THERMAL ZONE: SPACE 101, Cooling, 1263.44985, 1452.96732, 8.85752E-002, 0.10186, ANN CLG 4% CONDNS DB =>MWB, 7/21 15:00:00, 35.70000, 2.01594E-002, 25.92000, 6.48000, 6.11712E-002, 0.00000
+ Zone Sizing Information, THERMAL ZONE: SPACE 101, Heating, 1526.20046, 1907.75058, 4.00404E-002, 6.11712E-002, ANN HTG 99.6% CONDNS DB, 1/21 10:00:00, -4.10000, 2.68154E-003, 25.92000, 6.48000, 6.11712E-002, 0.00000
+ Zone Sizing Information, THERMAL ZONE: SPACE 102, Cooling, 1218.33915, 1401.09003, 8.54171E-002, 9.82297E-002, ANN CLG 4% CONDNS DB =>MWB, 7/21 15:00:00, 35.70000, 2.01594E-002, 25.92000, 6.48000, 6.11712E-002, 0.00000
+ Zone Sizing Information, THERMAL ZONE: SPACE 102, Heating, 1094.90933, 1368.63666, 2.87264E-002, 6.11712E-002, ANN HTG 99.6% CONDNS DB, 1/21 10:00:00, -4.10000, 2.68154E-003, 25.92000, 6.48000, 6.11712E-002, 0.00000
+ Zone Sizing Information, THERMAL ZONE: SPACE 103, Cooling, 1211.20841, 1392.88967, 8.49185E-002, 9.76563E-002, ANN CLG 4% CONDNS DB =>MWB, 7/21 15:00:00, 35.70000, 2.01594E-002, 25.92000, 6.48000, 6.11712E-002, 0.00000
+ Zone Sizing Information, THERMAL ZONE: SPACE 103, Heating, 1051.22816, 1314.03520, 2.75805E-002, 6.11712E-002, ANN HTG 99.6% CONDNS DB, 1/21 10:00:00, -4.10000, 2.68154E-003, 25.92000, 6.48000, 6.11712E-002, 0.00000
+ Zone Sizing Information, THERMAL ZONE: SPACE 104, Cooling, 1218.68646, 1401.48943, 8.54414E-002, 9.82577E-002, ANN CLG 4% CONDNS DB =>MWB, 7/21 15:00:00, 35.70000, 2.01594E-002, 25.92000, 6.48000, 6.11712E-002, 0.00000
+ Zone Sizing Information, THERMAL ZONE: SPACE 104, Heating, 1094.80442, 1368.50553, 2.87237E-002, 6.11712E-002, ANN HTG 99.6% CONDNS DB, 1/21 10:00:00, -4.10000, 2.68154E-003, 25.92000, 6.48000, 6.11712E-002, 0.00000
+ Zone Sizing Information, THERMAL ZONE: SPACE 105, Cooling, 1265.70395, 1455.55954, 8.87330E-002, 0.10204, ANN CLG 4% CONDNS DB =>MWB, 7/21 15:00:00, 35.70000, 2.01594E-002, 25.92000, 6.48000, 6.11712E-002, 0.00000
+ Zone Sizing Information, THERMAL ZONE: SPACE 105, Heating, 1525.04855, 1906.31068, 4.00102E-002, 6.11712E-002, ANN HTG 99.6% CONDNS DB, 1/21 10:00:00, -4.10000, 2.68154E-003, 25.92000, 6.48000, 6.11712E-002, 0.00000
+ Zone Sizing Information, THERMAL ZONE: SPACE 106, Cooling, 2014.53203, 2316.71183, 0.14124, 0.16242, ANN CLG 4% CONDNS DB =>MWB, 7/21 15:00:00, 35.70000, 2.01594E-002, 43.20000, 10.80000, 0.10195, 0.00000
+ Zone Sizing Information, THERMAL ZONE: SPACE 106, Heating, 1781.94436, 2227.43045, 4.67520E-002, 0.10195, ANN HTG 99.6% CONDNS DB, 1/21 10:00:00, -4.10000, 2.68154E-003, 43.20000, 10.80000, 0.10195, 0.00000
+ Zone Sizing Information, THERMAL ZONE: SPACE 107, Cooling, 1262.28420, 1451.62683, 8.84935E-002, 0.10177, ANN CLG 4% CONDNS DB =>MWB, 7/21 15:00:00, 35.70000, 2.01594E-002, 25.92000, 6.48000, 6.11712E-002, 0.00000
+ Zone Sizing Information, THERMAL ZONE: SPACE 107, Heating, 1526.90789, 1908.63486, 4.00590E-002, 6.11712E-002, ANN HTG 99.6% CONDNS DB, 1/21 10:00:00, -4.10000, 2.68154E-003, 25.92000, 6.48000, 6.11712E-002, 0.00000
+ Zone Sizing Information, THERMAL ZONE: SPACE 108, Cooling, 1216.10592, 1398.52181, 8.52609E-002, 9.80501E-002, ANN CLG 4% CONDNS DB =>MWB, 7/21 15:00:00, 35.70000, 2.01594E-002, 25.92000, 6.48000, 6.11712E-002, 0.00000
+ Zone Sizing Information, THERMAL ZONE: SPACE 108, Heating, 1095.61289, 1369.51612, 2.87449E-002, 6.11712E-002, ANN HTG 99.6% CONDNS DB, 1/21 10:00:00, -4.10000, 2.68154E-003, 25.92000, 6.48000, 6.11712E-002, 0.00000
+ Zone Sizing Information, THERMAL ZONE: SPACE 109, Cooling, 1203.90250, 1384.48787, 8.44081E-002, 9.70693E-002, ANN CLG 4% CONDNS DB =>MWB, 7/21 15:00:00, 35.70000, 2.01594E-002, 25.92000, 6.48000, 6.11712E-002, 0.00000
+ Zone Sizing Information, THERMAL ZONE: SPACE 109, Heating, 1051.11633, 1313.89542, 2.75775E-002, 6.11712E-002, ANN HTG 99.6% CONDNS DB, 1/21 10:00:00, -4.10000, 2.68154E-003, 25.92000, 6.48000, 6.11712E-002, 0.00000
+ Zone Sizing Information, THERMAL ZONE: SPACE 110, Cooling, 1189.01282, 1367.36475, 8.33704E-002, 9.58759E-002, ANN CLG 4% CONDNS DB =>MWB, 7/21 15:00:00, 35.70000, 2.01594E-002, 25.92000, 6.48000, 6.11712E-002, 0.00000
+ Zone Sizing Information, THERMAL ZONE: SPACE 110, Heating, 1088.23098, 1360.28873, 2.85512E-002, 6.11712E-002, ANN HTG 99.6% CONDNS DB, 1/21 10:00:00, -4.10000, 2.68154E-003, 25.92000, 6.48000, 6.11712E-002, 0.00000
+ Zone Sizing Information, THERMAL ZONE: SPACE 111, Cooling, 1125.17289, 1293.94883, 7.88886E-002, 9.07219E-002, ANN CLG 4% CONDNS DB =>MWB, 7/21 15:00:00, 35.70000, 2.01594E-002, 25.92000, 6.48000, 6.11712E-002, 0.00000
+ Zone Sizing Information, THERMAL ZONE: SPACE 111, Heating, 1476.08208, 1845.10261, 3.87257E-002, 6.11712E-002, ANN HTG 99.6% CONDNS DB, 1/21 10:00:00, -4.10000, 2.68154E-003, 25.92000, 6.48000, 6.11712E-002, 0.00000
+ Zone Sizing Information, THERMAL ZONE: SPACE 201, Cooling, 1321.26031, 1519.44936, 9.26244E-002, 0.10652, ANN CLG 4% CONDNS DB =>MWB, 7/21 15:00:00, 35.70000, 2.01594E-002, 25.92000, 6.48000, 6.11712E-002, 0.00000
+ Zone Sizing Information, THERMAL ZONE: SPACE 201, Heating, 1571.94253, 1964.92816, 4.12403E-002, 6.11712E-002, ANN HTG 99.6% CONDNS DB, 1/21 10:00:00, -4.10000, 2.68154E-003, 25.92000, 6.48000, 6.11712E-002, 0.00000
+ Zone Sizing Information, THERMAL ZONE: SPACE 202, Cooling, 1269.57383, 1460.00991, 8.90033E-002, 0.10235, ANN CLG 4% CONDNS DB =>MWB, 7/21 15:00:00, 35.70000, 2.01594E-002, 25.92000, 6.48000, 6.11712E-002, 0.00000
+ Zone Sizing Information, THERMAL ZONE: SPACE 202, Heating, 1138.98053, 1423.72566, 2.98826E-002, 6.11712E-002, ANN HTG 99.6% CONDNS DB, 1/21 10:00:00, -4.10000, 2.68154E-003, 25.92000, 6.48000, 6.11712E-002, 0.00000
+ Zone Sizing Information, THERMAL ZONE: SPACE 203, Cooling, 1261.56733, 1450.80242, 8.84425E-002, 0.10171, ANN CLG 4% CONDNS DB =>MWB, 7/21 15:00:00, 35.70000, 2.01594E-002, 25.92000, 6.48000, 6.11712E-002, 0.00000
+ Zone Sizing Information, THERMAL ZONE: SPACE 203, Heating, 1095.41600, 1369.27000, 2.87397E-002, 6.11712E-002, ANN HTG 99.6% CONDNS DB, 1/21 10:00:00, -4.10000, 2.68154E-003, 25.92000, 6.48000, 6.11712E-002, 0.00000
+ Zone Sizing Information, THERMAL ZONE: SPACE 204, Cooling, 1269.71624, 1460.17367, 8.90132E-002, 0.10237, ANN CLG 4% CONDNS DB =>MWB, 7/21 15:00:00, 35.70000, 2.01594E-002, 25.92000, 6.48000, 6.11712E-002, 0.00000
+ Zone Sizing Information, THERMAL ZONE: SPACE 204, Heating, 1138.88936, 1423.61170, 2.98802E-002, 6.11712E-002, ANN HTG 99.6% CONDNS DB, 1/21 10:00:00, -4.10000, 2.68154E-003, 25.92000, 6.48000, 6.11712E-002, 0.00000
+ Zone Sizing Information, THERMAL ZONE: SPACE 205, Cooling, 1322.04790, 1520.35508, 9.26796E-002, 0.10658, ANN CLG 4% CONDNS DB =>MWB, 7/21 15:00:00, 35.70000, 2.01594E-002, 25.92000, 6.48000, 6.11712E-002, 0.00000
+ Zone Sizing Information, THERMAL ZONE: SPACE 205, Heating, 1570.96514, 1963.70642, 4.12147E-002, 6.11712E-002, ANN HTG 99.6% CONDNS DB, 1/21 10:00:00, -4.10000, 2.68154E-003, 25.92000, 6.48000, 6.11712E-002, 0.00000
+ Zone Sizing Information, THERMAL ZONE: SPACE 206, Cooling, 2115.07755, 2432.33919, 0.14827, 0.17051, ANN CLG 4% CONDNS DB =>MWB, 7/21 15:00:00, 35.70000, 2.01594E-002, 43.20000, 10.80000, 0.10195, 0.00000
+ Zone Sizing Information, THERMAL ZONE: SPACE 206, Heating, 1854.69038, 2318.36297, 4.86605E-002, 0.10195, ANN HTG 99.6% CONDNS DB, 1/21 10:00:00, -4.10000, 2.68154E-003, 43.20000, 10.80000, 0.10195, 0.00000
+ Zone Sizing Information, THERMAL ZONE: SPACE 207, Cooling, 1320.76531, 1518.88011, 9.25897E-002, 0.10648, ANN CLG 4% CONDNS DB =>MWB, 7/21 15:00:00, 35.70000, 2.01594E-002, 25.92000, 6.48000, 6.11712E-002, 0.00000
+ Zone Sizing Information, THERMAL ZONE: SPACE 207, Heating, 1572.49161, 1965.61452, 4.12547E-002, 6.11712E-002, ANN HTG 99.6% CONDNS DB, 1/21 10:00:00, -4.10000, 2.68154E-003, 25.92000, 6.48000, 6.11712E-002, 0.00000
+ Zone Sizing Information, THERMAL ZONE: SPACE 208, Cooling, 1268.71603, 1459.02344, 8.89432E-002, 0.10228, ANN CLG 4% CONDNS DB =>MWB, 7/21 15:00:00, 35.70000, 2.01594E-002, 25.92000, 6.48000, 6.11712E-002, 0.00000
+ Zone Sizing Information, THERMAL ZONE: SPACE 208, Heating, 1139.61032, 1424.51291, 2.98991E-002, 6.11712E-002, ANN HTG 99.6% CONDNS DB, 1/21 10:00:00, -4.10000, 2.68154E-003, 25.92000, 6.48000, 6.11712E-002, 0.00000
+ Zone Sizing Information, THERMAL ZONE: SPACE 209, Cooling, 1259.35059, 1448.25317, 8.82872E-002, 0.10153, ANN CLG 4% CONDNS DB =>MWB, 7/21 15:00:00, 35.70000, 2.01594E-002, 25.92000, 6.48000, 6.11712E-002, 0.00000
+ Zone Sizing Information, THERMAL ZONE: SPACE 209, Heating, 1095.93055, 1369.91319, 2.87532E-002, 6.11712E-002, ANN HTG 99.6% CONDNS DB, 1/21 10:00:00, -4.10000, 2.68154E-003, 25.92000, 6.48000, 6.11712E-002, 0.00000
+ Zone Sizing Information, THERMAL ZONE: SPACE 210, Cooling, 1262.77700, 1452.19355, 8.85272E-002, 0.10181, ANN CLG 4% CONDNS DB =>MWB, 7/21 15:00:00, 35.70000, 2.01594E-002, 25.92000, 6.48000, 6.11712E-002, 0.00000
+ Zone Sizing Information, THERMAL ZONE: SPACE 210, Heating, 1138.71261, 1423.39076, 2.98755E-002, 6.11712E-002, ANN HTG 99.6% CONDNS DB, 1/21 10:00:00, -4.10000, 2.68154E-003, 25.92000, 6.48000, 6.11712E-002, 0.00000
+ Zone Sizing Information, THERMAL ZONE: SPACE 211, Cooling, 1301.77137, 1497.03707, 9.12591E-002, 0.10495, ANN CLG 4% CONDNS DB =>MWB, 7/21 15:00:00, 35.70000, 2.01594E-002, 25.92000, 6.48000, 6.11712E-002, 0.00000
+ Zone Sizing Information, THERMAL ZONE: SPACE 211, Heating, 1568.02757, 1960.03447, 4.11376E-002, 6.11712E-002, ANN HTG 99.6% CONDNS DB, 1/21 10:00:00, -4.10000, 2.68154E-003, 25.92000, 6.48000, 6.11712E-002, 0.00000
+ Zone Sizing Information, THERMAL ZONE: SPACE 301, Cooling, 1333.24661, 1533.23360, 9.34643E-002, 0.10748, ANN CLG 4% CONDNS DB =>MWB, 7/21 15:00:00, 35.70000, 2.01594E-002, 25.92000, 6.48000, 6.11712E-002, 0.00000
+ Zone Sizing Information, THERMAL ZONE: SPACE 301, Heating, 2085.83787, 2607.29734, 5.47208E-002, 6.84010E-002, ANN HTG 99.6% CONDNS DB, 1/21 10:00:00, -4.10000, 2.68154E-003, 25.92000, 6.48000, 6.11712E-002, 0.00000
+ Zone Sizing Information, THERMAL ZONE: SPACE 302, Cooling, 1281.81225, 1474.08409, 8.98605E-002, 0.10334, ANN CLG 4% CONDNS DB =>MWB, 7/21 15:00:00, 35.70000, 2.01594E-002, 25.92000, 6.48000, 6.11712E-002, 0.00000
+ Zone Sizing Information, THERMAL ZONE: SPACE 302, Heating, 1658.11331, 2072.64164, 4.35008E-002, 6.11712E-002, ANN HTG 99.6% CONDNS DB, 1/21 10:00:00, -4.10000, 2.68154E-003, 25.92000, 6.48000, 6.11712E-002, 0.00000
+ Zone Sizing Information, THERMAL ZONE: SPACE 303, Cooling, 1274.28122, 1465.42340, 8.93330E-002, 0.10273, ANN CLG 4% CONDNS DB =>MWB, 7/21 15:00:00, 35.70000, 2.01594E-002, 25.92000, 6.48000, 6.11712E-002, 0.00000
+ Zone Sizing Information, THERMAL ZONE: SPACE 303, Heating, 1617.77471, 2022.21839, 4.24426E-002, 6.11712E-002, ANN HTG 99.6% CONDNS DB, 1/21 10:00:00, -4.10000, 2.68154E-003, 25.92000, 6.48000, 6.11712E-002, 0.00000
+ Zone Sizing Information, THERMAL ZONE: SPACE 304, Cooling, 1281.79490, 1474.06414, 8.98593E-002, 0.10334, ANN CLG 4% CONDNS DB =>MWB, 7/21 15:00:00, 35.70000, 2.01594E-002, 25.92000, 6.48000, 6.11712E-002, 0.00000
+ Zone Sizing Information, THERMAL ZONE: SPACE 304, Heating, 1658.05610, 2072.57013, 4.34993E-002, 6.11712E-002, ANN HTG 99.6% CONDNS DB, 1/21 10:00:00, -4.10000, 2.68154E-003, 25.92000, 6.48000, 6.11712E-002, 0.00000
+ Zone Sizing Information, THERMAL ZONE: SPACE 305, Cooling, 1333.03331, 1532.98831, 9.34493E-002, 0.10747, ANN CLG 4% CONDNS DB =>MWB, 7/21 15:00:00, 35.70000, 2.01594E-002, 25.92000, 6.48000, 6.11712E-002, 0.00000
+ Zone Sizing Information, THERMAL ZONE: SPACE 305, Heating, 2085.19117, 2606.48896, 5.47039E-002, 6.83798E-002, ANN HTG 99.6% CONDNS DB, 1/21 10:00:00, -4.10000, 2.68154E-003, 25.92000, 6.48000, 6.11712E-002, 0.00000
+ Zone Sizing Information, THERMAL ZONE: SPACE 306, Cooling, 2139.34182, 2460.24309, 0.14997, 0.17247, ANN CLG 4% CONDNS DB =>MWB, 7/21 15:00:00, 35.70000, 2.01594E-002, 43.20000, 10.80000, 0.10195, 0.00000
+ Zone Sizing Information, THERMAL ZONE: SPACE 306, Heating, 2737.13878, 3421.42347, 7.18098E-002, 0.10195, ANN HTG 99.6% CONDNS DB, 1/21 10:00:00, -4.10000, 2.68154E-003, 43.20000, 10.80000, 0.10195, 0.00000
+ Zone Sizing Information, THERMAL ZONE: SPACE 307, Cooling, 1333.35384, 1533.35692, 9.34718E-002, 0.10749, ANN CLG 4% CONDNS DB =>MWB, 7/21 15:00:00, 35.70000, 2.01594E-002, 25.92000, 6.48000, 6.11712E-002, 0.00000
+ Zone Sizing Information, THERMAL ZONE: SPACE 307, Heating, 2086.19260, 2607.74075, 5.47301E-002, 6.84127E-002, ANN HTG 99.6% CONDNS DB, 1/21 10:00:00, -4.10000, 2.68154E-003, 25.92000, 6.48000, 6.11712E-002, 0.00000
+ Zone Sizing Information, THERMAL ZONE: SPACE 308, Cooling, 1281.85258, 1474.13046, 8.98634E-002, 0.10334, ANN CLG 4% CONDNS DB =>MWB, 7/21 15:00:00, 35.70000, 2.01594E-002, 25.92000, 6.48000, 6.11712E-002, 0.00000
+ Zone Sizing Information, THERMAL ZONE: SPACE 308, Heating, 1658.55532, 2073.19415, 4.35124E-002, 6.11712E-002, ANN HTG 99.6% CONDNS DB, 1/21 10:00:00, -4.10000, 2.68154E-003, 25.92000, 6.48000, 6.11712E-002, 0.00000
+ Zone Sizing Information, THERMAL ZONE: SPACE 309, Cooling, 1274.10911, 1465.22547, 8.93209E-002, 0.10272, ANN CLG 4% CONDNS DB =>MWB, 7/21 15:00:00, 35.70000, 2.01594E-002, 25.92000, 6.48000, 6.11712E-002, 0.00000
+ Zone Sizing Information, THERMAL ZONE: SPACE 309, Heating, 1618.21805, 2022.77256, 4.24543E-002, 6.11712E-002, ANN HTG 99.6% CONDNS DB, 1/21 10:00:00, -4.10000, 2.68154E-003, 25.92000, 6.48000, 6.11712E-002, 0.00000
+ Zone Sizing Information, THERMAL ZONE: SPACE 310, Cooling, 1281.07110, 1473.23176, 8.98086E-002, 0.10328, ANN CLG 4% CONDNS DB =>MWB, 7/21 15:00:00, 35.70000, 2.01594E-002, 25.92000, 6.48000, 6.11712E-002, 0.00000
+ Zone Sizing Information, THERMAL ZONE: SPACE 310, Heating, 1658.41791, 2073.02239, 4.35088E-002, 6.11712E-002, ANN HTG 99.6% CONDNS DB, 1/21 10:00:00, -4.10000, 2.68154E-003, 25.92000, 6.48000, 6.11712E-002, 0.00000
+ Zone Sizing Information, THERMAL ZONE: SPACE 311, Cooling, 1331.31696, 1531.01450, 9.33290E-002, 0.10733, ANN CLG 4% CONDNS DB =>MWB, 7/21 15:00:00, 35.70000, 2.01594E-002, 25.92000, 6.48000, 6.11712E-002, 0.00000
+ Zone Sizing Information, THERMAL ZONE: SPACE 311, Heating, 2085.31464, 2606.64330, 5.47071E-002, 6.83839E-002, ANN HTG 99.6% CONDNS DB, 1/21 10:00:00, -4.10000, 2.68154E-003, 25.92000, 6.48000, 6.11712E-002, 0.00000
+! <Component Sizing Information>, Component Type, Component Name, Input Field Description, Value
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 101 PTHP, Design Size Cooling Supply Air Flow Rate [m3/s], 0.10186
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 101 PTHP, Design Size Heating Supply Air Flow Rate [m3/s], 0.10186
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 101 PTHP, User-Specified No Load Supply Air Flow Rate [m3/s], 0.00000
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 101 PTHP, Design Size Outdoor Air Flow Rate During Cooling Operation [m3/s], 6.11712E-002
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 101 PTHP, Design Size Outdoor Air Flow Rate During Heating Operation [m3/s], 6.11712E-002
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 101 PTHP, Design Size Outdoor Air Flow Rate When No Cooling or Heating is Needed [m3/s], 0.00000
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 101 PTHP, Design Size Maximum Supply Air Temperature from Supplemental Heater [C], 50.00000
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, THERMAL ZONE: SPACE 101 PTHP COOLING COIL, Design Size Rated Air Flow Rate [m3/s], 0.10186
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, THERMAL ZONE: SPACE 101 PTHP COOLING COIL, Design Size Gross Rated Total Cooling Capacity [W], 2529.46200
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, THERMAL ZONE: SPACE 101 PTHP COOLING COIL, Design Size Gross Rated Sensible Heat Ratio, 0.67608
+! <DX Cooling Coil Standard Rating Information>, Component Type, Component Name, Standard Rating (Net) Cooling Capacity {W}, Standard Rated Net COP {W/W}, EER {Btu/W-h}, SEER {Btu/W-h}, IEER {Btu/W-h}
+ DX Cooling Coil Standard Rating Information, Coil:Cooling:DX:SingleSpeed, THERMAL ZONE: SPACE 101 PTHP COOLING COIL, 2450.3, 2.66, 9.07, 9.63, 9.52
+ Component Sizing Information, Coil:Heating:DX:SingleSpeed, THERMAL ZONE: SPACE 101 PTHP HEATING COIL, Design Size Rated Air Flow Rate [m3/s], 0.10186
+ Component Sizing Information, Coil:Heating:DX:SingleSpeed, THERMAL ZONE: SPACE 101 PTHP HEATING COIL, Design Size Gross Rated Heating Capacity [W], 2529.46200
+! <DX Heating Coil Standard Rating Information>, Component Type, Component Name, High Temperature Heating (net) Rating Capacity {W}, Low Temperature Heating (net) Rating Capacity {W}, HSPF {Btu/W-h}, Region Number
+ DX Heating Coil Standard Rating Information, Coil:Heating:DX:SingleSpeed, THERMAL ZONE: SPACE 101 PTHP HEATING COIL, 2611.3, 1436.9, 6.23, 4
+ Component Sizing Information, Fan:OnOff, THERMAL ZONE: SPACE 101 PTHP SUPPLY FAN, Design Size Maximum Flow Rate [m3/s], 0.10186
+ Component Sizing Information, Coil:Heating:Electric, THERMAL ZONE: SPACE 101 PTHP SUPP HEATING COIL, Design Size Nominal Capacity [W], 3940.75249
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 102 PTHP, Design Size Cooling Supply Air Flow Rate [m3/s], 9.82297E-002
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 102 PTHP, Design Size Heating Supply Air Flow Rate [m3/s], 9.82297E-002
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 102 PTHP, User-Specified No Load Supply Air Flow Rate [m3/s], 0.00000
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 102 PTHP, Design Size Outdoor Air Flow Rate During Cooling Operation [m3/s], 6.11712E-002
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 102 PTHP, Design Size Outdoor Air Flow Rate During Heating Operation [m3/s], 6.11712E-002
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 102 PTHP, Design Size Outdoor Air Flow Rate When No Cooling or Heating is Needed [m3/s], 0.00000
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 102 PTHP, Design Size Maximum Supply Air Temperature from Supplemental Heater [C], 50.00000
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, THERMAL ZONE: SPACE 102 PTHP COOLING COIL, Design Size Rated Air Flow Rate [m3/s], 9.82297E-002
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, THERMAL ZONE: SPACE 102 PTHP COOLING COIL, Design Size Gross Rated Total Cooling Capacity [W], 2439.27778
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, THERMAL ZONE: SPACE 102 PTHP COOLING COIL, Design Size Gross Rated Sensible Heat Ratio, 0.67608
+ DX Cooling Coil Standard Rating Information, Coil:Cooling:DX:SingleSpeed, THERMAL ZONE: SPACE 102 PTHP COOLING COIL, 2362.9, 2.66, 9.07, 9.63, 9.52
+ Component Sizing Information, Coil:Heating:DX:SingleSpeed, THERMAL ZONE: SPACE 102 PTHP HEATING COIL, Design Size Rated Air Flow Rate [m3/s], 9.82297E-002
+ Component Sizing Information, Coil:Heating:DX:SingleSpeed, THERMAL ZONE: SPACE 102 PTHP HEATING COIL, Design Size Gross Rated Heating Capacity [W], 2439.27778
+ DX Heating Coil Standard Rating Information, Coil:Heating:DX:SingleSpeed, THERMAL ZONE: SPACE 102 PTHP HEATING COIL, 2518.2, 1385.7, 6.22, 4
+ Component Sizing Information, Fan:OnOff, THERMAL ZONE: SPACE 102 PTHP SUPPLY FAN, Design Size Maximum Flow Rate [m3/s], 9.82297E-002
+ Component Sizing Information, Coil:Heating:Electric, THERMAL ZONE: SPACE 102 PTHP SUPP HEATING COIL, Design Size Nominal Capacity [W], 3940.75249
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 103 PTHP, Design Size Cooling Supply Air Flow Rate [m3/s], 9.76563E-002
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 103 PTHP, Design Size Heating Supply Air Flow Rate [m3/s], 9.76563E-002
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 103 PTHP, User-Specified No Load Supply Air Flow Rate [m3/s], 0.00000
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 103 PTHP, Design Size Outdoor Air Flow Rate During Cooling Operation [m3/s], 6.11712E-002
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 103 PTHP, Design Size Outdoor Air Flow Rate During Heating Operation [m3/s], 6.11712E-002
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 103 PTHP, Design Size Outdoor Air Flow Rate When No Cooling or Heating is Needed [m3/s], 0.00000
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 103 PTHP, Design Size Maximum Supply Air Temperature from Supplemental Heater [C], 50.00000
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, THERMAL ZONE: SPACE 103 PTHP COOLING COIL, Design Size Rated Air Flow Rate [m3/s], 9.76563E-002
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, THERMAL ZONE: SPACE 103 PTHP COOLING COIL, Design Size Gross Rated Total Cooling Capacity [W], 2425.03843
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, THERMAL ZONE: SPACE 103 PTHP COOLING COIL, Design Size Gross Rated Sensible Heat Ratio, 0.67608
+ DX Cooling Coil Standard Rating Information, Coil:Cooling:DX:SingleSpeed, THERMAL ZONE: SPACE 103 PTHP COOLING COIL, 2349.1, 2.66, 9.07, 9.63, 9.52
+ Component Sizing Information, Coil:Heating:DX:SingleSpeed, THERMAL ZONE: SPACE 103 PTHP HEATING COIL, Design Size Rated Air Flow Rate [m3/s], 9.76563E-002
+ Component Sizing Information, Coil:Heating:DX:SingleSpeed, THERMAL ZONE: SPACE 103 PTHP HEATING COIL, Design Size Gross Rated Heating Capacity [W], 2425.03843
+ DX Heating Coil Standard Rating Information, Coil:Heating:DX:SingleSpeed, THERMAL ZONE: SPACE 103 PTHP HEATING COIL, 2503.5, 1377.6, 6.22, 4
+ Component Sizing Information, Fan:OnOff, THERMAL ZONE: SPACE 103 PTHP SUPPLY FAN, Design Size Maximum Flow Rate [m3/s], 9.76563E-002
+ Component Sizing Information, Coil:Heating:Electric, THERMAL ZONE: SPACE 103 PTHP SUPP HEATING COIL, Design Size Nominal Capacity [W], 3940.75249
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 104 PTHP, Design Size Cooling Supply Air Flow Rate [m3/s], 9.82577E-002
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 104 PTHP, Design Size Heating Supply Air Flow Rate [m3/s], 9.82577E-002
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 104 PTHP, User-Specified No Load Supply Air Flow Rate [m3/s], 0.00000
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 104 PTHP, Design Size Outdoor Air Flow Rate During Cooling Operation [m3/s], 6.11712E-002
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 104 PTHP, Design Size Outdoor Air Flow Rate During Heating Operation [m3/s], 6.11712E-002
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 104 PTHP, Design Size Outdoor Air Flow Rate When No Cooling or Heating is Needed [m3/s], 0.00000
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 104 PTHP, Design Size Maximum Supply Air Temperature from Supplemental Heater [C], 50.00000
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, THERMAL ZONE: SPACE 104 PTHP COOLING COIL, Design Size Rated Air Flow Rate [m3/s], 9.82577E-002
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, THERMAL ZONE: SPACE 104 PTHP COOLING COIL, Design Size Gross Rated Total Cooling Capacity [W], 2439.97155
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, THERMAL ZONE: SPACE 104 PTHP COOLING COIL, Design Size Gross Rated Sensible Heat Ratio, 0.67608
+ DX Cooling Coil Standard Rating Information, Coil:Cooling:DX:SingleSpeed, THERMAL ZONE: SPACE 104 PTHP COOLING COIL, 2363.6, 2.66, 9.07, 9.63, 9.52
+ Component Sizing Information, Coil:Heating:DX:SingleSpeed, THERMAL ZONE: SPACE 104 PTHP HEATING COIL, Design Size Rated Air Flow Rate [m3/s], 9.82577E-002
+ Component Sizing Information, Coil:Heating:DX:SingleSpeed, THERMAL ZONE: SPACE 104 PTHP HEATING COIL, Design Size Gross Rated Heating Capacity [W], 2439.97155
+ DX Heating Coil Standard Rating Information, Coil:Heating:DX:SingleSpeed, THERMAL ZONE: SPACE 104 PTHP HEATING COIL, 2518.9, 1386.0, 6.22, 4
+ Component Sizing Information, Fan:OnOff, THERMAL ZONE: SPACE 104 PTHP SUPPLY FAN, Design Size Maximum Flow Rate [m3/s], 9.82577E-002
+ Component Sizing Information, Coil:Heating:Electric, THERMAL ZONE: SPACE 104 PTHP SUPP HEATING COIL, Design Size Nominal Capacity [W], 3940.75249
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 105 PTHP, Design Size Cooling Supply Air Flow Rate [m3/s], 0.10204
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 105 PTHP, Design Size Heating Supply Air Flow Rate [m3/s], 0.10204
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 105 PTHP, User-Specified No Load Supply Air Flow Rate [m3/s], 0.00000
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 105 PTHP, Design Size Outdoor Air Flow Rate During Cooling Operation [m3/s], 6.11712E-002
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 105 PTHP, Design Size Outdoor Air Flow Rate During Heating Operation [m3/s], 6.11712E-002
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 105 PTHP, Design Size Outdoor Air Flow Rate When No Cooling or Heating is Needed [m3/s], 0.00000
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 105 PTHP, Design Size Maximum Supply Air Temperature from Supplemental Heater [C], 50.00000
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, THERMAL ZONE: SPACE 105 PTHP COOLING COIL, Design Size Rated Air Flow Rate [m3/s], 0.10204
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, THERMAL ZONE: SPACE 105 PTHP COOLING COIL, Design Size Gross Rated Total Cooling Capacity [W], 2533.97070
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, THERMAL ZONE: SPACE 105 PTHP COOLING COIL, Design Size Gross Rated Sensible Heat Ratio, 0.67608
+ DX Cooling Coil Standard Rating Information, Coil:Cooling:DX:SingleSpeed, THERMAL ZONE: SPACE 105 PTHP COOLING COIL, 2454.7, 2.66, 9.07, 9.63, 9.52
+ Component Sizing Information, Coil:Heating:DX:SingleSpeed, THERMAL ZONE: SPACE 105 PTHP HEATING COIL, Design Size Rated Air Flow Rate [m3/s], 0.10204
+ Component Sizing Information, Coil:Heating:DX:SingleSpeed, THERMAL ZONE: SPACE 105 PTHP HEATING COIL, Design Size Gross Rated Heating Capacity [W], 2533.97070
+ DX Heating Coil Standard Rating Information, Coil:Heating:DX:SingleSpeed, THERMAL ZONE: SPACE 105 PTHP HEATING COIL, 2616.0, 1439.4, 6.23, 4
+ Component Sizing Information, Fan:OnOff, THERMAL ZONE: SPACE 105 PTHP SUPPLY FAN, Design Size Maximum Flow Rate [m3/s], 0.10204
+ Component Sizing Information, Coil:Heating:Electric, THERMAL ZONE: SPACE 105 PTHP SUPP HEATING COIL, Design Size Nominal Capacity [W], 3940.75249
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 106 PTHP, Design Size Cooling Supply Air Flow Rate [m3/s], 0.16242
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 106 PTHP, Design Size Heating Supply Air Flow Rate [m3/s], 0.16242
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 106 PTHP, User-Specified No Load Supply Air Flow Rate [m3/s], 0.00000
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 106 PTHP, Design Size Outdoor Air Flow Rate During Cooling Operation [m3/s], 0.10195
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 106 PTHP, Design Size Outdoor Air Flow Rate During Heating Operation [m3/s], 0.10195
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 106 PTHP, Design Size Outdoor Air Flow Rate When No Cooling or Heating is Needed [m3/s], 0.00000
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 106 PTHP, Design Size Maximum Supply Air Temperature from Supplemental Heater [C], 50.00000
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, THERMAL ZONE: SPACE 106 PTHP COOLING COIL, Design Size Rated Air Flow Rate [m3/s], 0.16242
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, THERMAL ZONE: SPACE 106 PTHP COOLING COIL, Design Size Gross Rated Total Cooling Capacity [W], 4033.38469
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, THERMAL ZONE: SPACE 106 PTHP COOLING COIL, Design Size Gross Rated Sensible Heat Ratio, 0.67608
+ DX Cooling Coil Standard Rating Information, Coil:Cooling:DX:SingleSpeed, THERMAL ZONE: SPACE 106 PTHP COOLING COIL, 3907.1, 2.66, 9.07, 9.63, 9.52
+ Component Sizing Information, Coil:Heating:DX:SingleSpeed, THERMAL ZONE: SPACE 106 PTHP HEATING COIL, Design Size Rated Air Flow Rate [m3/s], 0.16242
+ Component Sizing Information, Coil:Heating:DX:SingleSpeed, THERMAL ZONE: SPACE 106 PTHP HEATING COIL, Design Size Gross Rated Heating Capacity [W], 4033.38469
+ DX Heating Coil Standard Rating Information, Coil:Heating:DX:SingleSpeed, THERMAL ZONE: SPACE 106 PTHP HEATING COIL, 4163.9, 2291.2, 6.22, 4
+ Component Sizing Information, Fan:OnOff, THERMAL ZONE: SPACE 106 PTHP SUPPLY FAN, Design Size Maximum Flow Rate [m3/s], 0.16242
+ Component Sizing Information, Coil:Heating:Electric, THERMAL ZONE: SPACE 106 PTHP SUPP HEATING COIL, Design Size Nominal Capacity [W], 6567.92081
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 107 PTHP, Design Size Cooling Supply Air Flow Rate [m3/s], 0.10177
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 107 PTHP, Design Size Heating Supply Air Flow Rate [m3/s], 0.10177
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 107 PTHP, User-Specified No Load Supply Air Flow Rate [m3/s], 0.00000
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 107 PTHP, Design Size Outdoor Air Flow Rate During Cooling Operation [m3/s], 6.11712E-002
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 107 PTHP, Design Size Outdoor Air Flow Rate During Heating Operation [m3/s], 6.11712E-002
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 107 PTHP, Design Size Outdoor Air Flow Rate When No Cooling or Heating is Needed [m3/s], 0.00000
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 107 PTHP, Design Size Maximum Supply Air Temperature from Supplemental Heater [C], 50.00000
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, THERMAL ZONE: SPACE 107 PTHP COOLING COIL, Design Size Rated Air Flow Rate [m3/s], 0.10177
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, THERMAL ZONE: SPACE 107 PTHP COOLING COIL, Design Size Gross Rated Total Cooling Capacity [W], 2527.13040
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, THERMAL ZONE: SPACE 107 PTHP COOLING COIL, Design Size Gross Rated Sensible Heat Ratio, 0.67608
+ DX Cooling Coil Standard Rating Information, Coil:Cooling:DX:SingleSpeed, THERMAL ZONE: SPACE 107 PTHP COOLING COIL, 2448.0, 2.66, 9.07, 9.63, 9.52
+ Component Sizing Information, Coil:Heating:DX:SingleSpeed, THERMAL ZONE: SPACE 107 PTHP HEATING COIL, Design Size Rated Air Flow Rate [m3/s], 0.10177
+ Component Sizing Information, Coil:Heating:DX:SingleSpeed, THERMAL ZONE: SPACE 107 PTHP HEATING COIL, Design Size Gross Rated Heating Capacity [W], 2527.13040
+ DX Heating Coil Standard Rating Information, Coil:Heating:DX:SingleSpeed, THERMAL ZONE: SPACE 107 PTHP HEATING COIL, 2608.9, 1435.6, 6.23, 4
+ Component Sizing Information, Fan:OnOff, THERMAL ZONE: SPACE 107 PTHP SUPPLY FAN, Design Size Maximum Flow Rate [m3/s], 0.10177
+ Component Sizing Information, Coil:Heating:Electric, THERMAL ZONE: SPACE 107 PTHP SUPP HEATING COIL, Design Size Nominal Capacity [W], 3940.75249
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 108 PTHP, Design Size Cooling Supply Air Flow Rate [m3/s], 9.80501E-002
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 108 PTHP, Design Size Heating Supply Air Flow Rate [m3/s], 9.80501E-002
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 108 PTHP, User-Specified No Load Supply Air Flow Rate [m3/s], 0.00000
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 108 PTHP, Design Size Outdoor Air Flow Rate During Cooling Operation [m3/s], 6.11712E-002
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 108 PTHP, Design Size Outdoor Air Flow Rate During Heating Operation [m3/s], 6.11712E-002
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 108 PTHP, Design Size Outdoor Air Flow Rate When No Cooling or Heating is Needed [m3/s], 0.00000
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 108 PTHP, Design Size Maximum Supply Air Temperature from Supplemental Heater [C], 50.00000
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, THERMAL ZONE: SPACE 108 PTHP COOLING COIL, Design Size Rated Air Flow Rate [m3/s], 9.80501E-002
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, THERMAL ZONE: SPACE 108 PTHP COOLING COIL, Design Size Gross Rated Total Cooling Capacity [W], 2434.81667
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, THERMAL ZONE: SPACE 108 PTHP COOLING COIL, Design Size Gross Rated Sensible Heat Ratio, 0.67608
+ DX Cooling Coil Standard Rating Information, Coil:Cooling:DX:SingleSpeed, THERMAL ZONE: SPACE 108 PTHP COOLING COIL, 2358.6, 2.66, 9.07, 9.63, 9.52
+ Component Sizing Information, Coil:Heating:DX:SingleSpeed, THERMAL ZONE: SPACE 108 PTHP HEATING COIL, Design Size Rated Air Flow Rate [m3/s], 9.80501E-002
+ Component Sizing Information, Coil:Heating:DX:SingleSpeed, THERMAL ZONE: SPACE 108 PTHP HEATING COIL, Design Size Gross Rated Heating Capacity [W], 2434.81667
+ DX Heating Coil Standard Rating Information, Coil:Heating:DX:SingleSpeed, THERMAL ZONE: SPACE 108 PTHP HEATING COIL, 2513.6, 1383.1, 6.22, 4
+ Component Sizing Information, Fan:OnOff, THERMAL ZONE: SPACE 108 PTHP SUPPLY FAN, Design Size Maximum Flow Rate [m3/s], 9.80501E-002
+ Component Sizing Information, Coil:Heating:Electric, THERMAL ZONE: SPACE 108 PTHP SUPP HEATING COIL, Design Size Nominal Capacity [W], 3940.75249
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 109 PTHP, Design Size Cooling Supply Air Flow Rate [m3/s], 9.70693E-002
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 109 PTHP, Design Size Heating Supply Air Flow Rate [m3/s], 9.70693E-002
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 109 PTHP, User-Specified No Load Supply Air Flow Rate [m3/s], 0.00000
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 109 PTHP, Design Size Outdoor Air Flow Rate During Cooling Operation [m3/s], 6.11712E-002
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 109 PTHP, Design Size Outdoor Air Flow Rate During Heating Operation [m3/s], 6.11712E-002
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 109 PTHP, Design Size Outdoor Air Flow Rate When No Cooling or Heating is Needed [m3/s], 0.00000
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 109 PTHP, Design Size Maximum Supply Air Temperature from Supplemental Heater [C], 50.00000
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, THERMAL ZONE: SPACE 109 PTHP COOLING COIL, Design Size Rated Air Flow Rate [m3/s], 9.70693E-002
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, THERMAL ZONE: SPACE 109 PTHP COOLING COIL, Design Size Gross Rated Total Cooling Capacity [W], 2410.46200
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, THERMAL ZONE: SPACE 109 PTHP COOLING COIL, Design Size Gross Rated Sensible Heat Ratio, 0.67608
+ DX Cooling Coil Standard Rating Information, Coil:Cooling:DX:SingleSpeed, THERMAL ZONE: SPACE 109 PTHP COOLING COIL, 2335.0, 2.66, 9.07, 9.63, 9.52
+ Component Sizing Information, Coil:Heating:DX:SingleSpeed, THERMAL ZONE: SPACE 109 PTHP HEATING COIL, Design Size Rated Air Flow Rate [m3/s], 9.70693E-002
+ Component Sizing Information, Coil:Heating:DX:SingleSpeed, THERMAL ZONE: SPACE 109 PTHP HEATING COIL, Design Size Gross Rated Heating Capacity [W], 2410.46200
+ DX Heating Coil Standard Rating Information, Coil:Heating:DX:SingleSpeed, THERMAL ZONE: SPACE 109 PTHP HEATING COIL, 2488.4, 1369.3, 6.21, 4
+ Component Sizing Information, Fan:OnOff, THERMAL ZONE: SPACE 109 PTHP SUPPLY FAN, Design Size Maximum Flow Rate [m3/s], 9.70693E-002
+ Component Sizing Information, Coil:Heating:Electric, THERMAL ZONE: SPACE 109 PTHP SUPP HEATING COIL, Design Size Nominal Capacity [W], 3940.75249
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 110 PTHP, Design Size Cooling Supply Air Flow Rate [m3/s], 9.58759E-002
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 110 PTHP, Design Size Heating Supply Air Flow Rate [m3/s], 9.58759E-002
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 110 PTHP, User-Specified No Load Supply Air Flow Rate [m3/s], 0.00000
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 110 PTHP, Design Size Outdoor Air Flow Rate During Cooling Operation [m3/s], 6.11712E-002
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 110 PTHP, Design Size Outdoor Air Flow Rate During Heating Operation [m3/s], 6.11712E-002
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 110 PTHP, Design Size Outdoor Air Flow Rate When No Cooling or Heating is Needed [m3/s], 0.00000
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 110 PTHP, Design Size Maximum Supply Air Temperature from Supplemental Heater [C], 50.00000
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, THERMAL ZONE: SPACE 110 PTHP COOLING COIL, Design Size Rated Air Flow Rate [m3/s], 9.58759E-002
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, THERMAL ZONE: SPACE 110 PTHP COOLING COIL, Design Size Gross Rated Total Cooling Capacity [W], 2380.82730
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, THERMAL ZONE: SPACE 110 PTHP COOLING COIL, Design Size Gross Rated Sensible Heat Ratio, 0.67608
+ DX Cooling Coil Standard Rating Information, Coil:Cooling:DX:SingleSpeed, THERMAL ZONE: SPACE 110 PTHP COOLING COIL, 2306.3, 2.66, 9.07, 9.63, 9.52
+ Component Sizing Information, Coil:Heating:DX:SingleSpeed, THERMAL ZONE: SPACE 110 PTHP HEATING COIL, Design Size Rated Air Flow Rate [m3/s], 9.58759E-002
+ Component Sizing Information, Coil:Heating:DX:SingleSpeed, THERMAL ZONE: SPACE 110 PTHP HEATING COIL, Design Size Gross Rated Heating Capacity [W], 2380.82730
+ DX Heating Coil Standard Rating Information, Coil:Heating:DX:SingleSpeed, THERMAL ZONE: SPACE 110 PTHP HEATING COIL, 2457.9, 1352.5, 6.21, 4
+ Component Sizing Information, Fan:OnOff, THERMAL ZONE: SPACE 110 PTHP SUPPLY FAN, Design Size Maximum Flow Rate [m3/s], 9.58759E-002
+ Component Sizing Information, Coil:Heating:Electric, THERMAL ZONE: SPACE 110 PTHP SUPP HEATING COIL, Design Size Nominal Capacity [W], 3940.75249
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 111 PTHP, Design Size Cooling Supply Air Flow Rate [m3/s], 9.07219E-002
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 111 PTHP, Design Size Heating Supply Air Flow Rate [m3/s], 9.07219E-002
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 111 PTHP, User-Specified No Load Supply Air Flow Rate [m3/s], 0.00000
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 111 PTHP, Design Size Outdoor Air Flow Rate During Cooling Operation [m3/s], 6.11712E-002
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 111 PTHP, Design Size Outdoor Air Flow Rate During Heating Operation [m3/s], 6.11712E-002
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 111 PTHP, Design Size Outdoor Air Flow Rate When No Cooling or Heating is Needed [m3/s], 0.00000
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 111 PTHP, Design Size Maximum Supply Air Temperature from Supplemental Heater [C], 50.00000
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, THERMAL ZONE: SPACE 111 PTHP COOLING COIL, Design Size Rated Air Flow Rate [m3/s], 9.07219E-002
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, THERMAL ZONE: SPACE 111 PTHP COOLING COIL, Design Size Gross Rated Total Cooling Capacity [W], 2252.84097
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, THERMAL ZONE: SPACE 111 PTHP COOLING COIL, Design Size Gross Rated Sensible Heat Ratio, 0.67608
+ DX Cooling Coil Standard Rating Information, Coil:Cooling:DX:SingleSpeed, THERMAL ZONE: SPACE 111 PTHP COOLING COIL, 2182.3, 2.66, 9.07, 9.63, 9.52
+ Component Sizing Information, Coil:Heating:DX:SingleSpeed, THERMAL ZONE: SPACE 111 PTHP HEATING COIL, Design Size Rated Air Flow Rate [m3/s], 9.07219E-002
+ Component Sizing Information, Coil:Heating:DX:SingleSpeed, THERMAL ZONE: SPACE 111 PTHP HEATING COIL, Design Size Gross Rated Heating Capacity [W], 2252.84097
+ DX Heating Coil Standard Rating Information, Coil:Heating:DX:SingleSpeed, THERMAL ZONE: SPACE 111 PTHP HEATING COIL, 2325.7, 1279.7, 6.19, 4
+ Component Sizing Information, Fan:OnOff, THERMAL ZONE: SPACE 111 PTHP SUPPLY FAN, Design Size Maximum Flow Rate [m3/s], 9.07219E-002
+ Component Sizing Information, Coil:Heating:Electric, THERMAL ZONE: SPACE 111 PTHP SUPP HEATING COIL, Design Size Nominal Capacity [W], 3940.75249
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 201 PTHP, Design Size Cooling Supply Air Flow Rate [m3/s], 0.10652
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 201 PTHP, Design Size Heating Supply Air Flow Rate [m3/s], 0.10652
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 201 PTHP, User-Specified No Load Supply Air Flow Rate [m3/s], 0.00000
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 201 PTHP, Design Size Outdoor Air Flow Rate During Cooling Operation [m3/s], 6.11712E-002
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 201 PTHP, Design Size Outdoor Air Flow Rate During Heating Operation [m3/s], 6.11712E-002
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 201 PTHP, Design Size Outdoor Air Flow Rate When No Cooling or Heating is Needed [m3/s], 0.00000
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 201 PTHP, Design Size Maximum Supply Air Temperature from Supplemental Heater [C], 50.00000
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, THERMAL ZONE: SPACE 201 PTHP COOLING COIL, Design Size Rated Air Flow Rate [m3/s], 0.10652
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, THERMAL ZONE: SPACE 201 PTHP COOLING COIL, Design Size Gross Rated Total Cooling Capacity [W], 2645.09687
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, THERMAL ZONE: SPACE 201 PTHP COOLING COIL, Design Size Gross Rated Sensible Heat Ratio, 0.67608
+ DX Cooling Coil Standard Rating Information, Coil:Cooling:DX:SingleSpeed, THERMAL ZONE: SPACE 201 PTHP COOLING COIL, 2562.3, 2.66, 9.07, 9.63, 9.52
+ Component Sizing Information, Coil:Heating:DX:SingleSpeed, THERMAL ZONE: SPACE 201 PTHP HEATING COIL, Design Size Rated Air Flow Rate [m3/s], 0.10652
+ Component Sizing Information, Coil:Heating:DX:SingleSpeed, THERMAL ZONE: SPACE 201 PTHP HEATING COIL, Design Size Gross Rated Heating Capacity [W], 2645.09687
+ DX Heating Coil Standard Rating Information, Coil:Heating:DX:SingleSpeed, THERMAL ZONE: SPACE 201 PTHP HEATING COIL, 2730.7, 1502.6, 6.22, 4
+ Component Sizing Information, Fan:OnOff, THERMAL ZONE: SPACE 201 PTHP SUPPLY FAN, Design Size Maximum Flow Rate [m3/s], 0.10652
+ Component Sizing Information, Coil:Heating:Electric, THERMAL ZONE: SPACE 201 PTHP SUPP HEATING COIL, Design Size Nominal Capacity [W], 3940.75249
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 202 PTHP, Design Size Cooling Supply Air Flow Rate [m3/s], 0.10235
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 202 PTHP, Design Size Heating Supply Air Flow Rate [m3/s], 0.10235
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 202 PTHP, User-Specified No Load Supply Air Flow Rate [m3/s], 0.00000
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 202 PTHP, Design Size Outdoor Air Flow Rate During Cooling Operation [m3/s], 6.11712E-002
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 202 PTHP, Design Size Outdoor Air Flow Rate During Heating Operation [m3/s], 6.11712E-002
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 202 PTHP, Design Size Outdoor Air Flow Rate When No Cooling or Heating is Needed [m3/s], 0.00000
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 202 PTHP, Design Size Maximum Supply Air Temperature from Supplemental Heater [C], 50.00000
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, THERMAL ZONE: SPACE 202 PTHP COOLING COIL, Design Size Rated Air Flow Rate [m3/s], 0.10235
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, THERMAL ZONE: SPACE 202 PTHP COOLING COIL, Design Size Gross Rated Total Cooling Capacity [W], 2541.68763
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, THERMAL ZONE: SPACE 202 PTHP COOLING COIL, Design Size Gross Rated Sensible Heat Ratio, 0.67608
+ DX Cooling Coil Standard Rating Information, Coil:Cooling:DX:SingleSpeed, THERMAL ZONE: SPACE 202 PTHP COOLING COIL, 2462.1, 2.66, 9.07, 9.63, 9.52
+ Component Sizing Information, Coil:Heating:DX:SingleSpeed, THERMAL ZONE: SPACE 202 PTHP HEATING COIL, Design Size Rated Air Flow Rate [m3/s], 0.10235
+ Component Sizing Information, Coil:Heating:DX:SingleSpeed, THERMAL ZONE: SPACE 202 PTHP HEATING COIL, Design Size Gross Rated Heating Capacity [W], 2541.68763
+ DX Heating Coil Standard Rating Information, Coil:Heating:DX:SingleSpeed, THERMAL ZONE: SPACE 202 PTHP HEATING COIL, 2623.9, 1443.8, 6.23, 4
+ Component Sizing Information, Fan:OnOff, THERMAL ZONE: SPACE 202 PTHP SUPPLY FAN, Design Size Maximum Flow Rate [m3/s], 0.10235
+ Component Sizing Information, Coil:Heating:Electric, THERMAL ZONE: SPACE 202 PTHP SUPP HEATING COIL, Design Size Nominal Capacity [W], 3940.75249
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 203 PTHP, Design Size Cooling Supply Air Flow Rate [m3/s], 0.10171
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 203 PTHP, Design Size Heating Supply Air Flow Rate [m3/s], 0.10171
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 203 PTHP, User-Specified No Load Supply Air Flow Rate [m3/s], 0.00000
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 203 PTHP, Design Size Outdoor Air Flow Rate During Cooling Operation [m3/s], 6.11712E-002
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 203 PTHP, Design Size Outdoor Air Flow Rate During Heating Operation [m3/s], 6.11712E-002
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 203 PTHP, Design Size Outdoor Air Flow Rate When No Cooling or Heating is Needed [m3/s], 0.00000
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 203 PTHP, Design Size Maximum Supply Air Temperature from Supplemental Heater [C], 50.00000
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, THERMAL ZONE: SPACE 203 PTHP COOLING COIL, Design Size Rated Air Flow Rate [m3/s], 0.10171
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, THERMAL ZONE: SPACE 203 PTHP COOLING COIL, Design Size Gross Rated Total Cooling Capacity [W], 2525.67338
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, THERMAL ZONE: SPACE 203 PTHP COOLING COIL, Design Size Gross Rated Sensible Heat Ratio, 0.67608
+ DX Cooling Coil Standard Rating Information, Coil:Cooling:DX:SingleSpeed, THERMAL ZONE: SPACE 203 PTHP COOLING COIL, 2446.6, 2.66, 9.07, 9.63, 9.52
+ Component Sizing Information, Coil:Heating:DX:SingleSpeed, THERMAL ZONE: SPACE 203 PTHP HEATING COIL, Design Size Rated Air Flow Rate [m3/s], 0.10171
+ Component Sizing Information, Coil:Heating:DX:SingleSpeed, THERMAL ZONE: SPACE 203 PTHP HEATING COIL, Design Size Gross Rated Heating Capacity [W], 2525.67338
+ DX Heating Coil Standard Rating Information, Coil:Heating:DX:SingleSpeed, THERMAL ZONE: SPACE 203 PTHP HEATING COIL, 2607.4, 1434.7, 6.23, 4
+ Component Sizing Information, Fan:OnOff, THERMAL ZONE: SPACE 203 PTHP SUPPLY FAN, Design Size Maximum Flow Rate [m3/s], 0.10171
+ Component Sizing Information, Coil:Heating:Electric, THERMAL ZONE: SPACE 203 PTHP SUPP HEATING COIL, Design Size Nominal Capacity [W], 3940.75249
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 204 PTHP, Design Size Cooling Supply Air Flow Rate [m3/s], 0.10237
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 204 PTHP, Design Size Heating Supply Air Flow Rate [m3/s], 0.10237
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 204 PTHP, User-Specified No Load Supply Air Flow Rate [m3/s], 0.00000
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 204 PTHP, Design Size Outdoor Air Flow Rate During Cooling Operation [m3/s], 6.11712E-002
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 204 PTHP, Design Size Outdoor Air Flow Rate During Heating Operation [m3/s], 6.11712E-002
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 204 PTHP, Design Size Outdoor Air Flow Rate When No Cooling or Heating is Needed [m3/s], 0.00000
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 204 PTHP, Design Size Maximum Supply Air Temperature from Supplemental Heater [C], 50.00000
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, THERMAL ZONE: SPACE 204 PTHP COOLING COIL, Design Size Rated Air Flow Rate [m3/s], 0.10237
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, THERMAL ZONE: SPACE 204 PTHP COOLING COIL, Design Size Gross Rated Total Cooling Capacity [W], 2541.97248
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, THERMAL ZONE: SPACE 204 PTHP COOLING COIL, Design Size Gross Rated Sensible Heat Ratio, 0.67608
+ DX Cooling Coil Standard Rating Information, Coil:Cooling:DX:SingleSpeed, THERMAL ZONE: SPACE 204 PTHP COOLING COIL, 2462.4, 2.66, 9.07, 9.63, 9.52
+ Component Sizing Information, Coil:Heating:DX:SingleSpeed, THERMAL ZONE: SPACE 204 PTHP HEATING COIL, Design Size Rated Air Flow Rate [m3/s], 0.10237
+ Component Sizing Information, Coil:Heating:DX:SingleSpeed, THERMAL ZONE: SPACE 204 PTHP HEATING COIL, Design Size Gross Rated Heating Capacity [W], 2541.97248
+ DX Heating Coil Standard Rating Information, Coil:Heating:DX:SingleSpeed, THERMAL ZONE: SPACE 204 PTHP HEATING COIL, 2624.2, 1444.0, 6.23, 4
+ Component Sizing Information, Fan:OnOff, THERMAL ZONE: SPACE 204 PTHP SUPPLY FAN, Design Size Maximum Flow Rate [m3/s], 0.10237
+ Component Sizing Information, Coil:Heating:Electric, THERMAL ZONE: SPACE 204 PTHP SUPP HEATING COIL, Design Size Nominal Capacity [W], 3940.75249
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 205 PTHP, Design Size Cooling Supply Air Flow Rate [m3/s], 0.10658
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 205 PTHP, Design Size Heating Supply Air Flow Rate [m3/s], 0.10658
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 205 PTHP, User-Specified No Load Supply Air Flow Rate [m3/s], 0.00000
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 205 PTHP, Design Size Outdoor Air Flow Rate During Cooling Operation [m3/s], 6.11712E-002
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 205 PTHP, Design Size Outdoor Air Flow Rate During Heating Operation [m3/s], 6.11712E-002
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 205 PTHP, Design Size Outdoor Air Flow Rate When No Cooling or Heating is Needed [m3/s], 0.00000
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 205 PTHP, Design Size Maximum Supply Air Temperature from Supplemental Heater [C], 50.00000
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, THERMAL ZONE: SPACE 205 PTHP COOLING COIL, Design Size Rated Air Flow Rate [m3/s], 0.10658
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, THERMAL ZONE: SPACE 205 PTHP COOLING COIL, Design Size Gross Rated Total Cooling Capacity [W], 2646.67283
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, THERMAL ZONE: SPACE 205 PTHP COOLING COIL, Design Size Gross Rated Sensible Heat Ratio, 0.67608
+ DX Cooling Coil Standard Rating Information, Coil:Cooling:DX:SingleSpeed, THERMAL ZONE: SPACE 205 PTHP COOLING COIL, 2563.8, 2.66, 9.07, 9.63, 9.52
+ Component Sizing Information, Coil:Heating:DX:SingleSpeed, THERMAL ZONE: SPACE 205 PTHP HEATING COIL, Design Size Rated Air Flow Rate [m3/s], 0.10658
+ Component Sizing Information, Coil:Heating:DX:SingleSpeed, THERMAL ZONE: SPACE 205 PTHP HEATING COIL, Design Size Gross Rated Heating Capacity [W], 2646.67283
+ DX Heating Coil Standard Rating Information, Coil:Heating:DX:SingleSpeed, THERMAL ZONE: SPACE 205 PTHP HEATING COIL, 2732.3, 1503.5, 6.22, 4
+ Component Sizing Information, Fan:OnOff, THERMAL ZONE: SPACE 205 PTHP SUPPLY FAN, Design Size Maximum Flow Rate [m3/s], 0.10658
+ Component Sizing Information, Coil:Heating:Electric, THERMAL ZONE: SPACE 205 PTHP SUPP HEATING COIL, Design Size Nominal Capacity [W], 3940.75249
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 206 PTHP, Design Size Cooling Supply Air Flow Rate [m3/s], 0.17051
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 206 PTHP, Design Size Heating Supply Air Flow Rate [m3/s], 0.17051
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 206 PTHP, User-Specified No Load Supply Air Flow Rate [m3/s], 0.00000
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 206 PTHP, Design Size Outdoor Air Flow Rate During Cooling Operation [m3/s], 0.10195
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 206 PTHP, Design Size Outdoor Air Flow Rate During Heating Operation [m3/s], 0.10195
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 206 PTHP, Design Size Outdoor Air Flow Rate When No Cooling or Heating is Needed [m3/s], 0.00000
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 206 PTHP, Design Size Maximum Supply Air Temperature from Supplemental Heater [C], 50.00000
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, THERMAL ZONE: SPACE 206 PTHP COOLING COIL, Design Size Rated Air Flow Rate [m3/s], 0.17051
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, THERMAL ZONE: SPACE 206 PTHP COOLING COIL, Design Size Gross Rated Total Cooling Capacity [W], 4234.26576
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, THERMAL ZONE: SPACE 206 PTHP COOLING COIL, Design Size Gross Rated Sensible Heat Ratio, 0.67608
+ DX Cooling Coil Standard Rating Information, Coil:Cooling:DX:SingleSpeed, THERMAL ZONE: SPACE 206 PTHP COOLING COIL, 4101.7, 2.66, 9.07, 9.63, 9.52
+ Component Sizing Information, Coil:Heating:DX:SingleSpeed, THERMAL ZONE: SPACE 206 PTHP HEATING COIL, Design Size Rated Air Flow Rate [m3/s], 0.17051
+ Component Sizing Information, Coil:Heating:DX:SingleSpeed, THERMAL ZONE: SPACE 206 PTHP HEATING COIL, Design Size Gross Rated Heating Capacity [W], 4234.26576
+ DX Heating Coil Standard Rating Information, Coil:Heating:DX:SingleSpeed, THERMAL ZONE: SPACE 206 PTHP HEATING COIL, 4371.3, 2405.3, 6.21, 4
+ Component Sizing Information, Fan:OnOff, THERMAL ZONE: SPACE 206 PTHP SUPPLY FAN, Design Size Maximum Flow Rate [m3/s], 0.17051
+ Component Sizing Information, Coil:Heating:Electric, THERMAL ZONE: SPACE 206 PTHP SUPP HEATING COIL, Design Size Nominal Capacity [W], 6567.92081
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 207 PTHP, Design Size Cooling Supply Air Flow Rate [m3/s], 0.10648
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 207 PTHP, Design Size Heating Supply Air Flow Rate [m3/s], 0.10648
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 207 PTHP, User-Specified No Load Supply Air Flow Rate [m3/s], 0.00000
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 207 PTHP, Design Size Outdoor Air Flow Rate During Cooling Operation [m3/s], 6.11712E-002
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 207 PTHP, Design Size Outdoor Air Flow Rate During Heating Operation [m3/s], 6.11712E-002
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 207 PTHP, Design Size Outdoor Air Flow Rate When No Cooling or Heating is Needed [m3/s], 0.00000
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 207 PTHP, Design Size Maximum Supply Air Temperature from Supplemental Heater [C], 50.00000
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, THERMAL ZONE: SPACE 207 PTHP COOLING COIL, Design Size Rated Air Flow Rate [m3/s], 0.10648
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, THERMAL ZONE: SPACE 207 PTHP COOLING COIL, Design Size Gross Rated Total Cooling Capacity [W], 2644.10638
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, THERMAL ZONE: SPACE 207 PTHP COOLING COIL, Design Size Gross Rated Sensible Heat Ratio, 0.67608
+ DX Cooling Coil Standard Rating Information, Coil:Cooling:DX:SingleSpeed, THERMAL ZONE: SPACE 207 PTHP COOLING COIL, 2561.3, 2.66, 9.07, 9.63, 9.52
+ Component Sizing Information, Coil:Heating:DX:SingleSpeed, THERMAL ZONE: SPACE 207 PTHP HEATING COIL, Design Size Rated Air Flow Rate [m3/s], 0.10648
+ Component Sizing Information, Coil:Heating:DX:SingleSpeed, THERMAL ZONE: SPACE 207 PTHP HEATING COIL, Design Size Gross Rated Heating Capacity [W], 2644.10638
+ DX Heating Coil Standard Rating Information, Coil:Heating:DX:SingleSpeed, THERMAL ZONE: SPACE 207 PTHP HEATING COIL, 2729.7, 1502.0, 6.22, 4
+ Component Sizing Information, Fan:OnOff, THERMAL ZONE: SPACE 207 PTHP SUPPLY FAN, Design Size Maximum Flow Rate [m3/s], 0.10648
+ Component Sizing Information, Coil:Heating:Electric, THERMAL ZONE: SPACE 207 PTHP SUPP HEATING COIL, Design Size Nominal Capacity [W], 3940.75249
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 208 PTHP, Design Size Cooling Supply Air Flow Rate [m3/s], 0.10228
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 208 PTHP, Design Size Heating Supply Air Flow Rate [m3/s], 0.10228
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 208 PTHP, User-Specified No Load Supply Air Flow Rate [m3/s], 0.00000
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 208 PTHP, Design Size Outdoor Air Flow Rate During Cooling Operation [m3/s], 6.11712E-002
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 208 PTHP, Design Size Outdoor Air Flow Rate During Heating Operation [m3/s], 6.11712E-002
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 208 PTHP, Design Size Outdoor Air Flow Rate When No Cooling or Heating is Needed [m3/s], 0.00000
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 208 PTHP, Design Size Maximum Supply Air Temperature from Supplemental Heater [C], 50.00000
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, THERMAL ZONE: SPACE 208 PTHP COOLING COIL, Design Size Rated Air Flow Rate [m3/s], 0.10228
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, THERMAL ZONE: SPACE 208 PTHP COOLING COIL, Design Size Gross Rated Total Cooling Capacity [W], 2539.97178
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, THERMAL ZONE: SPACE 208 PTHP COOLING COIL, Design Size Gross Rated Sensible Heat Ratio, 0.67608
+ DX Cooling Coil Standard Rating Information, Coil:Cooling:DX:SingleSpeed, THERMAL ZONE: SPACE 208 PTHP COOLING COIL, 2460.5, 2.66, 9.07, 9.63, 9.52
+ Component Sizing Information, Coil:Heating:DX:SingleSpeed, THERMAL ZONE: SPACE 208 PTHP HEATING COIL, Design Size Rated Air Flow Rate [m3/s], 0.10228
+ Component Sizing Information, Coil:Heating:DX:SingleSpeed, THERMAL ZONE: SPACE 208 PTHP HEATING COIL, Design Size Gross Rated Heating Capacity [W], 2539.97178
+ DX Heating Coil Standard Rating Information, Coil:Heating:DX:SingleSpeed, THERMAL ZONE: SPACE 208 PTHP HEATING COIL, 2622.1, 1442.9, 6.23, 4
+ Component Sizing Information, Fan:OnOff, THERMAL ZONE: SPACE 208 PTHP SUPPLY FAN, Design Size Maximum Flow Rate [m3/s], 0.10228
+ Component Sizing Information, Coil:Heating:Electric, THERMAL ZONE: SPACE 208 PTHP SUPP HEATING COIL, Design Size Nominal Capacity [W], 3940.75249
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 209 PTHP, Design Size Cooling Supply Air Flow Rate [m3/s], 0.10153
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 209 PTHP, Design Size Heating Supply Air Flow Rate [m3/s], 0.10153
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 209 PTHP, User-Specified No Load Supply Air Flow Rate [m3/s], 0.00000
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 209 PTHP, Design Size Outdoor Air Flow Rate During Cooling Operation [m3/s], 6.11712E-002
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 209 PTHP, Design Size Outdoor Air Flow Rate During Heating Operation [m3/s], 6.11712E-002
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 209 PTHP, Design Size Outdoor Air Flow Rate When No Cooling or Heating is Needed [m3/s], 0.00000
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 209 PTHP, Design Size Maximum Supply Air Temperature from Supplemental Heater [C], 50.00000
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, THERMAL ZONE: SPACE 209 PTHP COOLING COIL, Design Size Rated Air Flow Rate [m3/s], 0.10153
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, THERMAL ZONE: SPACE 209 PTHP COOLING COIL, Design Size Gross Rated Total Cooling Capacity [W], 2521.23986
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, THERMAL ZONE: SPACE 209 PTHP COOLING COIL, Design Size Gross Rated Sensible Heat Ratio, 0.67608
+ DX Cooling Coil Standard Rating Information, Coil:Cooling:DX:SingleSpeed, THERMAL ZONE: SPACE 209 PTHP COOLING COIL, 2442.3, 2.66, 9.07, 9.63, 9.52
+ Component Sizing Information, Coil:Heating:DX:SingleSpeed, THERMAL ZONE: SPACE 209 PTHP HEATING COIL, Design Size Rated Air Flow Rate [m3/s], 0.10153
+ Component Sizing Information, Coil:Heating:DX:SingleSpeed, THERMAL ZONE: SPACE 209 PTHP HEATING COIL, Design Size Gross Rated Heating Capacity [W], 2521.23986
+ DX Heating Coil Standard Rating Information, Coil:Heating:DX:SingleSpeed, THERMAL ZONE: SPACE 209 PTHP HEATING COIL, 2602.8, 1432.2, 6.23, 4
+ Component Sizing Information, Fan:OnOff, THERMAL ZONE: SPACE 209 PTHP SUPPLY FAN, Design Size Maximum Flow Rate [m3/s], 0.10153
+ Component Sizing Information, Coil:Heating:Electric, THERMAL ZONE: SPACE 209 PTHP SUPP HEATING COIL, Design Size Nominal Capacity [W], 3940.75249
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 210 PTHP, Design Size Cooling Supply Air Flow Rate [m3/s], 0.10181
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 210 PTHP, Design Size Heating Supply Air Flow Rate [m3/s], 0.10181
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 210 PTHP, User-Specified No Load Supply Air Flow Rate [m3/s], 0.00000
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 210 PTHP, Design Size Outdoor Air Flow Rate During Cooling Operation [m3/s], 6.11712E-002
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 210 PTHP, Design Size Outdoor Air Flow Rate During Heating Operation [m3/s], 6.11712E-002
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 210 PTHP, Design Size Outdoor Air Flow Rate When No Cooling or Heating is Needed [m3/s], 0.00000
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 210 PTHP, Design Size Maximum Supply Air Temperature from Supplemental Heater [C], 50.00000
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, THERMAL ZONE: SPACE 210 PTHP COOLING COIL, Design Size Rated Air Flow Rate [m3/s], 0.10181
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, THERMAL ZONE: SPACE 210 PTHP COOLING COIL, Design Size Gross Rated Total Cooling Capacity [W], 2528.09334
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, THERMAL ZONE: SPACE 210 PTHP COOLING COIL, Design Size Gross Rated Sensible Heat Ratio, 0.67608
+ DX Cooling Coil Standard Rating Information, Coil:Cooling:DX:SingleSpeed, THERMAL ZONE: SPACE 210 PTHP COOLING COIL, 2449.0, 2.66, 9.07, 9.63, 9.52
+ Component Sizing Information, Coil:Heating:DX:SingleSpeed, THERMAL ZONE: SPACE 210 PTHP HEATING COIL, Design Size Rated Air Flow Rate [m3/s], 0.10181
+ Component Sizing Information, Coil:Heating:DX:SingleSpeed, THERMAL ZONE: SPACE 210 PTHP HEATING COIL, Design Size Gross Rated Heating Capacity [W], 2528.09334
+ DX Heating Coil Standard Rating Information, Coil:Heating:DX:SingleSpeed, THERMAL ZONE: SPACE 210 PTHP HEATING COIL, 2609.9, 1436.1, 6.23, 4
+ Component Sizing Information, Fan:OnOff, THERMAL ZONE: SPACE 210 PTHP SUPPLY FAN, Design Size Maximum Flow Rate [m3/s], 0.10181
+ Component Sizing Information, Coil:Heating:Electric, THERMAL ZONE: SPACE 210 PTHP SUPP HEATING COIL, Design Size Nominal Capacity [W], 3940.75249
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 211 PTHP, Design Size Cooling Supply Air Flow Rate [m3/s], 0.10495
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 211 PTHP, Design Size Heating Supply Air Flow Rate [m3/s], 0.10495
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 211 PTHP, User-Specified No Load Supply Air Flow Rate [m3/s], 0.00000
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 211 PTHP, Design Size Outdoor Air Flow Rate During Cooling Operation [m3/s], 6.11712E-002
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 211 PTHP, Design Size Outdoor Air Flow Rate During Heating Operation [m3/s], 6.11712E-002
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 211 PTHP, Design Size Outdoor Air Flow Rate When No Cooling or Heating is Needed [m3/s], 0.00000
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 211 PTHP, Design Size Maximum Supply Air Temperature from Supplemental Heater [C], 50.00000
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, THERMAL ZONE: SPACE 211 PTHP COOLING COIL, Design Size Rated Air Flow Rate [m3/s], 0.10495
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, THERMAL ZONE: SPACE 211 PTHP COOLING COIL, Design Size Gross Rated Total Cooling Capacity [W], 2606.10794
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, THERMAL ZONE: SPACE 211 PTHP COOLING COIL, Design Size Gross Rated Sensible Heat Ratio, 0.67608
+ DX Cooling Coil Standard Rating Information, Coil:Cooling:DX:SingleSpeed, THERMAL ZONE: SPACE 211 PTHP COOLING COIL, 2524.5, 2.66, 9.07, 9.63, 9.52
+ Component Sizing Information, Coil:Heating:DX:SingleSpeed, THERMAL ZONE: SPACE 211 PTHP HEATING COIL, Design Size Rated Air Flow Rate [m3/s], 0.10495
+ Component Sizing Information, Coil:Heating:DX:SingleSpeed, THERMAL ZONE: SPACE 211 PTHP HEATING COIL, Design Size Gross Rated Heating Capacity [W], 2606.10794
+ DX Heating Coil Standard Rating Information, Coil:Heating:DX:SingleSpeed, THERMAL ZONE: SPACE 211 PTHP HEATING COIL, 2690.4, 1480.4, 6.22, 4
+ Component Sizing Information, Fan:OnOff, THERMAL ZONE: SPACE 211 PTHP SUPPLY FAN, Design Size Maximum Flow Rate [m3/s], 0.10495
+ Component Sizing Information, Coil:Heating:Electric, THERMAL ZONE: SPACE 211 PTHP SUPP HEATING COIL, Design Size Nominal Capacity [W], 3940.75249
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 301 PTHP, Design Size Cooling Supply Air Flow Rate [m3/s], 0.10748
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 301 PTHP, Design Size Heating Supply Air Flow Rate [m3/s], 0.10748
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 301 PTHP, User-Specified No Load Supply Air Flow Rate [m3/s], 0.00000
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 301 PTHP, Design Size Outdoor Air Flow Rate During Cooling Operation [m3/s], 6.11712E-002
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 301 PTHP, Design Size Outdoor Air Flow Rate During Heating Operation [m3/s], 6.11712E-002
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 301 PTHP, Design Size Outdoor Air Flow Rate When No Cooling or Heating is Needed [m3/s], 0.00000
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 301 PTHP, Design Size Maximum Supply Air Temperature from Supplemental Heater [C], 50.00000
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, THERMAL ZONE: SPACE 301 PTHP COOLING COIL, Design Size Rated Air Flow Rate [m3/s], 0.10748
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, THERMAL ZONE: SPACE 301 PTHP COOLING COIL, Design Size Gross Rated Total Cooling Capacity [W], 2669.08096
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, THERMAL ZONE: SPACE 301 PTHP COOLING COIL, Design Size Gross Rated Sensible Heat Ratio, 0.67608
+ DX Cooling Coil Standard Rating Information, Coil:Cooling:DX:SingleSpeed, THERMAL ZONE: SPACE 301 PTHP COOLING COIL, 2585.5, 2.66, 9.07, 9.63, 9.52
+ Component Sizing Information, Coil:Heating:DX:SingleSpeed, THERMAL ZONE: SPACE 301 PTHP HEATING COIL, Design Size Rated Air Flow Rate [m3/s], 0.10748
+ Component Sizing Information, Coil:Heating:DX:SingleSpeed, THERMAL ZONE: SPACE 301 PTHP HEATING COIL, Design Size Gross Rated Heating Capacity [W], 2669.08096
+ DX Heating Coil Standard Rating Information, Coil:Heating:DX:SingleSpeed, THERMAL ZONE: SPACE 301 PTHP HEATING COIL, 2755.4, 1516.2, 6.22, 4
+ Component Sizing Information, Fan:OnOff, THERMAL ZONE: SPACE 301 PTHP SUPPLY FAN, Design Size Maximum Flow Rate [m3/s], 0.10748
+ Component Sizing Information, Coil:Heating:Electric, THERMAL ZONE: SPACE 301 PTHP SUPP HEATING COIL, Design Size Nominal Capacity [W], 4216.35136
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 302 PTHP, Design Size Cooling Supply Air Flow Rate [m3/s], 0.10334
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 302 PTHP, Design Size Heating Supply Air Flow Rate [m3/s], 0.10334
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 302 PTHP, User-Specified No Load Supply Air Flow Rate [m3/s], 0.00000
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 302 PTHP, Design Size Outdoor Air Flow Rate During Cooling Operation [m3/s], 6.11712E-002
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 302 PTHP, Design Size Outdoor Air Flow Rate During Heating Operation [m3/s], 6.11712E-002
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 302 PTHP, Design Size Outdoor Air Flow Rate When No Cooling or Heating is Needed [m3/s], 0.00000
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 302 PTHP, Design Size Maximum Supply Air Temperature from Supplemental Heater [C], 50.00000
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, THERMAL ZONE: SPACE 302 PTHP COOLING COIL, Design Size Rated Air Flow Rate [m3/s], 0.10334
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, THERMAL ZONE: SPACE 302 PTHP COOLING COIL, Design Size Gross Rated Total Cooling Capacity [W], 2566.16859
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, THERMAL ZONE: SPACE 302 PTHP COOLING COIL, Design Size Gross Rated Sensible Heat Ratio, 0.67608
+ DX Cooling Coil Standard Rating Information, Coil:Cooling:DX:SingleSpeed, THERMAL ZONE: SPACE 302 PTHP COOLING COIL, 2485.8, 2.66, 9.07, 9.63, 9.52
+ Component Sizing Information, Coil:Heating:DX:SingleSpeed, THERMAL ZONE: SPACE 302 PTHP HEATING COIL, Design Size Rated Air Flow Rate [m3/s], 0.10334
+ Component Sizing Information, Coil:Heating:DX:SingleSpeed, THERMAL ZONE: SPACE 302 PTHP HEATING COIL, Design Size Gross Rated Heating Capacity [W], 2566.16859
+ DX Heating Coil Standard Rating Information, Coil:Heating:DX:SingleSpeed, THERMAL ZONE: SPACE 302 PTHP HEATING COIL, 2649.2, 1457.7, 6.23, 4
+ Component Sizing Information, Fan:OnOff, THERMAL ZONE: SPACE 302 PTHP SUPPLY FAN, Design Size Maximum Flow Rate [m3/s], 0.10334
+ Component Sizing Information, Coil:Heating:Electric, THERMAL ZONE: SPACE 302 PTHP SUPP HEATING COIL, Design Size Nominal Capacity [W], 3940.75249
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 303 PTHP, Design Size Cooling Supply Air Flow Rate [m3/s], 0.10273
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 303 PTHP, Design Size Heating Supply Air Flow Rate [m3/s], 0.10273
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 303 PTHP, User-Specified No Load Supply Air Flow Rate [m3/s], 0.00000
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 303 PTHP, Design Size Outdoor Air Flow Rate During Cooling Operation [m3/s], 6.11712E-002
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 303 PTHP, Design Size Outdoor Air Flow Rate During Heating Operation [m3/s], 6.11712E-002
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 303 PTHP, Design Size Outdoor Air Flow Rate When No Cooling or Heating is Needed [m3/s], 0.00000
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 303 PTHP, Design Size Maximum Supply Air Temperature from Supplemental Heater [C], 50.00000
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, THERMAL ZONE: SPACE 303 PTHP COOLING COIL, Design Size Rated Air Flow Rate [m3/s], 0.10273
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, THERMAL ZONE: SPACE 303 PTHP COOLING COIL, Design Size Gross Rated Total Cooling Capacity [W], 2551.10361
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, THERMAL ZONE: SPACE 303 PTHP COOLING COIL, Design Size Gross Rated Sensible Heat Ratio, 0.67608
+ DX Cooling Coil Standard Rating Information, Coil:Cooling:DX:SingleSpeed, THERMAL ZONE: SPACE 303 PTHP COOLING COIL, 2471.3, 2.66, 9.07, 9.63, 9.52
+ Component Sizing Information, Coil:Heating:DX:SingleSpeed, THERMAL ZONE: SPACE 303 PTHP HEATING COIL, Design Size Rated Air Flow Rate [m3/s], 0.10273
+ Component Sizing Information, Coil:Heating:DX:SingleSpeed, THERMAL ZONE: SPACE 303 PTHP HEATING COIL, Design Size Gross Rated Heating Capacity [W], 2551.10361
+ DX Heating Coil Standard Rating Information, Coil:Heating:DX:SingleSpeed, THERMAL ZONE: SPACE 303 PTHP HEATING COIL, 2633.6, 1449.2, 6.23, 4
+ Component Sizing Information, Fan:OnOff, THERMAL ZONE: SPACE 303 PTHP SUPPLY FAN, Design Size Maximum Flow Rate [m3/s], 0.10273
+ Component Sizing Information, Coil:Heating:Electric, THERMAL ZONE: SPACE 303 PTHP SUPP HEATING COIL, Design Size Nominal Capacity [W], 3940.75249
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 304 PTHP, Design Size Cooling Supply Air Flow Rate [m3/s], 0.10334
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 304 PTHP, Design Size Heating Supply Air Flow Rate [m3/s], 0.10334
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 304 PTHP, User-Specified No Load Supply Air Flow Rate [m3/s], 0.00000
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 304 PTHP, Design Size Outdoor Air Flow Rate During Cooling Operation [m3/s], 6.11712E-002
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 304 PTHP, Design Size Outdoor Air Flow Rate During Heating Operation [m3/s], 6.11712E-002
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 304 PTHP, Design Size Outdoor Air Flow Rate When No Cooling or Heating is Needed [m3/s], 0.00000
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 304 PTHP, Design Size Maximum Supply Air Temperature from Supplemental Heater [C], 50.00000
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, THERMAL ZONE: SPACE 304 PTHP COOLING COIL, Design Size Rated Air Flow Rate [m3/s], 0.10334
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, THERMAL ZONE: SPACE 304 PTHP COOLING COIL, Design Size Gross Rated Total Cooling Capacity [W], 2566.13388
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, THERMAL ZONE: SPACE 304 PTHP COOLING COIL, Design Size Gross Rated Sensible Heat Ratio, 0.67608
+ DX Cooling Coil Standard Rating Information, Coil:Cooling:DX:SingleSpeed, THERMAL ZONE: SPACE 304 PTHP COOLING COIL, 2485.8, 2.66, 9.07, 9.63, 9.52
+ Component Sizing Information, Coil:Heating:DX:SingleSpeed, THERMAL ZONE: SPACE 304 PTHP HEATING COIL, Design Size Rated Air Flow Rate [m3/s], 0.10334
+ Component Sizing Information, Coil:Heating:DX:SingleSpeed, THERMAL ZONE: SPACE 304 PTHP HEATING COIL, Design Size Gross Rated Heating Capacity [W], 2566.13388
+ DX Heating Coil Standard Rating Information, Coil:Heating:DX:SingleSpeed, THERMAL ZONE: SPACE 304 PTHP HEATING COIL, 2649.2, 1457.7, 6.23, 4
+ Component Sizing Information, Fan:OnOff, THERMAL ZONE: SPACE 304 PTHP SUPPLY FAN, Design Size Maximum Flow Rate [m3/s], 0.10334
+ Component Sizing Information, Coil:Heating:Electric, THERMAL ZONE: SPACE 304 PTHP SUPP HEATING COIL, Design Size Nominal Capacity [W], 3940.75249
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 305 PTHP, Design Size Cooling Supply Air Flow Rate [m3/s], 0.10747
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 305 PTHP, Design Size Heating Supply Air Flow Rate [m3/s], 0.10747
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 305 PTHP, User-Specified No Load Supply Air Flow Rate [m3/s], 0.00000
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 305 PTHP, Design Size Outdoor Air Flow Rate During Cooling Operation [m3/s], 6.11712E-002
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 305 PTHP, Design Size Outdoor Air Flow Rate During Heating Operation [m3/s], 6.11712E-002
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 305 PTHP, Design Size Outdoor Air Flow Rate When No Cooling or Heating is Needed [m3/s], 0.00000
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 305 PTHP, Design Size Maximum Supply Air Temperature from Supplemental Heater [C], 50.00000
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, THERMAL ZONE: SPACE 305 PTHP COOLING COIL, Design Size Rated Air Flow Rate [m3/s], 0.10747
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, THERMAL ZONE: SPACE 305 PTHP COOLING COIL, Design Size Gross Rated Total Cooling Capacity [W], 2668.65410
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, THERMAL ZONE: SPACE 305 PTHP COOLING COIL, Design Size Gross Rated Sensible Heat Ratio, 0.67608
+ DX Cooling Coil Standard Rating Information, Coil:Cooling:DX:SingleSpeed, THERMAL ZONE: SPACE 305 PTHP COOLING COIL, 2585.1, 2.66, 9.07, 9.63, 9.52
+ Component Sizing Information, Coil:Heating:DX:SingleSpeed, THERMAL ZONE: SPACE 305 PTHP HEATING COIL, Design Size Rated Air Flow Rate [m3/s], 0.10747
+ Component Sizing Information, Coil:Heating:DX:SingleSpeed, THERMAL ZONE: SPACE 305 PTHP HEATING COIL, Design Size Gross Rated Heating Capacity [W], 2668.65410
+ DX Heating Coil Standard Rating Information, Coil:Heating:DX:SingleSpeed, THERMAL ZONE: SPACE 305 PTHP HEATING COIL, 2755.0, 1516.0, 6.22, 4
+ Component Sizing Information, Fan:OnOff, THERMAL ZONE: SPACE 305 PTHP SUPPLY FAN, Design Size Maximum Flow Rate [m3/s], 0.10747
+ Component Sizing Information, Coil:Heating:Electric, THERMAL ZONE: SPACE 305 PTHP SUPP HEATING COIL, Design Size Nominal Capacity [W], 4215.54302
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 306 PTHP, Design Size Cooling Supply Air Flow Rate [m3/s], 0.17247
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 306 PTHP, Design Size Heating Supply Air Flow Rate [m3/s], 0.17247
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 306 PTHP, User-Specified No Load Supply Air Flow Rate [m3/s], 0.00000
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 306 PTHP, Design Size Outdoor Air Flow Rate During Cooling Operation [m3/s], 0.10195
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 306 PTHP, Design Size Outdoor Air Flow Rate During Heating Operation [m3/s], 0.10195
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 306 PTHP, Design Size Outdoor Air Flow Rate When No Cooling or Heating is Needed [m3/s], 0.00000
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 306 PTHP, Design Size Maximum Supply Air Temperature from Supplemental Heater [C], 50.00000
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, THERMAL ZONE: SPACE 306 PTHP COOLING COIL, Design Size Rated Air Flow Rate [m3/s], 0.17247
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, THERMAL ZONE: SPACE 306 PTHP COOLING COIL, Design Size Gross Rated Total Cooling Capacity [W], 4282.79875
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, THERMAL ZONE: SPACE 306 PTHP COOLING COIL, Design Size Gross Rated Sensible Heat Ratio, 0.67608
+ DX Cooling Coil Standard Rating Information, Coil:Cooling:DX:SingleSpeed, THERMAL ZONE: SPACE 306 PTHP COOLING COIL, 4148.7, 2.66, 9.07, 9.63, 9.52
+ Component Sizing Information, Coil:Heating:DX:SingleSpeed, THERMAL ZONE: SPACE 306 PTHP HEATING COIL, Design Size Rated Air Flow Rate [m3/s], 0.17247
+ Component Sizing Information, Coil:Heating:DX:SingleSpeed, THERMAL ZONE: SPACE 306 PTHP HEATING COIL, Design Size Gross Rated Heating Capacity [W], 4282.79875
+ DX Heating Coil Standard Rating Information, Coil:Heating:DX:SingleSpeed, THERMAL ZONE: SPACE 306 PTHP HEATING COIL, 4421.4, 2432.9, 6.21, 4
+ Component Sizing Information, Fan:OnOff, THERMAL ZONE: SPACE 306 PTHP SUPPLY FAN, Design Size Maximum Flow Rate [m3/s], 0.17247
+ Component Sizing Information, Coil:Heating:Electric, THERMAL ZONE: SPACE 306 PTHP SUPP HEATING COIL, Design Size Nominal Capacity [W], 6567.92081
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 307 PTHP, Design Size Cooling Supply Air Flow Rate [m3/s], 0.10749
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 307 PTHP, Design Size Heating Supply Air Flow Rate [m3/s], 0.10749
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 307 PTHP, User-Specified No Load Supply Air Flow Rate [m3/s], 0.00000
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 307 PTHP, Design Size Outdoor Air Flow Rate During Cooling Operation [m3/s], 6.11712E-002
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 307 PTHP, Design Size Outdoor Air Flow Rate During Heating Operation [m3/s], 6.11712E-002
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 307 PTHP, Design Size Outdoor Air Flow Rate When No Cooling or Heating is Needed [m3/s], 0.00000
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 307 PTHP, Design Size Maximum Supply Air Temperature from Supplemental Heater [C], 50.00000
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, THERMAL ZONE: SPACE 307 PTHP COOLING COIL, Design Size Rated Air Flow Rate [m3/s], 0.10749
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, THERMAL ZONE: SPACE 307 PTHP COOLING COIL, Design Size Gross Rated Total Cooling Capacity [W], 2669.29556
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, THERMAL ZONE: SPACE 307 PTHP COOLING COIL, Design Size Gross Rated Sensible Heat Ratio, 0.67608
+ DX Cooling Coil Standard Rating Information, Coil:Cooling:DX:SingleSpeed, THERMAL ZONE: SPACE 307 PTHP COOLING COIL, 2585.7, 2.66, 9.07, 9.63, 9.52
+ Component Sizing Information, Coil:Heating:DX:SingleSpeed, THERMAL ZONE: SPACE 307 PTHP HEATING COIL, Design Size Rated Air Flow Rate [m3/s], 0.10749
+ Component Sizing Information, Coil:Heating:DX:SingleSpeed, THERMAL ZONE: SPACE 307 PTHP HEATING COIL, Design Size Gross Rated Heating Capacity [W], 2669.29556
+ DX Heating Coil Standard Rating Information, Coil:Heating:DX:SingleSpeed, THERMAL ZONE: SPACE 307 PTHP HEATING COIL, 2755.7, 1516.3, 6.22, 4
+ Component Sizing Information, Fan:OnOff, THERMAL ZONE: SPACE 307 PTHP SUPPLY FAN, Design Size Maximum Flow Rate [m3/s], 0.10749
+ Component Sizing Information, Coil:Heating:Electric, THERMAL ZONE: SPACE 307 PTHP SUPP HEATING COIL, Design Size Nominal Capacity [W], 4216.79475
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 308 PTHP, Design Size Cooling Supply Air Flow Rate [m3/s], 0.10334
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 308 PTHP, Design Size Heating Supply Air Flow Rate [m3/s], 0.10334
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 308 PTHP, User-Specified No Load Supply Air Flow Rate [m3/s], 0.00000
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 308 PTHP, Design Size Outdoor Air Flow Rate During Cooling Operation [m3/s], 6.11712E-002
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 308 PTHP, Design Size Outdoor Air Flow Rate During Heating Operation [m3/s], 6.11712E-002
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 308 PTHP, Design Size Outdoor Air Flow Rate When No Cooling or Heating is Needed [m3/s], 0.00000
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 308 PTHP, Design Size Maximum Supply Air Temperature from Supplemental Heater [C], 50.00000
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, THERMAL ZONE: SPACE 308 PTHP COOLING COIL, Design Size Rated Air Flow Rate [m3/s], 0.10334
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, THERMAL ZONE: SPACE 308 PTHP COOLING COIL, Design Size Gross Rated Total Cooling Capacity [W], 2566.24932
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, THERMAL ZONE: SPACE 308 PTHP COOLING COIL, Design Size Gross Rated Sensible Heat Ratio, 0.67608
+ DX Cooling Coil Standard Rating Information, Coil:Cooling:DX:SingleSpeed, THERMAL ZONE: SPACE 308 PTHP COOLING COIL, 2485.9, 2.66, 9.07, 9.63, 9.52
+ Component Sizing Information, Coil:Heating:DX:SingleSpeed, THERMAL ZONE: SPACE 308 PTHP HEATING COIL, Design Size Rated Air Flow Rate [m3/s], 0.10334
+ Component Sizing Information, Coil:Heating:DX:SingleSpeed, THERMAL ZONE: SPACE 308 PTHP HEATING COIL, Design Size Gross Rated Heating Capacity [W], 2566.24932
+ DX Heating Coil Standard Rating Information, Coil:Heating:DX:SingleSpeed, THERMAL ZONE: SPACE 308 PTHP HEATING COIL, 2649.3, 1457.8, 6.23, 4
+ Component Sizing Information, Fan:OnOff, THERMAL ZONE: SPACE 308 PTHP SUPPLY FAN, Design Size Maximum Flow Rate [m3/s], 0.10334
+ Component Sizing Information, Coil:Heating:Electric, THERMAL ZONE: SPACE 308 PTHP SUPP HEATING COIL, Design Size Nominal Capacity [W], 3940.75249
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 309 PTHP, Design Size Cooling Supply Air Flow Rate [m3/s], 0.10272
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 309 PTHP, Design Size Heating Supply Air Flow Rate [m3/s], 0.10272
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 309 PTHP, User-Specified No Load Supply Air Flow Rate [m3/s], 0.00000
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 309 PTHP, Design Size Outdoor Air Flow Rate During Cooling Operation [m3/s], 6.11712E-002
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 309 PTHP, Design Size Outdoor Air Flow Rate During Heating Operation [m3/s], 6.11712E-002
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 309 PTHP, Design Size Outdoor Air Flow Rate When No Cooling or Heating is Needed [m3/s], 0.00000
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 309 PTHP, Design Size Maximum Supply Air Temperature from Supplemental Heater [C], 50.00000
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, THERMAL ZONE: SPACE 309 PTHP COOLING COIL, Design Size Rated Air Flow Rate [m3/s], 0.10272
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, THERMAL ZONE: SPACE 309 PTHP COOLING COIL, Design Size Gross Rated Total Cooling Capacity [W], 2550.75942
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, THERMAL ZONE: SPACE 309 PTHP COOLING COIL, Design Size Gross Rated Sensible Heat Ratio, 0.67608
+ DX Cooling Coil Standard Rating Information, Coil:Cooling:DX:SingleSpeed, THERMAL ZONE: SPACE 309 PTHP COOLING COIL, 2470.9, 2.66, 9.07, 9.63, 9.52
+ Component Sizing Information, Coil:Heating:DX:SingleSpeed, THERMAL ZONE: SPACE 309 PTHP HEATING COIL, Design Size Rated Air Flow Rate [m3/s], 0.10272
+ Component Sizing Information, Coil:Heating:DX:SingleSpeed, THERMAL ZONE: SPACE 309 PTHP HEATING COIL, Design Size Gross Rated Heating Capacity [W], 2550.75942
+ DX Heating Coil Standard Rating Information, Coil:Heating:DX:SingleSpeed, THERMAL ZONE: SPACE 309 PTHP HEATING COIL, 2633.3, 1449.0, 6.23, 4
+ Component Sizing Information, Fan:OnOff, THERMAL ZONE: SPACE 309 PTHP SUPPLY FAN, Design Size Maximum Flow Rate [m3/s], 0.10272
+ Component Sizing Information, Coil:Heating:Electric, THERMAL ZONE: SPACE 309 PTHP SUPP HEATING COIL, Design Size Nominal Capacity [W], 3940.75249
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 310 PTHP, Design Size Cooling Supply Air Flow Rate [m3/s], 0.10328
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 310 PTHP, Design Size Heating Supply Air Flow Rate [m3/s], 0.10328
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 310 PTHP, User-Specified No Load Supply Air Flow Rate [m3/s], 0.00000
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 310 PTHP, Design Size Outdoor Air Flow Rate During Cooling Operation [m3/s], 6.11712E-002
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 310 PTHP, Design Size Outdoor Air Flow Rate During Heating Operation [m3/s], 6.11712E-002
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 310 PTHP, Design Size Outdoor Air Flow Rate When No Cooling or Heating is Needed [m3/s], 0.00000
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 310 PTHP, Design Size Maximum Supply Air Temperature from Supplemental Heater [C], 50.00000
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, THERMAL ZONE: SPACE 310 PTHP COOLING COIL, Design Size Rated Air Flow Rate [m3/s], 0.10328
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, THERMAL ZONE: SPACE 310 PTHP COOLING COIL, Design Size Gross Rated Total Cooling Capacity [W], 2564.68605
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, THERMAL ZONE: SPACE 310 PTHP COOLING COIL, Design Size Gross Rated Sensible Heat Ratio, 0.67608
+ DX Cooling Coil Standard Rating Information, Coil:Cooling:DX:SingleSpeed, THERMAL ZONE: SPACE 310 PTHP COOLING COIL, 2484.4, 2.66, 9.07, 9.63, 9.52
+ Component Sizing Information, Coil:Heating:DX:SingleSpeed, THERMAL ZONE: SPACE 310 PTHP HEATING COIL, Design Size Rated Air Flow Rate [m3/s], 0.10328
+ Component Sizing Information, Coil:Heating:DX:SingleSpeed, THERMAL ZONE: SPACE 310 PTHP HEATING COIL, Design Size Gross Rated Heating Capacity [W], 2564.68605
+ DX Heating Coil Standard Rating Information, Coil:Heating:DX:SingleSpeed, THERMAL ZONE: SPACE 310 PTHP HEATING COIL, 2647.7, 1456.9, 6.23, 4
+ Component Sizing Information, Fan:OnOff, THERMAL ZONE: SPACE 310 PTHP SUPPLY FAN, Design Size Maximum Flow Rate [m3/s], 0.10328
+ Component Sizing Information, Coil:Heating:Electric, THERMAL ZONE: SPACE 310 PTHP SUPP HEATING COIL, Design Size Nominal Capacity [W], 3940.75249
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 311 PTHP, Design Size Cooling Supply Air Flow Rate [m3/s], 0.10733
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 311 PTHP, Design Size Heating Supply Air Flow Rate [m3/s], 0.10733
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 311 PTHP, User-Specified No Load Supply Air Flow Rate [m3/s], 0.00000
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 311 PTHP, Design Size Outdoor Air Flow Rate During Cooling Operation [m3/s], 6.11712E-002
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 311 PTHP, Design Size Outdoor Air Flow Rate During Heating Operation [m3/s], 6.11712E-002
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 311 PTHP, Design Size Outdoor Air Flow Rate When No Cooling or Heating is Needed [m3/s], 0.00000
+ Component Sizing Information, ZoneHVAC:PackagedTerminalHeatPump, THERMAL ZONE: SPACE 311 PTHP, Design Size Maximum Supply Air Temperature from Supplemental Heater [C], 50.00000
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, THERMAL ZONE: SPACE 311 PTHP COOLING COIL, Design Size Rated Air Flow Rate [m3/s], 0.10733
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, THERMAL ZONE: SPACE 311 PTHP COOLING COIL, Design Size Gross Rated Total Cooling Capacity [W], 2665.21990
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, THERMAL ZONE: SPACE 311 PTHP COOLING COIL, Design Size Gross Rated Sensible Heat Ratio, 0.67608
+ DX Cooling Coil Standard Rating Information, Coil:Cooling:DX:SingleSpeed, THERMAL ZONE: SPACE 311 PTHP COOLING COIL, 2581.8, 2.66, 9.07, 9.63, 9.52
+ Component Sizing Information, Coil:Heating:DX:SingleSpeed, THERMAL ZONE: SPACE 311 PTHP HEATING COIL, Design Size Rated Air Flow Rate [m3/s], 0.10733
+ Component Sizing Information, Coil:Heating:DX:SingleSpeed, THERMAL ZONE: SPACE 311 PTHP HEATING COIL, Design Size Gross Rated Heating Capacity [W], 2665.21990
+ DX Heating Coil Standard Rating Information, Coil:Heating:DX:SingleSpeed, THERMAL ZONE: SPACE 311 PTHP HEATING COIL, 2751.4, 1514.0, 6.22, 4
+ Component Sizing Information, Fan:OnOff, THERMAL ZONE: SPACE 311 PTHP SUPPLY FAN, Design Size Maximum Flow Rate [m3/s], 0.10733
+ Component Sizing Information, Coil:Heating:Electric, THERMAL ZONE: SPACE 311 PTHP SUPP HEATING COIL, Design Size Nominal Capacity [W], 4215.69735
+! <Environment>,Environment Name,Environment Type, Start Date, End Date, Start DayOfWeek, Duration {#days}, Source:Start DayOfWeek,  Use Daylight Saving, Use Holidays, Apply Weekend Holiday Rule,  Use Rain Values, Use Snow Values
+! <Environment:Special Days>, Special Day Name, Special Day Type, Source, Start Date, Duration {#days}
+! <Environment:Daylight Saving>, Daylight Saving Indicator, Source, Start Date, End Date
+! <Environment:WarmupDays>, NumberofWarmupDays
+Environment,ANN HTG 99.6% CONDNS DB,SizingPeriod:DesignDay,01/21,01/21,WinterDesignDay,1,N/A,N/A,N/A,N/A,N/A,N/A
+Environment:Daylight Saving,No,SizingPeriod:DesignDay
+! <Environment:Design Day Data>, Max Dry-Bulb Temp {C}, Temp Range {dC}, Temp Range Ind Type, Hum Ind Value at Max Temp, Hum Ind Type,Pressure {Pa}, Wind Direction {deg CW from N}, Wind Speed {m/s}, Clearness, Rain, Snow
+! <Environment:Design Day Misc>,DayOfYear,ASHRAE A Coeff,ASHRAE B Coeff,ASHRAE C Coeff,Solar Constant-Annual Variation,Eq of Time {minutes}, Solar Declination Angle {deg}, Solar Model
+Environment:Design Day Data,-2.20,5.00,DefaultMultipliers,101048,20,1.6,0.00,No,No
+Environment:Design Day Misc, 21,1229.0,0.1415,5.7310E-002,1.0,-11.15,-20.1,ASHRAEClearSky
+Environment:WarmupDays,  6
+! <Warmup Convergence Information>,Zone Name,Environment Type/Name,Average Warmup Temperature Difference {deltaC},Std Dev Warmup Temperature Difference {deltaC},Max Temperature Pass/Fail Convergence,Min Temperature Pass/Fail Convergence,Average Warmup Load Difference {W},Std Dev Warmup Load Difference {W},Heating Load Pass/Fail Convergence,Cooling Load Pass/Fail Convergence
+ Warmup Convergence Information,THERMAL ZONE: SPACE 101,SizingPeriod: ANN HTG 99.6% CONDNS DB,2.2335105317E-005,3.9443173516E-005,Pass,Pass,1.3297494896E-002,5.7244718133E-002,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE: SPACE 102,SizingPeriod: ANN HTG 99.6% CONDNS DB,1.8106129154E-005,3.7455927249E-005,Pass,Pass,2.3748194517E-002,0.1077194415,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE: SPACE 103,SizingPeriod: ANN HTG 99.6% CONDNS DB,1.7784003184E-005,3.7713320840E-005,Pass,Pass,2.6021533432E-002,0.1198865068,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE: SPACE 104,SizingPeriod: ANN HTG 99.6% CONDNS DB,1.8099339857E-005,3.7442783494E-005,Pass,Pass,2.3753695098E-002,0.1077460198,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE: SPACE 105,SizingPeriod: ANN HTG 99.6% CONDNS DB,2.2281031771E-005,3.9340911416E-005,Pass,Pass,1.3311940153E-002,5.7302080624E-002,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE: SPACE 106,SizingPeriod: ANN HTG 99.6% CONDNS DB,1.7626180400E-005,3.7175391437E-005,Pass,Pass,2.5191616976E-002,0.1151216283,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE: SPACE 107,SizingPeriod: ANN HTG 99.6% CONDNS DB,2.2364315478E-005,3.9497356135E-005,Pass,Pass,1.3288510555E-002,5.7208460368E-002,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE: SPACE 108,SizingPeriod: ANN HTG 99.6% CONDNS DB,1.8150218323E-005,3.7543525007E-005,Pass,Pass,2.3718079398E-002,0.1075719169,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE: SPACE 109,SizingPeriod: ANN HTG 99.6% CONDNS DB,1.7902686766E-005,3.7994685374E-005,Pass,Pass,2.6028346848E-002,0.1199397756,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE: SPACE 110,SizingPeriod: ANN HTG 99.6% CONDNS DB,1.8527471609E-005,3.8564979101E-005,Pass,Pass,2.4024976052E-002,0.1092658046,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE: SPACE 111,SizingPeriod: ANN HTG 99.6% CONDNS DB,2.4630980545E-005,4.5037331691E-005,Pass,Pass,1.4063625969E-002,6.1105633406E-002,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE: SPACE 201,SizingPeriod: ANN HTG 99.6% CONDNS DB,2.1806295649E-005,3.7904063054E-005,Pass,Pass,1.2803519635E-002,5.5310735868E-002,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE: SPACE 202,SizingPeriod: ANN HTG 99.6% CONDNS DB,1.7768519088E-005,3.5861290483E-005,Pass,Pass,2.2002723154E-002,9.9351479204E-002,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE: SPACE 203,SizingPeriod: ANN HTG 99.6% CONDNS DB,1.7444857160E-005,3.6036860001E-005,Pass,Pass,2.3855637933E-002,0.1090362353,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE: SPACE 204,SizingPeriod: ANN HTG 99.6% CONDNS DB,1.7765350993E-005,3.5856045465E-005,Pass,Pass,2.2006638453E-002,9.9370004045E-002,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE: SPACE 205,SizingPeriod: ANN HTG 99.6% CONDNS DB,2.1782601997E-005,3.7863528782E-005,Pass,Pass,1.2814828921E-002,5.5355681021E-002,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE: SPACE 206,SizingPeriod: ANN HTG 99.6% CONDNS DB,1.7136010609E-005,3.5192492843E-005,Pass,Pass,2.3187191685E-002,0.1052439908,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE: SPACE 207,SizingPeriod: ANN HTG 99.6% CONDNS DB,2.1820558151E-005,3.7928657192E-005,Pass,Pass,1.2797060115E-002,5.5285052221E-002,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE: SPACE 208,SizingPeriod: ANN HTG 99.6% CONDNS DB,1.7788463892E-005,3.5895044651E-005,Pass,Pass,2.1979921370E-002,9.9242195753E-002,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE: SPACE 209,SizingPeriod: ANN HTG 99.6% CONDNS DB,1.7484369639E-005,3.6117577481E-005,Pass,Pass,2.3833650653E-002,0.1089290607,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE: SPACE 210,SizingPeriod: ANN HTG 99.6% CONDNS DB,1.7870365785E-005,3.6099456844E-005,Pass,Pass,2.2014760266E-002,9.9420046524E-002,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE: SPACE 211,SizingPeriod: ANN HTG 99.6% CONDNS DB,2.2110662892E-005,3.8572585195E-005,Pass,Pass,1.2848870408E-002,5.5517124586E-002,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE: SPACE 301,SizingPeriod: ANN HTG 99.6% CONDNS DB,2.7121359481E-005,4.4303622698E-005,Pass,Pass,8.7064891091E-003,3.7101886545E-002,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE: SPACE 302,SizingPeriod: ANN HTG 99.6% CONDNS DB,2.3400714424E-005,4.0333817049E-005,Pass,Pass,1.1911127755E-002,5.1056124606E-002,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE: SPACE 303,SizingPeriod: ANN HTG 99.6% CONDNS DB,2.3100784857E-005,4.0141505356E-005,Pass,Pass,1.2342206934E-002,5.3004027056E-002,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE: SPACE 304,SizingPeriod: ANN HTG 99.6% CONDNS DB,2.3400384287E-005,4.0333768671E-005,Pass,Pass,1.1911873154E-002,5.1058836426E-002,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE: SPACE 305,SizingPeriod: ANN HTG 99.6% CONDNS DB,2.7119692699E-005,4.4302866653E-005,Pass,Pass,8.7101042132E-003,3.7113911863E-002,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE: SPACE 306,SizingPeriod: ANN HTG 99.6% CONDNS DB,2.2660898151E-005,3.9260328302E-005,Pass,Pass,1.2119761548E-002,5.1863813869E-002,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE: SPACE 307,SizingPeriod: ANN HTG 99.6% CONDNS DB,2.7122519036E-005,4.4304437053E-005,Pass,Pass,8.7044565238E-003,3.7095141507E-002,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE: SPACE 308,SizingPeriod: ANN HTG 99.6% CONDNS DB,2.3404554498E-005,4.0338265631E-005,Pass,Pass,1.1906591282E-002,5.1038781134E-002,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE: SPACE 309,SizingPeriod: ANN HTG 99.6% CONDNS DB,2.3108731256E-005,4.0154231074E-005,Pass,Pass,1.2337329498E-002,5.2985174897E-002,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE: SPACE 310,SizingPeriod: ANN HTG 99.6% CONDNS DB,2.3417996862E-005,4.0367351243E-005,Pass,Pass,1.1908138113E-002,5.1045168216E-002,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE: SPACE 311,SizingPeriod: ANN HTG 99.6% CONDNS DB,2.7156449717E-005,4.4377655981E-005,Pass,Pass,8.7092943427E-003,3.7112634955E-002,Pass,Pass
+Environment,ANN CLG 4% CONDNS DB =>MWB,SizingPeriod:DesignDay,07/21,07/21,SummerDesignDay,1,N/A,N/A,N/A,N/A,N/A,N/A
+Environment:Daylight Saving,No,SizingPeriod:DesignDay
+Environment:Design Day Data,35.70,6.30,DefaultMultipliers,101048,220,3.3,0.00,No,No
+Environment:Design Day Misc,202,1084.4,0.2082,0.1365,1.0,-6.23,20.6,ASHRAEClearSky
+Environment:WarmupDays,  6
+ Warmup Convergence Information,THERMAL ZONE: SPACE 101,SizingPeriod: ANN CLG 4% CONDNS DB =>MWB,3.1789469446E-002,0.1037836247,Pass,Pass,4.6011031818E-002,0.2462763389,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE: SPACE 102,SizingPeriod: ANN CLG 4% CONDNS DB =>MWB,3.1644964347E-002,0.1069025402,Pass,Pass,5.6686802660E-002,0.3006214343,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE: SPACE 103,SizingPeriod: ANN CLG 4% CONDNS DB =>MWB,3.1610907465E-002,0.1072951290,Pass,Pass,5.8466911215E-002,0.3100477242,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE: SPACE 104,SizingPeriod: ANN CLG 4% CONDNS DB =>MWB,3.1647698802E-002,0.1068866015,Pass,Pass,5.6592440576E-002,0.3000566116,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE: SPACE 105,SizingPeriod: ANN CLG 4% CONDNS DB =>MWB,3.1763756066E-002,0.1035829534,Pass,Pass,4.5531383171E-002,0.2434219476,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE: SPACE 106,SizingPeriod: ANN CLG 4% CONDNS DB =>MWB,3.0747038564E-002,0.1055586854,Pass,Pass,5.6973229987E-002,0.2976414460,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE: SPACE 107,SizingPeriod: ANN CLG 4% CONDNS DB =>MWB,3.1809208805E-002,0.1039020185,Pass,Pass,4.6246706101E-002,0.2476215480,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE: SPACE 108,SizingPeriod: ANN CLG 4% CONDNS DB =>MWB,3.1648109578E-002,0.1070506964,Pass,Pass,5.7162352494E-002,0.3032711101,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE: SPACE 109,SizingPeriod: ANN CLG 4% CONDNS DB =>MWB,3.1597712757E-002,0.1077942328,Pass,Pass,6.0177872491E-002,0.3201101198,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE: SPACE 110,SizingPeriod: ANN CLG 4% CONDNS DB =>MWB,3.1336864481E-002,0.1077470346,Pass,Pass,6.5809444000E-002,0.3616354340,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE: SPACE 111,SizingPeriod: ANN CLG 4% CONDNS DB =>MWB,3.1036214079E-002,0.1041399621,Pass,Pass,0.1617317855,1.0815603400,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE: SPACE 201,SizingPeriod: ANN CLG 4% CONDNS DB =>MWB,3.0986836098E-002,9.8291500976E-002,Pass,Pass,3.6862650112E-002,0.1883709356,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE: SPACE 202,SizingPeriod: ANN CLG 4% CONDNS DB =>MWB,3.1597900920E-002,0.1030640293,Pass,Pass,4.3892237962E-002,0.2297587799,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE: SPACE 203,SizingPeriod: ANN CLG 4% CONDNS DB =>MWB,3.1567596343E-002,0.1035529484,Pass,Pass,4.4993615365E-002,0.2353297303,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE: SPACE 204,SizingPeriod: ANN CLG 4% CONDNS DB =>MWB,3.1598840658E-002,0.1030560321,Pass,Pass,4.3872563016E-002,0.2296494310,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE: SPACE 205,SizingPeriod: ANN CLG 4% CONDNS DB =>MWB,3.0963604892E-002,9.8174959580E-002,Pass,Pass,3.6758847942E-002,0.1875473984,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE: SPACE 206,SizingPeriod: ANN CLG 4% CONDNS DB =>MWB,3.0826821525E-002,0.1015888195,Pass,Pass,4.2657289200E-002,0.2188723638,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE: SPACE 207,SizingPeriod: ANN CLG 4% CONDNS DB =>MWB,3.0998926900E-002,9.8363355488E-002,Pass,Pass,3.6910636556E-002,0.1887959226,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE: SPACE 208,SizingPeriod: ANN CLG 4% CONDNS DB =>MWB,3.1604911748E-002,0.1031384695,Pass,Pass,4.3996002521E-002,0.2302636434,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE: SPACE 209,SizingPeriod: ANN CLG 4% CONDNS DB =>MWB,3.1589118475E-002,0.1037550754,Pass,Pass,4.5255106711E-002,0.2365792067,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE: SPACE 210,SizingPeriod: ANN CLG 4% CONDNS DB =>MWB,3.1632410189E-002,0.1036152499,Pass,Pass,4.4728825759E-002,0.2339924984,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE: SPACE 211,SizingPeriod: ANN CLG 4% CONDNS DB =>MWB,3.1388688213E-002,0.1008665625,Pass,Pass,3.8548918541E-002,0.2035297184,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE: SPACE 301,SizingPeriod: ANN CLG 4% CONDNS DB =>MWB,3.0335092467E-002,9.6221567470E-002,Pass,Pass,3.5285468672E-002,0.1762664555,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE: SPACE 302,SizingPeriod: ANN CLG 4% CONDNS DB =>MWB,3.1370607708E-002,0.1019985310,Pass,Pass,4.2436966824E-002,0.2241631488,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE: SPACE 303,SizingPeriod: ANN CLG 4% CONDNS DB =>MWB,3.1330377362E-002,0.1023556101,Pass,Pass,4.3395833880E-002,0.2289858007,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE: SPACE 304,SizingPeriod: ANN CLG 4% CONDNS DB =>MWB,3.1370240775E-002,0.1019977611,Pass,Pass,4.2439199876E-002,0.2241776132,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE: SPACE 305,SizingPeriod: ANN CLG 4% CONDNS DB =>MWB,3.0340439105E-002,9.6241277993E-002,Pass,Pass,3.5313448206E-002,0.1764650425,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE: SPACE 306,SizingPeriod: ANN CLG 4% CONDNS DB =>MWB,3.0625598534E-002,0.1004152283,Pass,Pass,4.1032476536E-002,0.2125595792,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE: SPACE 307,SizingPeriod: ANN CLG 4% CONDNS DB =>MWB,3.0333454172E-002,9.6213832409E-002,Pass,Pass,3.5270350906E-002,0.1761626448,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE: SPACE 308,SizingPeriod: ANN CLG 4% CONDNS DB =>MWB,3.1370914202E-002,0.1020022032,Pass,Pass,4.2421784121E-002,0.2240487905,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE: SPACE 309,SizingPeriod: ANN CLG 4% CONDNS DB =>MWB,3.1332865258E-002,0.1023782637,Pass,Pass,4.3399662385E-002,0.2289439320,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE: SPACE 310,SizingPeriod: ANN CLG 4% CONDNS DB =>MWB,3.1375107690E-002,0.1020521135,Pass,Pass,4.2498468006E-002,0.2244025117,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE: SPACE 311,SizingPeriod: ANN CLG 4% CONDNS DB =>MWB,3.0406408145E-002,9.6493733689E-002,Pass,Pass,3.5513527151E-002,0.1780574324,Pass,Pass
+Environment,RUN PERIOD 1,WeatherFileRunPeriod,01/01,12/31,Sunday,365,UseWeatherFile,No,No,No,Yes,Yes
+Environment:Daylight Saving,No,RunPeriod Object
+Environment:Special Days,NEW YEAR`S DAY,Holiday,InputFile,01/01,  3
+Environment:Special Days,INTERNATIONAL LABOR DAY,Holiday,InputFile,05/01,  3
+Environment:Special Days,MID-AUTUM FESTIVAL,Holiday,InputFile,09/20,  3
+Environment:Special Days,NATIONAL`S DAY,Holiday,InputFile,10/01,  5
+Environment:Special Days,QINGMING,Holiday,InputFile,04/04,  1
+Environment:Special Days,DUANWU,Holiday,InputFile,06/07,  3
+Environment:Special Days,CHUXI,Holiday,InputFile,02/04,  7
+Environment:WarmupDays,  9
+ Warmup Convergence Information,THERMAL ZONE: SPACE 101,RunPeriod: RUN PERIOD 1,7.0209556515E-006,1.2187225012E-005,Pass,Pass,1.6129974822E-003,7.7116871852E-004,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE: SPACE 102,RunPeriod: RUN PERIOD 1,3.8564254122E-006,5.8040983778E-006,Pass,Pass,1.0242683471E-003,4.9707815513E-004,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE: SPACE 103,RunPeriod: RUN PERIOD 1,3.4271433101E-006,5.0619246651E-006,Pass,Pass,1.0467002267E-003,5.0462896318E-004,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE: SPACE 104,RunPeriod: RUN PERIOD 1,3.8770336111E-006,5.8480488640E-006,Pass,Pass,1.0078148887E-003,4.8902291505E-004,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE: SPACE 105,RunPeriod: RUN PERIOD 1,7.1724191843E-006,1.2587050078E-005,Pass,Pass,1.4819780158E-003,7.0637471935E-004,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE: SPACE 106,RunPeriod: RUN PERIOD 1,3.5918859360E-006,5.3509311645E-006,Pass,Pass,9.1788370946E-004,4.4977111754E-004,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE: SPACE 107,RunPeriod: RUN PERIOD 1,6.9046893347E-006,1.1907898618E-005,Pass,Pass,1.7152453003E-003,8.2710545476E-004,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE: SPACE 108,RunPeriod: RUN PERIOD 1,3.7183119050E-006,5.5369306463E-006,Pass,Pass,1.2004835611E-003,5.9889502098E-004,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE: SPACE 109,RunPeriod: RUN PERIOD 1,3.2848772297E-006,4.7852426065E-006,Pass,Pass,1.2480465636E-003,6.2017721684E-004,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE: SPACE 110,RunPeriod: RUN PERIOD 1,3.7320322132E-006,5.5802355991E-006,Pass,Pass,1.1942192284E-003,5.9520790488E-004,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE: SPACE 111,RunPeriod: RUN PERIOD 1,1.6588320702E-005,4.4438684042E-005,Pass,Pass,1.5738173752E-003,7.6546359792E-004,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE: SPACE 201,RunPeriod: RUN PERIOD 1,7.1692362906E-006,1.2442312909E-005,Pass,Pass,1.3618351096E-003,6.4975934921E-004,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE: SPACE 202,RunPeriod: RUN PERIOD 1,4.1605332389E-006,6.3480778705E-006,Pass,Pass,8.0709203331E-004,3.9336706369E-004,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE: SPACE 203,RunPeriod: RUN PERIOD 1,3.7638818376E-006,5.5880521228E-006,Pass,Pass,8.2561453514E-004,3.9910601723E-004,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE: SPACE 204,RunPeriod: RUN PERIOD 1,4.1797269239E-006,6.3748464942E-006,Pass,Pass,7.9564077924E-004,3.8779749516E-004,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE: SPACE 205,RunPeriod: RUN PERIOD 1,7.3120664464E-006,1.2827293389E-005,Pass,Pass,1.2580023729E-003,5.9901434982E-004,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE: SPACE 206,RunPeriod: RUN PERIOD 1,3.8856447435E-006,5.8642507533E-006,Pass,Pass,7.2007602087E-004,3.5430064502E-004,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE: SPACE 207,RunPeriod: RUN PERIOD 1,7.0621512052E-006,1.2180618582E-005,Pass,Pass,1.4439873565E-003,6.9486038218E-004,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE: SPACE 208,RunPeriod: RUN PERIOD 1,4.0356376113E-006,6.1842333566E-006,Pass,Pass,9.4030517507E-004,4.6975179160E-004,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE: SPACE 209,RunPeriod: RUN PERIOD 1,3.6346782843E-006,5.3939763225E-006,Pass,Pass,9.7376336600E-004,4.8372577569E-004,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE: SPACE 210,RunPeriod: RUN PERIOD 1,4.0638974757E-006,6.2162628234E-006,Pass,Pass,9.3053186324E-004,4.6480021006E-004,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE: SPACE 211,RunPeriod: RUN PERIOD 1,7.2703902718E-006,1.2775461108E-005,Pass,Pass,1.3441532703E-003,6.4689241727E-004,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE: SPACE 301,RunPeriod: RUN PERIOD 1,1.8174530727E-005,3.8735173436E-005,Pass,Pass,2.0388266817E-003,9.8661747346E-004,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE: SPACE 302,RunPeriod: RUN PERIOD 1,1.8451551739E-005,6.2645749694E-005,Pass,Pass,1.9562772361E-003,9.6241814648E-004,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE: SPACE 303,RunPeriod: RUN PERIOD 1,1.6489229331E-005,6.0539499971E-005,Pass,Pass,2.0141767646E-003,9.9119189745E-004,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE: SPACE 304,RunPeriod: RUN PERIOD 1,1.8378648816E-005,6.1887187586E-005,Pass,Pass,1.9491628820E-003,9.5888666521E-004,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE: SPACE 305,RunPeriod: RUN PERIOD 1,1.6944277855E-005,3.4475642197E-005,Pass,Pass,1.9561729567E-003,9.4402337878E-004,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE: SPACE 306,RunPeriod: RUN PERIOD 1,1.7126766016E-005,6.0704890782E-005,Pass,Pass,1.9034845728E-003,9.3915369234E-004,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE: SPACE 307,RunPeriod: RUN PERIOD 1,1.9154629751E-005,4.2313839339E-005,Pass,Pass,2.0975629833E-003,1.0155853464E-003,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE: SPACE 308,RunPeriod: RUN PERIOD 1,1.7441689945E-005,6.1696625320E-005,Pass,Pass,2.0361459625E-003,1.0013683036E-003,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE: SPACE 309,RunPeriod: RUN PERIOD 1,1.5739540649E-005,5.9857035631E-005,Pass,Pass,2.0982755109E-003,1.0315108575E-003,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE: SPACE 310,RunPeriod: RUN PERIOD 1,1.7769452041E-005,6.2018943872E-005,Pass,Pass,2.0290389017E-003,9.9800200735E-004,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE: SPACE 311,RunPeriod: RUN PERIOD 1,1.7567934915E-005,3.6685325568E-005,Pass,Pass,2.0139332250E-003,9.7302921087E-004,Pass,Pass
+! <Program Control Information:Threads/Parallel Sims>, Threading Supported,Maximum Number of Threads, Env Set Threads (OMP_NUM_THREADS), EP Env Set Threads (EP_OMP_NUM_THREADS), IDF Set Threads, Number of Threads Used (Interior Radiant Exchange), Number Nominal Surfaces, Number Parallel Sims
+Program Control:Threads/Parallel Sims, No,1, N/A, N/A, N/A, N/A, N/A, N/A
+End of Data

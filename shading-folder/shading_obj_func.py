@@ -1,7 +1,8 @@
-from moo.idfhandler import EPOutputReader
 from typing import List, Dict
 import os
 import re
+
+from moo.idfhandler import EPOutputReader
 from moo.utils import interval_to_list_idx
 
 """objective functions paras"""
@@ -68,7 +69,7 @@ def f1_energy_consumption(*args) -> float:
                         break_word = True
                         break
         energy_consumption = winter_consumption / cop + summer_consumption / cop
-        print("energy_consumption", energy_consumption)
+    print("energy_consumption", energy_consumption)
     print("log: winter_consumption", winter_consumption, os.getpid())
     print("log: summer_consumption", winter_consumption, os.getpid())
 
@@ -169,8 +170,10 @@ def f3_economy(*args) -> float:
         (lambda d: sum(d.values()) * C_i_shading)(shading_win_area_with_direction)
     ])
 
-    C_in = divident / total_ac_area + infiltration_specs[infiltration_id] + ac_specs[cop_id]  # initial cost.
-    C_o = f1_energy_consumption(*args) * local_electircity_fee * (1 - (1 + 0.049) ** -20) / 0.049  # operation cost.
+    # initial cost.
+    C_in = divident / total_ac_area + infiltration_specs[infiltration_id] + ac_specs[cop_id]
+    # operation cost.
+    C_o = f1_energy_consumption(*args) * local_electircity_fee * (1 - (1 + 0.049) ** -20) / 0.049
     LCC = C_in + C_o
 
     return LCC

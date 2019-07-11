@@ -59,18 +59,18 @@ class Evolution:
         log += "[!!!]Points in the front:\n"
         for individual in returned_population.fronts[0]:  # log output.
             log += "parameters: "
-            log += individual.features.__str__()
+            log += str(individual.features)
             log += "\nobjectives: "
-            log += individual.objectives.__str__()
+            log += str(individual.objectives)
             log += "\n\n"
 
         log += "size of all points: {}\n".format(len(returned_population))
         log += "[!!!]All points:\n"
         for individual in returned_population:
             log += "parameters: "
-            log += individual.features.__str__()
+            log += str(individual.features)
             log += "\nobjectives: "
-            log += individual.objectives.__str__()
+            log += str(individual.objectives)
             log += "\n\n"
 
         with open(log_path, "w+") as f:
