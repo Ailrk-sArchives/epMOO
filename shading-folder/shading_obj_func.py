@@ -89,6 +89,8 @@ def f2_aPMV(*args) -> float:
 
     # get aPMV
     apmv_avg: float = 0
+    apmv_range_upper = -0.5
+    apmv_range_lower = 0.5
 
     with EPOutputReader(ep_out_csv_path) as ep_table:
         pmv_list: List = []
@@ -104,8 +106,12 @@ def f2_aPMV(*args) -> float:
         apmv_list = list(map(lambda x: abs(x / 1 + SUMMER_LAMBDA * x), pmv_list_summer))
         apmv_list.extend(list(map(lambda x: abs(x / 1 - WINTER_LAMBDA * x), pmv_list_winter)))
 
-        apmv_avg = sum(apmv_list) / len(apmv_list)
-    return apmv_avg
+        # number of hours that apmv in [-0.5, 0.5]
+        num_in_apmv_range = (
+            len(list(filter(
+                lambda apmv: apmv >= apmv_range_lower and apmv <= apmv_range_upper,
+                apmv_list))))
+    return num_in_apmv_range
 
 
 def f3_economy(*args) -> float:

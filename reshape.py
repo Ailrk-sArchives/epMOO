@@ -93,13 +93,3 @@ if __name__ == "__main__":
                     res.append(rtuple)
 
     res_to_csv(res)
-
-
-
-
-
-
-
-
-
-
