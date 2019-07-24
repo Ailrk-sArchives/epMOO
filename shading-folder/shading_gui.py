@@ -368,8 +368,8 @@ class Run(flx.PyWidget):
             "WINDOW_EDG_HEIGHT": float(self.moo.root.window_edge_height_float),
             "HEATING_SETPOINT": float(self.moo.root.heating_setpoint_float),
             "COOLING_SETPOINT": float(self.moo.root.cooling_setpoint_float),
-            "APMV_UPPER": float(self.moo.root.apmv_upper),
-            "APMV_LOWER": float(self.moo.root.apmv_lower)
+            "APMV_UPPER": float(self.moo.root.apmv_upper_float),
+            "APMV_LOWER": float(self.moo.root.apmv_lower_float)
         }
 
         """path constants"""
