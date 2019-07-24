@@ -11,6 +11,7 @@ from moo.nsga2.evolution import Evolution
 from shading_obj_func import f1_energy_consumption as f1
 from shading_obj_func import f2_aPMV as f2
 from shading_obj_func import f3_economy as f3
+from shading_obj_func import set_apmv_range
 # from obj_func_preamble import preamble
 from shading_preamble import ShadingPreamble
 
@@ -176,11 +177,15 @@ class ConstantsParamWidget(flx.GroupWidget):
     def init(self):
         self.set_title("CONSTANTS")
         with flx.FormLayout(flex=1) as self.other_constants_model:
-            self.floor_height = flx.LineEdit(title='Floor Height', text='{}'.format(int(self.root.floor_height_float)))
-            self.window_height = flx.LineEdit(title='Window Height', text='{}'.format(int(self.root.window_height_float)))
-            self.window_edge_height = flx.LineEdit(title='Window edge height', text='{}'.format(int(self.root.window_edge_height_float)))
-            self.heating_setpoint = flx.LineEdit(title='Heating setpoint', text='{}'.format(int(self.root.heating_setpoint_float)))
-            self.cooling_setpoint = flx.LineEdit(title='Cooling setpoint', text='{}'.format(int(self.root.cooling_setpoint_float)))
+            self.floor_height = flx.LineEdit(title='Floor Height', text='{}'.format(float(self.root.floor_height_float)))
+            self.window_height = flx.LineEdit(title='Window Height', text='{}'.format(float(self.root.window_height_float)))
+            self.window_edge_height = flx.LineEdit(title='Window edge height', text='{}'.format(float(self.root.window_edge_height_float)))
+            self.heating_setpoint = flx.LineEdit(title='Heating setpoint', text='{}'.format(float(self.root.heating_setpoint_float)))
+            self.cooling_setpoint = flx.LineEdit(title='Cooling setpoint', text='{}'.format(float(self.root.cooling_setpoint_float)))
+            self.apmv_upper = flx.LineEdit(title='Apmv upper', text='{}'.format(float(self.root.apmv_upper_float)))
+            self.apmv_lower = flx.LineEdit(title='Apmv lower', text='{}'.format(float(self.root.apmv_lower_float)))
+
+
 
     @flx.reaction('floor_height.text')
     def change_floor_height(self, *events):
@@ -206,6 +211,19 @@ class ConstantsParamWidget(flx.GroupWidget):
     def change_cooling_setpoint(self, *events):
         i = float(self.cooling_setpoint.text.strip())
         self.root.set_cooling_setpoint_float(i)
+
+    @flx.reaction('apmv_upper.text')
+    def change_apmv_upper(self, *events):
+        i = float(self.apmv_upper.text.strip())
+        print(i)
+        self.root.set_apmv_upper_float(i)
+
+    @flx.reaction('apmv_lower.text')
+    def change_apmv_lower(self, *events):
+        i = float(self.apmv_lower.text.strip())
+        print(i)
+        self.root.set_apmv_lower_float(i)
+
 
 
 class PathsParamWidget(flx.GroupWidget):
@@ -259,7 +277,7 @@ class MooWidget(flx.Widget):
                 self.algo_params = AlgoParamWidget(minsize=(200, 200))
 
                 # constants
-                self.constant_params = ConstantsParamWidget(minsize=(120, 200))
+                self.constant_params = ConstantsParamWidget(minsize=(200, 240))
                 # paths
                 self.path_params = PathsParamWidget(minsize=(120, 120))
 
@@ -302,6 +320,8 @@ class Run(flx.PyWidget):
     window_edge_height_float = flx.FloatProp(1, settable=True)
     heating_setpoint_float = flx.FloatProp(18, settable=True)
     cooling_setpoint_float = flx.FloatProp(26, settable=True)
+    apmv_upper_float = flx.FloatProp(0.5, settable=True)
+    apmv_lower_float = flx.FloatProp(-0.5, settable=True)
 
     weather_file_str = flx.StringProp('../WeatherData/CHN_Chongqing.Chongqing.Shapingba.575160_CSWD.epw', settable=True)
     idf_file_str = flx.StringProp('shading_model_6-0603-1.idf', settable=True)
@@ -347,7 +367,9 @@ class Run(flx.PyWidget):
             "WINDOW_HEIGHT": float(self.moo.root.window_height_float),
             "WINDOW_EDG_HEIGHT": float(self.moo.root.window_edge_height_float),
             "HEATING_SETPOINT": float(self.moo.root.heating_setpoint_float),
-            "COOLING_SETPOINT": float(self.moo.root.cooling_setpoint_float)
+            "COOLING_SETPOINT": float(self.moo.root.cooling_setpoint_float),
+            "APMV_UPPER": float(self.moo.root.apmv_upper),
+            "APMV_LOWER": float(self.moo.root.apmv_lower)
         }
 
         """path constants"""
@@ -373,6 +395,7 @@ def moo_run(paras, hyperparameter, constants, paths):
     """The main entrance of the optimizer."""
     init()
 
+    set_apmv_range((constants["APMV_UPPER"], constants["APMV_LOWER"]))
     problem = Problem(num_of_variables=len(paras), objectives=[f1, f2, f3],
                       variables_range=paras,
                       preamble=ShadingPreamble(constants=constants, paths=paths))

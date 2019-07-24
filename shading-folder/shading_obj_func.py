@@ -1,4 +1,4 @@
-from typing import List, Dict
+from typing import List, Dict, Tuple
 import os
 import re
 
@@ -30,6 +30,13 @@ total_ac_area = 1584.33
 surface_area = 1617.58  # wall_area = surface_area - window_area
 roof_area = 402.83
 # Window area will change accroding to the winwallratio.
+
+apmv_range = (-0.5, 0.5)
+
+
+def set_apmv_range(r: Tuple[float, float]):
+    global apmv_range
+    apmv_range = r
 
 
 def f1_energy_consumption(*args) -> float:
@@ -88,9 +95,8 @@ def f2_aPMV(*args) -> float:
     print("running f2 ... in {}".format(os.getpid()))
 
     # get aPMV
-    apmv_avg: float = 0
-    apmv_range_upper = -0.5
-    apmv_range_lower = 0.5
+    global apmv_range
+    apmv_range_upper, apmv_range_lower = apmv_range
 
     with EPOutputReader(ep_out_csv_path) as ep_table:
         pmv_list: List = []
