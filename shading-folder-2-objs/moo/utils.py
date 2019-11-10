@@ -9,6 +9,8 @@ def init():
     # init the directory.
     if not os.path.exists("results"):
         os.mkdir("results")
+    if not os.path.exists("temp"):
+        os.mkdir("temp")
 
     try:
         if glob.glob("*.idf") == []:
@@ -45,3 +47,4 @@ def scale_interval(t: Tuple[float, float], coefficient: float):
     lower = lower * coefficient
     upper = upper * coefficient
     return (lower, upper)
+

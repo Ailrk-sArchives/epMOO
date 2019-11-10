@@ -10,7 +10,7 @@ from moo.nsga2.evolution import Evolution
 
 from shading_obj_func import f1_energy_consumption as f1
 from shading_obj_func import f2_aPMV as f2
-from shading_obj_func import f3_economy as f3
+# from shading_obj_func import f3_economy as f3
 from shading_obj_func import set_apmv_range
 # from obj_func_preamble import preamble
 from shading_preamble import ShadingPreamble
@@ -395,7 +395,7 @@ def moo_run(paras, hyperparameter, constants, paths):
     init()
 
     set_apmv_range((constants["APMV_UPPER"], constants["APMV_LOWER"]))
-    problem = Problem(num_of_variables=len(paras), objectives=[f1, f2, f3],
+    problem = Problem(num_of_variables=len(paras), objectives=[f1, f2],
                       variables_range=paras,
                       preamble=ShadingPreamble(constants=constants,
                                                paths=paths))
@@ -414,10 +414,7 @@ def moo_run(paras, hyperparameter, constants, paths):
 
     obj1 = [i[0] for i in func]
     obj2 = [i[1] for i in func]
-    obj3 = [i[2] for i in func]
-    fig = plt.figure()
-    ax = fig.add_subplot(111, projection='3d')
-    ax.scatter(obj1, obj2, obj3, c='r', marker='o')
+    plt.scatter(obj1, obj2)
     plt.draw()
     plt.savefig('results/epMOO_fig.png')
     plt.show()
@@ -427,5 +424,5 @@ def moo_run(paras, hyperparameter, constants, paths):
 
 if __name__ == "__main__":
     app = flx.App(Run)
-    app.launch('app')
+    app.launch('firefox')
     flx.run()
