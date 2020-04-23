@@ -17,6 +17,7 @@ from moo.utils import init
 from moo.utils import discrete_interval
 from moo.utils import scale_interval
 
+
 def main():
     """parameter"""
     outerwall = discrete_interval((1, 10))  # yield 0-7
@@ -33,8 +34,10 @@ def main():
     west_shading = discrete_interval((0, 1))
     south_shading = discrete_interval((0, 1))
     north_shading = discrete_interval((0, 1))
-    infiltration_air_change = discrete_interval(scale_interval((0.5, 1.0), 10))  # yield 5 - 10
-    # shading_direction = discrete_interval((1, 4))  # shading in east, west, south, north respectively.
+    infiltration_air_change = discrete_interval(
+        scale_interval((0.5, 1.0), 10))  # yield 5 - 10
+    # shading_direction = discrete_interval((1, 4))
+    # shading in east, west, south, north respectively.
     paras = [outerwall, roof, window,
              easterate, westrate, southrate,
              northrate, direction, airchange,

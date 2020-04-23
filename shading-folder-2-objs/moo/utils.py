@@ -21,11 +21,13 @@ def init():
         print("[X] cannot find idf file.")
         sys.exit(1)
     except OSError:
-        print("[X] cannot detect energyplus. Please make sure it is in the environment path.")
+        print(
+            "[X] cannot detect energyplus. Please make sure it is in the environment path.")
         sys.exit(1)
 
     if os.listdir("./results") != []:
-        clear_results_flag = input("Detected files in {}. Delete?(Y/n)".format(os.path.abspath('./results')))
+        clear_results_flag = input(
+            "Detected files in {}. Delete?(Y/n)".format(os.path.abspath('./results')))
         if clear_results_flag == "Y":
             for f in os.listdir("./results"):  # clean up.
                 os.remove(os.path.abspath(os.path.join('./results', f)))
@@ -47,4 +49,3 @@ def scale_interval(t: Tuple[float, float], coefficient: float):
     lower = lower * coefficient
     upper = upper * coefficient
     return (lower, upper)
-

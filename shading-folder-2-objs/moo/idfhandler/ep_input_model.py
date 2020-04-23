@@ -37,6 +37,7 @@ class EPInputModel:
     _input_path: path for base idf file.
     _output_path: path for generated idf file.
     """
+
     def __init__(self, input_path: str, output_path):
         self._input_path = os.path.abspath(input_path)
         self._output_path = os.path.abspath(output_path)
@@ -70,8 +71,13 @@ class IdfModel(EPInputModel):
     def append(self, data: List[str]):
         self.idf_lines.extend(data)
 
-    def search(self, capture_list: List, patterns: List[Pattern], idf_lines: List,
-               idx=0, depth=30, matched=False):
+    def search(self,
+               capture_list: List,
+               patterns: List[Pattern],
+               idf_lines: List,
+               idx=0,
+               depth=30,
+               matched=False):
         # recursively search, put result into capture_list.
         if depth == 0:
             print("search out put depth")
@@ -92,12 +98,14 @@ class IdfModel(EPInputModel):
                 return
 
             else:                     # in process.
-                self.search(capture_list, patterns, idf_lines, idx + 1, depth - 1, matched)
+                self.search(capture_list, patterns, idf_lines,
+                            idx + 1, depth - 1, matched)
             return
 
         elif matched:                 # hit anchor already.
             patterns.append(p)
-            self.search(capture_list, patterns, idf_lines, idx + 1, depth - 1, matched)
+            self.search(capture_list, patterns, idf_lines,
+                        idx + 1, depth - 1, matched)
         return
 
     def grap(self, capture_list, patterns: List[Pattern], idf_lines: List,
@@ -113,7 +121,8 @@ class IdfModel(EPInputModel):
             for i, sub_pattern in enumerate(sub_patterns):
                 self.search(sub_capture_list, sub_pattern, idf_lines, idx)
 
-            assert len(grouping) <= len(sub_capture_list), "GRAB ERROR, group missmatch"
+            assert len(grouping) <= len(
+                sub_capture_list), "GRAB ERROR, group missmatch"
             capture_list.append(self.__grouping(sub_capture_list, grouping))
 
     def __grouping(self, capture_list, grouping=(1,)) -> List:
@@ -138,7 +147,13 @@ class IdfModel(EPInputModel):
                     temp_list.append(g)
         return temp_list
 
-    def sub(self, patterns: List[Pattern], replacement: Pattern, idf_lines, idx, depth=30, matched=False):
+    def sub(self,
+            patterns: List[Pattern],
+            replacement: Pattern,
+            idf_lines,
+            idx,
+            depth=30,
+            matched=False):
         # recursively search till find the target, then do text substitution.
         if depth == 0:
             return
@@ -153,17 +168,20 @@ class IdfModel(EPInputModel):
                 return
             elif matched:
                 patterns.append(p)
-                self.sub(patterns, replacement, idf_lines, idx + 1, depth - 1, matched)
+                self.sub(patterns, replacement, idf_lines,
+                         idx + 1, depth - 1, matched)
             return
 
         if hit_anchor:              # still has patterns remains.
             matched = True
-            self.sub(patterns, replacement, idf_lines, idx + 1, depth - 1, matched)
+            self.sub(patterns, replacement, idf_lines,
+                     idx + 1, depth - 1, matched)
             return
 
         elif matched:
             patterns.append(p)
-            self.sub(patterns, replacement, idf_lines, idx + 1, depth - 1, matched)
+            self.sub(patterns, replacement, idf_lines,
+                     idx + 1, depth - 1, matched)
 
         return
 
@@ -194,6 +212,7 @@ class JdfModel(EPInputModel):  # NOTE unused.
     epJson file object
     The class support handling epJson format input file.
     """
+
     def __init__(self, input_path: str, output_path: str):
         super().__init__(input_path=input_path, output_path=output_path)
         self.ep_model: Optional[JsonDict] = None
@@ -237,4 +256,3 @@ class JdfModel(EPInputModel):  # NOTE unused.
 
         else:
             return None
-

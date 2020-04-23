@@ -14,6 +14,7 @@ class ShadingPreamble(Preamble):
     """
     User defined preamble for shading idf.
     """
+
     def __init__(self, constants: Dict, paths: Dict, *args):
         super().__init__(constants=constants, paths=paths)
         self.east_list: List = []
@@ -25,7 +26,8 @@ class ShadingPreamble(Preamble):
     def __call__(self, *args):
         super().__call__(*args)
         self.__create_pid_dir()
-        self._output_idf_file = os.path.join(self._paths["OUTPUT_PATH"], self._pid, "in.idf")  # temp/pid/in.idf
+        self._output_idf_file = os.path.join(
+            self._paths["OUTPUT_PATH"], self._pid, "in.idf")  # temp/pid/in.idf
 
         winwallrate = self._args[3:7]
         shading_dirs = self._args[10:14]
@@ -38,26 +40,32 @@ class ShadingPreamble(Preamble):
 
             # appaned newly calculated structures.
             for w in self.east_list:
-                data = self.generate_window("east", w[0], w[1:], winwallrate[0], shading_dirs)
+                data = self.generate_window(
+                    "east", w[0], w[1:], winwallrate[0], shading_dirs)
                 idf.append(data)
             for w in self.west_list:
-                data = self.generate_window("west", w[0], w[1:], winwallrate[1], shading_dirs)
+                data = self.generate_window(
+                    "west", w[0], w[1:], winwallrate[1], shading_dirs)
                 idf.append(data)
             for w in self.south_list:
-                data = self.generate_window("south", w[0], w[1:], winwallrate[2], shading_dirs)
+                data = self.generate_window(
+                    "south", w[0], w[1:], winwallrate[2], shading_dirs)
                 idf.append(data)
             for w in self.north_list:
-                data = self.generate_window("north", w[0], w[1:], winwallrate[3], shading_dirs)
+                data = self.generate_window(
+                    "north", w[0], w[1:], winwallrate[3], shading_dirs)
                 idf.append(data)
 
-        self.run_energy_plus()  # file will be written when out of the context manager.
+        # file will be written when out of the context manager.
+        self.run_energy_plus()
 
     @override
     def _operator(self, idf: IdfModel, lines: List[str], idx: int):
         direction = self._args[7]
 
         # map infiltration id to actual value. now id is 1 - 3.
-        infiltration_air_change = (lambda l: lambda x: l[x])([1, 0.8, 0.5])(interval_to_list_idx(int(self._args[14])))
+        infiltration_air_change = (lambda l: lambda x: l[x])(
+            [1, 0.8, 0.5])(interval_to_list_idx(int(self._args[14])))
 
         # change Exterior Wall
         wall_str = r"(.*)Exterior Wall" + str(int(self._args[0]))  # re.sub
@@ -222,16 +230,23 @@ class ShadingPreamble(Preamble):
             lines, idx
         )
 
-    def generate_window(self, direction: str, floor_num: str, pos: List[Tuple], rate: float, shading_dirs: List) -> List[str]:
+    def generate_window(
+        self, direction: str,
+            floor_num: str,
+            pos: List[Tuple],
+            rate: float,
+            shading_dirs: List) -> List[str]:
         # convert pos from string to float
         # pos = [(x1, y1, z1)
         #        (x2, y2, z2)
         #        (x3, y3, z3)
         #        (x4, y4, z4)]
         data = []
-        pos = [tuple([float(e.strip()) for e in one_point]) for one_point in pos]
+        pos = [tuple([float(e.strip()) for e in one_point])
+               for one_point in pos]
         new_coord: List = [[], [], [], []]
-        CB0, CB1, CB2, CB3 = self.__calculate_win_pos(direction, floor_num, pos, rate)
+        CB0, CB1, CB2, CB3 = self.__calculate_win_pos(
+            direction, floor_num, pos, rate)
         shading = self.__shading_direction(direction, shading_dirs)
 
         # calculate the coordiate according to the direction.
@@ -262,25 +277,37 @@ class ShadingPreamble(Preamble):
         # construct the data.
         data.append("\n")
         data.append("FenestrationSurface:Detailed,\n")
-        data.append("    " + direction + "window" + floor_num + ",           \n")
+        data.append("    " + direction + "window" +
+                    floor_num + ",           \n")
         data.append("    Window,                  !- Surface Type\n")
         data.append("    Exterior Window,         !- Construction Name\n")
-        data.append("    " + direction + "wall" + floor_num + ",           !- Name\n")
-        data.append("    ,                        !- Outside Boundary Condition Object\n")
+        data.append("    " + direction + "wall" +
+                    floor_num + ",           !- Name\n")
+        data.append(
+            "    ,                        !- Outside Boundary Condition Object\n")
         data.append("    ,                        !- View Factor to Ground\n")
-        data.append("    " + shading + "                        !- Shading Control Name\n")
+        data.append("    " + shading +
+                    "                        !- Shading Control Name\n")
         data.append("    ,                        !- Frame and Divider Name\n")
         data.append("    ,                        !- Multiplier\n")
         data.append("    4,                       !- Number of Vertices\n")
 
-        data.append("    " + "{:.12f}, {:.12f}, {:.12f},\n".format(new_coord[0][0], new_coord[0][1], new_coord[0][2]))
-        data.append("                                        !- X,Y,Z  1 {m}\n")
-        data.append("    " + "{:.12f}, {:.12f}, {:.12f},\n".format(new_coord[1][0], new_coord[1][1], new_coord[1][2]))
-        data.append("                                        !- X,Y,Z  2 {m}\n")
-        data.append("    " + "{:.12f}, {:.12f}, {:.12f},\n".format(new_coord[2][0], new_coord[2][1], new_coord[2][2]))
-        data.append("                                        !- X,Y,Z  3 {m}\n")
-        data.append("    " + "{:.12f}, {:.12f}, {:.12f};\n".format(new_coord[3][0], new_coord[3][1], new_coord[3][2]))
-        data.append("                                        !- X,Y,Z  4 {m}\n")
+        data.append("    " + "{:.12f}, {:.12f}, {:.12f},\n".format(
+            new_coord[0][0], new_coord[0][1], new_coord[0][2]))
+        data.append(
+            "                                        !- X,Y,Z  1 {m}\n")
+        data.append("    " + "{:.12f}, {:.12f}, {:.12f},\n".format(
+            new_coord[1][0], new_coord[1][1], new_coord[1][2]))
+        data.append(
+            "                                        !- X,Y,Z  2 {m}\n")
+        data.append("    " + "{:.12f}, {:.12f}, {:.12f},\n".format(
+            new_coord[2][0], new_coord[2][1], new_coord[2][2]))
+        data.append(
+            "                                        !- X,Y,Z  3 {m}\n")
+        data.append("    " + "{:.12f}, {:.12f}, {:.12f};\n".format(
+            new_coord[3][0], new_coord[3][1], new_coord[3][2]))
+        data.append(
+            "                                        !- X,Y,Z  4 {m}\n")
 
         return data
 
@@ -305,9 +332,11 @@ class ShadingPreamble(Preamble):
         window_area = wall_area * rate
         window_length = window_area / self._constants["WINDOW_HEIGHT"]
         CB0 = (wall_length - window_length) / 2 + p1  # win x axis on one side
-        CB1 = p2 - (wall_length - window_length) / 2  # win x axis on the other side.
+        # win x axis on the other side.
+        CB1 = p2 - (wall_length - window_length) / 2
         # CB2 = (floor - 1) * self._constants["FLOOR_HEIGHT"] + self._constants["WINDOW_EDG_HEIGHT"]
-        CB2 = self._constants["FLOOR_HEIGHT"] + self._constants["WINDOW_EDG_HEIGHT"]  # lower win y axis
+        CB2 = self._constants["FLOOR_HEIGHT"] + \
+            self._constants["WINDOW_EDG_HEIGHT"]  # lower win y axis
         CB3 = CB2 + self._constants["WINDOW_HEIGHT"]  # upper win y axis
 
         return (CB0, CB1, CB2, CB3)
@@ -319,8 +348,10 @@ class ShadingPreamble(Preamble):
         return "external shading control," if s[dir_map[direction]] == 1 else ","
 
     def run_energy_plus(self):
-        output_dir = os.path.join(os.path.abspath(self._paths["OUTPUT_PATH"]), self._pid)
-        run_idf_file = os.path.join(os.path.abspath("temp"), self._pid, "run.idf")
+        output_dir = os.path.join(os.path.abspath(
+            self._paths["OUTPUT_PATH"]), self._pid)
+        run_idf_file = os.path.join(
+            os.path.abspath("temp"), self._pid, "run.idf")
         original_path = os.path.abspath(os.curdir)
 
         print("<running ExpandObjects in {} >".format(self._pid))
@@ -344,10 +375,10 @@ class ShadingPreamble(Preamble):
         print("<end ep in pid {} at {}>".format(self._pid, time.ctime()))
 
     def __create_pid_dir(self, ):
-        pid_dir = os.path.join(self._paths["OUTPUT_PATH"], self._pid)  # temp/pid/in.idf
+        pid_dir = os.path.join(
+            self._paths["OUTPUT_PATH"], self._pid)  # temp/pid/in.idf
         if not os.path.exists(os.path.abspath('temp')):
             os.mkdir(os.path.mkdir(os.path.abspath('temp')))
         if not os.path.exists(pid_dir):
             os.mkdir(pid_dir)
         # shutil.copy('./Energy+.idd', pid_dir)
-

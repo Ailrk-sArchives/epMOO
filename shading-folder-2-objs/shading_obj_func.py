@@ -50,11 +50,14 @@ def f1_energy_consumption(*args) -> float:
     # cop is handled the same way as infiltration that the input is a
     # discrete interval, and we map the input integer into the specific
     # value.
-    # Why? because the algorithm generates random value only in a continuous manner,
-    # and we cannot just specify a set of random values it generated for just one parameter
+    # Why? because the algorithm generates random value only in a
+    # continuous manner,
+    # and we cannot just specify a set of random values it generated for
+    # just one parameter
     # without making algorithm lose its generiality.
 
-    cop = (lambda l: lambda x: l[x])([2.0, 2.5, 3.0, 3.5])(interval_to_list_idx(int(args[9])))
+    cop = (lambda l: lambda x: l[x])([2.0, 2.5, 3.0, 3.5])(
+        interval_to_list_idx(int(args[9])))
     energy_consumption: float = 0
     summer_consumption: float = 0
     winter_consumption: float = 0
@@ -75,7 +78,9 @@ def f1_energy_consumption(*args) -> float:
 
                         break_word = True
                         break
-        energy_consumption = winter_consumption / cop + summer_consumption / cop
+        energy_consumption = (
+            winter_consumption
+            / cop + summer_consumption / cop)
     print("energy_consumption", energy_consumption)
     print("log: winter_consumption", winter_consumption, os.getpid())
     print("log: summer_consumption", winter_consumption, os.getpid())
@@ -107,15 +112,20 @@ def f2_aPMV(*args) -> float:
 
         pmv_list = list(map(lambda x: float(x), pmv_list))
         pmv_list_summer = list(filter(lambda x: x >= 0, pmv_list))
-        pmv_list_winter = list(filter(lambda x: x < 0, pmv_list))  # TODO: Pick out 0.
+        # TODO: Pick out 0.
+        pmv_list_winter = list(filter(lambda x: x < 0, pmv_list))
 
-        apmv_list = list(map(lambda x: abs(x / 1 + SUMMER_LAMBDA * x), pmv_list_summer))
-        apmv_list.extend(list(map(lambda x: abs(x / 1 - WINTER_LAMBDA * x), pmv_list_winter)))
+        apmv_list = list(
+            map(lambda x: abs(x / 1 + SUMMER_LAMBDA * x), pmv_list_summer))
+        apmv_list.extend(
+            list(map(lambda x:
+                     abs(x / 1 - WINTER_LAMBDA * x), pmv_list_winter)))
 
         # number of hours that apmv in [-0.5, 0.5]
         num_in_apmv_range = (
             len(list(filter(
-                lambda apmv: apmv >= apmv_range_lower and apmv <= apmv_range_upper,
+                lambda apmv:
+                apmv >= apmv_range_lower and apmv <= apmv_range_upper,
                 apmv_list))))
     return num_in_apmv_range
 
@@ -126,7 +136,8 @@ def f3_economy(*args) -> float:
 
     print("running f3 ... in {}".format(os.getpid()))
     wall_id = interval_to_list_idx(args[0])
-    roof_id = interval_to_list_idx(args[1])  # there was a + 1 before. 2019-06-20
+    # there was a + 1 before. 2019-06-20
+    roof_id = interval_to_list_idx(args[1])
     win_id = interval_to_list_idx(args[2])
 
     infiltration_id = interval_to_list_idx(args[14])
@@ -148,13 +159,17 @@ def f3_economy(*args) -> float:
 
         for i, _ in enumerate(data):
             if "Yes" in data[i] and "EASTWINDOW" in data[i]:
-                shading_win_area_with_direction["east_win_area"] += float(data[i].split(",")[3])
+                shading_win_area_with_direction["east_win_area"] += float(
+                    data[i].split(",")[3])
             if "Yes" in data[i] and "WESTWINDOW" in data[i]:
-                shading_win_area_with_direction["west_win_area"] += float(data[i].split(",")[3])
+                shading_win_area_with_direction["west_win_area"] += float(
+                    data[i].split(",")[3])
             if "Yes" in data[i] and "SOUTHWINDOW" in data[i]:
-                shading_win_area_with_direction["south_win_area"] += float(data[i].split(",")[3])
+                shading_win_area_with_direction["south_win_area"] += float(
+                    data[i].split(",")[3])
             if "Yes" in data[i] and "NORTHWINDOW" in data[i]:
-                shading_win_area_with_direction["north_win_area"] += float(data[i].split(",")[3])
+                shading_win_area_with_direction["north_win_area"] += float(
+                    data[i].split(",")[3])
 
             if re.match(r"Window-Wall Ratio", data[i]):
                 for line in data[i:i + 6]:
@@ -179,13 +194,16 @@ def f3_economy(*args) -> float:
         (C_i_wall * delta_wall + C_e_wall) * wall_area,
         (C_i_win + C_e_win) * window_area,
         (C_i_roof * delta_roof + C_e_roof) * roof_area,
-        (lambda d: sum(d.values()) * C_i_shading)(shading_win_area_with_direction)
+        (lambda d:
+         sum(d.values()) * C_i_shading)(shading_win_area_with_direction)
     ])
 
     # initial cost.
-    C_in = divident / total_ac_area + infiltration_specs[infiltration_id] + ac_specs[cop_id]
+    C_in = divident / total_ac_area + \
+        infiltration_specs[infiltration_id] + ac_specs[cop_id]
     # operation cost.
-    C_o = f1_energy_consumption(*args) * local_electircity_fee * (1 - (1 + 0.049) ** -20) / 0.049
+    C_o = f1_energy_consumption(
+        *args) * local_electircity_fee * (1 - (1 + 0.049) ** -20) / 0.049
     LCC = C_in + C_o
 
     return LCC
