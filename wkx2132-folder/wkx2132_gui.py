@@ -26,74 +26,98 @@ class ModelParametersWidget(flx.GroupWidget):
         self.set_title("MODEL PARAMTERS")
         with flx.FormLayout() as self.model_params_form:
             flx.Widget(flex=1)
-            self.exterior_wall = flx.LineEdit(title='Exterior Wall', text='{}'.format(tuple(self.root.exterior_wall_tuple)))
-            self.exterior_roof = flx.LineEdit(title='Exterior Roof', text='{}'.format(tuple(self.root.exterior_roof_tuple)))
-            self.exterior_window = flx.LineEdit(title='Exterior Window', text='{}'.format(tuple(self.root.exterior_window_tuple)))
-            self.eastrate = flx.LineEdit(title='East winwall ratio', text='{}'.format(tuple(self.root.eastrate_tuple)))
-            self.westrate = flx.LineEdit(title='West winwall ratio', text='{}'.format(tuple(self.root.westrate_tuple)))
-            self.southrate = flx.LineEdit(title='South winwall ratio', text='{}'.format(tuple(self.root.southrate_tuple)))
-            self.northrate = flx.LineEdit(title='North winwall ratio', text='{}'.format(tuple(self.root.northrate_tuple)))
-            self.direction = flx.LineEdit(title='direction(deg)', text='{}'.format(tuple(self.root.direction_tuple)))
-            self.airchange = flx.LineEdit(title='airchange', text='{}'.format(tuple(self.root.airchange_tuple)))
-            self.cop = flx.LineEdit(title='cop', text='{}'.format(tuple(self.root.cop_tuple)))
-            self.east_shading = flx.LineEdit(title='east shading', text='{}'.format(tuple(self.root.east_shading_tuple)))
-            self.west_shading = flx.LineEdit(title='west shading', text='{}'.format(tuple(self.root.west_shading_tuple)))
-            self.south_shading = flx.LineEdit(title='south shading', text='{}'.format(tuple(self.root.south_shading_tuple)))
-            self.north_shading = flx.LineEdit(title='north shading', text='{}'.format(self.root.north_shading_tuple))
-            self.infiltration_airchange = flx.LineEdit(title='infiltration airchange', text='{}'.format(self.root.infiltration_airchange_tuple))
+            self.exterior_wall = flx.LineEdit(
+                title='Exterior Wall', text='{}'.format(tuple(self.root.exterior_wall_tuple)))
+            self.exterior_roof = flx.LineEdit(
+                title='Exterior Roof', text='{}'.format(tuple(self.root.exterior_roof_tuple)))
+            self.exterior_window = flx.LineEdit(title='Exterior Window', text='{}'.format(
+                tuple(self.root.exterior_window_tuple)))
+            self.eastrate = flx.LineEdit(
+                title='East winwall ratio', text='{}'.format(tuple(self.root.eastrate_tuple)))
+            self.westrate = flx.LineEdit(
+                title='West winwall ratio', text='{}'.format(tuple(self.root.westrate_tuple)))
+            self.southrate = flx.LineEdit(
+                title='South winwall ratio', text='{}'.format(tuple(self.root.southrate_tuple)))
+            self.northrate = flx.LineEdit(
+                title='North winwall ratio', text='{}'.format(tuple(self.root.northrate_tuple)))
+            self.direction = flx.LineEdit(
+                title='direction(deg)', text='{}'.format(tuple(self.root.direction_tuple)))
+            self.airchange = flx.LineEdit(
+                title='airchange', text='{}'.format(tuple(self.root.airchange_tuple)))
+            self.cop = flx.LineEdit(
+                title='cop', text='{}'.format(tuple(self.root.cop_tuple)))
+            self.east_shading = flx.LineEdit(
+                title='east shading', text='{}'.format(tuple(self.root.east_shading_tuple)))
+            self.west_shading = flx.LineEdit(
+                title='west shading', text='{}'.format(tuple(self.root.west_shading_tuple)))
+            self.south_shading = flx.LineEdit(
+                title='south shading', text='{}'.format(tuple(self.root.south_shading_tuple)))
+            self.north_shading = flx.LineEdit(
+                title='north shading', text='{}'.format(self.root.north_shading_tuple))
+            self.infiltration_airchange = flx.LineEdit(
+                title='infiltration airchange', text='{}'.format(self.root.infiltration_airchange_tuple))
             flx.Widget(flex=1)
 
     @flx.reaction('exterior_wall.text')
     def change_exterior_wall(self, *events):
-        t = tuple(map(lambda x: float(x.strip()), self.exterior_wall.text.split(',')))
+        t = tuple(map(lambda x: float(x.strip()),
+                      self.exterior_wall.text.split(',')))
         self.root.set_exterior_wall_tuple(t)
         print(self.root.exterior_wall_tuple)
 
     @flx.reaction('exterior_roof.text')
     def change_exterior_roof(self, *events):
-        t = tuple(map(lambda x: float(x.strip()), self.exterior_roof.text.split(',')))
+        t = tuple(map(lambda x: float(x.strip()),
+                      self.exterior_roof.text.split(',')))
         self.root.set_exterior_roof_tuple(t)
         print(self.root.exterior_roof_tuple)
 
     @flx.reaction('exterior_window.text')
     def change_exterior_window(self, *events):
-        t = tuple(map(lambda x: float(x.strip()), self.exterior_window.text.split(',')))
+        t = tuple(map(lambda x: float(x.strip()),
+                      self.exterior_window.text.split(',')))
         self.root.set_exterior_window_tuple(t)
         print(self.root.exterior_window_tuple)
 
     @flx.reaction('eastrate.text')
     def change_eastrate(self, *events):
-        t = tuple(map(lambda x: float(x.strip()), self.eastrate.text.split(',')))
+        t = tuple(map(lambda x: float(x.strip()),
+                      self.eastrate.text.split(',')))
         self.root.set_eastrate_tuple(t)
         print(self.root.eastrate_tuple)
 
     @flx.reaction('westrate.text')
     def change_westrate(self, *events):
-        t = tuple(map(lambda x: float(x.strip()), self.westrate.text.split(',')))
+        t = tuple(map(lambda x: float(x.strip()),
+                      self.westrate.text.split(',')))
         self.root.set_westrate_tuple(t)
         print(self.root.westrate_tuple)
 
     @flx.reaction('southrate.text')
     def change_southrate(self, *events):
-        t = tuple(map(lambda x: float(x.strip()), self.southrate.text.split(',')))
+        t = tuple(map(lambda x: float(x.strip()),
+                      self.southrate.text.split(',')))
         self.root.set_southrate_tuple(t)
         print(self.root.sourthrate)
 
     @flx.reaction('northrate.text')
     def change_northrate(self, *events):
-        t = tuple(map(lambda x: float(x.strip()), self.northrate.text.split(',')))
+        t = tuple(map(lambda x: float(x.strip()),
+                      self.northrate.text.split(',')))
         self.root.set_northrate_tuple(t)
         print(self.root.northrate_tuple)
 
     @flx.reaction('direction.text')
     def change_direction(self, *events):
-        t = tuple(map(lambda x: float(x.strip()), self.direction.text.split(',')))
+        t = tuple(map(lambda x: float(x.strip()),
+                      self.direction.text.split(',')))
         self.root.set_direction_tuple(t)
         print(self.root.direction_tuple)
 
     @flx.reaction('airchange.text')
     def change_airchange(self, *events):
-        t = tuple(map(lambda x: float(x.strip()), self.airchange.text.split(',')))
+        t = tuple(map(lambda x: float(x.strip()),
+                      self.airchange.text.split(',')))
         self.root.set_airchange_tuple(t)
         print(self.root.airchange_tuple)
 
@@ -105,31 +129,36 @@ class ModelParametersWidget(flx.GroupWidget):
 
     @flx.reaction('east_shading.text')
     def change_east_shading(self, *events):
-        t = tuple(map(lambda x: float(x.strip()), self.east_shading.text.split(',')))
+        t = tuple(map(lambda x: float(x.strip()),
+                      self.east_shading.text.split(',')))
         self.root.set_east_shading_tuple(t)
         print(self.root.east_shading_tuple)
 
     @flx.reaction('west_shading.text')
     def change_west_shading(self, *events):
-        t = tuple(map(lambda x: float(x.strip()), self.west_shading.text.split(',')))
+        t = tuple(map(lambda x: float(x.strip()),
+                      self.west_shading.text.split(',')))
         self.root.set_west_shading_tuple(t)
         print(self.root.west_shading_tuple)
 
     @flx.reaction('south_shading.text')
     def change_south_shading(self, *events):
-        t = tuple(map(lambda x: float(x.strip()), self.south_shading.text.split(',')))
+        t = tuple(map(lambda x: float(x.strip()),
+                      self.south_shading.text.split(',')))
         self.root.set_south_shading_tuple(t)
         print(self.root.south_shading_tuple)
 
     @flx.reaction('north_shading.text')
     def change_north_shading(self, *events):
-        t = tuple(map(lambda x: float(x.strip()), self.north_shading.text.split(',')))
+        t = tuple(map(lambda x: float(x.strip()),
+                      self.north_shading.text.split(',')))
         self.root.set_north_shading_tuple(t)
         print(self.root.north_shading_tuple)
 
     @flx.reaction('infiltration_airchange.text')
     def change_infiltration_airchange(self, *events):
-        t = tuple(map(lambda x: float(x.strip()), self.infiltration_airchange.text.split(',')))
+        t = tuple(map(lambda x: float(x.strip()),
+                      self.infiltration_airchange.text.split(',')))
         self.root.set_infiltration_airchange_tuple(t)
         print(self.root.infiltration_airchange_tuple)
 
@@ -139,11 +168,16 @@ class AlgoParamWidget(flx.GroupWidget):
     def init(self):
         self.set_title("ALGORITHM PARAMETERS")
         with flx.FormLayout() as self.algo_params_model:
-            self.mutation_param = flx.LineEdit(title='Mutation Parameter', text='{}'.format(int(self.root.mutation_param_int)))
-            self.num_of_generation = flx.LineEdit(title='Num of genertion', text='{}'.format(int(self.root.num_of_generation_int)))
-            self.num_of_individual = flx.LineEdit(title='Num of individual', text='{}'.format(int(self.root.num_of_individual_int)))
-            self.num_of_tour_particps = flx.LineEdit(title='Num of tournament participents', text='{}'.format(int(self.root.num_of_tour_particps_int)))
-            self.max_proc = flx.LineEdit(title='max process in parallel', text='{}'.format(int(self.root.max_proc_int)))
+            self.mutation_param = flx.LineEdit(
+                title='Mutation Parameter', text='{}'.format(int(self.root.mutation_param_int)))
+            self.num_of_generation = flx.LineEdit(
+                title='Num of genertion', text='{}'.format(int(self.root.num_of_generation_int)))
+            self.num_of_individual = flx.LineEdit(
+                title='Num of individual', text='{}'.format(int(self.root.num_of_individual_int)))
+            self.num_of_tour_particps = flx.LineEdit(
+                title='Num of tournament participents', text='{}'.format(int(self.root.num_of_tour_particps_int)))
+            self.max_proc = flx.LineEdit(
+                title='max process in parallel', text='{}'.format(int(self.root.max_proc_int)))
 
     @flx.reaction('mutation_param.text')
     def change_mutation_param(self, *events):
@@ -176,11 +210,16 @@ class ConstantsParamWidget(flx.GroupWidget):
     def init(self):
         self.set_title("CONSTANTS")
         with flx.FormLayout(flex=1) as self.other_constants_model:
-            self.floor_height = flx.LineEdit(title='Floor Height', text='{}'.format(int(self.root.floor_height_float)))
-            self.window_height = flx.LineEdit(title='Window Height', text='{}'.format(int(self.root.window_height_float)))
-            self.window_edge_height = flx.LineEdit(title='Window edge height', text='{}'.format(int(self.root.window_edge_height_float)))
-            self.heating_setpoint = flx.LineEdit(title='Heating setpoint', text='{}'.format(int(self.root.heating_setpoint_float)))
-            self.cooling_setpoint = flx.LineEdit(title='Cooling setpoint', text='{}'.format(int(self.root.cooling_setpoint_float)))
+            self.floor_height = flx.LineEdit(
+                title='Floor Height', text='{}'.format(int(self.root.floor_height_float)))
+            self.window_height = flx.LineEdit(
+                title='Window Height', text='{}'.format(int(self.root.window_height_float)))
+            self.window_edge_height = flx.LineEdit(
+                title='Window edge height', text='{}'.format(int(self.root.window_edge_height_float)))
+            self.heating_setpoint = flx.LineEdit(
+                title='Heating setpoint', text='{}'.format(int(self.root.heating_setpoint_float)))
+            self.cooling_setpoint = flx.LineEdit(
+                title='Cooling setpoint', text='{}'.format(int(self.root.cooling_setpoint_float)))
 
     @flx.reaction('floor_height.text')
     def change_floor_height(self, *events):
@@ -212,9 +251,12 @@ class PathsParamWidget(flx.GroupWidget):
     def init(self):
         self.set_title("PATHS")
         with flx.FormLayout() as self.path_constants_model:
-            self.weather_file = flx.LineEdit(title='Weather File', text='{}'.format(self.root.weather_file_str))
-            self.idf_file = flx.LineEdit(title='Idf file', text='{}'.format(self.root.idf_file_str))
-            self.output_path = flx.LineEdit(title='Output directory', text='{}'.format(self.root.output_path_str))
+            self.weather_file = flx.LineEdit(
+                title='Weather File', text='{}'.format(self.root.weather_file_str))
+            self.idf_file = flx.LineEdit(
+                title='Idf file', text='{}'.format(self.root.idf_file_str))
+            self.output_path = flx.LineEdit(
+                title='Output directory', text='{}'.format(self.root.output_path_str))
 
     @flx.reaction('weather_file.text')
     def change_weather_file(self, *events):
@@ -249,7 +291,8 @@ class MooWidget(flx.Widget):
         with flx.HFix(flex=3):
             with flx.VBox(title='leftside'):
                 # Model para
-                self.model_params = ModelParametersWidget(minsize=(300, 500), maxsize=(300, 500))
+                self.model_params = ModelParametersWidget(
+                    minsize=(300, 500), maxsize=(300, 500))
                 with flx.HBox():
                     self.run_button = flx.Button(text='RUN', flex=1)
                     self.stop_button = flx.Button(text='STOP', flex=1)
@@ -303,8 +346,10 @@ class Run(flx.PyWidget):
     heating_setpoint_float = flx.FloatProp(18, settable=True)
     cooling_setpoint_float = flx.FloatProp(26, settable=True)
 
-    weather_file_str = flx.StringProp('../WeatherData/CHN_Chongqing.Chongqing.Shapingba.575160_CSWD.epw', settable=True)
-    idf_file_str = flx.StringProp('./wkx2132+surface+20190618+second+3.idf', settable=True)
+    weather_file_str = flx.StringProp(
+        '../WeatherData/CHN_Chongqing.Chongqing.Shapingba.575160_CSWD.epw', settable=True)
+    idf_file_str = flx.StringProp(
+        './wkx2132+surface+20190618+second+3.idf', settable=True)
     output_path_str = flx.StringProp('temp/', settable=True)
 
     def init(self):
@@ -327,7 +372,8 @@ class Run(flx.PyWidget):
             discrete_interval(tuple(self.moo.root.west_shading_tuple)),
             discrete_interval(tuple(self.moo.root.south_shading_tuple)),
             discrete_interval(tuple(self.moo.root.north_shading_tuple)),
-            discrete_interval(tuple(self.moo.root.infiltration_airchange_tuple))
+            discrete_interval(
+                tuple(self.moo.root.infiltration_airchange_tuple))
         ]
 
         """Algorithm parameter"""
